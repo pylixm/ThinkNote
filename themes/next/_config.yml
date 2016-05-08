@@ -229,7 +229,7 @@ mathjax:
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 6ae30333ba35ec34bf3c7d6471d7ba27
 
 # Duoshuo ShortName
 duoshuo_shortname: iwebsouls
