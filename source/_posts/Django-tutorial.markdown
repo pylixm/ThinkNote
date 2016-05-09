@@ -5,9 +5,9 @@ date : 2016-05-08 18:00
 tags : [django,]
 ---
 
-# 1 django 简单入门
+# django 简单入门
 
-## 1.1 django 简介
+## django 简介
 
 Django 是由 Python 开发的一个免费的开源网站框架。
 
@@ -15,7 +15,7 @@ Django 是由 Python 开发的一个免费的开源网站框架。
 
 在各种 python web 框架中，Django是功能最全的，自身包含了从前端模板（Template）到后端逻辑（View）再到数据库端的ORM（Model）的所有功能模块。
 
-### 1.1.1 特点
+### 特点
 
 - 强大的数据库功能
 
@@ -29,7 +29,7 @@ Django 是由 Python 开发的一个免费的开源网站框架。
 
 - 国际化
 
-### 1.1.2 项目结构
+### 项目结构
 
 Django的应用称做project。一个项目由多个应用或者apps组成。应用是一组拥有特定功能的Python包。
 
@@ -73,11 +73,11 @@ django1.8 中文文档：http://python.usyiyi.cn/django/index.html
 django 命令总结： http://www.pylixm.cc/posts/2016-01-29-Django-cmd.html
 
 
-## 1.2 django 快速入门
+## django 快速入门
 
 以一个博客展示列表页面为例，说下django项目的开发流程：
 
-### 1.2.1 第一步，模型设计
+### 第一步，模型设计
 
 - 编写models
 
@@ -130,7 +130,7 @@ python manag.py syncdb
 ```
 
 
-### 1.2.2 第二步，设计URL
+### 第二步，设计URL
 
 ```python
 #django_demo/urls.py
@@ -146,7 +146,7 @@ urlpatterns = [
 
 ```
 
-### 1.2.3 第三步，编写views
+### 第三步，编写views
 
 ```python
 #app01/views.py 
@@ -158,7 +158,7 @@ def index(request):
 
 ```
 
-### 1.2.4 第四步，编写template
+### 第四步，编写template
 
 ```html
     # base.html
@@ -188,11 +188,11 @@ def index(request):
 ```
 
 
-# 2 django 项目最佳实践
+# django 项目最佳实践
 
-## 2.1 django 开发环境篇
+## django 开发环境篇
 
-### 2.1.1 建议使用 virtualenv 来搭建开发环境：
+### 建议使用 virtualenv 来搭建开发环境：
 
     pip install virtualenv virtualenvwrapper
 
@@ -230,18 +230,19 @@ lsvirtualenv: 列出可用的运行环境
 
 lssitepackages: 列出当前环境安装了的包
 
-### 2.1.2 使用 requirement 来管理环境中的包
+### 使用 requirement 来管理环境中的包
 
 
 
-## 2.2 django配置文件管理篇
+## django配置文件管理篇
 
 django 的配置项都在 settings 文件中，但是生成、测试和开发中的配置是不同的。这就使得我们不得不手工的修改各环境中的配置。
 
 在使用版本管理工具时，不能够很好的发挥其功能。特从网上看了好几种方法解决此类问题，比较常用和推荐的方法如下：
 
 
-### 2.2.1 第一种：本地设置
+### 第一种：本地设置
+
 这个方法有一个 settings.py 文件，一些公共设置和一个特殊环境使用的 local_settings 文件。
 
 demo：
@@ -269,7 +270,7 @@ demo：
 缺点：这个方法限制了你对设置的权限，比如说修改 local_settings 的公共设置。但是这种方法在大多数简单的情况下都有用。
 
 
-### 2.2.2 第二种：基于环境的管理
+### 第二种：基于环境的管理
 
 将各环境的配置项分模块管理，一种环境对应一个模块文件。将原来的settings.py 换成 settings 目录，结构如下
 
@@ -301,9 +302,9 @@ demo：
     unset SECRET_KEY
  
  
-## 2.3 django 开发篇
+## django 开发篇
 
-### 2.3.1 models
+### models
 
 关于models的开发建议：
 
@@ -316,13 +317,15 @@ demo：
 - property cached_property 使模型的方法，可以当做属性来调用。
     
 - 尽量延长QuerySets不求值的时间。
-    
+
+```python
     例: 合并结果集
     >>> from itertools import chain
     >>> recent = chain(posts, comments)
     >>> sorted(recent, key=lambda e: e.modified, reverse=True)[:3]
-    
-### 2.3.2 views和urls
+```
+
+### views和urls
 
 关于views和urls开发建议：
 
@@ -332,7 +335,7 @@ demo：
 
 - urls的读取是自上而下的，把具有特殊性质的url放到前面，把广泛性的url放到后边。
 
-### 2.3.3 template 
+### template 
 
 关于模板开发建议：
 
@@ -343,8 +346,19 @@ demo：
 - 最佳实践 保证业务逻辑远离模板。
 
 - 根据情况不同，通过设置上下文变量或者请求路径来改变活动链接的外观。
+
 ```html
     例：导航栏
     {% include "_navbar.html" with active_link='link2' %}
     
 ```
+
+
+## 参考 
+
+- http://blog.zedbez.com/2015/10/12/settings-different-environments-version-control/
+
+- http://pycoders-weekly-chinese.readthedocs.io/en/latest/issue4/django-settings-for-production-and-development-best-practices.html
+
+- https://www.gitbook.com/book/wizardforcel/django-design-patterns-and-best-practices/details
+
