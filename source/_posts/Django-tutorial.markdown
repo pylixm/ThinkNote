@@ -5,31 +5,73 @@ date : 2016-05-08 18:00
 tags : [django,]
 ---
 
+
+
+自己使用纯django 开发项目，也有1年多了。在使用django的过程中，也抱怨过django的各种问题。比如，各种模块的约定过于死板，不够灵活。
+
+这恰恰是它的优点，突然想起一句以前看到过的话“这就是约定的力量”。正是这种约定，省去了我们好多的工作，简化的使用。
+
+最近有运维同事向我请教 `django` 如何使用，干脆写个最简单的入门吧。
+
+
+预备知识：
+
+- python 基础语法
+
+- html 基本语法
+
+- 数据库基本CRUD知识
+
+- JavaScript 
+
+- CSS
+
+
 # django 简单入门
 
 ## django 简介
 
-Django 是由 Python 开发的一个免费的开源网站框架。
+在python 系的web框架中，不乏精品。像以非阻塞、异步著称的tornado，短小的 flask 等等。而django 则以大而全著称，
 
-官网介绍：Django makes it easier to build better Web apps more quickly and with less code.
+自身包含了从前端模板（Template）到后端逻辑（View）再到数据库端的ORM（Model）的所有功能模块。意在，你只需要关心业务逻辑就好了，无需关心框架自身的结构。
 
-在各种 python web 框架中，Django是功能最全的，自身包含了从前端模板（Template）到后端逻辑（View）再到数据库端的ORM（Model）的所有功能模块。
+官网这样介绍：Django makes it easier to build better Web apps more quickly and with less code.
+
+所以说，使用django 可以快速的开发一个完整的网站系统。
+
+如果，在时间紧，任务重的项目中，而我们又恰好有python背景，那么使用 django 绝对是无二的选择。 
+
 
 ### 特点
 
-- 强大的数据库功能
+django 官网给出了3个特点：
 
-- 自带的强大的后台功能
+- 开发速度快：django 的宗旨意在帮助开发者迅速的将概念构建成完整的应用。
 
-- 优雅的网址
+- 安全 ： django帮助开发者避免了许多常见的安全问题。（例如：django自带了防止跨域请求的中间件；可以再中间件中做安全过滤；）
 
-- 模板系统
+- 丰富的插件扩展：有丰富的第三方插件模块（ django 的app 理论上来说是可以重用的。比如一个用户管理的app，开发一次，可以使用多次。）。
 
-- 缓存系统
+在开发中使用 django ，不免被别人问及，为什么使用django，django有什么好处或优势？根据自己的使用体验，总结了下，个人拙见，各位可以拿去参考，如下：
 
-- 国际化
+- 继承 python 语言所有的优势
 
-### 项目结构
+- 强大的数据库功能，编写好数据模块后，数据表就已经有了。 
+
+- django 自带 admin 后台管理，对于无需复杂的后台管理功能的系统完全可以满足需求，节省了开发时间。
+
+- 整体的架构设计，从orm数据层到页面渲染。形成了一个自己的生态，让你专心投入到系统的业务逻辑中而无需关心架构问题。（此点可能也是缺点）
+
+- 社区活跃，所有主流技术都能找到 django 的第三方插件。
+
+
+### django 的工作流程
+
+![](/images/django-jg.png)
+
+从图中，我们可以看到 django 框架的主要模块： URLconf、Views、Model、Template。
+
+### django 安装及目录结构
 
 Django的应用称做project。一个项目由多个应用或者apps组成。应用是一组拥有特定功能的Python包。
 
@@ -42,6 +84,10 @@ django 可通过 python 的包管理工具pip 来安装。执行如下命令：
 安装完成后，生成django项目代码：
 
     django-admin.py startproject django_demo
+    
+生成app01：
+
+    django_demo# python manage.py startapp app01    
 
 项目目录结构如下：
 
@@ -61,6 +107,21 @@ django 可通过 python 的包管理工具pip 来安装。执行如下命令：
         ├── tests.py
         └── views.py
 ```
+
+django_demo 为项目配置目录，其中有settings配置文件，url配置文件，及wsgi部署文件。
+
+app01 为默认app 的目录结构。
+    
+`admin` : 为django自带后台接口文件，可在其中注册model，用来在admin后台管理。
+
+`migrations`: 数据同步临时文件目录。
+
+`models` : 模板存放文件。
+
+`test` ： 单元测试文件django 集成了python的 unit test 。
+
+`views`： 视图文件。  
+
 
 **更多**
 
@@ -92,6 +153,7 @@ class Blogs(models.Model):
 
 ```
 
+
 - 配置数据库，创建数据表：
 
 ```python
@@ -117,6 +179,8 @@ class Blogs(models.Model):
         'CHARSET': 'utf8'
     }
 ```
+django 会根据INSTALLED_APPS 中配置的app ，来找到app包，从而加载其下的static 、template 等文件。
+
 
 - 生成数据表：
 
@@ -128,6 +192,10 @@ python manage.py migrate
 #django1.7-
 python manag.py syncdb
 ```
+
+小于1.7 版本django 数据同步使用 syncdb ，是能实现创建数据表，而不能修改更新字段。可使用第三方插件实现；
+
+从 1.7 版本开始 django 优化了数据同步，实现了数据表的字段同步。
 
 
 ### 第二步，设计URL
@@ -145,6 +213,8 @@ urlpatterns = [
 ]
 
 ```
+建议为 url 的 name 赋值，在使用url的地方使用其名词。避免在url修改后的维护问题。
+
 
 ### 第三步，编写views
 
@@ -157,6 +227,10 @@ def index(request):
     return render(request, 'index.html', context) # 带 request
 
 ```
+
+当模板中需要使用request 变量时，建议使用render 快捷方法。
+
+当模板中不使用request 时， 可使用render_to_response 来避免转入不必要的request 参数。
 
 ### 第四步，编写template
 
@@ -180,12 +254,36 @@ def index(request):
     {% block content %}
     <ul>
     {% for blog in blog_list %}
-        <li>{{ blog.title }}</li>
+        <li><h2>{{ blog.title }}</h2><small>{{ blog.create_time|date:'Y-m-d H:i:s'}}</small></li>
     {% endfor %}
     </ul>
     {% endblock%}
 
 ```
+
+#### 标签（tags）
+
+`extends` 标签为模块继承，当页面有公共部分需要提取出来时，可使用继承。
+
+`include` 标签为模板包含，提取部分公共页面。
+
+区别：
+
+`extends` 一般用来做页面布局使用。在系统整体或较多页面的公共元素，放到base.html中，来extends 。继承其他父模板。
+
+`include` 在较少或几个页面需要的公共元素，放到单独的页面，来include 。引入其他页面与元素到本页面。
+
+其他内建的标签：
+
+https://docs.djangoproject.com/en/1.9/ref/templates/builtins/#ref-templates-builtins-tags
+
+#### 过滤器（filters）
+
+date 内建时间过滤器
+
+其他内建过滤器：
+
+https://docs.djangoproject.com/en/1.9/ref/templates/builtins/#ref-templates-builtins-filters
 
 
 # django 项目最佳实践
@@ -339,9 +437,9 @@ demo：
 
 关于模板开发建议：
 
-- 善于使用filters，内建的filters https://docs.djangoproject.com/en/1.9/ref/templates/builtins/#ref-templates-builtins-filters
+- 善于使用filters，内建的filters 。
 
-- 善于使用 tags，内建的tags https://docs.djangoproject.com/en/1.9/ref/templates/builtins/#ref-templates-builtins-tags
+- 善于使用 tags，内建的tags 。
 
 - 最佳实践 保证业务逻辑远离模板。
 
