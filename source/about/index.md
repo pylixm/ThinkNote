@@ -11,7 +11,7 @@ comments: true
 >Life is short, i use Python！
 
 
-<script src='//w.segmentfault.com/card/1030000004045770.js?w=500&3rd=1&bg=0&bd=DDDDDD&cl=333333&btn=009a61&noBtn=0'></script>
+// <script src='//w.segmentfault.com/card/1030000004045770.js?w=500&3rd=1&bg=0&bd=DDDDDD&cl=333333&btn=009a61&noBtn=0'></script>
 
 
 ### 博客介绍
@@ -30,6 +30,9 @@ comments: true
 
 ### 联系我
 ---
+
+* [GitHub](https://github.com/pylixm)
+
 * [开源中国](http://my.oschina.net/u/877170/blog)、[Git@OSC](http://git.oschina.net/whlz)
 
 * [segmentfault](http://segmentfault.com/u/pyli)、[stackoverflow]()
@@ -40,7 +43,7 @@ comments: true
 
 * [E-Mail](mailto:pyli.xm@gmail.com)
 
-* [GitHub](https://github.com/pylixm)
+
 
 
 
