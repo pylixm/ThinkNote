@@ -232,7 +232,7 @@ mathjax:
 baidu_analytics: 6ae30333ba35ec34bf3c7d6471d7ba27
 
 # Duoshuo ShortName
-duoshuo_shortname: iwebsouls
+duoshuo_shortname: pylixm
 
 # Disqus
 #disqus_shortname:
@@ -286,8 +286,8 @@ facebook_sdk:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: true
-  app_id: 3SMz1Wgkzv8DDSup7HNk0Ehn-gzGzoHsz #<app_id>
-  app_key: TAhqYirsPqbOxI2AdkUcJ53s #<app_key>
+  app_id: OBJcj4PU8JI0zDfu0HJSrG6W-gzGzoHsz #<app_id>
+  app_key: tBtFzC72xIlgo2UFbA33nqmU #<app_key>
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
