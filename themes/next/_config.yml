@@ -117,9 +117,9 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
-  # GitHub: https://github.com/pylixm
+  GitHub: https://github.com/pylixm
 
 
 # Social Links Icons
@@ -285,9 +285,9 @@ facebook_sdk:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: 3SMz1Wgkzv8DDSup7HNk0Ehn-gzGzoHsz #<app_id>
+  app_key: TAhqYirsPqbOxI2AdkUcJ53s #<app_key>
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -295,17 +295,17 @@ busuanzi_count:
   # count values only if the other configs are false
   enable: false
   # custom uv span for the whole site
-  site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>
+  site_uv: false
+  site_uv_header: UV： # <i class="fa fa-user"></i>
   site_uv_footer: 
   # custom pv span for the whole site
-  site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>
+  site_pv: false
+  site_pv_header: PV： # <i class="fa fa-eye"></i>
   site_pv_footer: 
   # custom pv span for one page only
   page_pv: true
-  page_pv_header: <i class="fa fa-file-o"></i>
-  page_pv_footer: 
+  page_pv_header: 本文总阅读量
+  page_pv_footer: 次
 
 # Tencent analytics ID
 # tencent_analytics:
