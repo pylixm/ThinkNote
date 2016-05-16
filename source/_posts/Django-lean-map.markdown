@@ -23,6 +23,8 @@ tags : [django,]
 
 - 6、[django 相关命令总结](2016-01-29-Django-cmd.html)
 
+- 7、[Django 简单入门及最佳实践](2016-05-08-Django-tutorial.html)
+
 ## 进阶篇
 
 - 1、[转载 - Django admin 定制案例](2016-01-05-Django-admin.html)
@@ -31,6 +33,8 @@ tags : [django,]
 
 - 3、[Django restfull framework 文档](2015-11-01-Django-restfull-framework.html)
 
+- 4、[使用virtualenv 部署django应用问题记录](2016-01-18-Virtualenv-user.html)
+
 ## 专题篇
 
 ### celery 专题
@@ -38,6 +42,8 @@ tags : [django,]
 - 1、[译-在django中使用celery实现异步任务](2015-12-03-Django-celery.html)
 
 - 2、[译-使用 celery 时的 3 个坑](2016-03-08-Celery-gotchas.html)
+
+- 3、[使用 supervisor 来监控 django celery](2016-01-19-Django-supervisor-celery.html)
 
 ### Q&A 专题
 
