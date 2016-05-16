@@ -3,7 +3,7 @@ layout : post
 title : 译-在django中使用celery实现异步任务
 category : django
 date : 2015-12-03 16:00
-tags : [django,celery]
+tags : [django, celery ]
 ---
 
 
