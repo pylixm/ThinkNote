@@ -11,9 +11,6 @@ comments: true
 >Life is short, i use Python！
 
 
-// <script src='//w.segmentfault.com/card/1030000004045770.js?w=500&3rd=1&bg=0&bd=DDDDDD&cl=333333&btn=009a61&noBtn=0'></script>
-
-
 ### 博客介绍
 ---
 
