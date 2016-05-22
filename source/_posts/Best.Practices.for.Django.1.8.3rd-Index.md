@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 《Best.Practices.for.Django.1.8.3rd》 读书笔记-索引
-category : celery
+category : django
 date : 2016-05-22 
 tags : [django]
 ---
