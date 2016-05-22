@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 第一章 代码规范 
+title : Django 最佳实践-读书笔记 - 第一章 代码规范 
 category : django
 date : 2016-05-22
 tags : [django]

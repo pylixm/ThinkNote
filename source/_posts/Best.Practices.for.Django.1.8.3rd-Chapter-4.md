@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 第四章 django app的设计
+title : Django 最佳实践-读书笔记 - 第四章 django app的设计
 category : django
 date : 2016-05-22
 tags : [django]

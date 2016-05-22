@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 第五章 Settings 和 Requirements
+title : Django 最佳实践-读书笔记 - 第五章 Settings 和 Requirements
 category : django
 date : 2016-05-22
 tags : [django]

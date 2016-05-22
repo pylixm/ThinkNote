@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 第二章  django 环境配置
+title : Django 最佳实践-读书笔记 - 第二章  django 环境配置
 category : django
 date : 2016-05-22
 tags : [django]

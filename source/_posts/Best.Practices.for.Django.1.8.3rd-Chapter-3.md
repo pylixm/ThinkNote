@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 第三章 如何布局 django 项目
+title : Django 最佳实践-读书笔记 - 第三章 如何布局 django 项目
 category : django
 date : 2016-05-22
 tags : [django]

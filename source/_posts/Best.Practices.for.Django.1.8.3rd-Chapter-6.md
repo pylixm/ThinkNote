@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 第六章 model 最佳实践
+title : Django 最佳实践-读书笔记 - 第六章 model 最佳实践
 category : django
 date : 2016-05-22
 tags : [django]
