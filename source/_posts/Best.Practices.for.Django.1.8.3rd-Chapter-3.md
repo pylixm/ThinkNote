@@ -6,6 +6,11 @@ date : 2016-05-22
 tags : [django]
 ---
 
+# 《Best.Practices.for.Django.1.8.3rd》 读书笔记-索引
+
+[其他章节索引页](2016-05-22-Best.Practices.for.Django.1.8.3rd-Index.html)
+
+
 # 第三章 如何布局 django 项目
 
 ## 建议布局 

@@ -6,6 +6,10 @@ date : 2016-05-22
 tags : [django]
 ---
 
+# 《Best.Practices.for.Django.1.8.3rd》 读书笔记-索引
+
+[其他章节索引页](2016-05-22-Best.Practices.for.Django.1.8.3rd-Index.html)
+
 # 第四章 django app的设计
 
 ## Django的 app 设计的黄金法则
