@@ -232,6 +232,22 @@ broker 官方建议使用 rabbitmq 或 redis ，其他的broker 仅为开发测�
 
 官网详细介绍：http://docs.jinkan.org/docs/celery/getting-started/brokers/index.html
 
+
+### 2016年5月29日 更新：
+
+在搭建django + celery 使用总结：
+
+1、使用 ` app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)`这个配置，让celery 自动发现django app 下定义的task 时， django app下的task 文件名 必须为 `tasks.py`。
+
+2、celery 3.1 后，和django的结合无需再依靠django-celery。 可按以上方式搭建。具体官方地址 [这里](http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html)
+
+3、todo 后续补充
+
+
+### 各种功能搭建实例源码
+
+[源码](https://github.com/pylixm/celery-examples/tree/master)
+
 ---
 
 **ps: 个人英文水平有限，还请各位批评指正。**
