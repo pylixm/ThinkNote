@@ -117,7 +117,11 @@ Beware that setting `PREFETCH_MULTIPLAYER=0` means unlimited prefetching (not di
 Understanding how `PREFETCH_MULTIPLAYER` and ACK_LATE work isn’t trivial, I recommend you spend some time reading the official documentation.
 
 
+附：
 
+[celery 最佳实践](https://denibertovic.com/posts/celery-best-practices/)
+
+[官网问题汇总](http://www.celeryproject.org/community/)
 
 
 ---
