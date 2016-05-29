@@ -204,7 +204,7 @@ django-celery 模块库结果默认使用django的ORM 和 Cache 框架。
     celery help 
     
     
-2015年12月10日 update：
+### 2015年12月10日 update：
     
 按照此教程，启动celery后，报错误如下：
 
