@@ -176,14 +176,15 @@ django-celery 模块库结果默认使用django的ORM 和 Cache 框架。
 
 4、配置celery。
 
-    For the database backend you must use:
+    # For the database backend you must use:
     app.conf.update(
         CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend',
     )
-    For the cache backend you can use:
+    # For the cache backend you can use:
     app.conf.update(
         CELERY_RESULT_BACKEND='djcelery.backends.cache:CacheBackend',
     )
+    # 此处配置用来存储任务执行结果。
     
 除了这种方式外，你可以把 CELERY_RESULT_BACKEND 放到你的django的settings配置文件中。
 
@@ -202,6 +203,34 @@ django-celery 模块库结果默认使用django的ORM 和 Cache 框架。
 
     celery help 
     
+    
+2015年12月10日 update：
+    
+按照此教程，启动celery后，报错误如下：
+
+    [2016-05-29 01:19:24,751: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+    Trying again in 2.00 seconds...
+
+原因是，celery 需要一个 `broker` 来发送和接收消息，支持：rabbitmq、redis、数据库等作为这个broker。上边的配置中没有设置这个borker，
+
+celery 默认使用 rabbitmq来作为broker。所以，报错链接不上rabbitmq。
+
+解决办法：
+
+1、按装rabbitmq 显式的指定 broker为你配置的rabbitmq。
+
+    CELERY_BROKER_URL = 'amqp://guest:guest@localhost//' 
+
+2、使用django数据库作为 broker：
+
+    # 增加配置
+    BROKER_URL = 'django://'
+    # 增加app实例配置
+    INSTALLED_APPS = ('kombu.transport.django', )
+    
+broker 官方建议使用 rabbitmq 或 redis ，其他的broker 仅为开发测试，性能不稳定。
+
+官网详细介绍：http://docs.jinkan.org/docs/celery/getting-started/brokers/index.html
 
 ---
 
