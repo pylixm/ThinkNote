@@ -31,6 +31,7 @@ salt-api也用了一段时间了，现在从安装、配置、使用三个方面
     
     [root@saltstack ~]#pip install salt-api==0.8.3
     
+
 ## 配置
     
     [root@saltstack ~]# cd /etc/pki/tls/certs
@@ -229,3 +230,38 @@ salt-api也用了一段时间了，现在从安装、配置、使用三个方面
     
 以上只是一些基本的实例，salt-api还可以实现更多功能。
 
+## 2016-5-30 update：
+
+当前salt版本：`2016.3`，官网对salt各模块安装配置文档做了整理重拍，更加清晰明了。
+
+前段时间试着按官方的文档搭建了下salt环境，感觉安装更简单了，下面更新下 salt-api的安装：
+
+    # https://docs.saltstack.com/en/latest/ref/netapi/all/salt.netapi.rest_cherrypy.html
+    # 1、安装 salt-api 
+    yum install salt-api 
+    
+    # 2、生成 https ssl 证书
+    salt-call --local tls.create_self_signed_cert
+    
+    # 3、向master 配置文件中增加：
+    rest_cherrypy:
+    port: 8000
+    ssl_crt: /etc/pki/tls/certs/localhost.crt
+    ssl_key: /etc/pki/tls/certs/localhost.key
+    
+    # 4、创建salt 用户
+    [root@saltstack ~]# useradd -M -s /sbin/nologin salt
+    [root@saltstack ~]# passwd salt
+    # 修改 master 配置信息
+    external_auth:
+      pam:
+        saltapi:
+          - .*  
+    # 5、增加 api 访问信息
+     rest_cherrypy:
+       port: 8888
+       ssl_crt: /etc/pki/tls/certs/localhost.crt
+       ssl_key: /etc/pki/tls/private/localhost_nopass.key
+
+到此，salt-api 安装配置完成。需要注意的是，有时候 yum 和 pip 使用的python 并不是一个，所以有些依赖包安装的时候，尽量统一使用一种包管理管理工具。
+    
