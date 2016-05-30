@@ -1,13 +1,13 @@
 ---
 layout : post
-title : "SaltStack学习笔记2-- salt-api安装配置"
+title : "SaltStack学习笔记2-- salt-api安装配置(转载)"
 category : salt
 tagline: ""
 date : 2015-12-15
 tags : [salt,]
-old_url : http://www.xiaomastack.com/2014/11/18/salt-api/
 ---
 
+原文地址：http://www.xiaomastack.com/2014/11/18/salt-api/
 
 salt-api也用了一段时间了，现在从安装、配置、使用三个方面梳理下知识。
 
