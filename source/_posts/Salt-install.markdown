@@ -148,4 +148,4 @@ Rejected Keys:
 
 ### 参考：
 
-[http://docs.saltstack.cn/zh_CN/latest/topics/installation/rhel.html](http://docs.saltstack.cn/zh_CN/latest/topics/installation/rhel.html)
+[https://docs.saltstack.com/en/latest/](https://docs.saltstack.com/en/latest/)
