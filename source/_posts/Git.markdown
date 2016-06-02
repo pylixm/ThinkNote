@@ -88,6 +88,8 @@ git archive --format=tar --prefix=gitdemo/ 标签名|gzip > /gitdemo/gitdemo.tar
 git checkout 标签名
 # 提交tag到远程
 git push [origin] --tags
+# 删除远程tag
+$ git push origin :refs/tags/tagname
 ```
 
 5、分支 
