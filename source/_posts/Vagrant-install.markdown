@@ -299,6 +299,60 @@ Vagrant对于虚拟机的管理分成两个部分：Box和Machine。Box是指初
     ==> default: flag to force provisioning. Provisioners marked to run always will still run.
 
 
+#### 3.4 一个vagrantfile 文件管理多台虚机
+
+1、先使用 box 初始化： `vagrant init `
+
+2、修改配置文件如下：
+
+```ruby
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  config.vm.provision "shell", inline: "echo Hello"
+  
+  config.vm.define "master" do |saltmaster|
+    saltmaster.vm.box = "base"
+    saltmaster.vm.host_name = 'saltmaster.local'
+    saltmaster.vm.network "private_network", ip: "192.168.33.13"
+    saltmaster.ssh.username = 'root'
+    saltmaster.ssh.password = 'vagrant'
+    saltmaster.ssh.insert_key = 'true'
+  end
+
+  config.vm.define "minion" do |saltminion|
+    saltminion.vm.box = "base"
+    saltminion.vm.host_name = 'saltminion.local'
+    saltminion.vm.network "private_network", ip: "192.168.33.14"
+    saltminion.ssh.username = 'root'
+    saltminion.ssh.password = 'vagrant'
+    saltminion.ssh.insert_key = 'true'
+  end
+end
+```
+
+3、正常启动即可 : `vagrant up`
+
+4、登录
+
+- 使用 vagrant ssh + 名称 登录 
+```bash
+pylixm@pylixm-pc /d/vagrant/dev331314 $ vagrant ssh master
+root@127.0.0.1's password:
+Welcome to your Vagrant-built virtual machine.
+[root@saltmaster ~]#
+```
+
+- 使用 ip 直接登录
+ 
+
+
+
 --- 
 
 ### 参考：
