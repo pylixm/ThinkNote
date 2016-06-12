@@ -350,8 +350,19 @@ Welcome to your Vagrant-built virtual machine.
 
 - 使用 ip 直接登录
  
+#### 将已有 virtualbox 虚机添加到 vagrant管理
 
+直接添加是不行的，这里提供了一中变向的方式：先将virtualbox 的虚机转成 box 镜像 ，再将镜像添加到 vagrant 管理；
 
+详细 --> [这里](http://stackoverflow.com/questions/20560152/what-is-the-vagrant-syntax-for-adding-a-locally-existing-vdi)
+
+1、打包已有虚机（虚机必须用virtualbox打开过，为了让virtualbox可以找到该虚机）
+
+    vagrant package --base mybox --output /path/to/mybox.box
+
+2、添加 box 镜像 
+
+    vagrant box add mybox /path/to/mybox.box
 
 --- 
 

@@ -86,6 +86,8 @@ git tag 标签名
 git archive --format=tar --prefix=gitdemo/ 标签名|gzip > /gitdemo/gitdemo.tar.gz
 # 检出：
 git checkout 标签名
+# 删除 
+git tag -d tagname
 # 提交tag到远程
 git push [origin] --tags
 # 删除远程tag
