@@ -155,5 +155,5 @@ UpdateView):
 ```
 
 
-
+ps： 感觉本书views 这里讲的比较乱, 部分class-based views 可参见另一篇博文： [Django class views](http://localhost:4000/posts/2016-03-24-Django-class-Views.html)
 
