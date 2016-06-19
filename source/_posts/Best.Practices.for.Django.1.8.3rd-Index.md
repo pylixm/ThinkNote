@@ -28,3 +28,13 @@ tags : [django]
 [第五章 Settings 和 Requirements](2016-05-22-Best.Practices.for.Django.1.8.3rd-Chapter-5.html)
 
 [第六章 model 最佳实践](2016-05-22-Best.Practices.for.Django.1.8.3rd-Chapter-6.html)
+
+update 20160619 ：
+
+[第七章 查询与数据库层](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-7.html)
+
+[第八章 查询与数据库层](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-7.html)
+
+[第九章 Function-based views 最佳实践](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-8.html#第九章 Function-based views 最佳实践)
+
+[第十章 Class-based views 最佳实践](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-8.html#第十章 Class-based views 最佳实践)
