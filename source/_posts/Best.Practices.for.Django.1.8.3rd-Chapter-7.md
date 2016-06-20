@@ -2,7 +2,7 @@
 layout : post
 title : Django 最佳实践-读书笔记 - 第七章 查询与数据库层
 category : django
-date : 2016-06-19
+date : 2016-06-19 22:00:00
 tags : [django]
 ---
 

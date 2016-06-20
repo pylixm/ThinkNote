@@ -2,7 +2,7 @@
 layout : post
 title : Django 最佳实践-读书笔记 - 第八、九、十章 FBVS & CBVS
 category : django
-date : 2016-06-19
+date : 2016-06-19 22:30:00
 tags : [django]
 ---
 
@@ -155,5 +155,5 @@ UpdateView):
 ```
 
 
-ps： 感觉本书views 这里讲的比较乱, 部分class-based views 可参见另一篇博文： [Django class views](http://localhost:4000/posts/2016-03-24-Django-class-Views.html)
+ps： 感觉本书views 这里讲的比较乱, 部分class-based views 可参见另一篇博文： [Django class views](http://pylixm.cc/posts/2016-03-24-Django-class-Views.html)
 
