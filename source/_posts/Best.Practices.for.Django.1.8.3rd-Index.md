@@ -38,3 +38,7 @@ update 20160619 ：
 [第九章 Function-based views 最佳实践](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-8.html#第九章 Function-based views 最佳实践)
 
 [第十章 Class-based views 最佳实践](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-8.html#第十章 Class-based views 最佳实践)
+
+update 20160626:
+
+[第十一章、第十二章 Form ](2016-06-26-Best.Practices.for.Django.1.8.3rd-Chapter-9.html)
