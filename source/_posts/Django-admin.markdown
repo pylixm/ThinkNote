@@ -325,6 +325,20 @@ class EntryAdmin(admin.ModelAdmin):
 
 ```
 
+### 启用在列表页编辑功能
+
+`list_editable = ('is_active',)`
+
+### 自定义编辑页面展示
+
+```python
+fieldsets=(
+    ('user', {'fields':('username', 'slug', 'email', 'password')}),
+    ('Personal info', {'fields':('name', 'mobile')}),
+    ('Permissions', {'fields':('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+    )
+```
+
 #### 参考
 
 * [http://www.cnblogs.com/linxiyue/p/4075048.html](http://www.cnblogs.com/linxiyue/p/4075048.html)
