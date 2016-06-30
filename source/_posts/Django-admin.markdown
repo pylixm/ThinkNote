@@ -106,7 +106,7 @@ class EntryAdmin(admin.ModelAdmin):
         
 ```
 
-重写Model的save行为
+### 重写Model的save行为
 
 可以直接重写model的save()方法：
 
