@@ -45,4 +45,4 @@ update 20160626:
 
 update 20160703:
 
-[第十三、十四、十五章](2016-07-02-Best.Practices.for.Django.1.8.3rd-Chapter-10.html)
+[第十三、十四、十五章 Django Template Language](2016-07-02-Best.Practices.for.Django.1.8.3rd-Chapter-10.html)
