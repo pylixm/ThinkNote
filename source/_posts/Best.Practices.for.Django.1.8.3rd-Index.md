@@ -42,3 +42,7 @@ update 20160619 ：
 update 20160626:
 
 [第十一章、第十二章 Form ](2016-06-26-Best.Practices.for.Django.1.8.3rd-Chapter-9.html)
+
+update 20160703:
+
+[第十三、十四、十五章](2016-07-02-Best.Practices.for.Django.1.8.3rd-Chapter-10.html)
