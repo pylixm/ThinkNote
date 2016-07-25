@@ -33,7 +33,7 @@ update 20160619 ：
 
 [第七章 查询与数据库层](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-7.html)
 
-[第八章 查询与数据库层](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-7.html)
+[第八章 FBVS & CBVS](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-8.html)
 
 [第九章 Function-based views 最佳实践](2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-8.html#第九章 Function-based views 最佳实践)
 

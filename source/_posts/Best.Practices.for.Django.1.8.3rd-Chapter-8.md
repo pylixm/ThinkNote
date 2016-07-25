@@ -47,7 +47,7 @@ urlpatterns = [
 
 ## 使用url name space 更好的管理 url
 
-`url(r'^tastings/', include('tastings.urls', namespace='tastings')),`
+`url(r'^detail/', include('tastings.urls', namespace='tastings')),`
 
 通过 `tastings:detail` 调用。 
 
