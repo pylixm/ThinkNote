@@ -10,6 +10,11 @@ comments: true
 
 >Life is short, i use Python！
 
+Name: pylixm
+
+Email： pyli.xm@gmail.com 
+
+Job: pythoner, devops
 
 ### 博客介绍
 ---
