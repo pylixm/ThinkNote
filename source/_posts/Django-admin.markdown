@@ -4,10 +4,10 @@ title : 转载 - Django admin 定制案例
 category : django
 date : 2016-01-05 20:00
 tags : [django,]
-old_url: http://www.cnblogs.com/linxiyue/p/4075048.html?utm_source=tuicool&utm_medium=referral
 
 ---
 
+>>> 原文地址：http://www.cnblogs.com/linxiyue/p/4075048.html?utm_source=tuicool&utm_medium=referral
 
 总体思路：重写``admin.ModelAdmin``中的某些方法。
 
@@ -338,6 +338,57 @@ fieldsets=(
     ('Permissions', {'fields':('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
     )
 ```
+------------------ update 2016-9-22 ---------------------------------------
+
+### 自定义admin验证
+
+
+方法一：
+[详见](http://stackoverflow.com/questions/24802244/custom-validation-in-django-admin)
+```python
+from models import Lecture
+from django.contrib import admin
+from django import forms
+
+
+class LectureForm(forms.ModelForm):
+
+    def clean(self):
+        start_date = self.cleaned_data.get('start_date')
+        end_date = self.cleaned_data.get('end_date')
+        if start_date > end_date:
+            raise forms.ValidationError("Dates are fucked up")
+        return self.cleaned_data
+
+    class Meta:
+        model = Lecture
+
+
+class LectureAdmin(admin.ModelAdmin):
+    form = LectureForm
+    list_display = ('topic', 'speaker', 'start_date', 'end_date')
+
+admin.site.register(Lecture, LectureAdmin)
+```
+
+方法二：
+[详见](https://docs.djangoproject.com/en/1.7/ref/models/instances/#validating-objects)
+```python
+import datetime
+from django.core.exceptions import ValidationError
+from django.db import models
+
+class Article(models.Model):
+    ...
+    def clean(self):
+        # Don't allow draft entries to have a pub_date.
+        if self.status == 'draft' and self.pub_date is not None:
+            raise ValidationError('Draft entries may not have a publication date.')
+        # Set the pub_date for published items if it hasn't been set already.
+        if self.status == 'published' and self.pub_date is None:
+            self.pub_date = datetime.date.today()
+```
+
 
 #### 参考
 
