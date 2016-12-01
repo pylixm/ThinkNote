@@ -364,6 +364,19 @@ Welcome to your Vagrant-built virtual machine.
 
     vagrant box add mybox /path/to/mybox.box
 
+
+
+
+## 错误问题汇总
+
+#### Vagrant with VirtualBox on Windows10: “Rsync” could not be found on your PATH
+
+http://stackoverflow.com/questions/34176041/vagrant-with-virtualbox-on-windows10-rsync-could-not-be-found-on-your-path
+
+#### Failed to mount folders in Linux guest. 
+
+https://github.com/mitchellh/vagrant/issues/3341
+
 --- 
 
 ### 参考：
