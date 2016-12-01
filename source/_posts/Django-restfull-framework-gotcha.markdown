@@ -1,6 +1,6 @@
 ---
 layout : post
-title : Django restfull framework 学习笔记 -- 踩坑记录
+title : Django restfull framework 使用笔记 -- 踩坑记录
 category : django
 tagline: ""
 date : 2016-11-30 
