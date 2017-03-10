@@ -31,13 +31,9 @@ if __name__ == "__main__":
     tornado.ioloop.IOLoop.current().start()
 ```
 上边是tornado 官网的hello world的实例，tornado做为web框架使用时，只需要处理逻辑的handler和系统入口application及路由即可启动系统，只提供了框架
-
 最核心的部分，使系统更加灵活。这样我们在开发的时候便拥有了自主选择权，可以选择自己喜欢的模板语言，可以选择是否使用orm，根据自己的需求任意组装。
-
 这样问题便来了，我们只能凭借我们有限的开发经验来组织我们的项目结构，路由层、业务层、数据库层等。有没有一个tornado的项目结构的最佳实践呢？
-
-经同事介绍，我从github 上找到了这个项目[tornado-boilerplate](https://github.com/bueda/tornado-boilerplate),虽说6年没有更新了，但是这个目录结构对于
-
+经同事介绍，我从github 上找到了这个项目[tornado-boilerplate](https://github.com/bueda/tornado-boilerplate),虽说6年没有更新了，但是这个目录结构对
 我这个初学者足够了。
 
 ```
@@ -68,7 +64,6 @@ tornado-boilerplate/
 ## sqlalchemy 和 tornado的结合
 
 sqlalchemy 是python系用的最多的orm，我们的项目也选用了sqlalchemy 。在结合sqlalchemy 和tornado过程中，查阅了大量资料。
-
 sqlalchemy 执行各种操作时，最基本的单元为session。sqlalchemy 官方文档建议，尽量适用框架的第三方扩展包来集成sqlalchemy，可以自动的管理session范围。根据sqlalchemy 文档，session的管理放在了每次的request请求中处理为最佳，及每次请求进来时，实例化session，请求结束后，将session关闭，见[这里](http://docs.sqlalchemy.org/en/latest/orm/contextual.html#using-thread-local-scope-with-web-applications)和 [tornado的一个相关issues](https://github.com/tornadoweb/tornado/issues/1675)。
 
 结合如下：
@@ -106,9 +101,7 @@ class BaseHandler(tornado.web.RequestHandler):
 此处的scoped_session, 可理解为session的注册表，从中取用和交还，并保证多次取用的为统一session。详见官方文档，[这里](http://docs.sqlalchemy.org/en/latest/orm/contextual.html#sqlalchemy.orm.scoping.scoped_session)
 
 另外需要注意，此处的sqlalchemy的数据库查询，并不是异步，当使用tornado 的异步特性时，遇到查询数据库慢时，还是会阻塞的，此时我们更多的需要考虑的
-
 是去优化我们的sql，而不是异步查询数据库。因为，当数据库的查询慢到可以阻塞进程时，说明确实是有问题了。除非我们确实是有这种长时间查询数据库的需求。
-
 tornado 本身并没有提供数据库层的异步，看了许多异步查询数据库的三方库，都不是特别成熟。还有另一种解决方案，是使用其他异步任务库来完成长时间查询数据库的
 
 需求，如celery。
@@ -116,12 +109,10 @@ tornado 本身并没有提供数据库层的异步，看了许多异步查询数
 ## tornado 日志使用
 
 tornado 的日志模块使用了python的logging模块实现。tornado 文档日志部分说的比较简单，[这里](http://www.tornadoweb.org/en/stable/log.html).
-
 让人读了，比较糊涂，文中说了，3个内部的 logger: `access` 、`application` 和 `general`。一开始我以为是使用这3个logger来记录tornado中的日志信息，
-
 其实不是，他们只是tornado自己内部使用的。我们完全可以自己获取我们的logger,即使用root logger 。tornado 作者建议如此，可见[这里](https://groups.google.com/forum/#!topic/python-tornado/QSKNn4_l0Oo)
 
-可如下使用，在py中直接获取logger
+可如下使用，在py中直接获取logger:
 ```python 
 import logging 
 
@@ -190,5 +181,5 @@ def define_logging_options(options=None):
 
 - [Intoduction tornado](http://demo.pythoner.com/itt2zh/) 虽然此文档的tornado版本是老的，但是介绍的知识点，比较全面且通俗易懂。
 
-- todo 持续更新
+>todo 持续更新
 
