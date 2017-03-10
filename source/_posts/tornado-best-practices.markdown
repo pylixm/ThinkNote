@@ -8,6 +8,8 @@ tags : [tornado, best_practices ]
 
 最新开发新项目一直在学习tornado的知识，在前人的基础上找了些最佳实践，记录如下，备查。
 
+tornado 新人一枚，欢迎大神拍砖~ 
+
 ## 项目目录结构
 
 ```python
@@ -182,4 +184,5 @@ def define_logging_options(options=None):
 - [Intoduction tornado](http://demo.pythoner.com/itt2zh/) 虽然此文档的tornado版本是老的，但是介绍的知识点，比较全面且通俗易懂。
 
 >todo 持续更新
+
 
