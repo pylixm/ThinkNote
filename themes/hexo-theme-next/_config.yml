@@ -533,3 +533,6 @@ images: images
 
 # Theme version
 version: 5.1.0
+
+# Google 
+google_adsense: true
