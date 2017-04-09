@@ -133,9 +133,10 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
   GitHub: https://github.com/pylixm
+  Weibo: http://weibo.com/u/2258086637
 
 # Social Links Icons
 # Icon Mapping:
@@ -204,6 +205,12 @@ sidebar:
 #links_layout: inline
 #links:
   #Title: http://example.com/
+
+links_title: 友情链接
+links_layout: block
+links:
+  程序员集散地: http://iwebtools.cn
+  Hachbin'Wiki: http://hachbin.cc
 
 
 # ---------------------------------------------------------------
@@ -536,3 +543,4 @@ version: 5.1.0
 
 # Google 
 google_adsense: true
+
