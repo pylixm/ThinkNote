@@ -75,6 +75,11 @@ git config  user.email 'pyli.xm@gmail.com'
 git commit -m '说明'
 # 添加并提交 
 git commit -a -m '说明'
+# 移除受控文件，
+git rm -r -n --cached */Runtime/\* #预览剔除版本控制的文件  --cached 保留本地
+git rm -r --cached */Runtime/\* #剔除版本控制 
+git commit -am "移除Runtime目录下所有文件的版本控制"
+git push
 ```
 
 4、标签
