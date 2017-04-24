@@ -3,7 +3,7 @@ layout : post
 title : 译-使用 celery 时的 3 个坑 
 category : celery
 date : 2016-03-08
-tags : [django, celery]
+tags : [django, celery, 翻译]
 old_url : https://wiredcraft.com/blog/3-gotchas-for-celery
 
 ---
