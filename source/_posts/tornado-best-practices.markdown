@@ -73,18 +73,19 @@ sqlalchemy 执行各种操作时，最基本的单元为session。sqlalchemy 官
 ```python
 from sqlalchemy.orm import scoped_session, sessionmaker
 from models import *  # import the engine to bind
+# engine = create_engine(connect_str, pool_size=1, pool_recycle=3600, echo=False, max_overflow=10, echo_pool=True)
 
 class Application(tornado.web.Application):
-def __init__(self):
-    handlers = [
-        (r"/users", UsersHandler),
-    ]
-    settings = dict(
-        cookie_secret="some_long_secret_and_other_settins"
-    )
-    tornado.web.Application.__init__(self, handlers, **settings)
-    # Have one global connection.
-    self.session = scoped_session(sessionmaker(bind=engine))
+    def __init__(self):
+        handlers = [
+            (r"/users", UsersHandler),
+        ]
+        settings = dict(
+            cookie_secret="some_long_secret_and_other_settins"
+        )
+        tornado.web.Application.__init__(self, handlers, **settings)
+        # Have one global connection.
+        self.session = scoped_session(sessionmaker(bind=engine))
 
 class BaseHandler(tornado.web.RequestHandler):
 
@@ -107,6 +108,23 @@ class BaseHandler(tornado.web.RequestHandler):
 tornado 本身并没有提供数据库层的异步，看了许多异步查询数据库的三方库，都不是特别成熟。还有另一种解决方案，是使用其他异步任务库来完成长时间查询数据库的
 
 需求，如celery。
+
+**update 2017-05-03**
+
+1、tornado 本身还提供了一种通用的异步解决方案，即使用线程池的方式，见官方文档[这里](http://www.tornadoweb.org/en/stable/faq.html#why-isn-t-this-example-with-time-sleep-running-in-parallel)。
+总结下来，实现异步有3中方式：
+- 使用gen方式
+- 使用线程池方式
+- 使用第3放库方式
+
+2、如上结合tornado 和sqlalchemy 时，所有的资源都是tornado进程独有的。例如，在application中生成的session。
+
+3、`pool_size`为进程池常驻进程数量，等到回收时间到时回收。 `max_overflow` 为最大超出`pool_size`的链接数量，此链接可以被`remove`回收。得出以上结论依据如下：
+- 在连续请求的情况下，数据库链接不断上升，达到最大值后，有可能报 `TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30`。原因如下：
+    - scoped_session 每次请求尝试新的session（推断，有待验证）
+    - 老的session被占用
+- 将`pool_size` 和 `max_overflow`的值互换后，以上错误没有出现，且链接池链接数量有减少的情况。    
+
 
 ## tornado 日志使用
 
