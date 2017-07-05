@@ -30,6 +30,25 @@
       <div id="lv-container" data-id="city" data-uid="{{ theme.livere_uid }}"></div>
     {% elseif theme.changyan.appid and theme.changyan.appkey %}
       <div id="SOHUCS"></div>
+    {% elseif theme.comment_js.enable %}
+        <div id="comment-thread"></div>
+        <script type="text/javascript">
+          var opt = {
+              type: "github",
+              user: "pylixm",
+              repo: "pylixm_hexo",
+              no_comment: "No comments yet. Press the button and go to comment now!",
+              go_to_comment: "Go to comment",
+              issue_title: "{{ page.title }}",
+              issue_id: "{{ page.issue_id }}",
+              btn_class: "btn",
+              comments_target: "#comment-thread",
+              loading_target: "#loading-spin",
+              client_id: "3bfeabded9187bfed657",
+              client_secret: "9a8b545a31b1467b676e45a8cf990dad94c5c06a"
+          };
+          getComments(opt);
+        </script>
     {% endif %}
   </div>
 {% endif %}

@@ -8,6 +8,16 @@
 <html class="{{ html_class | lower }}" lang="{{ config.language }}">
 <head>
   {% include '_partials/head.swig' %}
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="/lib/comment/comment.css">
+  <link rel="stylesheet" href="/lib/comment/comment.next.theme.css">
+  <!-- javascripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown.js/0.5.0/markdown.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+  <script src="/lib/comment/comment.js"></script>
+
   <title>{% block title %}{% endblock %}</title>
 </head>
 

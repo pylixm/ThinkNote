@@ -289,6 +289,7 @@ mathjax:
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 
+
 # Swiftype Search API Key
 #swiftype_key:
 
@@ -315,11 +316,16 @@ mathjax:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
-youyan_uid: 2086721
+# youyan_uid: 2086721
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid
+
+
+# Comment js 
+comment_js:
+  enable: true
 
 # Baidu Share
 # Available value:
