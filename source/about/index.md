@@ -1,9 +1,8 @@
 ---
-title: "关于作者"
+title: "关于"
 type: "about"
 comments: true
 ---
-
 
 ## 关于作者 
 ---
@@ -14,23 +13,18 @@ Name: pylixm
 
 Email： pyli.xm@gmail.com 
 
-Job: pythoner, devops
+Job: pythoner, devloper
 
-### 博客介绍
+## 关于博客
 ---
+
+关注互联网技术和创业！
 
 > 自感不善于写作，但总感觉要记录下自己这段时光。已近而立之年，自己却仍然混沌。那便用这“烂笔头”理顺这混沌年华吧！
 <small>2015-11-28 北京</small>
 
-在别人博客中看到一个视频，它里面有这样一句话，觉着特别能说明我记录博客的心情。“你无法把点滴与未来联系，你只能通过回顾才能看见。因为把过去的点滴串联起来，
-你才有勇气忠于自我”。
 
-**与你我共勉：**
-
-
-<object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v02/-0-2_MB3VSRR8I_MB3VVNVF9-vimg1_ws_126_net//image/snapshot_movie/2015/10/H/M/MB3VVOQHM-1429002752199.swf"></param><param name="allowScriptAccess" value="always"></param><param name="wmode" value="transparent"></param><embed src="http://swf.ws.126.net/openplayer/v02/-0-2_MB3VSRR8I_MB3VVNVF9-vimg1_ws_126_net//image/snapshot_movie/2015/10/H/M/MB3VVOQHM-1429002752199.swf" type="application/x-shockwave-flash" width="640" height="360" allowFullScreen="true" wmode="transparent" allowScriptAccess="always"></embed></object>
-
-### 联系我
+## 活跃在其他地方
 ---
 
 * [GitHub](https://github.com/pylixm)
