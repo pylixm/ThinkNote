@@ -8,7 +8,7 @@ tags : [vcs,]
 ---
 
 
-### 一、Git知识点
+## 一、Git知识点
 
 1. 将发生变化的文件全部保存。为了减少磁盘使用，只保存发生变化的文件。使用sha1算法的20字节（40位）值作为对象的唯一标识。
 ![][1]
@@ -36,9 +36,9 @@ remote branch
 对象是静止的，引用是动态的。
 
 
-### 二、操作使用
+## 二、操作使用
 
-#### git配置
+### git配置
 
 1.文件位置
 
@@ -57,7 +57,7 @@ git config --global user.email 'pyli.xm@gmail.com'
 git config  user.name 'pyli.xm'
 git config  user.email 'pyli.xm@gmail.com'
 ```
-#### 命令
+### 命令
 
 1、git初始化
 
@@ -158,9 +158,48 @@ git reset --hard <commit ID号> 或者 git reset --hard HEAD^
 
 ![][4]
 
+8、合并
+```bash
+# 分支合并：
+git merge 分支名A  在B分之下执行，将B合并到A分支上。
+# 在B分之下执行，将A合并到B分支上。
+git merge --no-ff 分支A 
+# 合并提交 
+> git rebase -i HEAD~3
+看到如下信息：
+pick:*******
+pick:*******
+pick:*******
+修改成：
+pick:*******
+squash:*******
+squash:*******
+保存退出，提示录入commit信息，保存即可。
+```
+
+9、其他
+```
+# 修改历史commit信息
+> git rebase -i HEAD~3
+看到如下信息：
+pick:*******
+pick:*******
+pick:*******
+如果你要修改哪个，就把那行的pick改成edit，然后退出。
+> git commit --amend
+> git rebase --continue
+
+```
 
 
 **更多实例参考 ``git --help``** 
+
+### 参考资料
+
+[阮一峰-git分支管理策略](http://www.ruanyifeng.com/blog/2012/07/git.html)
+[阮一峰-git工作流程](http://www.ruanyifeng.com/blog/2015/12/git-workflow.html)
+[阮一峰-git常用命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+[阮一峰-git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
 
 
 ---

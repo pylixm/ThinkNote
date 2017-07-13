@@ -13,7 +13,7 @@ Name: pylixm
 
 Email： pyli.xm@gmail.com 
 
-Job: pythoner, devloper
+Job: Pythonista, Operation and development developer
 
 ## 关于博客
 ---
