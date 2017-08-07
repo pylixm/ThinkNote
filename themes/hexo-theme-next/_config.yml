@@ -209,8 +209,8 @@ sidebar:
 links_title: 友情链接
 links_layout: block
 links:
-  程序员集散地: http://iwebtools.cn
-  Hachbin'Wiki: http://hachbin.cc
+  # 程序员集散地: http://iwebtools.cn
+  # Hachbin'Wiki: http://hachbin.cc
 
 
 # ---------------------------------------------------------------
@@ -239,7 +239,7 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
-  item_text: true
+  item_text: false
   wordcount: false
   min2read: false
 
@@ -432,7 +432,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -464,7 +464,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
 
 # External URL with BASE64 encrypt & decrypt
 # Usage: {% exturl text url "title" %}

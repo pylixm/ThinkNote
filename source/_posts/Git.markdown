@@ -189,6 +189,11 @@ pick:*******
 > git commit --amend
 > git rebase --continue
 
+# 查看远端和本地分支情况
+> git remote show origin
+
+# 根据远端分支修建本地分支，将远端分支删除的分支在本地也删除
+> git fetch -p / git remote prune origin 
 ```
 
 
