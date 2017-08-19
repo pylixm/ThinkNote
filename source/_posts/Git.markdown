@@ -116,6 +116,8 @@ git merge 分支名A  在B分之下执行，将A合并到B分支上。
 git branch -D 分支名A
 #删除远程分支（>v1.7）
 git push origin --delete <branchName>
+# 修改分支名称
+> git branch -m devel develop
 ```
 
 6、回溯
@@ -194,6 +196,9 @@ pick:*******
 
 # 根据远端分支修建本地分支，将远端分支删除的分支在本地也删除
 > git fetch -p / git remote prune origin 
+
+
+
 ```
 
 
