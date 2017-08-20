@@ -1,5 +1,5 @@
 ---
-title: "关于"
+title: "简介"
 type: "about"
 comments: true
 ---
