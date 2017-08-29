@@ -25,31 +25,31 @@ engine = create_engine(connect_str, pool_size=10, pool_recycle=300, echo=False, 
 在线上运行中，我们发现每隔一段时间会报数据库链接的错误，错误日志如下：
 ```
     Traceback (most recent call last):
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/pool.py", line 687, in _finalize_fairy
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/pool.py", line 687, in _finalize_fairy
         fairy._reset(pool)
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/pool.py", line 827, in _reset
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/pool.py", line 827, in _reset
         self._reset_agent.rollback()
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1612, in rollback
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1612, in rollback
         self._do_rollback()
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1650, in _do_rollback
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1650, in _do_rollback
         self.connection._rollback_impl()
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 703, in _rollback_impl
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 703, in _rollback_impl
         self._handle_dbapi_exception(e, None, None, None, None)
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
         exc_info
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
         reraise(type(exception), exception, tb=exc_tb, cause=cause)
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
         raise value.with_traceback(tb)
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 701, in _rollback_impl
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 701, in _rollback_impl
         self.engine.dialect.do_rollback(self.connection)
-      File "/usr/local/connector/env/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 1572, in do_rollback
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 1572, in do_rollback
         dbapi_connection.rollback()
-      File "/usr/local/connector/env/lib/python3.6/site-packages/pymysql/connections.py", line 788, in rollback
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/pymysql/connections.py", line 788, in rollback
         self._execute_command(COMMAND.COM_QUERY, "ROLLBACK")
-      File "/usr/local/connector/env/lib/python3.6/site-packages/pymysql/connections.py", line 1088, in _execute_command
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/pymysql/connections.py", line 1088, in _execute_command
         self._write_bytes(packet)
-      File "/usr/local/connector/env/lib/python3.6/site-packages/pymysql/connections.py", line 1040, in _write_bytes
+      File "/usr/local/myapi/env/lib/python3.6/site-packages/pymysql/connections.py", line 1040, in _write_bytes
         "MySQL server has gone away (%r)" % (e,))
     sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2006, "MySQL server has gone away (BrokenPipeError(32, 'Broken pipe'))")
 ```
