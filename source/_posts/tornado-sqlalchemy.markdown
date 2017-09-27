@@ -9,9 +9,9 @@ tags : [tornado, sqlalchemy]
 
 ## 环境
 
-web框架：tornado 
-ORM： SQLAlchemy 
-DB: MySQL
+web框架：tornado 4.4.2
+ORM： SQLAlchemy 1.2.0b1
+DB: MySQL 5.7
 
 ## 问题描述
 
@@ -58,7 +58,7 @@ engine = create_engine(connect_str, pool_size=10, pool_recycle=300, echo=False, 
 (pymysql.err.OperationalError) (2014, 'Command Out of Sync')
 ```
 
-## 初步分析
+## 分析过程
 
 1、根据错误，怀疑是SQLAlchemy 链接池回收的问题。通过阅读链接池的官方文档, 看到如下描述：
 >Above, any DBAPI connection that has been open for more than one hour will be invalidated and replaced, upon next checkout. Note that the invalidation only occurs during checkout - not on any connections that are held in a checked out state. pool_recycle is a function of the Pool itself, independent of whether or not an Engine is in use.
@@ -72,7 +72,7 @@ engine = create_engine(connect_str, pool_size=10, pool_recycle=300, echo=False, 
 
 2、根据错误信息查询，发现github社区有人遇到同样的报错，是因为mysql数据库的数据包太大导致，见[这里](https://github.com/PyMySQL/PyMySQL/issues/426)。后来`pymysql`的维护者，针对此问题做了修正。查看我们数据的参数 `max_allowed_packet`足够大，所以也不回一切上边的报错。pymysql 默认这个值为 16M([这里](http://pymysql.readthedocs.io/en/latest/modules/connections.html?highlight=max_allowed_packet)),也足够大。
 
-3、查询stackoverflow, 发下如下问题：[Python SQLAlchemy - “MySQL server has gone away”](https://stackoverflow.com/questions/18054224/python-sqlalchemy-mysql-server-has-gone-away)。按照此解决方法，增加链接池的监听函数，问题顺利解决。代码如下：
+3、查询stackoverflow, 发下如下问题：[Python SQLAlchemy - “MySQL server has gone away”](https://stackoverflow.com/questions/18054224/python-sqlalchemy-mysql-server-has-gone-away)。按照此解决方法，增加链接池的监听函数，代码如下：
 ```python
 def checkout_listener(dbapi_con, con_record, con_proxy):
     try:
@@ -94,14 +94,9 @@ event.listen(engine, 'checkout', checkout_listener)
 
 更多SQLAlchemy无效链接的描述，见[官方文档](http://docs.sqlalchemy.org/en/latest/core/pooling.html#dealing-with-disconnects)
 
-## 原理分析
+4、增加链接池监听函数后也是不见好转。便通过日志打印，跟踪了session 的分配和回收过程，`发现在tornado 的多进程异步模式下，多进程获取的session 并不是主进程的session,而是从连接池中获取的新的session，而这个session,并没有关闭操作，主进程中 `on_finish` 函数中的`remove`只能交还主进程中的session`。看到这里，恍然大悟，非阻塞进程获取的新的session,长期没有交还连接池，导致session超时，mysql 自动断开连接。在非阻塞进程中，增加交还session的代码后解决问题。
 
-在上边分析3中，我通读了[https://discorporate.us/jek/talks/SQLAlchemy-EuroPython2010.pdf](https://discorporate.us/jek/talks/SQLAlchemy-EuroPython2010.pdf)，文中有个案例提到了SQLAlchemy的链接池监听
->The connection pool should always dispense valid connections.
 
-就是说我们应该保证链接池分配出去的链接的有效性，查阅了SQLAchemy的官方文档链接池部分，并没有发现对分配链接有效性保证的措施。所以说，链接池并不能够保证分配出去的链接是可用的，以此导致文章开头的错误。
-
-到此，问题便清晰了，即：`错误的、无效的、没有到回收时间的数据库链接被链接池分配出去，导致访问数据库异常。`
 
 ## 参考
 
