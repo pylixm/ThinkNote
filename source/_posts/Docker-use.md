@@ -122,9 +122,9 @@ docker run -it --rm -p 80:80 -v /Users/pylixm/docker.dev/django-demo/mysite:/cod
 - 2、配置`Edite configrations`, 将host设置为`0.0.0.0`, 选择刚才添加的项目解释器，并配置容器运行参数`Docker container settings`，如图：
 ![](/images/docker-config-2.png)
 
-说明：
-- 容器端口：8000 映射到主机端口 80
-- 挂载项目目录的数据卷： ` /Users/pylixm/docker.dev/django-demo/mysite:/code/mysite`
+>说明：
+>    - 容器端口：8000 映射到主机端口 80
+>    - 挂载项目目录的数据卷： ` /Users/pylixm/docker.dev/django-demo/mysite:/code/mysite`
 
 - 3、正常启动项目，访问`http://0.0.0.0:80`,即可看到亲切的欢迎界面。
 
