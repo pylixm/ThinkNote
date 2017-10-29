@@ -37,27 +37,99 @@ docker 容器的运行是基于docker镜像的，所以我们需要先获取镜�
 
 我们这里通过编写Dockerfile来定制镜像。
 ```dockerfile
-FROM python:2.7  # 依据python:2.7 镜像构建
-ENV PYTHONUNBUFFERED 1  # 这是python环境变量
-RUN mkdir /code    # 在docker容器内创建代码目录
-RUN mkdir /code/db  # 在docker内创建db目录
-WORKDIR /code  # 设置工作目录为 code 
-ADD ./mysite/requirements.txt /code/  # 复制文件到code 目录下
-RUN pip install -r requirements.txt  # 运行命令
-ADD . /code/  # 复制当前目录下的所有文件到code目录下 
+FROM python:2.7  
+ENV PYTHONUNBUFFERED 1  
+RUN mkdir /code    
+WORKDIR /code  
+ADD ./mysite/requirements.txt /code/  
+RUN pip install -r requirements.txt  
 ```
+说明：
+1、依据python:2.7 镜像构建
+2、这是python环境变量
+3、在docker容器内创建代码目录
+4、设置工作目录为 code 
+5、复制文件到code 目录下
+6、执行命令安装python依赖包
 
 注：
 1、如何编写Dockerfile, [官方文档](https://docs.docker.com/engine/reference/builder/)
 2、copy vs add [官方文档](https://docs.docker.com/engine/reference/builder/#copy)，[网友解释](http://blog.csdn.net/liukuan73/article/details/52936045)
 
-### 第二部，启动容器
->TODO
+运行 `docker build -t docker-ssh:v1 -f mysite/Dockerfile .` 构建镜像。
+注意：`Forbidden path outside of the build context`错误，解决方案[参考](http://blog.csdn.net/zssureqh/article/details/52009043)
 
-### 第三部，配置pycharm使用
->TODO
+这样，基于python2.7的python开发镜像变做好了，自己需要什么python依赖直接写到requirements文件里即可。
 
 
+### 第二步，启动容器，开发项目：django 项目为例
+
+在目录`/Users/pylixm/docker.dev/django-demo/`下，运行`django-admin startproject mysite`在本地目录创建django项目, 目录如下：
+
+```bash
+$ tree
+.
+├── Dockerfile
+├── manage.py
+├── mysite
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── requirements.txt
+```
+
+运行一下命令以bash模式启动容器：
+```
+docker run -it --rm -p 80:80 -v /Users/pylixm/docker.dev/django-demo/mysite:/code/mysite docker-ssh:v1 bash
+```
+说明：
+* -it：这是两个参数，一个是 -i：交互式操作，一个是 -t 终端。我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终端。
+* --rm：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 docker rm。我们这里只是随便执行个命令，看看结果，不需要排障和保留结果，因此使用 --rm 可以避免浪费空间。
+* -p hostPort:containerPort : 映射容器端口到主机端口，前面是主机端口，后边是容器端口；
+* -t 主机目录:容器内目录 ：挂载主机目录作为容器的持久化数据卷。主机目录必须是`绝对路径`；
+* bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 bash。
+
+此处利用容器的数据卷，将我们的开发项目映射到容器中，当我们的项目文件发生电话时会立即体现在容器中。容器关闭后，项目的变动任然存在。这样便可以愉快的使用docker来封装我们的开发环境了。
+
+可进入容器，运行`python manage.py runserver 0.0.0.0:80`启动django项目。在我们主机的浏览器访问`0.0.0.0:80`, 便可看到项目页面了。
+
+我们也可改造Dockerfile，设置暴露端口，和执行的命令,重新编译镜像。设置好后，我们便不用再进入容器启动运行django项目启动命令。
+```
+## 暴露docker容器的端口
+EXPOSE 3306 80 22
+CMD ["python manage.py runserver 0.0.0.0:80", "-D"]
+```
+或者直接在`docker run ` 命令后加启动命令:
+```
+docker run -it --rm -p 80:80 -v /Users/pylixm/docker.dev/django-demo/mysite:/code/mysite docker-ssh:v1 python ./mysite/manage.py runserver 0.0.0.0:80
+```
+
+
+### 第三步，在pycharm中配置使用
+
+第二步的时候，我们构建了我们的python开发镜像。我们只需要在pycharm中配置`Project Interpreter `即可。
+
+**检查**
+在Mac上开发，需要保证`Docker for Mac`启动，并配置好`Docker API`(Preferences | Build, Execution, Deployment | Docker)，如下图：
+![](/images/docker-connect.png)
+
+**配置**
+
+- 1、到`Preferences -> Project Interpreter -> Add Romete `，选择本地的可用Docker 镜像,如图：
+![](/images/docker-config-1.png)
+
+- 2、配置`Edite configrations`, 将host设置为`0.0.0.0`, 选择刚才添加的项目解释器，并配置容器运行参数`Docker container settings`，如图：
+![](/images/docker-config-2.png)
+
+说明：
+- 容器端口：8000 映射到主机端口 80
+- 挂载项目目录的数据卷： ` /Users/pylixm/docker.dev/django-demo/mysite:/code/mysite`
+
+- 3、正常启动项目，访问`http://0.0.0.0:80`,即可看到亲切的欢迎界面。
+
+
+更加详细配置说明参见[译 - 在pycharm中使用docker](http://pylixm.cc/posts/2017-10-29-Docker-use_in_pycharm.html)。
 
 ## Docker 其他知识点
 
@@ -120,3 +192,4 @@ http://blog.csdn.net/wanglei_storage/article/details/50299491
 ## 参考
 
 - [http://blog.csdn.net/yhcvb/article/details/45696961](http://blog.csdn.net/yhcvb/article/details/45696961)
+- [http://blog.csdn.net/wind_602/article/details/77988395](http://blog.csdn.net/wind_602/article/details/77988395)
