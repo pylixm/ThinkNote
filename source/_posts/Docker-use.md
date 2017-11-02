@@ -177,6 +177,10 @@ service docker start
 
 11、删除容器
 docker rm $(docker ps -a -q)
+
+12、进入后台运行的docker容器
+docker attach 5ac094c371f5
+
 ```
 
 ## Docker 其他相关文档收集 
