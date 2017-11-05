@@ -50,7 +50,7 @@ systemctl start postgresql-10
 
 **说明：**
 - 1、数据库默认路径：`/var/lib/pgsql/10/data` ;
-- 2、修改默认初始化路径：
+- 2、修改默认初始化路径，使用`postgreSQL`自带的初始化命令`initdb`，如下操作：
 ```
 #mkdir /opt/PostgreSQL
 #mkdir /opt/PostgreSQL/data
