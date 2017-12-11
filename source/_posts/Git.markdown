@@ -197,7 +197,13 @@ pick:*******
 # 根据远端分支修建本地分支，将远端分支删除的分支在本地也删除
 > git fetch -p / git remote prune origin 
 
+# 撤销 reset 
+$ git reflog
+b7057a9 HEAD@{0}: reset: moving to b7057a9
+98abc5a HEAD@{1}: commit: more stuff added to foo
+b7057a9 HEAD@{2}: commit (initial): initial commit
 
+$ git reset --hard 98abc5a
 
 ```
 
