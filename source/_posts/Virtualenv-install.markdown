@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 使用 pyenv + virtualenv 打造多版本python开发环境
-category : vcs
+category : python
 tagline: ""
 date : 2016-06-19
 tags : [virtualenv, pyenv]
