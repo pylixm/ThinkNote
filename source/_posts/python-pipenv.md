@@ -53,10 +53,11 @@ The use of Python 3 is highly preferred over Python 2, when installing Pipenv. C
 ```
 #### 用户模式安装
 
+为防止和系统python库产生影响，可使用此种方案安装。
 ```
 pip install --user pipenv
 ```
-pip 默认安装包路径为`/usr/local/lib/python2.7/site-packages`pip安装包保存路径为用户库路径,一般为`/Users/pylixm/Library/Python/3.6/lib/python/site-packages`, 可使用命令`python3 -m site --user-site` 具体查看。如果在安装后你的shell中pipenv不可用，你需要把用户库的二进制目录`/Users/pylixm/Library/Python/3.6/bin`添加到你的PATH中。
+pip 默认安装包路径为`/usr/local/lib/python2.7/site-packages`。此模式下，pip安装包保存路径为用户库路径,一般为`/Users/pylixm/Library/Python/3.6/lib/python/site-packages`, 可使用命令`python3 -m site --user-site` 具体查看。如果在安装后你的shell中pipenv不可用，你需要把用户库的二进制目录`/Users/pylixm/Library/Python/3.6/bin`添加到你的PATH中。
 
 ### pipenv 使用
 
@@ -166,7 +167,7 @@ flask = "==0.10"
 python_version = "3.6"
 
 ```
-实在 `[dev-packages]` 部分，还是`[packages]` 部分。若安装时不定指定`--dev`参数，只会安装`[packages]` 包下面的模块。
+安装包记录是在`[dev-packages]` 部分，还是`[packages]` 部分。在安装时，指定`--dev`参数，则只安装`[dev-packages]`下的包,若安装时不定指定`--dev`参数，只会安装`[packages]` 包下面的模块。
 
 `[requires]` 下的python在构建新的虚拟环境时，若没有会自动下载安装。
 
