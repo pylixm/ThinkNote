@@ -1,6 +1,6 @@
 ---
 layout : post
-title : pipenv 更优雅的管理你的python环境
+title : pipenv 试用过程分享
 category : python
 date : 2018-01-13
 tags : [python ]
@@ -10,17 +10,20 @@ tags : [python ]
 
 >Pipenv — the officially recommended Python packaging tool from Python.org, free (as in freedom).
 
-那么接下来说下，分享下我的试用过程给大家参考：
+那么接下来，分享下我的试用过程，供大家参考：
 
 ## 准备工作
 
 ### 试用环境及相关文档
 
+**环境**
+- pipenv 9.0.1 
+- python3.6
+- python2.7
+
+**文档**
 - github仓库地址：[pipenv](https://github.com/pypa/pipenv)  
 - [pipenv 官方文档](https://docs.pipenv.org/)
-
-- pipenv 9.0.1 
-- python2.7 
 
 ### pipenv 基本概念理解
 
@@ -34,6 +37,7 @@ tags : [python ]
 
 ### pipenv 安装
 
+#### 普通安装
 `pipenv` 可使用 pip 直接安装。
 
 ```
@@ -47,16 +51,16 @@ The use of Python 3 is highly preferred over Python 2, when installing Pipenv. C
 
 —Kenneth Reitz
 ```
-### 用户模式安装
+#### 用户模式安装
 
 ```
 pip install --user pipenv
 ```
 pip 默认安装包路径为`/usr/local/lib/python2.7/site-packages`pip安装包保存路径为用户库路径,一般为`/Users/pylixm/Library/Python/3.6/lib/python/site-packages`, 可使用命令`python3 -m site --user-site` 具体查看。如果在安装后你的shell中pipenv不可用，你需要把用户库的二进制目录`/Users/pylixm/Library/Python/3.6/bin`添加到你的PATH中。
 
-## pipenv 使用
+### pipenv 使用
 
-### 初始化虚拟环境
+#### 初始化虚拟环境
 
 执行`pipenv install`，创建虚拟环境，如下：
 
@@ -80,7 +84,7 @@ To activate this project's virtualenv, run the following:
  $ pipenv shell
 ```
 
-从打印信息可见，它在目录用户目录`.local`下创建了个和项目同名的虚拟环境(可通过配置环境变量来自定义`export WORKON_HOME=~/.venvs`)，python使用的是默认的python2.7 。
+从打印信息可见，它在目录用户目录`.local`下创建了个和项目同名的虚拟环境(可通过配置环境变量来自定义虚拟环境目录，`export WORKON_HOME=~/.venvs`)，python使用的是默认的python2.7 。
 可通过参数`--two` 和`--three` 来泛指python版本，也可通过`--python 3.5` 来明确知道python版本，但是这些参数的前提是你系统上有此python版本，否则会报如下错误：
 ```
 $ pipenv --python 3.5
@@ -89,16 +93,16 @@ You can specify specific versions of Python with:
   $ pipenv --python path/to/python
 
 ```
-个人理解，有点像 virtualenv 的 `--python`参数。
+有点像 virtualenv 的 `--python`参数。
 
 初始化好虚拟环境后，会在项目目录下生成2个文件`Pipfile`和`Pipfile.lock`。为pipenv包的配置文件，代替原来的 requirement.txt。项目提交时，可将`Pipfile` 文件和`Pipfile.lock`文件受控提交,待其他开发克隆下载，根据此Pipfile 运行命令`pipenv install [--dev]`生成自己的虚拟环境。
 
 `Pipfile.lock` 文件是通过hash算法将包的名称和版本，及依赖关系生成哈希值，可以保证包的完整性。
 
 
-### 安装python模块
+#### 安装python模块
 
-#### 正常安装 
+##### 正常安装 
 
 安装 `requests` 模块：
 ```
@@ -135,7 +139,7 @@ requests==2.18.4
   - urllib3 [required: >=1.21.1,<1.23, installed: 1.22]
 ```
 
-#### 只安装开发环境
+##### 只安装开发环境
 
 可通过以下命令，仅安装在开发环境,
 ```
@@ -166,7 +170,7 @@ python_version = "3.6"
 
 `[requires]` 下的python在构建新的虚拟环境时，若没有会自动下载安装。
 
-#### 通过 requirements.txt 安装
+##### 通过 requirements.txt 安装
 
 ```
 pipenv install -r requirements.txt
@@ -179,7 +183,7 @@ pipenv install -r requirements.txt
 pipenv lock -r [--dev] > requirements.txt
 ```
 
-### 运行虚拟环境
+#### 运行虚拟环境
 
 可使用以下命令来运行项目：
 ```
@@ -209,7 +213,7 @@ No action taken to avoid nested environments.
 
 `pipenv` 提供了`.env` 文件，放在项目目录下，提供项目所需的环境变量，运行`pipenv shell` 时，会自动加载。
 
-### 删除虚拟环境及包
+#### 删除虚拟环境及包
 
 删除包:
 ```
@@ -223,6 +227,11 @@ pipenv --rm
 
 ## 总结
 
-`pipenv` 完美的解决了python的包和版本的管理。并对包之间的依赖关系也管理起来，方便了开发者构建自己的开发运行环境。
+- `pipenv` 完美的解决了python的包和版本的管理。
+- 并对包之间的依赖关系也管理起来，方便了开发者构建自己的开发运行环境。
 
-以上列举的仅为部分功能，更多的功能详见[官方文档](https://docs.pipenv.org/)。
+时间有限，以上列举的仅为部分功能，更多的强大功能详见[官方文档](https://docs.pipenv.org/)。
+
+
+## 参考
+- [https://docs.pipenv.org/](https://docs.pipenv.org/)
