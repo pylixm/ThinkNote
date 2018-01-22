@@ -1,6 +1,6 @@
 ---
 title: 2018年计划
-type: page
+layout: page
 comments: false
 ---
 
@@ -21,6 +21,7 @@ comments: false
 - 《尽管去做》-- 产出笔记；
 - 《时间管理》-- 产出笔记；
 - 《SRE Google》 -- 产出笔记；
+- 《流畅的python》 -- 产出笔记；
 - 《Python CookBook》 -- 产出笔记；
 
 ## 学习计划
