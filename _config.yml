@@ -71,7 +71,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-indigo-ext
+# theme: hexo-theme-indigo-ext
+theme: hexo-theme-indigo
 #theme: hexo-theme-next
 #theme: landscape
 #theme: hexo-theme-simpleblock

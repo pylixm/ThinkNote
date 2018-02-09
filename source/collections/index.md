@@ -41,6 +41,14 @@ comments: true
 ## 其他
 
 - [python 分布式异步任务框架：celery](http://docs.celeryproject.org/en/latest/)
+- [python 代码加密混淆方案](http://blog.csdn.net/ir0nf1st/article/details/61650984)
+
+## Python 新闻&&社区
+
+- [Pycoder's Weekly](http://pycoders.com/)
+- [Pythonweekly](https://www.pythonweekly.com/)
+- [Reddit python](https://www.reddit.com/r/Python/)
+
 
 # Go 
 
@@ -54,8 +62,20 @@ comments: true
 
 - [Go语言高级编程](https://github.com/chai2010/advanced-go-programming-book)
 - [Go语言圣经](https://www.gitbook.com/book/yar999/gopl-zh/details)
+- [Go web 编程](https://github.com/astaxie/build-web-application-with-golang)
+- [Go 开发实战](https://github.com/astaxie/go-best-practice)
+- [Go 实例](https://gobyexample.com/)
 
 ## 社区
 
 - [GoCN](https://gocn.io/)
 - [知乎问题：怎么学习golang？](https://www.zhihu.com/question/23486344)
+
+# 工具篇 
+
+- [VS Code官方文档](https://code.visualstudio.com/docs)
+
+
+# 其他
+
+- [LeetCode 题库](https://leetcode.com/problemset/all/)
