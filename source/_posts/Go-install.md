@@ -112,11 +112,11 @@ hello ,world
 
 Linux 和 Mac 可在解压 Golang 时，将位置变换即可。golang 的安装包为开箱即用的。windows 也可在安装时修改。官方文档说，自定义了安装位置，必须配置 `GOROOT`。 
 
-在Linux 测试，更换了安装位置，修改对应 go bin 的系统环境PATH 目录，执行go命令正常执行。通过`go env` 查看 GOROOT 自动修改为新的位置。此处`GOROOT`的配置的作用，类似`JAVA_HOME`在其他应用调用时使用，自己执行 go 命令不受影响。
+在Linux 测试，更换了安装位置，修改对应 go bin 的系统环境PATH 目录，执行go命令正常执行。通过`go env` 查看 GOROOT 自动修改为新的位置。
 
 ### 卸载 
 
-直接删除 golang 目录（Linux/Mac OS: /usr/local/go; Windows: C:Go ）和环境变量即可。
+直接删除 golang 目录（Linux/Mac OS: /usr/local/go; Windows: C:\Go ）和环境变量即可。
 
 ## 相关概念 
 
