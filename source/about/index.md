@@ -9,11 +9,15 @@ comments: true
 
 >Life is short, i use Python！
 
-Name: pylixm
+Name: P歪理(pylixm)
 
 Email： pyli.xm@gmail.com 
 
 Job: Pythonista, Operation and development developer
+
+Follow me: <img style='min-height:20px;width:150px;cursor: pointer;' src="https://img.shields.io/github/followers/pylixm.svg?style=social&amp;logo=github&amp;label=Follow@pylixm" alt="GitHub followers" title="">
+
+><script src='//w.segmentfault.com/card/1030000004045770.js?w=0&3rd=1&bg=0&bd=DDDDDD&cl=333333&btn=009a61&noBtn=0'></script>
 
 ## 关于博客
 ---
