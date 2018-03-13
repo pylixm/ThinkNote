@@ -54,7 +54,7 @@ search:
   path: search.xml
   field: post
   format: html
-  limit: 10000
+  limit: 100
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -74,7 +74,7 @@ pagination_dir: page
 # theme: hexo-theme-indigo-ext
 theme: hexo-theme-indigo-ext2
 #theme: hexo-theme-next
-#theme: landscape
+# theme: landscape
 #theme: hexo-theme-simpleblock
 #theme: fexo
 #theme: hexo-theme-artist
