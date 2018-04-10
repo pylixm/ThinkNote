@@ -106,6 +106,8 @@ $ git push origin :refs/tags/tagname
 git branch -l/-all
 #创建：
 git branch 分支名
+#分支提交
+git push origin 分支名
 #分支切换 
 git checkout  分支名
 # 创建分之并切换分之
