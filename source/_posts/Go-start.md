@@ -1225,9 +1225,11 @@ func main() {
 2**7 = 128
 ```
 
-14.range（续）
+#### 14.range（续）
+
 可以通过赋值给 _来忽略序号和值。
 如果只需要索引值，去掉 “ , value ” 的部分即可。
+```go
 package main
 
 import "fmt"
@@ -1241,7 +1243,9 @@ func main() {
         fmt.Printf("%d\n", value)
     }
 }
+```
 结果
+```
 1
 2
 4
@@ -1252,9 +1256,13 @@ func main() {
 128
 256
 512
-15.map
+```
+
+#### 15.map
+
 map 映射键到值。
 map 在使用之前必须用 make来创建；值为 nil的 map 是空的，并且不能对其赋值。
+```go
 package main
 
 import "fmt"
@@ -1272,10 +1280,15 @@ func main() {
     }
     fmt.Println(m["Bell Labs"])
 }
+```
 结果
+```
 {40.68433 -74.39967}
-16.map 的文法
+```
+
+#### 16.map 的文法
 map 的文法跟结构体文法相似，不过必须有键名
+```go
 package main
 
 import "fmt"
@@ -1296,10 +1309,15 @@ var m = map[string]Vertex{
 func main() {
     fmt.Println(m)
 }
+```
 结果
+```
 map[Bell Labs:{40.68433 -74.39967} Google:{37.42202 -122.08408}]
-17.map 的文法（续）
+```
+
+#### 17.map 的文法（续）
 若顶级类型只是一个类型名，你可以在文法的元素中省略它。
+```go
 package main
 
 import "fmt"
@@ -1316,19 +1334,24 @@ var m = map[string]Vertex{
 func main() {
     fmt.Println(m)
 }
+```
 结果
+```
 map[Bell Labs:{40.68433 -74.39967} Google:{37.42202 -122.08408}]
-18.修改 map
+```
+
+#### 18.修改 map
 在 map m中插入或修改一个元素：
-m[key] = elem
+`m[key] = elem`
 获得元素：
-elem = m[key]
+`elem = m[key]`
 删除元素：
-delete(m, key)
+`delete(m, key)`
 通过双赋值检测某个键存在：
-elem, ok = m[key]
+`elem, ok = m[key]`
 如果 key在 m中， ok为 true。否则， ok为 false，并且 elem是 map 的元素类型的零值。
 同样的，当从 map 中读取某个不存在的键时，结果是 map 的元素类型的零值。
+```go
 package main
 
 import "fmt"
@@ -1348,13 +1371,17 @@ func main() {
     v, ok := m["Answer"]
     fmt.Println("The value:", v, "Present?", ok)
 }
+```
 结果
+```
 The value: 42
 The value: 48
 The value: 0
 The value: 0 Present? false
+```
 19.函数值
 函数也是值。他们可以像其他值一样传递，比如，函数值可以作为函数的参数或者返回值。
+```go
 package main
 
 import (
@@ -1375,13 +1402,18 @@ func main() {
     fmt.Println(compute(hypot))
     fmt.Println(compute(math.Pow))
 }
+```
 结果
+```
 13
 5
 81
-20.函数的闭包
+```
+
+#### 20.函数的闭包
 Go 函数可以是一个闭包。闭包是一个函数值，它引用了函数体之外的变量。 这个函数可以对这个引用的变量进行访问和赋值；换句话说这个函数被“绑定”在这个变量上。
 例如，函数 adder返回一个闭包。每个返回的闭包都被绑定到其各自的sum变量上。
+```go
 package main
 
 import "fmt"
@@ -1403,7 +1435,9 @@ func main() {
         )
     }
 }
+```
 结果
+```
 1 -2
 3 -6
 6 -12
@@ -1413,7 +1447,8 @@ func main() {
 28 -56
 36 -72
 45 -90
-方法和接口
+```
+### 方法和接口
 学习如何为类型定义方法；如何定义接口；可以用它们来定义对象和其行为。
 1.方法
 Go 没有类。然而，仍然可以在结构体类型上定义方法。
