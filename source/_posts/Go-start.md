@@ -1450,9 +1450,11 @@ func main() {
 ```
 ### 方法和接口
 学习如何为类型定义方法；如何定义接口；可以用它们来定义对象和其行为。
-1.方法
+
+#### 1.方法
 Go 没有类。然而，仍然可以在结构体类型上定义方法。
 方法接收者 出现在 func关键字和方法名之间的参数中。
+```go
 package main
 
 import (
@@ -1472,11 +1474,15 @@ func main() {
     v := &Vertex{3, 4}
     fmt.Println(v.Abs())
 }
+```
 结果：
+```
 5
-2.方法（续）
+```
+#### 2.方法（续）
 你可以对包中的 任意 类型定义任意方法，而不仅仅是针对结构体。
 但是，不能对来自其他包的类型或基础类型定义方法。
+```go
 package main
 
 import (
@@ -1497,14 +1503,19 @@ func main() {
     f := MyFloat(-math.Sqrt2)
     fmt.Println(f.Abs())
 }
+```
 结果：
+```
 1.4142135623730951
-3.接收者为指针的方法
+```
+
+#### 3.接收者为指针的方法
 方法可以与命名类型或命名类型的指针关联。
 刚刚看到的两个 Abs方法。一个是在*Vertex指针类型上，而另一个在 MyFloat值类型上。 有两个原因需要使用指针接收者。首先避免在每个方法调用中拷贝值（如果值类型是大的结构体的话会更有效率）。其次，方法可以修改接收者指向的值。
 尝试修改 Abs的定义，同时 Scale方法使用 Vertex 代替*Vertex作为接收者。
 当 v是Vertex的时候Scale方法没有任何作用。Scale修改 v。当 v是一个值（非指针），方法看到的是 Vertex的副本，并且无法修改原始值。
 Abs的工作方式是一样的。只不过，仅仅读取 v。所以读取的是原始值（通过指针）还是那个值的副本并没有关系。
+```go
 package main
 
 import (
@@ -1531,13 +1542,18 @@ func main() {
     v.Scale(5)
     fmt.Printf("After scaling: %+v, Abs: %v\n", v, v.Abs())
 }
+```
 结果：
+```
 Before scaling: &{X:3 Y:4}, Abs: 5
 After scaling: &{X:15 Y:20}, Abs: 25
-4.接口
+```
+
+#### 4.接口
 接口类型是由一组方法定义的集合。
 接口类型的值可以存放实现这些方法的任何值。
 注意： 示例代码的 22 行存在一个错误。 由于 Abs只定义在 *Vertex（指针类型）上， 所以 Vertex（值类型）不满足 Abser。
+```go
 package main
 
 import (
@@ -1580,14 +1596,19 @@ type Vertex struct {
 func (v *Vertex) Abs() float64 {
     return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
+```
 结果：
+```
 5
-5.隐式接口
+```
+
+#### 5.隐式接口
 类型通过实现那些方法来实现接口。 没有显式声明的必要；所以也就没有关键字“implements“。
 隐式接口解藕了实现接口的包和定义接口的包：互不依赖。
 因此，也就无需在每一个实现上增加新的接口名称，这样同时也鼓励了明确的接口定义。
 包 io 定义了 Reader
 和 Writer；其实不一定要这么做。
+```go
 package main
 
 import (
@@ -1616,16 +1637,23 @@ func main() {
 
     fmt.Fprintf(w, "hello, writer\n")
 }
+```
 结果：
+```
 hello, writer
-6.Stringers
+```
+
+#### 6.Stringers
 一个普遍存在的接口是 fmt
 包中定义的 Stringer
 。
+```go
 type Stringer interface { 
     String() string
 }
+```
 Stringer是一个可以用字符串描述自己的类型。fmt包 （还有许多其他包）使用这个来进行输出。
+```go
 package main
 
 import "fmt"
@@ -1644,22 +1672,32 @@ func main() {
     z := Person{"Zaphod Beeblebrox", 9001}
     fmt.Println(a, z)
 }
+```
 结果：
+```
 Arthur Dent (42 years) Zaphod Beeblebrox (9001 years)
-7.错误
+```
+
+#### 7.错误
 Go 程序使用 error值来表示错误状态。
 与 fmt.Stringer类似， error类型是一个内建接口：
+```go
 type error interface { 
     Error() string
 }
+```
 （与 fmt.Stringer类似，fmt包在输出时也会试图匹配 error。）
 通常函数会返回一个 error值，调用的它的代码应当判断这个错误是否等于 nil， 来进行错误处理。
+```go
 i, err := strconv.Atoi("42")
 if err != nil { 
     fmt.Printf("couldn't convert number: %v\n", err)
     return}
 fmt.Println("Converted integer:", i)
+``` 
+
 error 为 nil 时表示成功；非 nil 的 error表示错误。
+```go
 package main
 
 import (
@@ -1689,15 +1727,22 @@ func main() {
         fmt.Println(err)
     }
 }
+```
 结果：
+```
 at 2009-11-10 23:00:00 +0000 UTC, it didn't work
-8.Readers
+```
+
+#### 8.Readers
 io包指定了 io.Reader接口， 它表示从数据流结尾读取。
 Go 标准库包含了这个接口的许多实现， 包括文件、网络连接、压缩、加密等等。
 io.Reader接口有一个 Read方法：
+```go
 func (T) Read(b []byte) (n int, err error)
+```
 Read用数据填充指定的字节 slice，并且返回填充的字节数和错误信息。 在遇到数据流结尾时，返回 io.EOF错误。
 例子代码创建了一个 strings.Reader。 并且以每次 8 字节的速度读取它的输出。
+```go
 package main
 
 import (
@@ -1719,24 +1764,32 @@ func main() {
         }
     }
 }
+```
 结果：
+```
 n = 8 err = <nil> b = [72 101 108 108 111 44 32 82]
 b[:n] = "Hello, R"
 n = 6 err = <nil> b = [101 97 100 101 114 33 32 82]
 b[:n] = "eader!"
 n = 0 err = EOF b = [101 97 100 101 114 33 32 82]
 b[:n] = ""
-9.Web 服务器
+```
+
+#### 9.Web 服务器
+
 包 http 通过任何实现了 http.Handler
 的值来响应 HTTP 请求：
+```go
 package http
 
 type Handler interface { 
     ServeHTTP(w ResponseWriter, r *Request)
 }
+```
 在这个例子中，类型 Hello实现了 http.Handler。
 访问 http://localhost:4000/ 会看到来自程序的问候。
 注意： 这个例子无法在基于 web 的指南用户界面运行。为了尝试编写 web 服务器，可能需要安装 Go。
+```go
 package main
 
 import (
@@ -1760,11 +1813,16 @@ func main() {
         log.Fatal(err)
     }
 }
+```
 结果：
+```
 2009/11/10 23:00:00 listen tcp: Protocol not available
-10.图片
+```
+
+#### 10.图片
 Package image 定义了 Image
 接口：
+```go
 package image
 
 type Image interface { 
@@ -1772,9 +1830,12 @@ type Image interface {
     Bounds() Rectangle 
     At(x, y int) color.Color
 }
+```
+
 注意：Bounds方法的 Rectangle返回值实际上是一个 image.Rectangle， 其定义在 image包中。
 （参阅文档了解全部信息。）
 color.Color和 color.Model也是接口，但是通常因为直接使用预定义的实现 image.RGBA和 image.RGBAModel而被忽视了。这些接口和类型由image/color包定义。
+```go
 package main
 
 import (
@@ -1787,20 +1848,25 @@ func main() {
     fmt.Println(m.Bounds())
     fmt.Println(m.At(0, 0).RGBA())
 }
+```
 结果：
+```
 (0,0)-(100,100)
 0 0 0 0
-并发
+```
+### 并发
 作为语言的核心部分，Go 提供了并发的特性。
 这一部分概览了 goroutine 和 channel，以及如何使用它们来实现不同的并发模式。
 Go 将并发作为语言的核心构成。
-1.goroutine
+
+#### 1.goroutine
 goroutine 是由 Go 运行时环境管理的轻量级线程。
 go f(x, y, z)
 开启一个新的 goroutine 执行
 f(x, y, z)
 f，x，y和 z是当前 goroutine 中定义的，但是在新的 goroutine 中运行 f。
 goroutine 在相同的地址空间中运行，因此访问共享内存必须进行同步。sync 提供了这种可能，不过在 Go 中并不经常用到，因为有其他的办法。（在接下来的内容中会涉及到。）
+```go
 package main
 
 import (
@@ -1819,7 +1885,9 @@ func main() {
     go say("world")
     say("hello")
 }
+```
 结果：
+```
 hello
 hello
 world
@@ -1829,14 +1897,19 @@ hello
 world
 world
 hello
-2.channel
+``` 
+
+#### 2.channel
 channel 是有类型的管道，可以用 channel 操作符 <-对其发送或者接收值。
+```
 ch <- v // 将 v 送入 channel ch。
 v := <-ch // 从 ch 接收，并且赋值给 v。
+```
 （“箭头”就是数据流的方向。）
 和 map 与 slice 一样，channel 使用前必须创建：
-ch := make(chan int)
+`ch := make(chan int)`
 默认情况下，在另一端准备好之前，发送和接收都会阻塞。这使得 goroutine 可以在没有明确的锁或竞态变量的情况下进行同步
+```go
 package main
 
 import "fmt"
@@ -1859,13 +1932,18 @@ func main() {
 
     fmt.Println(x, y, x+y)
 }
+```
 结果：
+```
 -5 17 12
-3.缓冲 channel
+```
+
+#### 3.缓冲 channel
 channel 可以是 带缓冲的。为 make提供第二个参数作为缓冲长度来初始化一个缓冲 channel：
 ch := make(chan int, 100)
 向带缓冲的 channel 发送数据的时候，只有在缓冲区满的时候才会阻塞。 而当缓冲区为空的时候接收操作会阻塞。
 修改例子使得缓冲区被填满，然后看看会发生什么
+```go
 package main
 
 import "fmt"
@@ -1877,7 +1955,9 @@ func main() {
     fmt.Println(<-ch)
     fmt.Println(<-ch)
 }
+```
 结果：
+```
 1
 2
 -----------------
@@ -1887,12 +1967,15 @@ fatal error: all goroutines are asleep - deadlock!
 goroutine 1 [chan send]:
 main.main() 
         /tmp/sandbox156608315/main.go:9 +0x100
-4.range 和 close
+```
+
+#### 4.range 和 close
 发送者可以 close一个 channel 来表示再没有值会被发送了。接收者可以通过赋值语句的第二参数来测试 channel 是否被关闭：当没有值可以接收并且 channel 已经被关闭，那么经过
 v, ok := <-ch
 之后 ok会被设置为 false。
 循环 for i := range c 会不断从 channel 接收值，直到它被关闭。
 注意： 只有发送者才能关闭 channel，而不是接收者。向一个已经关闭的 channel 发送数据会引起 panic。 还要注意： channel 与文件不同；通常情况下无需关闭它们。只有在需要告诉接收者没有更多的数据的时候才有必要进行关闭，例如中断一个 range。
+```go
 package main
 
 import (
@@ -1915,7 +1998,9 @@ func main() {
         fmt.Println(i)
     }
 }
+```
 结果：
+```
 0
 1
 1
@@ -1926,9 +2011,12 @@ func main() {
 13
 21
 34
-5.select
+```
+
+#### 5.select
 select语句使得一个 goroutine 在多个通讯操作上等待。
 select会阻塞，直到条件分支中的某个可以继续执行，这时就会执行那个条件分支。当多个都准备好的时候，会随机选择一个
+```go
 package main
 
 import "fmt"
@@ -1957,7 +2045,10 @@ func main() {
     }()
     fibonacci(c, quit)
 }
+```
+
 结果：
+```
 0
 1
 1
@@ -1969,9 +2060,12 @@ func main() {
 21
 34
 quit
-6.默认选择
+```
+
+#### 6.默认选择
 当 select中的其他条件分支都没有准备好的时候，default分支会被执行。
 为了非阻塞的发送或者接收，可使用 default分支：
+```go
 select {
 case i := <-c: 
     // 使用 idefault: 
@@ -2000,7 +2094,9 @@ func main() {
         }
     }
 }
+```
 结果：
+```
     .
     .
 tick.
@@ -2017,21 +2113,24 @@ tick.
     .
 tick.
 BOOM!
-7.sync.Mutex
+```
+
+#### 7.sync.Mutex
 我们已经看到 channel用来在各个 goroutine 间进行通信是非常合适的了。
 
 但是如果我们并不需要通信呢？比如说，如果我们只是想保证在每个时刻，只有一个 goroutine 能访问一个共享的变量从而避免冲突？
 
-这里涉及的概念叫做 互斥，通常使用 互斥锁(mutex)_来提供这个限制。
+这里涉及的概念叫做 `互斥`，通常使用 `互斥锁(mutex)_` 来提供这个限制。
 
 Go 标准库中提供了 sync.Mutex 类型及其两个方法：
-
+```
 Lock
 Unlock
+```
 我们可以通过在代码前调用 Lock方法，在代码后调用 Unlock方法来保证一段代码的互斥执行。 参见 Inc方法。
 
 我们也可以用 defer语句来保证互斥锁一定会被解锁。参见 Value方法。
-
+```go
 package main
 
 import (
@@ -2071,10 +2170,13 @@ func main() {
     time.Sleep(time.Second)
     fmt.Println(c.Value("somekey"))
 }
+```
 结果：
+```
 1000
+```
 
-### 8.练习：Web 爬虫
+#### 8.练习：Web 爬虫
 在这个练习中，将会使用 Go 的并发特性来并行执行 web 爬虫。
 修改 Crawl函数来并行的抓取 URLs，并且保证不重复。
 提示：你可以用一个 map 来缓存已经获取的 URL，但是需要注意 map 本身并不是并发安全的！
