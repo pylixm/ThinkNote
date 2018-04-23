@@ -55,6 +55,13 @@ RUN pip install -r requirements.txt
 注：
 1、如何编写Dockerfile, [官方文档](https://docs.docker.com/engine/reference/builder/)
 2、copy vs add [官方文档](https://docs.docker.com/engine/reference/builder/#copy)，[网友解释](http://blog.csdn.net/liukuan73/article/details/52936045)
+>ADD 功能更多：
+>- ADD指令可以让你使用URL作为<src>参数。当遇到URL时候，可以通过URL下载文件并且复制到<dest>。
+>- ADD的另外一个特性是有能力自动解压文件。如果<src>参数是一个可识别的压缩格式（tar, gzip, bzip2, etc）的本地文件（所以实现不了同时下载并解压），就会被解压到指定容器文件系统的路径<dest>。
+>- URL下载和解压特性不能一起使用。任何压缩文件通过URL拷贝，都不会自动解压。
+>Copy :
+>- 只复制文件 
+> Dockerfile 里添加文件建议使用 Copy, 除非明确需要使用ADD.
 
 运行 `docker build -t docker-ssh:v1 -f mysite/Dockerfile .` 构建镜像。
 注意：`Forbidden path outside of the build context`错误，解决方案[参考](http://blog.csdn.net/zssureqh/article/details/52009043)
