@@ -298,6 +298,9 @@ Vagrant对于虚拟机的管理分成两个部分：Box和Machine。Box是指初
     ==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
     ==> default: flag to force provisioning. Provisioners marked to run always will still run.
 
+-- 2018-04-24 update 
+注：此处注意错误`default: Warning: Authentication failure. Retrying...`
+有些box镜像关闭了密码登录，可先不配置用户名密码使用`vagrant ssh`登录，修改`/etc/ssh/sshd_config`中的`PasswordAuthentication` 设置为 `yes`即可
 
 #### 3.4 一个vagrantfile 文件管理多台虚机
 

@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 转- SSH 原理与运用
+title : Linux基础系列 - SSH 原理与运用
 category : Linux
 tagline: ""
 date : 2016-11-16 
