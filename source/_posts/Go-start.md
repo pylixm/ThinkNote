@@ -942,6 +942,8 @@ func main() {
 {1 2} &{1 2} {1 0} {0 0}
 ```
 
+结构体扩展阅读:[Go web编程：struct](https://www.kancloud.cn/kancloud/web-application-with-golang/44153)
+
 #### 6.数组
 
 - 类型 [n]T是一个有 n个类型为 T的值的数组。
@@ -1549,6 +1551,8 @@ Before scaling: &{X:3 Y:4}, Abs: 5
 After scaling: &{X:15 Y:20}, Abs: 25
 ```
 
+方法扩展阅读：[Go web编程:method](https://github.com/pylixm/build-web-application-with-golang/blob/master/zh/02.5.md)
+
 #### 4.接口
 接口类型是由一组方法定义的集合。
 接口类型的值可以存放实现这些方法的任何值。
@@ -1866,6 +1870,7 @@ go f(x, y, z)
 f(x, y, z)
 f，x，y和 z是当前 goroutine 中定义的，但是在新的 goroutine 中运行 f。
 goroutine 在相同的地址空间中运行，因此访问共享内存必须进行同步。sync 提供了这种可能，不过在 Go 中并不经常用到，因为有其他的办法。（在接下来的内容中会涉及到。）
+
 ```go
 package main
 
@@ -1901,7 +1906,8 @@ hello
 
 #### 2.channel
 channel 是有类型的管道，可以用 channel 操作符 <-对其发送或者接收值。
-```
+
+```go
 ch <- v // 将 v 送入 channel ch。
 v := <-ch // 从 ch 接收，并且赋值给 v。
 ```
