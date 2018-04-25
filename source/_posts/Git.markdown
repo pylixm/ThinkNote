@@ -199,6 +199,14 @@ pick:*******
 # 根据远端分支修建本地分支，将远端分支删除的分支在本地也删除
 > git fetch -p / git remote prune origin 
 
+# 查看文件提交情况
+> git blame 文件名
+显示格式：
+commit ID | 代码提交作者 | 提交时间 | 代码位于文件中的行数 | 实际代码
+
+# 查看每次提交的信息
+> git show commitID
+
 # 撤销 reset 
 $ git reflog
 b7057a9 HEAD@{0}: reset: moving to b7057a9
