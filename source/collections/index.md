@@ -65,6 +65,7 @@ comments: true
 - [Go web 编程](https://github.com/astaxie/build-web-application-with-golang)
 - [Go 开发实战](https://github.com/astaxie/go-best-practice)
 - [Go 实例](https://gobyexample.com/)
+- [Go 生产最佳实践](http://peter.bourgon.org/go-in-production/)
 
 ## 社区
 
