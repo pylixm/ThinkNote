@@ -333,7 +333,7 @@ serverurl=unix:///tmp/supervisor.sock ; 这个是supervisorctl本地连接superv
 
 
 
-### Q&A 
+### QA
 
 1、FATAL Exited too quickly (process log may have details
     

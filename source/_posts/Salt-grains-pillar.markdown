@@ -2,9 +2,8 @@
 layout : post
 title : 转-saltstack 中Grains 与pillar的区别
 category : salt
-tagline: ""
 date : 2016-09-04
-tags : [salt,]
+tags : [salt]
 ---
 
 原文地址：http://www.aikaiyuan.com/9728.html

@@ -2,7 +2,7 @@
 layout : post
 title : 《尽管去做》读书笔记
 category : 时间管理
-date : 2017-03-07 21:00
+date : 2017-03-07 21:00:00
 tags : [时间管理]
 ---
 

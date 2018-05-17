@@ -2,7 +2,6 @@
 layout : post
 title : Linux基础系列 - SSH 原理与运用
 category : Linux
-tagline: ""
 date : 2016-11-16 
 tags : [Linux, 运维]
 ---

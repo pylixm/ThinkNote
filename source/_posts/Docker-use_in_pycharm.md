@@ -57,10 +57,10 @@ $ docker pull minimum/docker-django-mysite
 ### 配置一个docker interpreter，运行项目
 
 - 1、到`Preferences -> Project Interpreter -> Add Romete `，选择本地的可用Docker 镜像,如图：
-![](/images/docker-config-1.png)
+![](/static/imgs/docker-config-1.png)
 
 - 2、配置`Edite configrations`, 将host设置为`0.0.0.0`, 选择刚才添加的项目解释器，并配置容器运行参数`Docker container settings`，如图：
-![](/images/docker-config-2.png)
+![](/static/imgs/docker-config-2.png)
 
 说明：
 - 容器端口：8000 映射到主机端口 80
@@ -81,7 +81,7 @@ $ docker pull minimum/docker-django-mysite
 
 编写好 compose 配置文件，可参考 [https://github.com/pydanny/cookiecutter-django/](https://github.com/pydanny/cookiecutter-django/)。
 pycharm 项目解释器选择如下：
-![](/images/docker-compose-pycharm.png)
+![](/static/imgs/docker-compose-pycharm.png)
 
 当 compose 配置服务太多时，构建可能比较慢。可参考官博上的[flask实例](https://github.com/ErnstHaagsman/flask-compose/blob/master/docker-compose.dev.yml)，查看运行情况。
 

@@ -2,9 +2,8 @@
 layout : post
 title : Saltstack学习笔记-组件篇
 category : salt
-tagline: ""
 date : 2016-08-21
-tags : [salt,]
+tags : [salt]
 ---
 
 

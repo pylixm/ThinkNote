@@ -3,9 +3,7 @@ layout : post
 title : 【 Go语言学习笔记 】 - Golang 初步了解
 category : golang
 date : 2018-01-24
-tags : 
-  - golang
-  - 语言学习
+tags : [golang, 语言学习]
 ---
 
 ## 前言
@@ -26,7 +24,7 @@ Go，又称 golang，是 Google 开发的一种静态强类型，编译型，并
 Go 语言于2009年11月正式宣布推出，自2012年发布1.0，最新稳定版1.9.3, 国内官方文档地址：https://golang.google.cn/ 。目前，Go的相关工具和生态已逐渐趋于完善，也不乏重量级项目，如 Docker, Kubernetes, Etcd, InfluxDB 等。
 
 下图为 Go 语言的起源：
-![](/images/go_history.png)
+![](/static/imgs/go_history.png)
 
 其他更多，见这里 [《The way to go》- Go 语言的起源，发展与普及](https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/01.1.md)
 

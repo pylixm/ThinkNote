@@ -48,13 +48,13 @@ class B(models.Model):
 
 今天遇到一个问题，如上的模型实例，数据如下：
 
-![](/images/data-table.png)
+![](/static/imgs/data-table.png)
 
 通过 A 的关联条件查询 B 时，并没有过滤掉 A中状态。
 
 如下：
 
-![](/images/model-objects.png)
+![](/static/imgs/model-objects.png)
 
 可以从 sql 看出，并没有对A 的状态进行过滤。
 

@@ -319,7 +319,7 @@ template.add_to_builtins(
 
 ## 不同之处 
 
-![](/images/df.png)
+![](/static/imgs/df.png)
 
 ## 我们应该如何选择
 

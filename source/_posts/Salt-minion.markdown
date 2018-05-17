@@ -1,10 +1,9 @@
 ---
 layout : post
 title : salt minion 启动问题
-category : Q&A
-tagline: ""
-date : 2016-01-18 19:55
-tags : [q&a, salt]
+category : QA
+date : 2016-01-18 19:55:00
+tags : [QA, salt]
 ---
 
 

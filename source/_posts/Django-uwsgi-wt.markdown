@@ -1,10 +1,9 @@
 ---
 layout : post
 title : Django uwsgi 启动问题 unavailable modifier requested 0
-category : Q&A
-tagline: ""
-date : 2016-01-18 19:55
-tags : [q&a, django, uwsgi]
+category : QA
+date : 2016-01-18 19:55:00
+tags : [QA, django, uwsgi]
 ---
 
 

@@ -122,15 +122,15 @@ docker run -it --rm -p 80:80 -v /Users/pylixm/docker.dev/django-demo/mysite:/cod
 
 **检查**
 在Mac上开发，需要保证`Docker for Mac`启动，并配置好`Docker API`(Preferences | Build, Execution, Deployment | Docker)，如下图：
-![](/images/docker-connect.png)
+![](/static/imgs/docker-connect.png)
 
 **配置**
 
 - 1、到`Preferences -> Project Interpreter -> Add Romete `，选择本地的可用Docker 镜像,如图：
-![](/images/docker-config-1.png)
+![](/static/imgs/docker-config-1.png)
 
 - 2、配置`Edite configrations`, 将host设置为`0.0.0.0`, 选择刚才添加的项目解释器，并配置容器运行参数`Docker container settings`，如图：
-![](/images/docker-config-2.png)
+![](/static/imgs/docker-config-2.png)
 
 >说明：
 >    - 容器端口：8000 映射到主机端口 80

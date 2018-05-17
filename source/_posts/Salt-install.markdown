@@ -2,9 +2,8 @@
 layout : post
 title : SaltStack学习笔记1-salt安装配置
 category : salt
-tagline: ""
-date : 2015-12-17 23:33
-tags : [salt,]
+date : 2015-12-17 23:33:00
+tags : [salt]
 ---
 
 

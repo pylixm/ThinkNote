@@ -2,7 +2,7 @@
 layout : post
 title : 转载 - Django admin 定制案例
 category : django
-date : 2016-01-05 20:00
+date : 2016-01-05 20:00:00
 tags : [django,]
 
 ---

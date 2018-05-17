@@ -3,15 +3,15 @@ layout : post
 title : Django学习笔记- Class View
 category : django
 date : 2016-03-24
-tags : [django, class-view]
+tags : [django, Classview]
 ---
 
 
-**提示**：文章概念性语句比较多，建议先看 class-view 的[官方文档](https://docs.djangoproject.com/en/1.9/topics/class-based-views/)或[1.8 中文翻译文档](http://python.usyiyi.cn/django_182/topics/class-based-views/index.html)。
+**提示**：文章概念性语句比较多，建议先看 Classview 的[官方文档](https://docs.djangoproject.com/en/1.9/topics/class-based-views/)或[1.8 中文翻译文档](http://python.usyiyi.cn/django_182/topics/class-based-views/index.html)。
 
-之前使用 `django` 开发都是使用 func-view ，对class-view一直是向往的。
+之前使用 `django` 开发都是使用 func-view ，对Classview一直是向往的。
 
-最近有些时间，看下class-view的用法，记录下，备查。
+最近有些时间，看下Classview的用法，记录下，备查。
 
 
 ### 0x01 使用目的及优势
@@ -22,7 +22,7 @@ tags : [django, class-view]
 
 - 更好的利用 `通用视图`。(基于函数的通用视图难易扩展，基于类的可以通过 Mixin 来扩展，更加灵活)
 
-### 0x02 class-view 原理
+### 0x02 Classview 原理
 
 Django 的URL 解析器将请求和关联的参数发送给一个可调用的函数而不是一个类，所以基于类的视图有一个as_view() 类方法用来作为类的可调用入口。
 
@@ -32,7 +32,7 @@ Django 的URL 解析器将请求和关联的参数发送给一个可调用的函
 
 ### 0x03 用法筛记 
 
-#### class-view 中装饰器的用法
+#### Classview 中装饰器的用法
 
 - 在urlconf 中直接装饰 `as_view()` 函数。
 
@@ -141,6 +141,6 @@ urlpatterns = [
 [http://blog.csdn.net/hackerain/article/details/40919789](http://blog.csdn.net/hackerain/article/details/40919789)
 
 
-[1]:/images/TemplateView.png
-[2]:/images/ListView.png
-[3]:/images/DetailView.png
+[1]:/static/imgs/TemplateView.png
+[2]:/static/imgs/ListView.png
+[3]:/static/imgs/DetailView.png

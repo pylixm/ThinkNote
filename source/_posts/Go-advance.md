@@ -3,9 +3,7 @@ layout : post
 title : 【 Go语言学习笔记 】 - Golang 语法进阶
 category : golang
 date : 2018-04-26
-tags : 
-  - golang
-  - 语言学习
+tags : [golang, 语言学习]
 ---
 
 ## 编码
@@ -160,7 +158,7 @@ func main() {
     fmt.Println("His weight is", mark.weight)
 }
 ```
-![](images/student_struct.png)
+![](static/imgs/student_struct.png)
 
 ## 方法
 

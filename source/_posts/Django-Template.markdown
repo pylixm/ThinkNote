@@ -2,7 +2,7 @@
 layout : post
 title : Django学习笔记-模板
 category : django
-date : 2015-11-15 16:30
+date : 2015-11-15 16:30:00
 tags : [django,]
 ---
 

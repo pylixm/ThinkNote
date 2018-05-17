@@ -2,7 +2,6 @@
 layout : post
 title : 转-【SaltStack源码分析任】务处理机制
 category : salt
-tagline: ""
 date : 2017-09-01
 tags : [salt, 源码分析]
 ---
@@ -40,7 +39,7 @@ Salt Master有几个重要的类
 
 ## 3.1. 任务流程图
 
-![](/images/saltstack_event_arch.jpg)
+![](/static/imgs/saltstack_event_arch.jpg)
 
 ## 3.2. 提交任务
 
@@ -268,7 +267,7 @@ ReqServer的启动入口在`salt/master.py`里。
 
 至此，这样一个多进程模型就创建完毕。(该图来自ZeroMQ官网)
 
-![](/images/zeromq_fig17.png)
+![](/static/imgs/zeromq_fig17.png)
 
 ## 3.4. MWorker的处理逻辑
 

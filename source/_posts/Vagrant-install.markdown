@@ -1,10 +1,9 @@
 ---
 layout : post
 title : vagrant的开发环境搭建-windows开发环境为例
-category : "虚拟机"
-tagline: ""
+category : 虚拟机
 date : 2015-12-01 11:30:00
-tags : ["容器", "虚拟机"]
+tags : [容器, 虚拟机]
 ---
 
 
@@ -179,11 +178,11 @@ D:\\vagrant\\worker\\>vagrant up
 
 工具-->用户秘钥管理-->导入，即可。
 
-![](/images/xshell-ssh.png)
+![](/static/imgs/xshell-ssh.png)
 
 创建好回话后，在点击登录的时候选择 public key ，会看到我们导入的 private_key。
 
-![](/images/xshell-ssh2.png)
+![](/static/imgs/xshell-ssh2.png)
 
 此处密码不用填写，直接点击登录即可进入系统命令行了。
 

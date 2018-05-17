@@ -1,10 +1,9 @@
 ---
 layout : post
 title : django form表单的数据 select 值更新问题
-category : Q&A
-tagline: ""
+category : QA
 date : 2015-11-01
-tags : [q&a, django,]
+tags : [QA, django]
 ---
 
 

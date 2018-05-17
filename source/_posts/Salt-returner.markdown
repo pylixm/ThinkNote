@@ -2,10 +2,8 @@
 layout : post
 title : "SaltStack学习笔记3 -- salt returner 的使用"
 category : salt
-tagline: ""
 date : 2016-03-10
-tags : [salt,]
-old_url : http://wushank.blog.51cto.com/3489095/1676139
+tags : [salt]
 ---
 
 

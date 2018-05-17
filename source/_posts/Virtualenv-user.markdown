@@ -2,8 +2,7 @@
 layout : post
 title : 使用virtualenv 部署django应用问题记录
 category : vcs
-tagline: ""
-date : 2016-01-18 19:50
+date : 2016-01-18 19:50:00
 tags : [virtualenv,]
 ---
 

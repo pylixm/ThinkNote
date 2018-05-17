@@ -2,9 +2,8 @@
 layout : post
 title : javascript 使用记录
 category : js
-tagline: ""
-date : 2015-11-27 13:26
-tags : [js,]
+date : 2015-11-27 13:26:00
+tags : [js]
 ---
 
 

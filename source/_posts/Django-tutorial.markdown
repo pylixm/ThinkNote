@@ -1,8 +1,8 @@
 ---
 title : Django 简单入门及最佳实践
 category : django
-date : 2016-05-08 18:00
-tags : [django,]
+date : 2016-05-08 18:00:00
+tags : [django]
 ---
 
 
@@ -70,7 +70,7 @@ django 官网给出了3个特点：
 
 ### django 的工作流程
 
-![](/images/django-jg.png)
+![](/static/imgs/django-jg.png)
 
 从图中，我们可以看到 django 框架的主要模块： URLconf、Views、Model、Template。
 

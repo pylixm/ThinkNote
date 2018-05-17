@@ -2,9 +2,8 @@
 layout : post
 title : Git使用学习笔记
 category : vcs
-tagline: ""
 date : 2015-11-01
-tags : [vcs,]
+tags : [vcs]
 ---
 
 
@@ -230,8 +229,8 @@ $ git reset --hard 98abc5a
 
 ---
 
-[1]:/images/git-1.png
-[2]:/images/git-2.png
-[3]:/images/git-3.png
-[4]:/images/git-4.png
-[5]:/images/git-5.png
+[1]:/static/imgs/git-1.png
+[2]:/static/imgs/git-2.png
+[3]:/static/imgs/git-3.png
+[4]:/static/imgs/git-4.png
+[5]:/static/imgs/git-5.png

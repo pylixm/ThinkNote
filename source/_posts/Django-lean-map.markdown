@@ -2,7 +2,7 @@
 layout : post
 title : Django 文章整理- 学习路径总结
 category : django
-date : 2016-05-16 22:24
+date : 2016-05-16 22:24:00
 tags : [django,]
 
 ---
@@ -45,7 +45,7 @@ tags : [django,]
 
 - 3、[使用 supervisor 来监控 django celery](2016-01-19-Django-supervisor-celery.html)
 
-### Q&A 专题
+### QA 专题
 
 - 1、[django form表单的数据 select 值更新问题](2015-11-01-Django-form.html)
 

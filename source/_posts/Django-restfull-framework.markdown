@@ -2,9 +2,8 @@
 layout : post
 title : Django restfull framework 文档
 category : django
-tagline: ""
 date : 2015-11-01 18:25:00
-tags : [django, restfull, ]
+tags : [django, restfull]
 ---
 
 

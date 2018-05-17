@@ -3,9 +3,7 @@ layout : post
 title : 【 Go语言学习笔记 】 - Golang 命令
 category : golang
 date : 2018-01-26
-tags : 
-  - golang
-  - 语言学习
+tags : [golang, 语言学习]
 ---
 
 安装好 golang 后，在任意目录运行 `go` 可看到 Golang 的所有命令，如下：

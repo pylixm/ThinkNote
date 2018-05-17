@@ -1,6 +1,6 @@
 ---
 layout : post
-title : python的MySQLdb模块 连接 mysql 错误 Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'
+title : python的MySQLdb模块 连接 mysql 错误
 category : mysql
 date : 2016-03-08
 tags : [mysql,]

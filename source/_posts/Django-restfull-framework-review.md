@@ -2,9 +2,8 @@
 layout : post
 title : Django restfull framework 学习使用总结-权限相关
 category : django
-tagline: ""
 date : 2016-01-08 21:15:00
-tags : [django, restfull, ]
+tags : [django, restfull]
 ---
 
 

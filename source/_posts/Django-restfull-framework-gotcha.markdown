@@ -2,9 +2,8 @@
 layout : post
 title : Django restfull framework 使用笔记 -- 踩坑记录
 category : django
-tagline: ""
 date : 2016-11-30 
-tags : [django, restfull, ]
+tags : [django, restfull]
 ---
 
 在使用django restfull 时，遇到的几个不好发现的问题，记录如下备查。

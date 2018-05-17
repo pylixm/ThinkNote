@@ -2,7 +2,7 @@
 layout : post
 title : 我心中的 tornado 最佳实践
 category : tornado
-date : 2017-03-10 20:00
+date : 2017-03-10 20:00:00
 tags : [tornado, best_practices ]
 ---
 

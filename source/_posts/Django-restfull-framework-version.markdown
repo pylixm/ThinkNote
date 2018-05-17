@@ -2,7 +2,6 @@
 layout : post
 title : 译-Django restfull framework 中API版本的管理
 category : django
-tagline: ""
 date : 2017-04-24 
 tags : [django, restfull, 翻译]
 ---

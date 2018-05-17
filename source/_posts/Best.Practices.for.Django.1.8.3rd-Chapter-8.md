@@ -14,7 +14,7 @@ tags : [django]
 ## 如何选择 function - views 和 class - views 
 
 见流程图：
-![](/images/wtovsyu.png)
+![](/static/imgs/wtovsyu.png)
 
 ## urlconf 中不要包含 views 的逻辑 
 
@@ -155,5 +155,5 @@ UpdateView):
 ```
 
 
-ps： 感觉本书views 这里讲的比较乱, 部分class-based views 可参见另一篇博文： [Django class views](http://pylixm.cc/posts/2016-03-24-Django-class-Views.html)
+ps： 感觉本书views 这里讲的比较乱, 部分class-based views 可参见另一篇博文： [Django class views](http://pylixm.cc/posts/2016-03-24-Django-Classviews.html)
 

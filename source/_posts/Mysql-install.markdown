@@ -2,8 +2,8 @@
 layout : post
 title : Mysql 免安装版配置 window环境搭建
 category : mysql
-date : 2015-11-01 00:00
-tags : [mysql,]
+date : 2015-11-01
+tags : [mysql]
 ---
 
 

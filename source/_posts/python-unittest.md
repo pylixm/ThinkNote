@@ -3,9 +3,7 @@ layout : post
 title : 【 python 基础系列 】 - python 单元测试 unittest 工具使用
 category : python
 date : 2018-01-18
-tags : 
-  - python
-  - unittest 
+tags : [python, unittest]
 ---
 
 python 的单元测试有许多工具，如unittest、pytest、nosetest 等等，这里主要介绍下unittest 的使用。
@@ -298,6 +296,6 @@ if __name__=='__main__':
 ```
 
 测试结果：
-![](/images/test_case_ret.jpg)
+![](/static/imgs/test_case_ret.jpg)
 
 说明：.代表用例执行通过，两个点表示两个用例执行通过。F表示用例执行不通过。

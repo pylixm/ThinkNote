@@ -276,10 +276,10 @@ MongoDB的集群能力还是很强的，搭建还算是简单。最关键的是�
 
 MongodDB官网文档：[http://docs.mongodb.org/](http://docs.mongodb.org/)
 
-[1]:/images/mongo-1.png
-[2]:/images/mongo-2.png
-[3]:/images/mongo-3.png
-[4]:/images/mongo-4.png
-[5]:/images/mongo-5.png
-[6]:/images/mongo-6.png
-[7]:/images/mongo-7.png
+[1]:/static/imgs/mongo-1.png
+[2]:/static/imgs/mongo-2.png
+[3]:/static/imgs/mongo-3.png
+[4]:/static/imgs/mongo-4.png
+[5]:/static/imgs/mongo-5.png
+[6]:/static/imgs/mongo-6.png
+[7]:/static/imgs/mongo-7.png

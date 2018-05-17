@@ -3,9 +3,7 @@ layout : post
 title : 【 Go语言学习笔记 】 - Golang 环境搭建及相关概念
 category : golang
 date : 2018-01-25
-tags : 
-  - golang
-  - 语言学习
+tags : [golang, 语言学习]
 ---
 
 
@@ -140,7 +138,7 @@ $ tree -d -L 1
     - 当 GOPATH 设置了多个目录时，必须设置 GOBIN 否则无法成功安装 Go 程序的可执行文件。
 
 整体如下：
-![](/images/gopath_demo.png)
+![](/static/imgs/gopath_demo.png)
 
 ### 源码文件类型
 

@@ -2,7 +2,6 @@
 layout : post
 title : Vue 新手使用总结
 category : js
-tagline: ""
 date : 2017-05-11
 tags : [js, vue]
 ---
