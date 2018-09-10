@@ -91,6 +91,9 @@ AuthorizedKeysFile .ssh/authorized_keys
 这条命令由多个语句组成，依次分解开来看：（1）"$ ssh user@host"，表示登录远程主机；（2）单引号中的mkdir .ssh && cat >> .ssh/authorized_keys，表示登录后在远程shell上执行的命令：（3）"$ mkdir -p .ssh"的作用是，如果用户主目录中的.ssh目录不存在，就创建一个；（4）'cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub的作用是，将本地的公钥文件~/.ssh/id_rsa.pub，重定向追加到远程文件authorized_keys的末尾。
 写入authorized_keys文件后，公钥登录的设置就完成了。
 
+秘钥登录和免密登录：
+![](https://ws1.sinaimg.cn/large/8697aaedly1fv4ao3iar1j20ib0br3zi.jpg)
+
 ## 七、远程操作
 SSH不仅可以用于远程主机登录，还可以直接在远程主机上执行操作。
 上一节的操作，就是一个例子：
