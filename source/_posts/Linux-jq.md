@@ -1,9 +1,9 @@
 ---
 layout : post
 title : Linux基础系列 - jq
-category : Linux
+category : linux
 date : 2018-06-26
-tags : [Linux, 运维]
+tags : [linux, 运维]
 ---
 
 ## 介绍 

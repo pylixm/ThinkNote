@@ -1,9 +1,9 @@
 ---
 layout : post
 title : Linux基础系列 - 命令ps
-category : Linux
+category : linux
 date : 2018-04-23
-tags : [Linux, 运维]
+tags : [linux, 运维]
 ---
 
 > 内容来自网络，由[pylixm](http://pylixm.cc)整理。

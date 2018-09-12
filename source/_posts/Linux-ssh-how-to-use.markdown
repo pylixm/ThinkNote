@@ -1,9 +1,9 @@
 ---
 layout : post
 title : Linux基础系列 - SSH 原理与运用
-category : Linux
+category : linux
 date : 2016-11-16 
-tags : [Linux, 运维]
+tags : [linux, 运维]
 ---
 
 一直对ssh的概念比较模糊，看到阮一峰大神的博客有说明，果断转来记录备查。
