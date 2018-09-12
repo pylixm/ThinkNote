@@ -14,7 +14,7 @@ tags : [devops, 自动化运维, docker]
 Docker 是一种轻量级的虚拟化技术，是一种Linux容器（Linux Containers，缩写为 LXC）技术的封装。
 
 大多数人可能知道虚拟机，可以在一台硬件机器上虚拟出另一台计算机，有它自己的cpu、硬盘等各种虚拟的硬件。而 Linux 容器技术也是一种虚拟技术，但是它并非直接从硬件上来虚拟，而是通过软件技术对进程及资源进行隔离，从而达到虚拟化的目的。Docker 就是一种这样隔离虚拟化技术。
-
+<!-- more -->
 Docker的发展由来大致如下：
 
 ![](https://ws1.sinaimg.cn/large/8697aaedly1frtdhgj1ilj20k00dxaaj.jpg)

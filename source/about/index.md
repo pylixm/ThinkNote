@@ -17,8 +17,6 @@ Job: Pythonista, Operation and development developer
 
 Follow me: <img style='min-height:20px;width:150px;cursor: pointer;' src="https://img.shields.io/github/followers/pylixm.svg?style=social&amp;logo=github&amp;label=Follow@pylixm" alt="GitHub followers" title="">
 
-><script src='//w.segmentfault.com/card/1030000004045770.js?w=0&3rd=1&bg=0&bd=DDDDDD&cl=333333&btn=009a61&noBtn=0'></script>
-
 ## 关于博客
 ---
 
@@ -44,14 +42,4 @@ Follow me: <img style='min-height:20px;width:150px;cursor: pointer;' src="https:
 * [E-Mail](mailto:pyli.xm@gmail.com)
 
 
-
-
-
-
----
-<!--音乐框-->
-<embed src="http://music.163.com/style/swf/widget.swf?sid=347230&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"/>
-
-
----
 

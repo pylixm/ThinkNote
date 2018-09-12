@@ -18,7 +18,7 @@ tags : [devops, 自动化运维, docker]
 - 创建一个Docker解释器来运行项目
 - Django运行配置在启动时创建一个新容器，并在停止时将其移除
 
-
+<!-- more -->
 ## 概述
 
 在Python中，当您运行应用程序时，Django站点，数据库脚本等 - 您需要一个环境来运行它。 Python具有管理环境并使其可重复的工具，例如virutal environment，pip require.txt文件和setup.py依赖项。 但是应用程序的非Python部分呢？

@@ -9,7 +9,7 @@ tags : [Linux, 运维]
 ## 介绍 
 
 `jq` 是linux下的一个解析JSON格式字符串的一个命令行工具。可直接使用 `yum install jq` 来安装。
-
+<!-- more -->
 ```bash
 jq - commandline JSON processor [version 1.5]
 Usage: jq [options] <jq filter> [file...]

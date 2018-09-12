@@ -16,7 +16,7 @@ docker 安装现在已非常简单，具体可参考[官方文档](https://docs.
 $ docker --version
 Docker version 17.06.2-ce, build cec0b72
 ```
-
+<!-- more -->
 ## 更换镜像源
 
 因 Docker 官方仓库地址在国外，速度比较慢。可使用国内的几家大厂放出的 Docker 仓库镜像源。 

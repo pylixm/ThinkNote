@@ -8,7 +8,7 @@ tags : [devops, 自动化运维, docker]
 
 最近几年Docker容器技术已经渗透到各技术领域，在自动化运维领域更胜，因为它对于代码的部署上可以说是革命性的。下面是我学习Docker，记录的一些笔记，方便日后回忆备查。
 
-
+<!-- more -->
 ## Docker 是什么
 
 Docker 是一种轻量级的虚拟化技术，是一种Linux容器（Linux Containers，缩写为 LXC）技术的封装。

@@ -15,7 +15,7 @@ tags : [Linux, 运维]
 - UNIX 风格，选项可以组合在一起，并且选项前必须有“-”连字符
 - BSD 风格，选项可以组合在一起，但是选项前不能有“-”连字符
 - GNU 风格的长选项，选项前有两个“-”连字符
-
+<!-- more -->
 ```bash
 ps [-aAcdefHjlmNVwy][acefghLnrsSTuvxX][-C <指令名称>][-g <群组名称>]
 
