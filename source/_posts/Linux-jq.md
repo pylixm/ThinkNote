@@ -3,7 +3,7 @@ layout : post
 title : Linux基础系列 - jq
 category : linux
 date : 2018-06-26
-tags : [linux, 运维]
+tags : [linux, linux基础系列, 运维]
 ---
 
 ## 介绍 
