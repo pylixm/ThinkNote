@@ -1889,7 +1889,9 @@ func main() {
     say("hello")
 }
 ```
+
 结果：
+
 ```
 hello
 hello
@@ -1903,6 +1905,7 @@ hello
 ``` 
 
 #### 2.channel
+
 channel 是有类型的管道，可以用 channel 操作符 <-对其发送或者接收值。
 
 ```go
