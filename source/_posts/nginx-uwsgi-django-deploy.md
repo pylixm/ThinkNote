@@ -121,6 +121,12 @@ http ---> proxy_pass
 在部署项目时，经常会用到`virtualenv`来生产虚拟环境来隔离系统的python环境，此时我们需要注意，安装uWSGI和运行django的python环境需要是同一个。
 
 
+**4、启动后uwsgi报错：-- unavailable modifier requested: 0 --**
+
+造成此错误的原因是uWSGI安装的python和项目使用的不是一个，重新安装uWSGI即可。使用项目相同的python编译安装，或直接使用项目使用python的包管理工具安装，如pip、pipenv。
+
+
+
 >TODO待补充
 
 欢迎大家在下方留言，提交自己遇到的问题，我们来共同交流探讨~ 
