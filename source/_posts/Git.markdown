@@ -183,7 +183,7 @@ squash:*******
 9、其他
 ```
 # 修改历史commit信息
-> git rebase -i HEAD~3（3位从当前commit往前的个数）
+> git rebase -i HEAD~3（3为从当前commit往前的个数）
 看到如下信息：
 pick:*******
 pick:*******
