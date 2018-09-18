@@ -1781,6 +1781,7 @@ b[:n] = ""
 
 包 http 通过任何实现了 http.Handler
 的值来响应 HTTP 请求：
+
 ```go
 package http
 
@@ -1791,6 +1792,7 @@ type Handler interface {
 在这个例子中，类型 Hello实现了 http.Handler。
 访问 http://localhost:4000/ 会看到来自程序的问候。
 注意： 这个例子无法在基于 web 的指南用户界面运行。为了尝试编写 web 服务器，可能需要安装 Go。
+
 ```go
 package main
 
@@ -1817,6 +1819,7 @@ func main() {
 }
 ```
 结果：
+
 ```
 2009/11/10 23:00:00 listen tcp: Protocol not available
 ```
@@ -1824,6 +1827,7 @@ func main() {
 #### 10.图片
 Package image 定义了 Image
 接口：
+
 ```go
 package image
 
@@ -1837,6 +1841,7 @@ type Image interface {
 注意：Bounds方法的 Rectangle返回值实际上是一个 image.Rectangle， 其定义在 image包中。
 （参阅文档了解全部信息。）
 color.Color和 color.Model也是接口，但是通常因为直接使用预定义的实现 image.RGBA和 image.RGBAModel而被忽视了。这些接口和类型由image/color包定义。
+
 ```go
 package main
 
@@ -1852,10 +1857,12 @@ func main() {
 }
 ```
 结果：
+
 ```
 (0,0)-(100,100)
 0 0 0 0
 ```
+
 ### 并发
 作为语言的核心部分，Go 提供了并发的特性。
 这一部分概览了 goroutine 和 channel，以及如何使用它们来实现不同的并发模式。
