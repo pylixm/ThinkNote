@@ -3,7 +3,7 @@ layout : post
 title : Linux基础系列 - route 
 category : linux
 date : 2018-09-14
-tags : [linux, linux基础系列, 运维]
+tags : [linux, linux基础系列, 运维知识库]
 ---
 
 > 内容来自[Linux命令大全](http://man.linuxde.net/route)，由[pylixm](http://pylixm.cc)整理。
