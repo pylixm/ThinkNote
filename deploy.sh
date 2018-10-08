@@ -7,4 +7,4 @@ cd ..
 git add .
 git commit -am 'update'
 git push 
-echo 'deploy success!!!'
+echo '>>>>>>> deploy success!!! <<<<<<<< '
