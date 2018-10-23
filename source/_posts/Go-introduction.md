@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 【 Go语言学习笔记 】 - Golang 初步了解
+title : 【 Go语言学习笔记一 】 - Golang 初步了解
 category : golang
 date : 2018-01-24
 tags : [golang, 语言学习]

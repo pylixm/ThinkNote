@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 【 Go语言学习笔记 】 - Golang 语法进阶
+title : 【 Go语言学习笔记五 】 - Golang 语法进阶
 category : golang
 date : 2018-04-26
 tags : [golang, 语言学习]

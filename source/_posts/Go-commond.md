@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 【 Go语言学习笔记 】 - Golang 命令
+title : 【 Go语言学习笔记四 】 - Golang 命令
 category : golang
 date : 2018-01-26
 tags : [golang, 语言学习]
