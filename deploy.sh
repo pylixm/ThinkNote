@@ -1,10 +1,16 @@
-echo '\033[31m >>>>>>> 开始生成html文件 \033[0m'
-hexo g 
+echo '\033[31m >>>>>>> 清理老的html文件 \033[0m'
+rm -rf ./public
+echo '\033[31m >>>>>>> 清理完成 \033[0m'
+echo '\033[31m >>>>>>> 开始生成新的html文件 \033[0m'
+hugo 
+echo '\033[31m >>>>>>> 生成完成 \033[0m'
 echo '\033[31m >>>>>>> 开始提交静态文件 \033[0m'
-cd public 
+cp -r ./public/* ./deploy/
+cd deploy
 git add .
 git commit -am 'update'
 git push 
+echo '\033[31m >>>>>>> 静态文件提交完成 \033[0m'
 echo '\033[31m >>>>>>> 主库文件受控更新  \033[0m'
 cd ..
 git add .
