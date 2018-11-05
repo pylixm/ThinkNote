@@ -1,10 +1,10 @@
 ---
 layout : post
-title : Django restfull framework 学习使用总结-权限相关
+title : Django restful framework 学习使用总结-权限相关
 categories: [ django] 
 date : 2016-01-08 21:15:00
 url: /posts/2016-01-08-Django-restfull-framework-review.html 
-tags : [django, restfull]
+tags : [django, restful]
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 layout : post
-title : 译-Django restfull framework 中API版本的管理
+title : 译-Django restful framework 中API版本的管理
 categories: [ django] 
 date : 2017-04-24 
 url: /posts/2017-04-24-Django-restfull-framework-version.html 
-tags : [django, restfull, 翻译]
+tags : [django, restful, 翻译]
 ---
 
 >原文：https://gearheart.io/blog/api-versioning-with-django-rest-framework/

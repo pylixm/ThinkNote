@@ -1,15 +1,15 @@
 ---
 layout : post
-title : Django restfull framework 文档
+title : Django restful framework 文档
 categories: [ django] 
 date : 2015-11-01 18:25:00
 url: /posts/2015-11-01-Django-restfull-framework.html 
-tags : [django, restfull]
+tags : [django, restful]
 ---
 
 
 
-前几天看到有博文记录的 django-restfull-framework的翻译文档。最近正需要，反而找不到了。现记录如下，备查：
+前几天看到有博文记录的 django-rest-framework的翻译文档。最近正需要，反而找不到了。现记录如下，备查：
 
 
 [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
