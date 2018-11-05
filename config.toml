@@ -137,14 +137,14 @@ googleAnalytics = ""
     clientSecret = ""       # Your client secret
 
   [params.valine]
-    enable = true # 如果你想使用valine，请将值设置为 true
+    enable = false # 如果你想使用valine，请将值设置为 true
     appId = "OBJcj4PU8JI0zDfu0HJSrG6W-gzGzoHsz" # your leancloud appId
     appKey = "tBtFzC72xIlgo2UFbA33nqmU"  # your leancloud appKey
     notify = false # Mail notify
     verify = false # Verify code
     avatar = "retro" # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
     placeholder = "想说点什么" # Comment Box placeholder
-    meta = "nick,mail" #,link # Comment header info
+    # meta = "nick,mail" #,link # Comment header info
     pageSize = 10 # comment list page size
 
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
