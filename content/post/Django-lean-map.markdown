@@ -32,7 +32,7 @@ tags : [django,]
 
 - 2、[Django学习笔记- 自定义管理器（objects）后遇到的问题](2016-04-20-Django-model-qt.html)
 
-- 3、[Django restfull framework 文档](2015-11-01-Django-restfull-framework.html)
+- 3、[Django restful framework 文档](2015-11-01-Django-restful-framework.html)
 
 - 4、[使用virtualenv 部署django应用问题记录](2016-01-18-Virtualenv-user.html)
 

@@ -1,13 +1,13 @@
 ---
 layout : post
-title : Django restfull framework 使用笔记 -- 踩坑记录
+title : Django restful framework 使用笔记 -- 踩坑记录
 categories: [ django] 
 date : 2016-11-30 
-url: /posts/2016-11-30-Django-restfull-framework-gotcha.html 
-tags : [django, restfull]
+url: /posts/2016-11-30-Django-restful-framework-gotcha.html 
+tags : [django, restful]
 ---
 
-在使用django restfull 时，遇到的几个不好发现的问题，记录如下备查。
+在使用django restful 时，遇到的几个不好发现的问题，记录如下备查。
 
 ## 一、 缓存问题 
 
