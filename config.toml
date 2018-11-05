@@ -13,7 +13,8 @@ hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否�
 paginate = 15                                              # 首页每页显示的文章数
 copyright = ""            # default: author.name ↓         # 默认为下面配置的author.name 
 disqusShortname = "pylixm"      # disqus_shortname
-googleAnalytics = "UA-76793541-1"      # UA-XXXXXXXX-X
+googleAnalytics = ""
+# googleAnalytics = "UA-76793541-1"      # UA-XXXXXXXX-X
   
 
 [author]                  # essential                     # 必需
@@ -98,7 +99,6 @@ googleAnalytics = "UA-76793541-1"      # UA-XXXXXXXX-X
   baidu_verification = ""   # Baidu Verification
   google_verification = ""  # Google_Verification         # 谷歌
 
-
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
   customCSS = []
@@ -136,6 +136,17 @@ googleAnalytics = "UA-76793541-1"      # UA-XXXXXXXX-X
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
 
+  [params.valine]
+    enable = true # 如果你想使用valine，请将值设置为 true
+    appId = "OBJcj4PU8JI0zDfu0HJSrG6W-gzGzoHsz" # your leancloud appId
+    appKey = "tBtFzC72xIlgo2UFbA33nqmU"  # your leancloud appKey
+    notify = false # Mail notify
+    verify = false # Verify code
+    avatar = "retro" # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+    placeholder = "想说点什么" # Comment Box placeholder
+    meta = "nick,mail" #,link # Comment header info
+    pageSize = 10 # comment list page size
+
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
     options = ""
@@ -154,6 +165,12 @@ googleAnalytics = "UA-76793541-1"      # UA-XXXXXXXX-X
     enable = false
     wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
     alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
+
+  # LeanCloud
+  [params.leancloud]
+    enable = true
+    app_id = "OBJcj4PU8JI0zDfu0HJSrG6W-gzGzoHsz" #<app_id>
+    app_key = "tBtFzC72xIlgo2UFbA33nqmU" #<app_key>
 
   [params.social]                                         # 社交链接
     a-email = "mailto:your@email.com"
