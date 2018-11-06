@@ -12,7 +12,7 @@ disablePathToLower = true # 不讲url 中大写改为小写
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 15                                              # 首页每页显示的文章数
 copyright = ""            # default: author.name ↓         # 默认为下面配置的author.name 
-disqusShortname = "pylixm"      # disqus_shortname
+disqusShortname = ""      # disqus_shortname  pylixm
 googleAnalytics = ""
 # googleAnalytics = "UA-76793541-1"      # UA-XXXXXXXX-X
   
@@ -137,7 +137,7 @@ googleAnalytics = ""
     clientSecret = ""       # Your client secret
 
   [params.valine]
-    enable = false # 如果你想使用valine，请将值设置为 true
+    enable = true # 如果你想使用valine，请将值设置为 true
     appId = "OBJcj4PU8JI0zDfu0HJSrG6W-gzGzoHsz" # your leancloud appId
     appKey = "tBtFzC72xIlgo2UFbA33nqmU"  # your leancloud appKey
     notify = false # Mail notify
