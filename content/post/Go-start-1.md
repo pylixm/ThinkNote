@@ -936,6 +936,7 @@ func main() {
 
 - 一个结构体（ struct）就是一个字段的集合。
 （而 type的含义跟其字面意思相符。
+
 ```go
 package main
 
@@ -950,7 +951,9 @@ func main() {
     fmt.Println(Vertex{1, 2})
 }
 ```
+
 结果
+
 ```
 {1 2}
 ```
@@ -958,6 +961,7 @@ func main() {
 **结构体字段**
 
 - 结构体字段使用点号来访问。
+
 ```go
 package main
 
@@ -974,7 +978,9 @@ func main() {
     fmt.Println(v.X)
 }
 ```
+
 结果
+
 ```
 4
 ```
@@ -983,6 +989,7 @@ func main() {
 
 - 结构体字段可以通过结构体指针来访问。
 - 通过指针间接的访问是透明的。（透明，即指可以看到结构体指针指向的内容。）
+
 ```go
 package main
 
@@ -1001,6 +1008,7 @@ func main() {
 }
 ```
 结果
+
 ```
 {1000000000 2}
 ```
@@ -1010,6 +1018,7 @@ func main() {
 - 结构体文法表示通过结构体字段的值作为列表来新分配一个结构体。
 - 使用 `Name:` 语法可以仅列出部分字段。（字段名的顺序无关。）
 - 特殊的前缀 `&` 返回一个指向结构体的指针。
+
 ```go
 package main
 
@@ -1042,12 +1051,14 @@ func main() {
 
 - 类型 [n]T是一个有 n个类型为 T的值的数组。
 - 表达式
+
 ```
 var a [10]int
 ```
 定义变量 a是一个有十个整数的数组。
 
 - 数组的长度是其类型的一部分，因此数组不能改变大小。 这看起来是一个制约，但是请不要担心； Go 提供了更加便利的方式来使用数组。
+
 ```go
 package main
 
@@ -1062,6 +1073,7 @@ func main() {
 }
 ```
 结果
+
 ```
 Hello World
 [Hello World]
@@ -1075,6 +1087,7 @@ Hello World
 - 切片的长度就是它所包含的元素个数。
 - 切片的容量是从它的第一个元素开始数，到其底层数组元素末尾的个数,。
 - 切片 s 的长度和容量可通过表达式 len(s) 和 cap(s) 来获取。
+
 ```go
 package main
 
@@ -1104,6 +1117,7 @@ s[5] == 13
 **slice 的 slice**
 
 - slice 可以包含任意的类型，包括另一个 slice。
+
 ```go
 package main
 
@@ -1158,7 +1172,9 @@ s[lo:lo]
 ```
 s[lo:lo+1]
 ```
+
 有一个元素。
+
 ```go
 package main
 
@@ -1177,6 +1193,7 @@ func main() {
 }
 ```
 结果
+
 ```
 s == [2 3 5 7 11 13]
 s[1:4] == [3 5 7]
@@ -1187,15 +1204,18 @@ s[4:] == [11 13]
 **构造 slice**
 
 - slice 由函数make创建。这会分配一个全是零值的数组并且返回一个 slice 指向这个数组
+
 ```
 a := make([]int, 5) // len(a)=5
 ```
 为了指定容量，可传递第三个参数到 make：
+
 ```
     b := make([]int, 0, 5) // len(b)=0, cap(b)=5
     b = b[:cap(b)] // len(b)=5, cap(b)=5
     b = b[1:] // len(b)=4, cap(b)=4
 ```
+
 ```go
 package main
 
@@ -1218,6 +1238,7 @@ func printSlice(s string, x []int) {
 }
 ```
 结果
+
 ```
 a len=5 cap=5 [0 0 0 0 0]
 b len=0 cap=5 []
@@ -1229,6 +1250,7 @@ d len=3 cap=3 [0 0 0]
 
 - slice 的零值是 nil 。
 - 一个 nil 的 slice 的长度和容量是 0。
+
 ```go
 package main
 
@@ -1243,6 +1265,7 @@ func main() {
 }
 ```
 结果
+
 ```
 [] 0 0
 nil!
@@ -1258,6 +1281,7 @@ func append(s []T, vs ...T) []T
 - append的结果是一个包含原 slice 所有元素加上新添加的元素的 slice。
 - 如果 s的底层数组太小，而不能容纳所有值时，会分配一个更大的数组。 返回的 slice 会指向这个新分配的数组。
 （了解更多关于 slice 的内容，参阅文章Go [切片：用法和本质](https://blog.go-zh.org/go-slices-usage-and-internals)。）
+
 ```go
 package main
 
@@ -1299,6 +1323,7 @@ a len=5 cap=8 [0 1 2 3 4]
 
 - for循环的 range格式可以对 slice 或者 map 进行迭代循环。
 - 当使用 for循环遍历一个 slice 时，每次迭代 range将返回两个值。 第一个是当前下标（序号），第二个是该下标所对应元素的一个拷贝。
+
 ```go
 package main
 
@@ -1313,6 +1338,7 @@ func main() {
 }
 ```
 结果
+
 ```
 2**0 = 1
 2**1 = 2
@@ -1326,6 +1352,7 @@ func main() {
 
 可以通过赋值给 _来忽略序号和值。
 如果只需要索引值，去掉 “ , value ” 的部分即可。
+
 ```go
 package main
 
@@ -1342,6 +1369,7 @@ func main() {
 }
 ```
 结果
+
 ```
 1
 2
@@ -1386,6 +1414,7 @@ func main() {
 **map 的文法**
 
 map 的文法跟结构体文法相似，不过必须有键名
+
 ```go
 package main
 
@@ -1409,11 +1438,13 @@ func main() {
 }
 ```
 结果
+
 ```
 map[Bell Labs:{40.68433 -74.39967} Google:{37.42202 -122.08408}]
 ```
 
 若顶级类型只是一个类型名，你可以在文法的元素中省略它。
+
 ```go
 package main
 
@@ -1433,6 +1464,7 @@ func main() {
 }
 ```
 结果
+
 ```
 map[Bell Labs:{40.68433 -74.39967} Google:{37.42202 -122.08408}]
 ```
@@ -1472,6 +1504,7 @@ func main() {
 }
 ```
 结果
+
 ```
 The value: 42
 The value: 48
@@ -1489,6 +1522,7 @@ The value: 0 Present? false
 
 Go 没有类。然而，仍然可以在结构体类型上定义方法。
 方法接收者 出现在 func关键字和方法名之间的参数中。
+
 ```go
 package main
 
@@ -1511,6 +1545,7 @@ func main() {
 }
 ```
 结果：
+
 ```
 5
 ```
@@ -1543,6 +1578,7 @@ func main() {
 }
 ```
 结果：
+
 ```
 1.4142135623730951
 ```
@@ -1554,6 +1590,7 @@ func main() {
 尝试修改 Abs的定义，同时 Scale方法使用 Vertex 代替*Vertex作为接收者。
 当 v是Vertex的时候Scale方法没有任何作用。Scale修改 v。当 v是一个值（非指针），方法看到的是 Vertex的副本，并且无法修改原始值。
 Abs的工作方式是一样的。只不过，仅仅读取 v。所以读取的是原始值（通过指针）还是那个值的副本并没有关系。
+
 ```go
 package main
 
@@ -1583,6 +1620,7 @@ func main() {
 }
 ```
 结果：
+
 ```
 Before scaling: &{X:3 Y:4}, Abs: 5
 After scaling: &{X:15 Y:20}, Abs: 25
@@ -1641,6 +1679,7 @@ func (v *Vertex) Abs() float64 {
 }
 ```
 结果：
+
 ```
 5
 ```
@@ -1652,6 +1691,7 @@ func (v *Vertex) Abs() float64 {
 因此，也就无需在每一个实现上增加新的接口名称，这样同时也鼓励了明确的接口定义。
 包 io 定义了 Reader
 和 Writer；其实不一定要这么做。
+
 ```go
 package main
 
@@ -1700,6 +1740,7 @@ type Stringer interface {
 }
 ```
 Stringer是一个可以用字符串描述自己的类型。fmt包 （还有许多其他包）使用这个来进行输出。
+
 ```go
 package main
 
@@ -1721,6 +1762,7 @@ func main() {
 }
 ```
 结果：
+
 ```
 Arthur Dent (42 years) Zaphod Beeblebrox (9001 years)
 ```
@@ -1729,6 +1771,7 @@ Arthur Dent (42 years) Zaphod Beeblebrox (9001 years)
 
 Go 程序使用 error值来表示错误状态。
 与 fmt.Stringer类似， error类型是一个内建接口：
+
 ```go
 type error interface { 
     Error() string
@@ -1736,6 +1779,7 @@ type error interface {
 ```
 （与 fmt.Stringer类似，fmt包在输出时也会试图匹配 error。）
 通常函数会返回一个 error值，调用的它的代码应当判断这个错误是否等于 nil， 来进行错误处理。
+
 ```go
 i, err := strconv.Atoi("42")
 if err != nil { 
@@ -1745,6 +1789,7 @@ fmt.Println("Converted integer:", i)
 ```
 
 error 为 nil 时表示成功；非 nil 的 error表示错误。
+
 ```go
 package main
 
@@ -1777,6 +1822,7 @@ func main() {
 }
 ```
 结果：
+
 ```
 at 2009-11-10 23:00:00 +0000 UTC, it didn't work
 ```
@@ -1791,6 +1837,7 @@ func (T) Read(b []byte) (n int, err error)
 ```
 Read用数据填充指定的字节 slice，并且返回填充的字节数和错误信息。 在遇到数据流结尾时，返回 io.EOF错误。
 例子代码创建了一个 strings.Reader。 并且以每次 8 字节的速度读取它的输出。
+
 ```go
 package main
 
@@ -1815,6 +1862,7 @@ func main() {
 }
 ```
 结果：
+
 ```
 n = 8 err = <nil> b = [72 101 108 108 111 44 32 82]
 b[:n] = "Hello, R"
@@ -2086,6 +2134,7 @@ func main() {
 
 select语句使得一个 goroutine 在多个通讯操作上等待。
 select会阻塞，直到条件分支中的某个可以继续执行，这时就会执行那个条件分支。当多个都准备好的时候，会随机选择一个
+
 ```go
 package main
 
@@ -2135,6 +2184,7 @@ quit
 **select 默认选择**
 当 select中的其他条件分支都没有准备好的时候，default分支会被执行。
 为了非阻塞的发送或者接收，可使用 default分支：
+
 ```go
 select {
 case i := <-c: 
@@ -2201,6 +2251,7 @@ Unlock
 我们可以通过在代码前调用 Lock方法，在代码后调用 Unlock方法来保证一段代码的互斥执行。 参见 Inc方法。
 
 我们也可以用 defer语句来保证互斥锁一定会被解锁。参见 Value方法。
+
 ```go
 package main
 
