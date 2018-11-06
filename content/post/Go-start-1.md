@@ -1,23 +1,24 @@
 ---
 layout : post
-title : 【 Go语言学习笔记三 】 - Golang 语法入门
-categories: [ golang] 
-date : 2018-01-30
-url: /posts/2018-01-30-Go-start.html 
+title : 【 Go语言学习笔记三 】 - Golang 语法入门【重排版】
+category : golang
+date : 2018-10-23
 tags : [golang, 语言学习]
 ---
 
-本文出处[Go编程语言](https://tour.go-zh.org)，由[Tuberose](https://www.jianshu.com/u/9029357b2874)整理。原文地址：[https://www.jianshu.com/p/bed39de53087](https://www.jianshu.com/p/bed39de53087)。转载到此，方便查阅学习。
+## 引子 
 
-欢迎来到 Go 编程语言指南。本指南涵盖了该语言的大部分重要特性
-Go 语言的交互式简介，它分为三节。第一节覆盖了基本语法及数据结构，第二节讨论了方法与接口， 第三节则简单介绍了 Go 的并发原语。每节末尾都有几个练习，你可以对自己的所学进行实践。 你可以 [在线学习](https://tour.go-zh.org) 或 安装到本地。
-<!-- more -->
+Golang官方网站的入门教程，更人感觉顺序有些问题，不太适合新手入门。根据我们的惯性思维，应该是类型、变量、基本类型开始，而它一上来便先来函数，虽然知识点比较简单，但整体文档下来，还是给人碎片的感觉，不能够很好的形成体系。
 
-## Go基础语法
+我之前转过一片文章[【 Go语言学习笔记三 】 - Golang 语法入门](https://pylixm.cc/posts/2018-01-30-Go-start.html)，为官方入门文档总结版，大家可参阅。
 
-### 包、变量和函数
+下面我根据官方文档，重新排版，以便可以形成体系。
 
-#### 1.包
+## 基本语法
+
+### 包 
+
+**包**
 
 - 每个 Go 程序都是由包组成的。
 - 程序运行的入口是包 main。
@@ -44,7 +45,7 @@ func main() {
 My favorite number is 1
 ```
 
-#### 2.导入
+**导入**
 
 - 这个代码用圆括号组合了导入，这是“打包”导入语句。
 - 同样可以编写多个导入语句，例如：
@@ -71,7 +72,7 @@ func main() {
 Now you have 2.6457513110645907 problems.
 ```
 
-#### 3.导出名
+**导出名**
 
 - 在 Go 中，首字母大写的名称是被导出的。
 - 在导入包之后，你只能访问包所导出的名字，任何未导出的名字是不能被包外的代码访问的。
@@ -95,169 +96,9 @@ tmp/sandbox583763709/main.go:9: cannot refer to unexported name math.pi
 tmp/sandbox583763709/main.go:9: undefined: math.pi
 ```
 
-#### 4.函数
+### 基本类型
 
-- 函数可以没有参数或接受多个参数。
-- 在这个例子中， add接受两个 int类型的参数。
-- 注意类型在变量名 之后 。
-（参考 [这篇关于 Go 语法定义](http://blog.go-zh.org/gos-declaration-syntax) 的文章了解类型以这种形式出现的原因。）
-```go
-package main
-
-import "fmt"
-
-func add(x int, y int) int {
-    return x + y
-}
-
-func main() {
-    fmt.Println(add(42, 13))
-}
-```
-结果
-```
-55
-```
-
-#### 5.函数（续）
-
-- 当两个或多个连续的函数命名参数是同一类型，则除了最后一个类型之外，其他都可以省略。
-- 在这个例子中 ，`x int, y int` 被缩写为 `x, y int`
-
-```go
-package main
-
-import "fmt"
-
-func add(x, y int) int {
-    return x + y
-}
-
-func main() {
-    fmt.Println(add(42, 13))
-}
-```
-
-结果
-```
-55
-```
-
-#### 6.多值返回
-
-- 函数可以返回任意数量的返回值。
-- swap函数返回了两个字符串。
-```go
-package main
-
-import "fmt"
-
-func swap(x, y string) (string, string) {
-    return y, x
-}
-
-func main() {
-    a, b := swap("hello", "world")
-    fmt.Println(a, b)
-}
-```
-结果
-```
-world hello
-```
-
-#### 7.命名返回值
-
-- Go 的返回值可以被命名，并且就像在函数体开头声明的变量那样使用。
-- 返回值的名称应当具有一定的意义，可以作为文档使用。
-- 没有参数的 return语句返回各个返回变量的当前值。这种用法被称作“裸”返回。
-- 直接返回语句仅应当用在像下面这样的短函数中。在长的函数中它们会影响代码的可读性。
-```go
-package main
-
-import "fmt"
-
-func split(sum int) (x, y int) {
-    x = sum * 4 / 9
-    y = sum - x
-    return
-}
-
-func main() {
-    fmt.Println(split(17))
-}
-```
-结果
-```
-7 10
-```
-
-#### 8.变量
-
-- var 语句定义了一个变量的列表；跟函数的参数列表一样，类型在后面。
-- 就像在这个例子中看到的一样， var 语句可以定义在包或函数级别。
-```go
-package main
-
-import "fmt"
-
-var c, python, java bool
-
-func main() {
-    var i int
-    fmt.Println(i, c, python, java)
-}
-```
-结果
-```
-0 false false false
-```
-
-#### 9.初始化变量
-
-- 变量定义可以包含初始值，每个变量对应一个。
-- 如果初始化是使用表达式，则可以省略类型；变量从初始值中获得类型。
-```go
-package main
-
-import "fmt"
-
-var i, j int = 1, 2
-
-func main() {
-    var c, python, java = true, false, "no!"
-    fmt.Println(i, j, c, python, java)
-}
-```
-结果
-```
-1 2 true false no!
-```
-
-#### 10.短声明变量
-
-- 在函数中， `:=` 简洁赋值语句在明确类型的地方，可以用于替代 `var` 定义。
-- 函数外的每个语句都必须以关键字开始（ `var`、 `func`、等等）， `:=` 结构不能使用在函数外
-```go
-package main
-
-import "fmt"
-
-func main() {
-    var i, j int = 1, 2
-    k := 3
-    c, python, java := true, false, "no!"
-
-    fmt.Println(i, j, k, c, python, java)
-}
-```
-
-结果
-```
-1 2 3 true false no!
-```
-
-#### 11.基本类型
+**基本类型**
 
 - Go 的基本类型有Basic types
 ```
@@ -302,7 +143,7 @@ uint64(18446744073709551615)
 complex128((2+3i))
 ```
 
-#### 12.类型转换
+**类型转换**
 
 - 表达式 T(v)将值 v 转换为类型 T 。
 - 一些关于数值的转换：
@@ -339,7 +180,7 @@ func main() {
 3 4 5
 ```
 
-#### 13.零值
+**零值**
 
 - 变量在定义时没有明确的初始化时会赋值为 **零值** 。
 - 零值是：
@@ -365,7 +206,7 @@ func main() {
 0 0 false ""
 ```
 
-#### 14.类型推导
+**类型推导**
 
 - 在定义一个变量却并不显式指定其类型时（使用 :=语法或者 var =表达式语法）， 变量的类型由（等号）右侧的值推导得出。
 - 当右值定义了类型时，新变量的类型与其相同：
@@ -395,7 +236,7 @@ func main() {
 v is of type int
 ```
 
-#### 15.常量
+### 常量
 
 - 常量的定义与变量类似，只能使用 `const` 关键字。
 - 常量可以是字符、字符串、布尔或数字类型的值。
@@ -423,7 +264,7 @@ Happy 3.14 Day
 Go rules? true
 ```
 
-#### 16.数值常量
+**数值常量**
 
 - 数值常量是高精度的 值 。
 - 一个未指定类型的常量由上下文来决定其类型。
@@ -457,9 +298,250 @@ func main() {
 1.2676506002282295e+29
 ```
 
-### 流程控制语句：for、if、else 、switch 和 defer
+### 变量 
 
-#### 1.for
+**变量**
+
+- var 语句定义了一个变量的列表；跟函数的参数列表一样，类型在后面。
+- 就像在这个例子中看到的一样， var 语句可以定义在包或函数级别。
+```go
+package main
+
+import "fmt"
+
+var c, python, java bool
+
+func main() {
+    var i int
+    fmt.Println(i, c, python, java)
+}
+```
+结果
+```
+0 false false false
+```
+
+**初始化变量**
+
+- 变量定义可以包含初始值，每个变量对应一个。
+- 如果初始化是使用表达式，则可以省略类型；变量从初始值中获得类型。
+```go
+package main
+
+import "fmt"
+
+var i, j int = 1, 2
+
+func main() {
+    var c, python, java = true, false, "no!"
+    fmt.Println(i, j, c, python, java)
+}
+```
+结果
+```
+1 2 true false no!
+```
+
+**短声明变量**
+
+- 在函数中， `:=` 简洁赋值语句在明确类型的地方，可以用于替代 `var` 定义。
+- 函数外的每个语句都必须以关键字开始（ `var`、 `func`、等等）， `:=` 结构不能使用在函数外
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var i, j int = 1, 2
+    k := 3
+    c, python, java := true, false, "no!"
+
+    fmt.Println(i, j, k, c, python, java)
+}
+```
+
+结果
+```
+1 2 3 true false no!
+```
+
+
+### 函数
+
+**函数**
+
+- 函数可以没有参数或接受多个参数。
+- 在这个例子中， add接受两个 int类型的参数。
+- 注意类型在变量名 之后 。
+（参考 [这篇关于 Go 语法定义](http://blog.go-zh.org/gos-declaration-syntax) 的文章了解类型以这种形式出现的原因。）
+```go
+package main
+
+import "fmt"
+
+func add(x int, y int) int {
+    return x + y
+}
+
+func main() {
+    fmt.Println(add(42, 13))
+}
+```
+结果
+```
+55
+```
+
+**函数（续）**
+
+- 当两个或多个连续的函数命名参数是同一类型，则除了最后一个类型之外，其他都可以省略。
+- 在这个例子中 ，`x int, y int` 被缩写为 `x, y int`
+
+```go
+package main
+
+import "fmt"
+
+func add(x, y int) int {
+    return x + y
+}
+
+func main() {
+    fmt.Println(add(42, 13))
+}
+```
+
+结果
+```
+55
+```
+
+**多值返回**
+
+- 函数可以返回任意数量的返回值。
+- swap函数返回了两个字符串。
+```go
+package main
+
+import "fmt"
+
+func swap(x, y string) (string, string) {
+    return y, x
+}
+
+func main() {
+    a, b := swap("hello", "world")
+    fmt.Println(a, b)
+}
+```
+结果
+```
+world hello
+```
+
+**命名返回值**
+
+- Go 的返回值可以被命名，并且就像在函数体开头声明的变量那样使用。
+- 返回值的名称应当具有一定的意义，可以作为文档使用。
+- 没有参数的 return语句返回各个返回变量的当前值。这种用法被称作“裸”返回。
+- 直接返回语句仅应当用在像下面这样的短函数中。在长的函数中它们会影响代码的可读性。
+```go
+package main
+
+import "fmt"
+
+func split(sum int) (x, y int) {
+    x = sum * 4 / 9
+    y = sum - x
+    return
+}
+
+func main() {
+    fmt.Println(split(17))
+}
+```
+结果
+```
+7 10
+```
+
+**函数值**
+
+函数也是值。他们可以像其他值一样传递，比如，函数值可以作为函数的参数或者返回值。
+```go
+package main
+
+import (
+    "fmt"
+    "math"
+)
+
+func compute(fn func(float64, float64) float64) float64 {
+    return fn(3, 4)
+}
+
+func main() {
+    hypot := func(x, y float64) float64 {
+        return math.Sqrt(x*x + y*y)
+    }
+    fmt.Println(hypot(5, 12))
+
+    fmt.Println(compute(hypot))
+    fmt.Println(compute(math.Pow))
+}
+```
+结果
+```
+13
+5
+81
+```
+
+**函数的闭包**
+
+Go 函数可以是一个闭包。闭包是一个函数值，它引用了函数体之外的变量。 这个函数可以对这个引用的变量进行访问和赋值；换句话说这个函数被“绑定”在这个变量上。
+例如，函数 adder返回一个闭包。每个返回的闭包都被绑定到其各自的sum变量上。
+```go
+package main
+
+import "fmt"
+
+func adder() func(int) int {
+    sum := 0
+    return func(x int) int {
+        sum += x
+        return sum
+    }
+}
+
+func main() {
+    pos, neg := adder(), adder()
+    for i := 0; i < 10; i++ {
+        fmt.Println(
+            pos(i),
+            neg(-2*i),
+        )
+    }
+}
+```
+结果
+```
+1 -2
+3 -6
+6 -12
+10 -20
+15 -30
+21 -42
+28 -56
+36 -72
+45 -90
+```
+
+### 流程控制
+
+#### 循环 for
+
+**for**
 
 - Go 只有一种循环结构—— for循环。
 - 基本的 for循环包含三个由分号分开的组成部分：
@@ -488,7 +570,7 @@ func main() {
 45
 ```
 
-#### 2.for（续）
+**for（续）**
 
 - 循环初始化语句和后置语句都是可选的。
 ```go
@@ -509,7 +591,7 @@ func main() {
 1024
 ```
 
-#### 3.for 是 Go 的 “while”
+**for 是 Go 的 “while”**
 - 基于此可以省略分号：C 的 while在 Go 中叫做 for。
 ```go
 package main
@@ -528,7 +610,9 @@ func main() {
 ```
 1024
 ```
-#### 4.无限循环
+
+**无限循环**
+
 如果省略循环条件，该循环就不会结束，因此无限循环可以写得很紧凑。
 ```go
 package main
@@ -543,7 +627,7 @@ func main() {
 process took too long
 ```
 
-#### 5.if
+if
 
 就像 for循环一样，Go 的 if语句也不要求用 ( )将条件括起来，同时， { }还是必须有的
 ```go
@@ -569,7 +653,10 @@ func main() {
 ```
 1.4142135623730951 2i
 ```
-#### 6.if 的便捷语句
+
+#### 判断 if/switch
+
+**if 的便捷语句**
 
 - 跟 for一样， if语句可以在条件之前执行一个简单语句。
 - 由这个语句定义的变量的作用域仅在 if范围之内。
@@ -601,7 +688,8 @@ func main() {
 9 20
 ```
 
-#### 7.if 和 else
+**if 和 else**
+
 - 在 if的便捷语句定义的变量同样可以在任何对应的 else块中使用。
 （提示：两个 pow调用都在 main调用 fmt.Println前执行完毕了。）
 ```go
@@ -635,7 +723,7 @@ func main() {
 9 20
 ```
 
-#### 8.switch
+**switch**
 
 - 你可能已经知道 switch语句会长什么样了。
 - 除非以 fallthrough 语句结束，否则分支会自动终止
@@ -667,7 +755,7 @@ func main() {
 Go runs on nacl.
 ```
 
-#### 9.switch 的执行顺序
+**switch 的执行顺序**
 
 - switch 的条件从上到下的执行，当匹配成功的时候停止。
 （例如，
@@ -706,7 +794,7 @@ When's Saturday?
 Too far away.
 ```
 
-#### 9.没有条件的 switch
+**没有条件的 switch**
 
 - 没有条件的 switch 同 switch true一样。
 - 这一构造使得可以用更清晰的形式来编写长的 if-then-else 链。
@@ -734,7 +822,10 @@ func main() {
 ```
 Good evening.
 ```
-#### 10.defer
+
+#### defer
+
+**defer**
 
 - defer 语句会延迟函数的执行直到上层函数返回。
 - 延迟调用的参数会立刻生成，但是在上层函数返回前函数都不会被调用。
@@ -755,7 +846,7 @@ hello
 world
 ```
 
-#### 11.defer 栈
+**defer 栈**
 
 - 延迟的函数调用被压入一个栈中。当函数返回时， 会按照后进先出的顺序调用被延迟的函数调用。
 - 阅读[博文](https://blog.go-zh.org/defer-panic-and-recover)了解更多关于 defer 语句的信息。
@@ -790,11 +881,11 @@ done
 0
 ```
 
-### 复杂类型： struct、slice 和 map。
+### 复杂类型
 
 学习如何基于已有类型定义新的类型：本课涵盖了结构体、数组、slice 和 map。
 
-#### 1.指针
+#### 指针
 
 - Go 具有指针。 指针保存了变量的内存地址。
 - 类型 *T是指向类型 T的值的指针。其零值是 nil。
@@ -812,7 +903,9 @@ fmt.Println(*p) // 通过指针 p 读取 i
 *p = 21 // 通过指针 p 设置 i
 ```
 这也就是通常所说的“间接引用”或“非直接引用”。
+
 **与 C 不同，Go 没有指针运算。**
+
 ```go
 package main
 
@@ -839,7 +932,7 @@ func main() {
 73
 ```
 
-#### 2.结构体
+#### 结构体
 
 - 一个结构体（ struct）就是一个字段的集合。
 （而 type的含义跟其字面意思相符。
@@ -862,7 +955,7 @@ func main() {
 {1 2}
 ```
 
-#### 3.结构体字段
+**结构体字段**
 
 - 结构体字段使用点号来访问。
 ```go
@@ -886,7 +979,7 @@ func main() {
 4
 ```
 
-#### 4.结构体指针
+**结构体指针**
 
 - 结构体字段可以通过结构体指针来访问。
 - 通过指针间接的访问是透明的。（透明，即指可以看到结构体指针指向的内容。）
@@ -912,7 +1005,8 @@ func main() {
 {1000000000 2}
 ```
 
-#### 5.结构体文法
+**结构体文法**
+
 - 结构体文法表示通过结构体字段的值作为列表来新分配一个结构体。
 - 使用 `Name:` 语法可以仅列出部分字段。（字段名的顺序无关。）
 - 特殊的前缀 `&` 返回一个指向结构体的指针。
@@ -944,7 +1038,7 @@ func main() {
 
 结构体扩展阅读:[Go web编程：struct](https://www.kancloud.cn/kancloud/web-application-with-golang/44153)
 
-#### 6.数组
+#### 数组
 
 - 类型 [n]T是一个有 n个类型为 T的值的数组。
 - 表达式
@@ -973,7 +1067,7 @@ Hello World
 [Hello World]
 ```
 
-#### 7.slice(切片)
+#### slice(切片)
 
 - 一个 slice 会指向一个序列的值，并且包含了长度信息。
 - []T是一个元素类型为 T的 slice。
@@ -1007,7 +1101,7 @@ s[4] == 11
 s[5] == 13
 ```
 
-#### 8.slice 的 slice
+**slice 的 slice**
 
 - slice 可以包含任意的类型，包括另一个 slice。
 ```go
@@ -1049,7 +1143,7 @@ O _ _
 X _ O
 ```
 
-#### 9.对 slice 切片
+**对 slice 切片**
 
 - slice 可以重新切片，创建一个新的 slice 值指向相同的数组。
 - 表达式 
@@ -1090,7 +1184,7 @@ s[:3] == [2 3 5]
 s[4:] == [11 13]
 ```
 
-#### 10.构造 slice
+**构造 slice**
 
 - slice 由函数make创建。这会分配一个全是零值的数组并且返回一个 slice 指向这个数组
 ```
@@ -1131,7 +1225,7 @@ c len=2 cap=5 [0 0]
 d len=3 cap=3 [0 0 0]
 ```
 
-#### 11.nil slice
+**nil slice**
 
 - slice 的零值是 nil 。
 - 一个 nil 的 slice 的长度和容量是 0。
@@ -1154,7 +1248,7 @@ func main() {
 nil!
 ```
 
-#### 12.向 slice 添加元素
+**向 slice 添加元素**
 
 - 向 slice 的末尾添加元素是一种常见的操作，因此 Go 提供了一个内建函数 append。 内建函数的文档对 append有详细介绍。
 ```
@@ -1199,7 +1293,10 @@ a len=2 cap=2 [0 1]
 a len=5 cap=8 [0 1 2 3 4]
 ```
 
-#### 13.range
+#### 内建函数
+
+##### range
+
 - for循环的 range格式可以对 slice 或者 map 进行迭代循环。
 - 当使用 for循环遍历一个 slice 时，每次迭代 range将返回两个值。 第一个是当前下标（序号），第二个是该下标所对应元素的一个拷贝。
 ```go
@@ -1226,8 +1323,6 @@ func main() {
 2**6 = 64
 2**7 = 128
 ```
-
-#### 14.range（续）
 
 可以通过赋值给 _来忽略序号和值。
 如果只需要索引值，去掉 “ , value ” 的部分即可。
@@ -1260,7 +1355,7 @@ func main() {
 512
 ```
 
-#### 15.map
+##### map
 
 map 映射键到值。
 map 在使用之前必须用 make来创建；值为 nil的 map 是空的，并且不能对其赋值。
@@ -1288,7 +1383,8 @@ func main() {
 {40.68433 -74.39967}
 ```
 
-#### 16.map 的文法
+**map 的文法**
+
 map 的文法跟结构体文法相似，不过必须有键名
 ```go
 package main
@@ -1317,7 +1413,6 @@ func main() {
 map[Bell Labs:{40.68433 -74.39967} Google:{37.42202 -122.08408}]
 ```
 
-#### 17.map 的文法（续）
 若顶级类型只是一个类型名，你可以在文法的元素中省略它。
 ```go
 package main
@@ -1342,7 +1437,8 @@ func main() {
 map[Bell Labs:{40.68433 -74.39967} Google:{37.42202 -122.08408}]
 ```
 
-#### 18.修改 map
+**修改 map**
+
 在 map m中插入或修改一个元素：
 `m[key] = elem`
 获得元素：
@@ -1353,6 +1449,7 @@ map[Bell Labs:{40.68433 -74.39967} Google:{37.42202 -122.08408}]
 `elem, ok = m[key]`
 如果 key在 m中， ok为 true。否则， ok为 false，并且 elem是 map 的元素类型的零值。
 同样的，当从 map 中读取某个不存在的键时，结果是 map 的元素类型的零值。
+
 ```go
 package main
 
@@ -1382,80 +1479,14 @@ The value: 0
 The value: 0 Present? false
 ```
 
-#### 19.函数值
-函数也是值。他们可以像其他值一样传递，比如，函数值可以作为函数的参数或者返回值。
-```go
-package main
-
-import (
-    "fmt"
-    "math"
-)
-
-func compute(fn func(float64, float64) float64) float64 {
-    return fn(3, 4)
-}
-
-func main() {
-    hypot := func(x, y float64) float64 {
-        return math.Sqrt(x*x + y*y)
-    }
-    fmt.Println(hypot(5, 12))
-
-    fmt.Println(compute(hypot))
-    fmt.Println(compute(math.Pow))
-}
-```
-结果
-```
-13
-5
-81
-```
-
-#### 20.函数的闭包
-Go 函数可以是一个闭包。闭包是一个函数值，它引用了函数体之外的变量。 这个函数可以对这个引用的变量进行访问和赋值；换句话说这个函数被“绑定”在这个变量上。
-例如，函数 adder返回一个闭包。每个返回的闭包都被绑定到其各自的sum变量上。
-```go
-package main
-
-import "fmt"
-
-func adder() func(int) int {
-    sum := 0
-    return func(x int) int {
-        sum += x
-        return sum
-    }
-}
-
-func main() {
-    pos, neg := adder(), adder()
-    for i := 0; i < 10; i++ {
-        fmt.Println(
-            pos(i),
-            neg(-2*i),
-        )
-    }
-}
-```
-结果
-```
-1 -2
-3 -6
-6 -12
-10 -20
-15 -30
-21 -42
-28 -56
-36 -72
-45 -90
-```
+## 高级语法
 
 ### 方法和接口
+
 学习如何为类型定义方法；如何定义接口；可以用它们来定义对象和其行为。
 
-#### 1.方法
+#### 方法
+
 Go 没有类。然而，仍然可以在结构体类型上定义方法。
 方法接收者 出现在 func关键字和方法名之间的参数中。
 ```go
@@ -1483,9 +1514,12 @@ func main() {
 ```
 5
 ```
-#### 2.方法（续）
+
+**方法（续）**
+
 你可以对包中的 任意 类型定义任意方法，而不仅仅是针对结构体。
 但是，不能对来自其他包的类型或基础类型定义方法。
+
 ```go
 package main
 
@@ -1513,7 +1547,8 @@ func main() {
 1.4142135623730951
 ```
 
-#### 3.接收者为指针的方法
+**接收者为指针的方法**
+
 方法可以与命名类型或命名类型的指针关联。
 刚刚看到的两个 Abs方法。一个是在*Vertex指针类型上，而另一个在 MyFloat值类型上。 有两个原因需要使用指针接收者。首先避免在每个方法调用中拷贝值（如果值类型是大的结构体的话会更有效率）。其次，方法可以修改接收者指向的值。
 尝试修改 Abs的定义，同时 Scale方法使用 Vertex 代替*Vertex作为接收者。
@@ -1555,10 +1590,12 @@ After scaling: &{X:15 Y:20}, Abs: 25
 
 方法扩展阅读：[Go web编程:method](https://github.com/pylixm/build-web-application-with-golang/blob/master/zh/02.5.md)
 
-#### 4.接口
+#### 接口
+
 接口类型是由一组方法定义的集合。
 接口类型的值可以存放实现这些方法的任何值。
 注意： 示例代码的 22 行存在一个错误。 由于 Abs只定义在 *Vertex（指针类型）上， 所以 Vertex（值类型）不满足 Abser。
+
 ```go
 package main
 
@@ -1608,7 +1645,8 @@ func (v *Vertex) Abs() float64 {
 5
 ```
 
-#### 5.隐式接口
+**隐式接口**
+
 类型通过实现那些方法来实现接口。 没有显式声明的必要；所以也就没有关键字“implements“。
 隐式接口解藕了实现接口的包和定义接口的包：互不依赖。
 因此，也就无需在每一个实现上增加新的接口名称，这样同时也鼓励了明确的接口定义。
@@ -1649,7 +1687,10 @@ func main() {
 hello, writer
 ```
 
-#### 6.Stringers
+#### 接口实例
+
+**Stringers**
+
 一个普遍存在的接口是 fmt
 包中定义的 Stringer
 。
@@ -1684,7 +1725,8 @@ func main() {
 Arthur Dent (42 years) Zaphod Beeblebrox (9001 years)
 ```
 
-#### 7.错误
+**错误**
+
 Go 程序使用 error值来表示错误状态。
 与 fmt.Stringer类似， error类型是一个内建接口：
 ```go
@@ -1700,7 +1742,7 @@ if err != nil {
     fmt.Printf("couldn't convert number: %v\n", err)
     return}
 fmt.Println("Converted integer:", i)
-``` 
+```
 
 error 为 nil 时表示成功；非 nil 的 error表示错误。
 ```go
@@ -1739,7 +1781,8 @@ func main() {
 at 2009-11-10 23:00:00 +0000 UTC, it didn't work
 ```
 
-#### 8.Readers
+**Readers**
+
 io包指定了 io.Reader接口， 它表示从数据流结尾读取。
 Go 标准库包含了这个接口的许多实现， 包括文件、网络连接、压缩、加密等等。
 io.Reader接口有一个 Read方法：
@@ -1781,7 +1824,7 @@ n = 0 err = EOF b = [101 97 100 101 114 33 32 82]
 b[:n] = ""
 ```
 
-#### 9.Web 服务器
+**Web 服务器**
 
 包 http 通过任何实现了 http.Handler
 的值来响应 HTTP 请求：
@@ -1828,7 +1871,8 @@ func main() {
 2009/11/10 23:00:00 listen tcp: Protocol not available
 ```
 
-#### 10.图片
+**图片**
+
 Package image 定义了 Image
 接口：
 
@@ -1873,7 +1917,8 @@ func main() {
 这一部分概览了 goroutine 和 channel，以及如何使用它们来实现不同的并发模式。
 Go 将并发作为语言的核心构成。
 
-#### 1.goroutine
+**goroutine**
+
 goroutine 是由 Go 运行时环境管理的轻量级线程。
 go f(x, y, z)
 开启一个新的 goroutine 执行
@@ -1914,9 +1959,9 @@ hello
 world
 world
 hello
-``` 
+```
 
-#### 2.channel
+**channel**
 
 channel 是有类型的管道，可以用 channel 操作符 <-对其发送或者接收值。
 
@@ -1957,7 +2002,8 @@ func main() {
 -5 17 12
 ```
 
-#### 3.缓冲 channel
+**缓冲 channel**
+
 channel 可以是 带缓冲的。为 make提供第二个参数作为缓冲长度来初始化一个缓冲 channel：
 ch := make(chan int, 100)
 向带缓冲的 channel 发送数据的时候，只有在缓冲区满的时候才会阻塞。 而当缓冲区为空的时候接收操作会阻塞。
@@ -1988,12 +2034,16 @@ main.main()
         /tmp/sandbox156608315/main.go:9 +0x100
 ```
 
-#### 4.range 和 close
+**range 和 close**
+
+
 发送者可以 close一个 channel 来表示再没有值会被发送了。接收者可以通过赋值语句的第二参数来测试 channel 是否被关闭：当没有值可以接收并且 channel 已经被关闭，那么经过
 v, ok := <-ch
 之后 ok会被设置为 false。
-循环 for i := range c 会不断从 channel 接收值，直到它被关闭。
+循环 `for i := range c ` 会不断从 channel 接收值，直到它被关闭。
+
 注意： 只有发送者才能关闭 channel，而不是接收者。向一个已经关闭的 channel 发送数据会引起 panic。 还要注意： channel 与文件不同；通常情况下无需关闭它们。只有在需要告诉接收者没有更多的数据的时候才有必要进行关闭，例如中断一个 range。
+
 ```go
 package main
 
@@ -2032,7 +2082,8 @@ func main() {
 34
 ```
 
-#### 5.select
+**select**
+
 select语句使得一个 goroutine 在多个通讯操作上等待。
 select会阻塞，直到条件分支中的某个可以继续执行，这时就会执行那个条件分支。当多个都准备好的时候，会随机选择一个
 ```go
@@ -2081,7 +2132,7 @@ func main() {
 quit
 ```
 
-#### 6.默认选择
+**select 默认选择**
 当 select中的其他条件分支都没有准备好的时候，default分支会被执行。
 为了非阻塞的发送或者接收，可使用 default分支：
 ```go
@@ -2134,7 +2185,8 @@ tick.
 BOOM!
 ```
 
-#### 7.sync.Mutex
+**sync.Mutex**
+
 我们已经看到 channel用来在各个 goroutine 间进行通信是非常合适的了。
 
 但是如果我们并不需要通信呢？比如说，如果我们只是想保证在每个时刻，只有一个 goroutine 能访问一个共享的变量从而避免冲突？
@@ -2195,7 +2247,8 @@ func main() {
 1000
 ```
 
-#### 8.练习：Web 爬虫
+## 练习：Web 爬虫
+
 在这个练习中，将会使用 Go 的并发特性来并行执行 web 爬虫。
 修改 Crawl函数来并行的抓取 URLs，并且保证不重复。
 提示：你可以用一个 map 来缓存已经获取的 URL，但是需要注意 map 本身并不是并发安全的！
