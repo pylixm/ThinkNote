@@ -43,6 +43,7 @@ import _ "strings"
 ```
 
 - 一个package级别的func, type, 变量, 常量, 在package内部下无论大小,无需导入,可以随意访问。此时需要run整个包的编译文件：
+
 ```bash
 awesomeProject
 ├── awesomeProject # go build 后产生
@@ -50,6 +51,7 @@ awesomeProject
 └── second.go
 ```
 如下运行:
+
 ```
 go run *.go 
 ./awesomeProject
