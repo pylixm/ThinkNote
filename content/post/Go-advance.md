@@ -10,6 +10,7 @@ tags : [golang, 语言学习]
 ## 编码
 
 - Go 原生支持UTF-8, 可直接打印非ASCII码字符。
+
 ```go
 package main
 
@@ -27,6 +28,7 @@ func main() {
 - Go 以包作为代码的最小组织单位，通过包来实现代码的导入、权限的控制。
 - 每个go文件必须从以`package` 包声明开头，声明包名称最好和目录相同，也可以不同。不同时，注意`import` 引入时，为目录名，在引入后的调用使用中，使用该引入包的 `package` 声明名称。
 - 三种导入方式：
+
 ```go
 // 带别名的导入
 import str "strings" 
@@ -67,6 +69,7 @@ go run *.go
 ## 函数
 
 - Go 函数支持可变参数
+
 ```go
 func myfunc(arg ...int) {}
 ```
@@ -75,6 +78,7 @@ func myfunc(arg ...int) {}
 - 传指针比较轻量级 (8bytes),当传入函数的参数占用较大内存时，使用指针参数，会节省参数赋值的时间和内存开销，提升效率。常用于结构体作为参数传入函数时。
 - Go语言中channel，slice，map这三种类型的实现机制类似指针，所以可以直接传递，而不用取地址后传递指针。（注：若函数需改变slice的长度，则仍需要取地址传递指针）
 - 函数也可作为参数来传递
+
 ```go
 package main
 import "fmt"
@@ -121,6 +125,7 @@ func main(){
 
 - 结构体是类型的集合
 - 结构体和通过`匿名结构体`来实现结构体字段的继承
+
 ```go
 package main
 import "fmt"
@@ -168,6 +173,7 @@ func main() {
 - 当指针作为receiver时，引用其方法可以直接使用指针对应的对象。
 - 方法可以通过匿名结构体来继承。
 - 方法的调用顺序是，先调用当前结构体的方法，再调用其继承的方法。所以，可以通过重新本结构体的方法，来达到方法重写的目的。
+
 ```go
 package main
 import "fmt"
@@ -214,6 +220,7 @@ func main() {
 - 空接口 `interface(interface{})`, 可认为任何类型都实现了空接口。
 - 接口变量可以存储任何实现了接口的类型，空接口变量可以存储任何类型数据。
 - 当接口作为函数参数时，则该参数可以为任何实现了该接口的数据类型。
+
 ```go
 package main
 
@@ -258,6 +265,7 @@ func main() {
 
 - 接口可通过嵌套接口来继承接口的方法。
 - Go 语言支持反射
+
 ```go
 t := reflect.TypeOf(i)    //得到类型的元数据,通过t我们能获取类型定义里面的所有元素
 v := reflect.ValueOf(i)   //得到实际的值，通过v我们获取存储在里面的值，还可以去改变值
@@ -266,6 +274,7 @@ v := reflect.ValueOf(i)   //得到实际的值，通过v我们获取存储在里
 ## 并发
 
 - 线程同步：
+
 ```go
 // 使用 sync.Mutex
 func main() {
@@ -327,6 +336,7 @@ func main() {
 ```
 
 - 开启多个并发，只要有1个返回，既退出住线程。
+
 ```go
 func main() {
     ch := make(chan string, 32)
@@ -346,6 +356,7 @@ func main() {
 ```
 
 - 生产者消费者模型
+
 ```go
 // Package pubsub implements a simple multi-topic pub-sub library.
 package pubsub
