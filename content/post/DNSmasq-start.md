@@ -320,6 +320,8 @@ $ service dnsmasq start
 $ dig @192.168.101.104 www.hi-linux.com
 ```
 
+其他可参阅官网：http://www.thekelleys.org.uk/dnsmasq/
+
 ## 参考 
 
 - [https://lcx.cc/post/2343/](https://lcx.cc/post/2343/)
