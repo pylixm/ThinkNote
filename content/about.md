@@ -8,7 +8,7 @@ type: "about"
 
 >Life is short, i use Python！
 
-Name: P歪理(pylixm)
+Name: DeanWu(pylixm)
 
 Email： pyli.xm@gmail.com 
 
