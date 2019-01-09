@@ -53,6 +53,7 @@ PKG_CONFIG="pkg-config"
 
 #### Linux, and FreeBSD tarballs
 
+源码方式安装：
 ```bash
 # 下载源码包
 wget https://dl.google.com/go/go1.9.3.linux-amd64.tar.gz
@@ -63,6 +64,13 @@ tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 # 配置环境变量  $HOME/.bash_profile
 export PATH=$PATH:/usr/local/go/bin
 source .bash_profile 
+```
+
+也可直接通过包管理工具来安装：
+
+```bash
+yum install golang 
+apt-get install golang 
 ```
 
 ####  Mac OS X
