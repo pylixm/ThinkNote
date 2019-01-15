@@ -4,7 +4,7 @@ title : Django 最佳实践-读书笔记 - 第五章 Settings 和 Requirements
 categories: [Django] 
 date : 2016-05-22
 url: /posts/2016-05-22-Best.Practices.for.Django.1.8.3rd-Chapter-5.html 
-tags : [[Django, Django最佳实践]]
+tags : [Django, Django最佳实践]
 ---
 
 [其他章节索引页](2016-05-22-Best.Practices.for.Django.1.8.3rd-Index.html)
