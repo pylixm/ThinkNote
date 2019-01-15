@@ -1,9 +1,9 @@
 ---
 layout : post
 title : 无法添加crontab 解决 No space left on device
-categories: [ QA ] 
+categories: [Linux] 
 date : 2019-01-15T16:04:08+08:00
-tags : [crontab, 计划任务]
+tags : [crontab, 计划任务, QA]
 ---
 
 ### Q & A：

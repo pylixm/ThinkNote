@@ -4,7 +4,7 @@ title : 《Best.Practices.for.Django.1.8.3rd》 读书笔记-索引
 categories: [Django] 
 date : 2016-05-22 
 url: /posts/2016-05-22-Best.Practices.for.Django.1.8.3rd-Index.html 
-tags : [Django,Django最佳实践]
+tags : [Django, Django最佳实践]
 ---
 
 >《Two.Scoops.Press.Two.Scoops.of.Django.Best.Practices.for.Django.1.8.3rd.Edition》

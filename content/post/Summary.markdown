@@ -1,10 +1,10 @@
 ---
 layout : post
 title : 2015总结，2016计划
-categories: [ summary] 
+categories: [个人管理] 
 date : 2016-02-22
 url: /posts/2016-02-22-Summary.html 
-tags : [summary,]
+tags : [summary, 个人管理]
 ---
 
 2015年算是自己的互联网元年。

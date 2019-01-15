@@ -1,10 +1,10 @@
 ---
 layout : post
 title : django signal 使用总结
-categories: [ django] 
+categories: [Django] 
 date : 2017-01-24
 url: /posts/2017-01-24-Django-signal.html 
-tags : [django, signal]
+tags : [django, django-signal]
 ---
 
 最近在已经开发好的项目上加功能，想到了django的signal，整理记录如下备查。

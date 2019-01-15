@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 使用 supervisor 来监控 django celery
-categories: [ supervisor] 
+categories: [Django, Supervisor] 
 date : 2016-01-19
 url: /posts/2016-01-19-Django-supervisor-celery.html 
 tags : [supervisor, django, celery]

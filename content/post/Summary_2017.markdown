@@ -1,10 +1,10 @@
 ---
 layout : post
 title : 2016 总结， 2017 计划
-categories: [ summary] 
+categories: [个人管理] 
 date : 2017-01-03
 url: /posts/2017-01-03-Summary_2017.html 
-tags : [summary,]
+tags : [summary, 个人管理]
 ---
 
 此时再看去年的总结，貌似完成的是少之又少。发现自己最大的问题是缺乏执行力，我想懒散应该是每个人最大的敌人了吧。

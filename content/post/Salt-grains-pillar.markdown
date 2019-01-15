@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 转-saltstack 中Grains 与pillar的区别
-categories: [ salt] 
+categories: [SaltStack] 
 date : 2016-09-04
 url: /posts/2016-09-04-Salt-grains-pillar.html 
 tags : [salt]

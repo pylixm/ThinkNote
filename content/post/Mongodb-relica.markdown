@@ -1,14 +1,13 @@
 ---
 layout : post
-title : 转载 - 高可用的MongoDB集群
-categories: [ mongodb] 
+title : 高可用的MongoDB集群
+categories: [Mongodb] 
 date : 2016-04-06 
 url: /posts/2016-04-06-Mongodb-relica.html 
 tags : [mongodb, 集群]
-old_url : http://www.jianshu.com/p/2825a66d6aed
-
 ---
 
+>原文链接：http://www.jianshu.com/p/2825a66d6aed
 
 刚接触MongoDB，就要用到它的集群，只能硬着头皮短时间去看文档和尝试自行搭建。迁移历史数据更是让人恼火，近100G的数据文件，导入、清理垃圾数据执行的速度蜗牛一样的慢。趁着这个时间，把这几天关于Mongod集群相关的内容整理一下。大概介绍一下MongoDB集群的几种方式：Master-Slave、Relica Set、Sharding，并做简单的演示。
 

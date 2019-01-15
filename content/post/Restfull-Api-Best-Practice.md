@@ -1,7 +1,7 @@
 ---
 layout : post
-title : 转-10 Best Practices for Better RESTful API
-categories: [ restful] 
+title : 10 Best Practices for Better RESTful API
+categories: [Restful] 
 date : 2017-08-26
 url: /posts/2017-08-26-Restfull-Api-Best-Practice.html 
 tags : [restful]

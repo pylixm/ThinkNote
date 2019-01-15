@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 【 python 基础系列 】 - python 魔法方法
-categories: [ python] 
+categories: [Python] 
 date : 2018-02-01
 url: /posts/2018-02-01-python-magic-method.html 
 tags : [python, Magic Method]

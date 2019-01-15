@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 【 Go语言学习笔记三 】 - Golang 语法入门
-categories: [ golang] 
+categories: [Golang] 
 date : 2018-01-30
 url: /posts/2018-01-30-Go-start.html 
 tags : [golang, 语言学习]

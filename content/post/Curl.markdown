@@ -1,12 +1,13 @@
 ---
 layout : post
-title : 转载 - curl 命令详解
-categories: [ linux] 
+title : curl 命令详解
+categories: [Linux] 
 date : 2016-03-07
 url: /posts/2016-03-07-Curl.html 
 tags : [linux, curl]
-old_url : http://blog.csdn.net/wangjunji34478/article/details/35988223
 ---
+
+> 原文地址：http://blog.csdn.net/wangjunji34478/article/details/35988223
  
  对于windows用户如果用Cygwin模拟unix环境的话，里面没有带curl命令，要自己装，所以建议用Gow来模拟，它已经自带了curl工具，安装后直接在cmd环境中用curl命令就可，因为路径已经自动给你配置好了。
 <!-- more -->

@@ -1,10 +1,10 @@
 ---
 layout : post
-title : 转载 - Django admin 定制案例
-categories: [ django] 
+title : Django admin 定制案例
+categories: [Django] 
 date : 2016-01-05 20:00:00
 url: /posts/2016-01-05-Django-admin.html 
-tags : [django,]
+tags : [django, django-admin]
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 如何开技术方案选型会议
-categories: [ 项目管理] 
+categories: [项目管理] 
 date : 2017-03-04 16:00:00
 url: /posts/2017-03-04-How-to-meetting.html 
 tags : [项目管理]

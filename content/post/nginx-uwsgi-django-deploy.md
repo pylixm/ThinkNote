@@ -1,10 +1,10 @@
 ---
 layout : post
 title : nginx+uwsgi 发布django项目常遇到的问题
-categories: [ django] 
+categories: [Django] 
 date : 2018-09-11
 url: /posts/2018-09-11-nginx-uwsgi-django-deploy.html 
-tags : [django, nginx, uwsgi]
+tags : [django, nginx, uwsgi, QA]
 ---
 
 

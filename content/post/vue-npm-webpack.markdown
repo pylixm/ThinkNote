@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Vue 新手使用总结
-categories: [ js] 
+categories: [Javascript, Vue] 
 date : 2017-05-11
 url: /posts/2017-05-11-vue-npm-webpack.html 
 tags : [js, vue]

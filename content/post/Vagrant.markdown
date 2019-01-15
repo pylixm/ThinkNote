@@ -1,10 +1,10 @@
 ---
 layout : post
 title : vagrant、docker、virtualbox之间的区别
-categories: [ 虚拟机] 
+categories: [Vagrant] 
 date : 2015-11-29 22:22:00
 url: /posts/2015-11-29-Vagrant.html 
-tags : [容器, 虚拟机]
+tags : [容器, 虚拟机, vagrant]
 ---
 
 

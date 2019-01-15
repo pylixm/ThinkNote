@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Vue.js 初尝试
-categories: [ js] 
+categories: [Javascript, Vue] 
 date : 2016-11-16 
 url: /posts/2016-11-16-vue-first.html 
 tags : [js, vue]

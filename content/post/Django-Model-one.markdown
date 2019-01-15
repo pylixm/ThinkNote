@@ -1,10 +1,10 @@
 ---
 layout : post
 title : Django学习笔记-模型(1)模型的定义
-categories: [ django] 
+categories: [Dajgno] 
 date : 2015-11-01
 url: /posts/2015-11-01-Django-Model-one.html 
-tags : [django,]
+tags : [django, django-model]
 ---
 
 

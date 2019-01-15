@@ -1,11 +1,10 @@
 ---
 title : Django 简单入门及最佳实践
-categories: [ django] 
+categories: [Django] 
 date : 2016-05-08 18:00:00
 url: /posts/2016-05-08-Django-tutorial.html 
-tags : [django]
+tags : [django, django-tutorial]
 ---
-
 
 
 自己使用纯django 开发项目，也有1年多了。在使用django的过程中，也抱怨过django的各种问题。比如，各种模块的约定过于死板，不够灵活。

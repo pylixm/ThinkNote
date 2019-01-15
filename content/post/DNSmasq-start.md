@@ -1,7 +1,7 @@
 ---
 layout : post
 title : DNS 相关知识记录
-categories: [DNS，运维知识库] 
+categories: [DNS, 运维知识库] 
 date : 2018-11-13
 url: /posts/2018-11-13-DNSmasq-start.html 
 tags : [运维知识库, DNS]

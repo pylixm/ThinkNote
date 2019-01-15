@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 自动化运维系列-资产管理系统CMDB
-categories: [ devops] 
+categories: [DevOps] 
 date : 2017-07-08
 url: /posts/2017-07-08-devops-cmdb.html 
 tags : [devops, 自动化运维]

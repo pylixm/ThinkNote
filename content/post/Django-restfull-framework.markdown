@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Django restful framework 文档
-categories: [ django] 
+categories: [Django] 
 date : 2015-11-01 18:25:00
 url: /posts/2015-11-01-Django-restfull-framework.html 
 tags : [django, restful]

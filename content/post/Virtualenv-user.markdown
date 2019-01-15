@@ -1,10 +1,10 @@
 ---
 layout : post
 title : 使用virtualenv 部署django应用问题记录
-categories: [ vcs] 
+categories: [Django] 
 date : 2016-01-18 19:50:00
 url: /posts/2016-01-18-Virtualenv-user.html 
-tags : [virtualenv,]
+tags : [virtualenv, django]
 ---
 
 

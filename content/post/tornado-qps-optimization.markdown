@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 记一次tornado QPS 优化
-categories: [ tornado] 
+categories: [Tornado] 
 date : 2017-04-04 20:00:00
 url: /posts/2017-04-04-tornado-qps-optimization.html 
 tags : [tornado]

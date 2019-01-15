@@ -1,10 +1,10 @@
 ---
 layout : post
 title : 2017 年总结，2018 年计划
-categories: [ summary] 
+categories: [个人管理] 
 date : 2018-01-04
 url: /posts/2018-01-04-Summary_2018.html 
-tags : [summary,]
+tags : [summary, 个人管理]
 ---
 
 2017 ，一年下来做了不少事情，遇到了很多挑战，现在看来最算是把它们都克服了。这充分说明了当时我想到的那句话“不管多大的困难，咬咬牙总会过去的“。只要坚持下来了，无论结果如何，都是一种成长。

@@ -1,7 +1,7 @@
 ---
 layout : post
 title : SaltStack学习笔记1-salt安装配置
-categories: [ salt] 
+categories: [SaltStack] 
 date : 2015-12-17 23:33:00
 url: /posts/2015-12-17-Salt-install.html 
 tags : [salt]

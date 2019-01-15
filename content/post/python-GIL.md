@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 【 python 基础系列 】 - GIL锁的来龙去脉
-categories: [ python] 
+categories: [Python] 
 date : 2018-08-10
 url: /posts/2018-08-10-python-GIL.html 
 tags : [python, GIL]

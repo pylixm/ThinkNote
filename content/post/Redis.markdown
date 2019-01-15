@@ -1,15 +1,13 @@
 ---
 layout : post
-title : 转载-Memcached, Redis, MongoDB区别
-categories: [ NoSQL] 
+title : Memcached, Redis, MongoDB区别
+categories: [NoSQL] 
 date : 2015-11-30 22:22:00
 url: /posts/2015-11-30-Redis.html 
-url: /posts/2015-11-30-Redis.html 
 tags : [NoSQL, redis]
-old_url : http://www.cnblogs.com/davidgu/p/3665589.html
 ---
 
-
+>原文地址：http://www.cnblogs.com/davidgu/p/3665589.html
 
 mongodb和memcached不是一个范畴内的东西。mongodb是文档型的非关系型数据库，其优势在于查询功能比较强大，能存储海量数据。mongodb和memcached不存在谁替换谁的问题。
 

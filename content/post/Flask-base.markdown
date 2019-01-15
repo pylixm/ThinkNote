@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Flask 目录结构分析
-categories: [ Flask] 
+categories: [Flask] 
 date : 2018-06-04
 url: /posts/2018-06-04-Flask-base.html 
 tags : [Flask, python]

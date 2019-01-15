@@ -1,7 +1,7 @@
 ---
 layout : post
 title : "SaltStack学习笔记3 -- salt returner 的使用"
-categories: [ salt] 
+categories: [SaltStack] 
 date : 2016-03-10
 url: /posts/2016-03-10-Salt-returner.html 
 tags : [salt]

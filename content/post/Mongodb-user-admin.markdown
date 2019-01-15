@@ -1,7 +1,7 @@
 ---
 layout : post
 title : mongodb 3.2 用户权限管理配置
-categories: [ mongodb] 
+categories: [Mongodb] 
 date : 2016-06-03
 url: /posts/2016-06-03-Mongodb-user-admin.html 
 tags : [mongodb,]

@@ -1,10 +1,10 @@
 ---
 layout : post
 title : mongodb 启动报错
-categories: [ mongodb] 
+categories: [Mongodb] 
 date : 2016-04-06 
 url: /posts/2016-04-06-Mongodb-start.html 
-tags : [mongodb, 启动报错]
+tags : [mongodb, 启动报错, QA]
 ---
 
 

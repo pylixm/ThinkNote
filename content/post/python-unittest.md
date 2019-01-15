@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 【 python 基础系列 】 - python 单元测试 unittest 工具使用
-categories: [ python] 
+categories: [Python] 
 date : 2018-01-18
 url: /posts/2018-01-18-python-unittest.html 
 tags : [python, unittest]

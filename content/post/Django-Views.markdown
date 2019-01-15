@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Django学习笔记-url、视图
-categories: [ django] 
+categories: [Django] 
 date : 2015-11-15 16:00:00
 url: /posts/2015-11-15-Django-Views.html 
 tags : [django,]
