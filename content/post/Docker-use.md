@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Docker学习笔记（二）--简单使用,搭建python开发环境 
-categories: [Docker] 
+categories: [Docker,] 
 date : 2017-08-26
 url: /posts/2017-08-26-Docker-use.html 
 tags : [devops, 自动化运维, docker]

@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Git使用学习笔记
-categories: [Git] 
+categories: [Git,] 
 date : 2015-11-01
 url: /posts/2015-11-01-Git.html 
 tags : [vcs, git]

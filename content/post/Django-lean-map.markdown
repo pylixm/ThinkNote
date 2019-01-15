@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Django 文章整理- 学习路径总结
-categories: [Django] 
+categories: [Django,] 
 date : 2016-05-16 22:24:00
 url: /posts/2016-05-16-Django-lean-map.html 
 tags : [django,]

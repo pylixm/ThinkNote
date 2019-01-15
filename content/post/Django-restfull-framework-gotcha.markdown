@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Django restful framework 使用笔记 -- 踩坑记录
-categories: [Django] 
+categories: [Django, Restful] 
 date : 2016-11-30 
 url: /posts/2016-11-30-Django-restfull-framework-gotcha.html 
 tags : [django, restful]

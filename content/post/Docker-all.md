@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Docker 知识大全
-categories: [Docker] 
+categories: [Docker,] 
 date : 2018-05-31
 url: /posts/2018-05-31-Docker-all.html 
 tags : [devops, 自动化运维, docker]

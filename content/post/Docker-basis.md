@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Docker学习笔记（一）--基础知识
-categories: [Docker] 
+categories: [Docker,] 
 date : 2017-08-25
 url: /posts/2017-08-25-Docker-basis.html 
 tags : [devops, 自动化运维, docker]

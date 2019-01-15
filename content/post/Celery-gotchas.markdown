@@ -1,6 +1,6 @@
 ---
 title : 译-使用 celery 时的 3 个坑 
-categories: [Python] 
+categories: [Python,] 
 date : 2016-03-08
 url: /posts/2016-03-08-Celery-gotchas.html 
 tags : [Python,Celery,翻译]

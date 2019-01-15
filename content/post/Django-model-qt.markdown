@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Django学习笔记- 自定义管理器（objects）后遇到的问题
-categories: [Django] 
+categories: [Django,] 
 date : 2016-04-20
 url: /posts/2016-04-20-Django-model-qt.html 
 tags : [django, django-model]

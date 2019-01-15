@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Django学习笔记-模型(2)模型的操作
-categories: [Django] 
+categories: [Django,] 
 date : 2015-11-13
 url: /posts/2015-11-13-Django-Model-two.html 
 tags : [django, django-model]

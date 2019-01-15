@@ -1,7 +1,7 @@
 ---
 layout : post
 title : curl 命令详解
-categories: [Linux] 
+categories: [Linux,] 
 date : 2016-03-07
 url: /posts/2016-03-07-Curl.html 
 tags : [linux, curl]

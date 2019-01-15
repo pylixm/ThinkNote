@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 《Best.Practices.for.Django.1.8.3rd》 读书笔记-索引
-categories: [Django] 
+categories: [Django,] 
 date : 2016-05-22 
 url: /posts/2016-05-22-Best.Practices.for.Django.1.8.3rd-Index.html 
 tags : [Django, Django最佳实践]

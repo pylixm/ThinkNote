@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Django 最佳实践-读书笔记 - 第十一章、第十二章 Form 
-categories: [Django] 
+categories: [Django,] 
 date : 2016-06-26 20:16:00
 url: /posts/2016-06-26-Best.Practices.for.Django.1.8.3rd-Chapter-9.html 
 tags : [Django, Django最佳实践]
