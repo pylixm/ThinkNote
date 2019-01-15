@@ -4,7 +4,7 @@ title : postgreSQL vs MySQL 命令行对比
 categories: [PostgreSQL,] 
 date : 2017-11-05
 url: /posts/2017-11-05-postgresql-cmd.html 
-tags : [postgreSQL, mysql, 数据库]
+tags : [PostgreSQL, Mysql, 数据库]
 ---
 
 >原文：http://www.cnblogs.com/qiyebao/p/4749146.html

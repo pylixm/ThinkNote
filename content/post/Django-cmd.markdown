@@ -4,7 +4,7 @@ title : django 相关命令总结
 categories: [Django,] 
 date : 2016-01-29 18:00:00
 url: /posts/2016-01-29-Django-cmd.html 
-tags : [django,]
+tags : [Django,]
 ---
 
 

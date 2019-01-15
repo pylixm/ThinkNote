@@ -4,7 +4,7 @@ title : SQLAlchemy 数据库链接池问题排查记录
 categories: [Tornado,] 
 date : 2017-08-29
 url: /posts/2017-08-29-tornado-sqlalchemy.html 
-tags : [tornado, sqlalchemy]
+tags : [Tornado, sqlalchemy]
 ---
 
 ## 环境

@@ -4,7 +4,7 @@ title : 【 python 基础系列 】 - python 魔法方法
 categories: [Python,] 
 date : 2018-02-01
 url: /posts/2018-02-01-python-magic-method.html 
-tags : [python, Magic Method]
+tags : [Python, Magic Method]
 ---
 
 本文参考 pycoder's weekly 的文章，做了下python 魔术方法的使用总结，记录备查。

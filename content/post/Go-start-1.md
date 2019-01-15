@@ -3,7 +3,7 @@ layout : post
 title : 【 Go语言学习笔记三 】 - Golang 语法入门【重排版】
 categories: [Golang,] 
 date : 2018-10-23
-tags : [golang, 语言学习]
+tags : [Golang, 语言学习]
 ---
 
 ## 引子 

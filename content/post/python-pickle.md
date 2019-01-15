@@ -4,7 +4,7 @@ title : 【 python 基础系列 】 Pickle 的使用
 categories: [Python,] 
 date : 2018-02-02
 url: /posts/2018-02-02-python-pickle.html 
-tags : [python, Pickle]
+tags : [Python, Pickle]
 ---
 
 > 原文：[储存你的对象](https://pycoders-weekly-chinese.readthedocs.io/en/latest/issue6/a-guide-to-pythons-magic-methods.html#id22)

@@ -4,7 +4,7 @@ title : Docker 知识大全
 categories: [Docker,] 
 date : 2018-05-31
 url: /posts/2018-05-31-Docker-all.html 
-tags : [devops, 自动化运维, docker]
+tags : [自动化运维, Docker]
 ---
 
 >原文地址：https://blog.opskumu.com/docker.html

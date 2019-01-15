@@ -4,7 +4,7 @@ title : 记一次tornado QPS 优化
 categories: [Tornado,] 
 date : 2017-04-04 20:00:00
 url: /posts/2017-04-04-tornado-qps-optimization.html 
-tags : [tornado]
+tags : [Tornado]
 ---
 
 应项目的需求，我们使用tornado开发了一个api系统，系统开发完后，在8核16G的虚机上经过压测qps只有200+。与我们当初定的QPS 大于2k差了一个数量级，于是便开始了漫长的优化之路。在优化过程中，学了许多东西，有必要整理记录下备查。

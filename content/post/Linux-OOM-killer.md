@@ -4,7 +4,7 @@ title : 记一次 Linux OOM-killer 分析过程
 categories: [Linux,] 
 date : 2018-11-28
 url: /posts/2018-11-28-Linux-oom-killer.html 
-tags : [linux, 运维知识库]
+tags : [Linux, 运维知识库]
 ---
 
 

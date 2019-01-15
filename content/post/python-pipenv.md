@@ -4,7 +4,7 @@ title : 【 python 基础系列 】 - pipenv 试用过程分享
 categories: [Python,] 
 date : 2018-01-13
 url: /posts/2018-01-13-python-pipenv.html 
-tags : [python, pipenv]
+tags : [Python, pipenv]
 ---
 
 最近常看到`pipenv`这个管理工具，今天有时间查了下，是 [Kennethreitz](https://www.kennethreitz.org/values) 大神的作品，看了下github的仓库，是2017年1月份创建的，仅仅一年的时间变获得了7k+的收藏，最新一次的提交时间为2天前，可见该仓库活跃程度。自己之前写过一篇文章[《使用 pyenv + virtualenv 打造多版本python开发环境》](http://www.pylixm.cc/posts/2016-06-19-Virtualenv-install.html),遗留个问题，一直没有找到合理的同时管理python和python依赖包的工具，试用了下	`pipenv`，可以说完美的解决了python版本及包的管理问题。并且`pipebv` 还是`Python.org`正式推荐的python包管理工具。原文如下：

@@ -4,7 +4,7 @@ title : Flask 目录结构分析
 categories: [Flask,] 
 date : 2018-06-04
 url: /posts/2018-06-04-Flask-base.html 
-tags : [Flask, python]
+tags : [Flask, Python]
 ---
  
 到目前为止，Flask 最新版本为`1.0.3`，我们来以此版本做分析，以便可以快速回忆各组件关系。

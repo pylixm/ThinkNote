@@ -4,7 +4,7 @@ title : Vue.js 初尝试
 categories: [Javascript, Vue] 
 date : 2016-11-16 
 url: /posts/2016-11-16-vue-first.html 
-tags : [js, vue]
+tags : [Javascript, Vue] 
 ---
 
 最近看了阮一峰的全站培训教材[这里](https://github.com/ruanyf/jstraining)，感叹现如今前端发展之迅猛。

@@ -4,7 +4,7 @@ title : Linux基础系列 - SSH 原理与运用
 categories: [Linux,] 
 date : 2016-11-16 
 url: /posts/2016-11-16-Linux-ssh-how-to-use.html 
-tags : [linux, 运维知识库]
+tags : [Linux, 运维知识库]
 ---
 
 一直对ssh的概念比较模糊，看到阮一峰大神的博客有说明，果断转来记录备查。

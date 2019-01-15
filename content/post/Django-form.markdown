@@ -4,7 +4,7 @@ title : django form表单的数据 select 值更新问题
 categories: [Django,] 
 date : 2015-11-01
 url: /posts/2015-11-01-Django-form.html 
-tags : [QA, django]
+tags : [QA, Django]
 ---
 
 

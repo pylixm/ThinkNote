@@ -4,7 +4,7 @@ title : 【 python 基础系列 】 - python 单元测试 unittest 工具使用
 categories: [Python,] 
 date : 2018-01-18
 url: /posts/2018-01-18-python-unittest.html 
-tags : [python, unittest]
+tags : [Python, unittest]
 ---
 
 python 的单元测试有许多工具，如unittest、pytest、nosetest 等等，这里主要介绍下unittest 的使用。

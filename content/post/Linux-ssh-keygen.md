@@ -4,7 +4,7 @@ title : Linux基础系列 - 命令ssh-keygen
 categories: [Linux,] 
 date : 2018-04-24
 url: /posts/2018-04-24-Linux-ssh-keygen.html 
-tags : [linux, 运维知识库]
+tags : [Linux, 运维知识库]
 ---
 
 > 内容来自网络，由[pylixm](http://pylixm.cc)整理。

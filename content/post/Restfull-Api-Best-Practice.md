@@ -4,7 +4,7 @@ title : 10 Best Practices for Better RESTful API
 categories: [Restful,] 
 date : 2017-08-26
 url: /posts/2017-08-26-Restfull-Api-Best-Practice.html 
-tags : [restful]
+tags : [Restful]
 ---
 
 Web APIs has become an very important topic in the last year. We at M-Way Solutions are working every day with different backend systems and therefore we know about the importance of a clean API design.

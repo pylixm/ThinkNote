@@ -4,7 +4,7 @@ title : Linux基础系列 - 命令ps
 categories: [Linux,] 
 date : 2018-04-23
 url: /posts/2018-04-23-Linux-ps.html 
-tags : [linux, linux基础系列, 运维知识库]
+tags : [Linux, Linux基础系列, 运维知识库]
 ---
 
 > 内容来自网络，由[pylixm](http://pylixm.cc)整理。

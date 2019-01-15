@@ -4,7 +4,7 @@ title : 【 Go语言学习笔记三 】 - Golang 语法入门
 categories: [Golang,] 
 date : 2018-01-30
 url: /posts/2018-01-30-Go-start.html 
-tags : [golang, 语言学习]
+tags : [Golang, 语言学习]
 ---
 
 本文出处[Go编程语言](https://tour.go-zh.org)，由[Tuberose](https://www.jianshu.com/u/9029357b2874)整理。原文地址：[https://www.jianshu.com/p/bed39de53087](https://www.jianshu.com/p/bed39de53087)。转载到此，方便查阅学习。

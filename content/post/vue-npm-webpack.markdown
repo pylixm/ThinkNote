@@ -4,7 +4,7 @@ title : Vue 新手使用总结
 categories: [Javascript, Vue] 
 date : 2017-05-11
 url: /posts/2017-05-11-vue-npm-webpack.html 
-tags : [js, vue]
+tags : [Javascript, Vue] 
 ---
 
 ## 使用 Vue.js 的前端基础知识 

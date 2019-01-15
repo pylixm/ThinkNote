@@ -4,7 +4,7 @@ title : python的MySQLdb模块 连接 mysql 错误
 categories: [Mysql,] 
 date : 2016-03-08
 url: /posts/2016-03-08-Mysql-python.html 
-tags : [mysql,]
+tags : [Mysql,]
 ---
 
 

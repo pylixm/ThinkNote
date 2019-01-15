@@ -4,7 +4,7 @@ title : 【 python 基础系列 】 - GIL锁的来龙去脉
 categories: [Python,] 
 date : 2018-08-10
 url: /posts/2018-08-10-python-GIL.html 
-tags : [python, GIL]
+tags : [Python, GIL]
 ---
 
 Python中GIL锁，一直是一个不大不小的问题。下面这篇文章呢，可以说把它的来龙去脉说的简单易懂，特转载记录备忘。

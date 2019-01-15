@@ -4,7 +4,7 @@ title : mongodb 3.2 用户权限管理配置
 categories: [Mongodb,] 
 date : 2016-06-03
 url: /posts/2016-06-03-Mongodb-user-admin.html 
-tags : [mongodb,]
+tags : [Mongodb,]
 ---
 
 使用mongodb 有段时间了，由于是在内网使用，便没有设置权限，一直是裸奔。

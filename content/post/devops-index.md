@@ -4,7 +4,7 @@ title : 自动化运维系列-前言
 categories: [DevOps,] 
 date : 2017-07-08
 url: /posts/2017-07-08-devops-index.html 
-tags : [devops, 自动化运维]
+tags : [DevOps, 自动化运维]
 ---
 
 # 自动化运维系列之前言

@@ -4,7 +4,7 @@ title : 使用 supervisor 来监控 django celery
 categories: [Django, Supervisor] 
 date : 2016-01-19
 url: /posts/2016-01-19-Django-supervisor-celery.html 
-tags : [supervisor, django, celery]
+tags : [Supervisor, Django, Celery]
 ---
 
 之前启动celery时，使用nohup 方式启动。这种方式是不安全的，今天使者使用supervisor来管理监控celery，记录如下，备查。

@@ -4,7 +4,7 @@ title : Django学习笔记-模板
 categories: [Django,] 
 date : 2015-11-15 16:30:00
 url: /posts/2015-11-15-Django-Template.html 
-tags : [django, django-template]
+tags : [Django, Django-template]
 ---
 
 

@@ -4,7 +4,7 @@ title : Django学习笔记- Class View
 categories: [Django,] 
 date : 2016-03-24
 url: /posts/2016-03-24-Django-class-Views.html 
-tags : [django, Classview]
+tags : [Django, Django-Classview]
 ---
 
 

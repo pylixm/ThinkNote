@@ -4,7 +4,7 @@ title : Django restful framework 文档
 categories: [Django, Restful] 
 date : 2015-11-01 18:25:00
 url: /posts/2015-11-01-Django-restfull-framework.html 
-tags : [django, restful]
+tags : [Django, Restful] 
 ---
 
 

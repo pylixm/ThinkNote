@@ -3,7 +3,7 @@ title : Django 简单入门及最佳实践
 categories: [Django,] 
 date : 2016-05-08 18:00:00
 url: /posts/2016-05-08-Django-tutorial.html 
-tags : [django, django-tutorial]
+tags : [Django, Django-tutorial]
 ---
 
 

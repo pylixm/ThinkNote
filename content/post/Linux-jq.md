@@ -4,7 +4,7 @@ title : Linux基础系列 - jq
 categories: [Linux,] 
 date : 2018-06-26
 url: /posts/2018-06-26-Linux-jq.html 
-tags : [linux, linux基础系列, 运维知识库]
+tags : [Linux, Linux基础系列, 运维知识库]
 ---
 
 ## 介绍 

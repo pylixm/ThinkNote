@@ -4,7 +4,7 @@ title : rabbitmq 安装配置记录
 categories: [Rabbitmq,] 
 date : 2016-01-19
 url: /posts/2016-01-19-Rabbitmq-install.html 
-tags : [rabbitmq,]
+tags : [Rabbitmq,]
 ---
 
 

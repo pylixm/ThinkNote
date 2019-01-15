@@ -4,7 +4,7 @@ title : Docker学习笔记（一）--基础知识
 categories: [Docker,] 
 date : 2017-08-25
 url: /posts/2017-08-25-Docker-basis.html 
-tags : [devops, 自动化运维, docker]
+tags : [自动化运维, Docker]
 ---
 
 最近几年Docker容器技术已经渗透到各技术领域，在自动化运维领域更胜，因为它对于代码的部署上可以说是革命性的。下面是我学习Docker，记录的一些笔记，方便日后回忆备查。

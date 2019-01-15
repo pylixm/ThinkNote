@@ -4,7 +4,7 @@ title : 【 Go语言学习笔记一 】 - Golang 初步了解
 categories: [Golang,] 
 date : 2018-01-24
 url: /posts/2018-01-24-Go-introduction.html 
-tags : [golang, 语言学习]
+tags : [Golang, 语言学习]
 ---
 
 ## 前言

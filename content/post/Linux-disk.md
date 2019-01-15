@@ -4,7 +4,7 @@ title : Linux基础系列 - 磁盘相关操作命令总结
 categories: [Linux,] 
 date : 2018-09-30
 url: /posts/2018-09-30-Linux-disk.html 
-tags : [linux, linux基础系列, 运维知识库]
+tags : [Linux, Linux基础系列, 运维知识库]
 ---
 
 Linux 系统中磁盘信息的查看是比较常用的操作，例如，查看磁盘使用情况、查看磁盘分区等待操作。这里总结一些运维中常用到的命令，以备使用查询。

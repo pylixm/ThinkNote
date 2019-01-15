@@ -4,7 +4,7 @@ title : 高可用的MongoDB集群
 categories: [Mongodb,] 
 date : 2016-04-06 
 url: /posts/2016-04-06-Mongodb-relica.html 
-tags : [mongodb, 集群]
+tags : [Mongodb, 集群]
 ---
 
 >原文链接：http://www.jianshu.com/p/2825a66d6aed

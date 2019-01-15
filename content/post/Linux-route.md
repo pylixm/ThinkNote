@@ -4,7 +4,7 @@ title : Linux基础系列 - route
 categories: [Linux,] 
 date : 2018-09-14
 url: /posts/2018-09-14-Linux-route.html 
-tags : [linux, linux基础系列, 运维知识库]
+tags : [Linux, Linux基础系列, 运维知识库]
 ---
 
 > 内容来自[Linux命令大全](http://man.linuxde.net/route)，由[pylixm](http://pylixm.cc)整理。

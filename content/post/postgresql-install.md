@@ -4,7 +4,7 @@ title : centos 7 下 postgreSQL 10 安装记录
 categories: [PostgreSQL,] 
 date : 2017-11-05
 url: /posts/2017-11-05-postgresql-install.html 
-tags : [postgreSQL, 数据库]
+tags : [PostgreSQL, 数据库]
 ---
 
 
