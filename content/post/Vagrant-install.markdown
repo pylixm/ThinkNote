@@ -1,7 +1,7 @@
 ---
 layout : post
 title : vagrant的开发环境搭建-windows开发环境为例
-categories: [Vagrant] 
+categories: [Vagrant,] 
 date : 2015-12-01 11:30:00
 url: /posts/2015-12-01-Vagrant-install.html 
 tags : [容器, 虚拟机, vagrant]

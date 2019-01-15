@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 我心中的 tornado 最佳实践
-categories: [Tornado] 
+categories: [Tornado,] 
 date : 2017-03-10 20:00:00
 url: /posts/2017-03-10-tornado-best-practices.html 
 tags : [tornado, best_practices ]

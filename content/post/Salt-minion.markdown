@@ -1,7 +1,7 @@
 ---
 layout : post
 title : salt minion 启动问题
-categories: [SaltStack] 
+categories: [SaltStack,] 
 date : 2016-01-18 19:55:00
 url: /posts/2016-01-18-Salt-minion.html 
 tags : [QA, salt]

@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Saltstack学习笔记-组件篇
-categories: [SaltStack] 
+categories: [SaltStack,] 
 date : 2016-08-21
 url: /posts/2016-08-21-Salt-plugin.html 
 tags : [salt]

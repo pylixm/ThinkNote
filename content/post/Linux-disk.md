@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Linux基础系列 - 磁盘相关操作命令总结
-categories: [Linux] 
+categories: [Linux,] 
 date : 2018-09-30
 url: /posts/2018-09-30-Linux-disk.html 
 tags : [linux, linux基础系列, 运维知识库]

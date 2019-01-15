@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Linux基础系列 - 三剑客之 grep 命令使用总结
-categories: [Linux] 
+categories: [Linux,] 
 date : 2018-10-23
 url: /posts/2018-10-23-Linux-grep.html 
 tags : [linux, linux基础系列, 运维知识库]

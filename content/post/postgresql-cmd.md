@@ -1,7 +1,7 @@
 ---
 layout : post
 title : postgreSQL vs MySQL 命令行对比
-categories: [PostgreSQL] 
+categories: [PostgreSQL,] 
 date : 2017-11-05
 url: /posts/2017-11-05-postgresql-cmd.html 
 tags : [postgreSQL, mysql, 数据库]

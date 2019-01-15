@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Linux基础系列 - 命令ssh-keygen
-categories: [Linux] 
+categories: [Linux,] 
 date : 2018-04-24
 url: /posts/2018-04-24-Linux-ssh-keygen.html 
 tags : [linux, 运维知识库]

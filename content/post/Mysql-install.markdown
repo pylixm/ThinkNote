@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Mysql 免安装版配置 window环境搭建
-categories: [Mysql] 
+categories: [Mysql,] 
 date : 2015-11-01
 url: /posts/2015-11-01-Mysql-install.html 
 tags : [mysql]

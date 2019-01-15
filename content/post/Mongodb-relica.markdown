@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 高可用的MongoDB集群
-categories: [Mongodb] 
+categories: [Mongodb,] 
 date : 2016-04-06 
 url: /posts/2016-04-06-Mongodb-relica.html 
 tags : [mongodb, 集群]

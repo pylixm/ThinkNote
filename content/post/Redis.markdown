@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Memcached, Redis, MongoDB区别
-categories: [NoSQL] 
+categories: [NoSQL,] 
 date : 2015-11-30 22:22:00
 url: /posts/2015-11-30-Redis.html 
 tags : [NoSQL, redis]

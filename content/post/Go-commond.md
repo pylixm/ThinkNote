@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 【 Go语言学习笔记四 】 - Golang 命令
-categories: [Golang] 
+categories: [Golang,] 
 date : 2018-01-26
 url: /posts/2018-01-26-Go-commond.html 
 tags : [golang, 语言学习]

@@ -1,7 +1,7 @@
 ---
 layout : post
 title : javascript 使用记录
-categories: [Javascript] 
+categories: [Javascript,] 
 date : 2015-11-27 13:26:00
 url: /posts/2015-11-27-Javascript.html 
 tags : [javascript]

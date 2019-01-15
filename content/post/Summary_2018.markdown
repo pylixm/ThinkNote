@@ -1,7 +1,7 @@
 ---
 layout : post
 title : 2017 年总结，2018 年计划
-categories: [个人管理] 
+categories: [个人管理,] 
 date : 2018-01-04
 url: /posts/2018-01-04-Summary_2018.html 
 tags : [summary, 个人管理]

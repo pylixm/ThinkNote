@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Linux基础系列 - 三剑客之 ack 命令使用总结
-categories: [Linux] 
+categories: [Linux,] 
 date : 2018-10-16
 url: /posts/2018-10-16-Linux-ack.html 
 tags : [linux, linux基础系列, 运维知识库]
