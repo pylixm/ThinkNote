@@ -1,10 +1,10 @@
 ---
 layout : post
 title : Django 最佳实践-读书笔记 - 第四章 django app的设计
-categories: [ django] 
+categories: [Django] 
 date : 2016-05-22
 url: /posts/2016-05-22-Best.Practices.for.Django.1.8.3rd-Chapter-4.html 
-tags : [django]
+tags : [[Django,Django最佳实践]]
 ---
 
 [其他章节索引页](2016-05-22-Best.Practices.for.Django.1.8.3rd-Index.html)

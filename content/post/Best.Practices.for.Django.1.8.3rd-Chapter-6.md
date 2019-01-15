@@ -1,10 +1,10 @@
 ---
 layout : post
 title : Django 最佳实践-读书笔记 - 第六章 model 最佳实践
-categories: [ django] 
+categories: [Django] 
 date : 2016-05-22
 url: /posts/2016-05-22-Best.Practices.for.Django.1.8.3rd-Chapter-6.html 
-tags : [django]
+tags : [[Django,Django最佳实践]]
 ---
 
 

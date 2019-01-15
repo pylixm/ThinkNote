@@ -1,14 +1,12 @@
 ---
-layout : post
 title : 译-使用 celery 时的 3 个坑 
-categories: [ celery] 
+categories: [Python] 
 date : 2016-03-08
 url: /posts/2016-03-08-Celery-gotchas.html 
-tags : [django, celery, 翻译]
-old_url : https://wiredcraft.com/blog/3-gotchas-for-celery
-
+tags : [Python,Celery,翻译]
 ---
 
+>原文地址：https://wiredcraft.com/blog/3-gotchas-for-celery
 
 Celery is our go-to task manager when working with Python. It is feature rich, stable, fast and has clean interfaces. We usually end up using it either for high volumes of short tasks or low volumes of long running ones (understand 10+ seconds, or even minutes in devo.ps’ case).
 
