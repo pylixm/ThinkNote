@@ -18,7 +18,7 @@ pygmentsCodefencesGuessSyntax = true
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 15                                             # 首页每页显示的文章数
 disqusShortname = "pylixmwiki"      # disqus_shortname
-googleAnalytics = ""      # UA-XXXXXXXX-X
+googleAnalytics = "UA-135903670-1"      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
@@ -109,7 +109,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   livereUID = ""            # LiveRe UID                  # 来必力
 
   baiduPush = false        # baidu push                  # 百度
-  baiduAnalytics = ""      # Baidu Analytics
+  baiduAnalytics = "c05fab1b3c819c78c0ecc09b9bb0b79a"      # Baidu Analytics
   baiduVerification = ""   # Baidu Verification
   googleVerification = ""  # Google Verification         # 谷歌
 
