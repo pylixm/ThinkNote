@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://pylixm.cc/"
 languageCode = "zh"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "Wiki - DeanWu's Wiki Blog"
