@@ -7,7 +7,7 @@ url: /posts/2019-05-06-share-resource.html
 tags : [资源分享计划]
 ---
 
->「资源分享计划」系列记录本周内我看到的一些好的学习资源及优秀的技术文章，在自己学习记录的同时，分享给大家希望对大家有帮助。
+>「资源分享计划」系列记录本周内我看到的一些好的Python学习资源及优秀的技术文章，在自己学习记录的同时，分享给大家希望对大家有帮助。
 
 ## 资源类
 
@@ -22,6 +22,11 @@ tags : [资源分享计划]
 ### 3、最新2019年web开发人员需要的技能图谱
 
  - https://github.com/kamranahmedse/developer-roadmap
+
+### 4、20多个免费的编程学习网站
+
+ - 源站：https://hackernoon.com/21-websites-to-learn-programming-for-free-5101c1ddf0c
+ - 国内：https://weibo.com/ttarticle/p/show?id=2309404369083725433335
 
 ## 文章类
 
