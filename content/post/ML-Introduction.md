@@ -7,14 +7,14 @@ url: /posts/2019-05-10-introduction-to-machine-learning.html
 tags : [机器学习, ]
 ---
 
-本文为「[Introduction To Machine Learning | Machine Learning Basics](https://www.codementor.io/zulaikhageer/introduction-to-machine-learning-machine-learning-basics-u9jnkzsjc#reinforcement-learning)」的一个节选译文，介绍了机器学习的一些相关概念和机器学习的过程，大家可以通过本文了解如下信息：
+本文为「[资源分享计划第一期 0427](https://pylixm.cc/posts/2019-04-29-share-resource.html)」中分享的文章「[Introduction To Machine Learning | Machine Learning Basics](https://www.codementor.io/zulaikhageer/introduction-to-machine-learning-machine-learning-basics-u9jnkzsjc#reinforcement-learning)」的一个节选译文，主要介绍了机器学习的一些相关概念和机器学习的过程，大家可以通过本文了解如下信息：
 
 - 为什么要机器学习
 - 机器学习解决问题的类型
 - 机器学习的分类
 - 机器学习一个完整过程是什么样的
 
-下面是原文：
+下面是原文 >>>
 
 毫无疑问，机器学习是当今市场上最受欢迎的技术。其应用范围从自动驾驶汽车到预测ALS等致命疾病。机器学习技能的高需求是这个博客背后的动机。在这篇关于机器学习简介的博客中，您将通过使用R语言了解机器学习的所有基本概念和机器学习的实际实现。
 
