@@ -21,7 +21,7 @@ tags : [资源分享计划]
 
 该应用可以监控，登录视频和view视图的失败情况。它可以帮助你阻止黑客对你站点的攻击，大家可以尝试。
 
-> 一个Django 扩展，可更最用户登录情况：https://github.com/jazzband/django-axes
+> https://github.com/jazzband/django-axes
 
 ### 一套Python入门机器学习的教程
 
