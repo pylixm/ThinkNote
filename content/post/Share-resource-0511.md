@@ -38,6 +38,7 @@ tags : [资源分享计划]
 这是一本每个人都可以用来学习前端开发实践的指南。它大致总结和讨论了前端工程的实践：如何学习它以及在2019年实践它时会使用到的工具。
 
 > 原版：https://frontendmasters.com/books/front-end-handbook/2019/
+>
 > 翻译版：https://www.yuque.com/ysfe/ykx/fedhb
 
 
@@ -48,6 +49,7 @@ tags : [资源分享计划]
 通过一个例子来一步一步理解PyTorch，文章结构化、由浅入深的讲解了为什么PyTorch这么受欢迎（自动编程，动态计算图，模型类）以及在使用中遇到的问题。
 
 > 原文地址：https://towardsdatascience.com/understanding-pytorch-with-an-example-a-step-by-step-tutorial-81fc5f8c4e8e
+> 
 > PDF 版，https://pan.baidu.com/s/1eSSjmZaYLl8UCbH4t4mVfQ 提取码: w63y 
 
 ### git 工作流中一些实用的技巧
@@ -55,6 +57,7 @@ tags : [资源分享计划]
 Git已经成为每个开发者必不可少的技能，这篇文章讲解了在使用git时的一些小技巧。阅读本文时，建议有一定的git使用基础。
 
 > 原文地址：https://medium.com/datadriveninvestor/git-for-beginner-f438adfc3599
+> 
 > PDF 版 https://pan.baidu.com/s/1bdhAF_Ldi8H3wU4xc-he4Q 提取码: g1ws 
 
 ### CodeReview时，如何有效和礼貌地批评代码
