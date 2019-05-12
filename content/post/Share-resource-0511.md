@@ -47,13 +47,15 @@ tags : [资源分享计划]
 
 通过一个例子来一步一步理解PyTorch，文章结构化、由浅入深的讲解了为什么PyTorch这么受欢迎（自动编程，动态计算图，模型类）以及在使用中遇到的问题。
 
-https://towardsdatascience.com/understanding-pytorch-with-an-example-a-step-by-step-tutorial-81fc5f8c4e8e
+> 原文地址：https://towardsdatascience.com/understanding-pytorch-with-an-example-a-step-by-step-tutorial-81fc5f8c4e8e
+> PDF 版，https://pan.baidu.com/s/1eSSjmZaYLl8UCbH4t4mVfQ 提取码: w63y 
 
 ### git 工作流中一些实用的技巧
 
-Git已经成为每个开发者比不可少的技能，这篇文章讲解了在使用git时的一些小技巧。阅读本文时，建议有一定的git使用基础。
+Git已经成为每个开发者必不可少的技能，这篇文章讲解了在使用git时的一些小技巧。阅读本文时，建议有一定的git使用基础。
 
-> https://medium.com/datadriveninvestor/git-for-beginner-f438adfc3599
+> 原文地址：https://medium.com/datadriveninvestor/git-for-beginner-f438adfc3599
+> PDF 版 https://pan.baidu.com/s/1bdhAF_Ldi8H3wU4xc-he4Q 提取码: g1ws 
 
 ### CodeReview时，如何有效和礼貌地批评代码
 
@@ -63,4 +65,3 @@ Git已经成为每个开发者比不可少的技能，这篇文章讲解了在�
 - 可重用性和扩展性如何？
 
 > https://www.codementor.io/blog/code-review-best-practice-6q5slpm2e0
-
