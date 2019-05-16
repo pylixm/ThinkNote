@@ -7,10 +7,12 @@ url: /posts/2019-05-16-python-trick.html
 tags : [Python,]
 ---
 
-> 标题：Things you’re probably not using in Python 3 – but should 
 > 原文：https://datawhatnow.com/things-you-are-probably-not-using-in-python-3-but-should/
+>
 > 作者：Vinko Kodžoman 
+>
 > 时间：May 6, 2019
+>
 > 译者：DeanWu
 
 
