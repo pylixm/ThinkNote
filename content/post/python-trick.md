@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 【 python 技巧 】译-python 3 值得尝试的技巧
+title : 「python 技巧」译-python 3 值得尝试的技巧
 categories: [Python,] 
 date : 2019-05-16
 url: /posts/2019-05-16-python-trick.html 
