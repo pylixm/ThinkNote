@@ -23,7 +23,7 @@ Python2停止维护日期（[Python EOL](https://pythonclock.org/)）发布以�
 
 ## f-strings（3.6+）
 
-在任何编程语言中没有字符串都很难做任何事情，为了保持稳定，你希望有一种结构化的方式来处理字符串。大多数使用Python的人更喜欢使用`format`方法。
+在任何一门编程语言中，若没有字符串类型，我们处理问题是非常困难的。为了保持程序的稳定性，你希望有一种结构化的方式来处理字符串。大多数使用Python的人更喜欢使用`format`方法。如下：
 
 ```python
 user = "Jane Doe"
@@ -36,7 +36,7 @@ print(log_message)
 # User Jane Doe has logged in and did an action buy.
 ```
 
-除`format`外，Python 3还提供了一种通过[f-string](https://www.python.org/dev/peps/pep-0498/)进行字符串插值的灵活方法。使用`f-strings`的上述代码如下所示：
+除`format`外，Python 3还提供了一种通过[f-string](https://www.python.org/dev/peps/pep-0498/)进行字符串插值的灵活方法。使用`f-strings`重写上述代码，如下：
 
 ```python
 user = "Jane Doe"
@@ -48,7 +48,7 @@ print(log_message)
 
 ## Pathlib（3.4+）
 
-`f-strings`是惊人的，但是像文件路径这样的字符串有自己的库，这使得它们的操作更加容易。Python 3提供了`pathlib`作为处理文件路径的便捷抽象库。如果您不确定为什么要使用pathlib，请尝试阅读这篇优秀文章 - [为什么您应该使用pathlib](https://treyhunner.com/2018/12/why-you-should-be-using-pathlib/) - by [Trey Hunner](https://treyhunner.com/)。
+`f-strings`是惊人的，但是像文件路径这样的字符串有自己的库，这使得处理起文件路径来更加容易。Python 3提供了`pathlib`作为处理文件路径的便捷抽象库。可参阅另一篇文章，来了解 [为什么您应该使用pathlib](https://treyhunner.com/2018/12/why-you-should-be-using-pathlib/) - by [Trey Hunner](https://treyhunner.com/)。
 
 ```python
 from pathlib import Path
@@ -63,7 +63,7 @@ print(path.resolve())
 
 ## Type hinting (类型注解) (3.5+)
 
-静态与动态类型是软件工程中的一个热门话题，几乎每个人都对它有自己的看法。我会让读者决定何时应该编写类型，但我认为你至少应该知道Python 3支持[type hints](https://docs.python.org/3/library/typing.html)。
+静态与动态类型是软件工程中的一个热门话题，几乎每个人都对它有自己的看法。我不会干涉读者何时应该使用何种类型，但我认为你至少应该知道Python 3支持[type hints](https://docs.python.org/3/library/typing.html)。
 
 ```python
 def sentence_has_animal(sentence: str) -> bool:
@@ -74,7 +74,7 @@ sentence_has_animal("Donald had a farm without animals")
 
 ## Enumerations（枚举） (3.4+)
 
-Python 3支持一种简单方法可通过编写Enum类来实现枚举。枚举是一种封装常量列表的便捷方式，因此它们不会随机分布在整个代码中而没有太多结构。
+Python 3支持通过继承Enum类来实现枚举。枚举是一种封装常量列表的便捷方式，它具有一定的结构组织在一起，而不会散落在代码的各个角落。
 
 ```python
 from enum import Enum, auto
@@ -119,7 +119,7 @@ print(f'Duration: {time.time() - start}s')
 # Duration: 30.684099674224854s
 ```
 
-现在我们可以使用它`lru_cache`来优化它（这种优化技术称为[memoization](https://en.wikipedia.org/wiki/Memoization)）。执行时间从几秒到几纳秒。
+现在我们可以使用它`lru_cache`来优化它（这种优化技术称为[memoization](https://en.wikipedia.org/wiki/Memoization)）。执行时间从几秒到了几纳秒。
 
 ```python
 from functools import lru_cache
@@ -157,7 +157,7 @@ print(first, third)
 
 ## Data classes (3.7+)
 
-Python 3引入了 [data class](https://docs.python.org/3/library/dataclasses.html)，这些数据类没有很多限制，可用于减少样板代码，因为装饰器会自动生成特殊方法，例如__init__()和__repr()__。从官方[提案](https://www.python.org/dev/peps/pep-0557/)中，它们被描述为“具有默认值的可变命名元组”。
+Python 3引入了 [data class](https://docs.python.org/3/library/dataclasses.html)，这些数据类没有太多限制，可用来减少我们的初始化代码，因为装饰器会自动生成特殊方法，例如__init__()和__repr()__。在官方[提案](https://www.python.org/dev/peps/pep-0557/)中，它们被描述为“具有默认值的可变命名元组（mutable named tuples with default）”。
 
 ```python
 class Armor:
