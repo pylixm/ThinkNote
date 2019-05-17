@@ -15,12 +15,7 @@ tags : [Python,]
 >
 > 译者：DeanWu
 
-本文讲解了一些只有在Python3中才有的特性，这些特性在日常编码中常会用到但是习惯性的使用了Python2的实现方式。作者希望通过这篇文章，你可以了解这些特性，并真正的使用起来。
-
-以下是原文译文>>>
-
-
-在Python2的停止维护日期（[Python EOL](https://pythonclock.org/)）的发布之后，越来越多的人开始从python2转为python3。但是，我发现大多数Python3代码看起来还是想Python3。在我以前的博文（[Python web 抓取简介](https://datawhatnow.com/introduction-web-scraping-python/)）中的实例也是如此，我为此感到内疚。
+Python2停止维护日期（[Python EOL](https://pythonclock.org/)）发布以来，越来越多的人开始从python2转为python3。但是，我发现大多数Python3代码看起来还是像Python3。在我以前博文（[Python web 抓取简介](https://datawhatnow.com/introduction-web-scraping-python/)）中的实例也是如此，我为此感到抱歉。
 
 下面，我将展示一些令人兴奋的功能实例，他们只能在Python3的环境下使用，他们可以帮助你更轻松的解决问题。
 
