@@ -15,15 +15,15 @@ tags : [Python,]
 >
 > 译者：DeanWu
 
-Python2停止维护日期（[Python EOL](https://pythonclock.org/)）发布以来，越来越多的人开始从python2转为python3。但是，我发现大多数Python3代码看起来还是像Python3。在我以前博文（[Python web 抓取简介](https://datawhatnow.com/introduction-web-scraping-python/)）中的实例也是如此，我为此感到抱歉。
+Python2停止维护日期（[Python EOL](https://pythonclock.org/)）发布以来，越来越多的人开始从python2转为python3。但是，我发现大多数Python3代码看起来还是像Python2。在我以前博文（[Python web 抓取简介](https://datawhatnow.com/introduction-web-scraping-python/)）中的实例也是如此，我为此感到抱歉。
 
 下面，我将展示一些令人兴奋的功能实例，他们只能在Python3的环境下使用，他们可以帮助你更轻松的解决问题。
 
-所有示例都是用Python 3.7编写的，每个实例都包含该功能所需的最低Python版本。
+所有示例都是用Python 3.7编写的，每个实例都附有该功能所需的最低Python版本。
 
 ## f-strings（3.6+）
 
-在任何一门编程语言中，若没有字符串类型，我们处理问题是非常困难的。为了保持程序的稳定性，你希望有一种结构化的方式来处理字符串。大多数使用Python的人更喜欢使用`format`方法。如下：
+在任何一门编程语言中，若没有字符串类型，处理问题是非常困难的。为了保持程序的稳定性，你更希望有使用一种结构化的方式来处理字符串。所以，大多数使用Python的人更喜欢使用`format`方法。如下：
 
 ```python
 user = "Jane Doe"
@@ -36,7 +36,7 @@ print(log_message)
 # User Jane Doe has logged in and did an action buy.
 ```
 
-除`format`外，Python 3还提供了一种通过[f-string](https://www.python.org/dev/peps/pep-0498/)进行字符串插值的灵活方法。使用`f-strings`重写上述代码，如下：
+除`format`外，Python 3还提供了另一种灵活的字符串插值方式，叫做[f-string](https://www.python.org/dev/peps/pep-0498/)。使用`f-strings`重写上述代码，如下：
 
 ```python
 user = "Jane Doe"
@@ -48,7 +48,7 @@ print(log_message)
 
 ## Pathlib（3.4+）
 
-`f-strings`是惊人的，但是像文件路径这样的字符串有自己的库，这使得处理起文件路径来更加容易。Python 3提供了`pathlib`作为处理文件路径的便捷抽象库。可参阅另一篇文章，来了解 [为什么您应该使用pathlib](https://treyhunner.com/2018/12/why-you-should-be-using-pathlib/) - by [Trey Hunner](https://treyhunner.com/)。
+`f-strings`的用法是令人惊叹的，但是像文件路径这样的字符串也有自己的处理库。Python 3提供了`pathlib`作为处理文件路径字符串的便捷工具库。可参阅另一篇文章，来了解 [为什么您应该使用pathlib](https://treyhunner.com/2018/12/why-you-should-be-using-pathlib/) - by [Trey Hunner](https://treyhunner.com/)。
 
 ```python
 from pathlib import Path
@@ -63,7 +63,7 @@ print(path.resolve())
 
 ## Type hinting (类型注解) (3.5+)
 
-静态与动态类型是软件工程中的一个热门话题，几乎每个人都对它有自己的看法。我不会干涉读者何时应该使用何种类型，但我认为你至少应该知道Python 3支持[type hints](https://docs.python.org/3/library/typing.html)。
+静态与动态类型是软件工程中的一个热门话题，几乎每个人都对它有自己的看法。这里不讨论那种类型优越，但我认为你至少应该知道Python 3支持动态类型的[type hints](https://docs.python.org/3/library/typing.html)。
 
 ```python
 def sentence_has_animal(sentence: str) -> bool:
@@ -74,7 +74,7 @@ sentence_has_animal("Donald had a farm without animals")
 
 ## Enumerations（枚举） (3.4+)
 
-Python 3支持通过继承Enum类来实现枚举。枚举是一种封装常量列表的便捷方式，它具有一定的结构组织在一起，而不会散落在代码的各个角落。
+Python 3支持通过继承Enum类来实现简单的枚举。枚举是一种封装常量列表的便捷方式，它具有一定的结构组织在一起，而不会散落在代码的各个角落。
 
 ```python
 from enum import Enum, auto
