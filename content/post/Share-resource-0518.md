@@ -40,7 +40,7 @@ Realpython出品的python 入门路径指南，为入门python的新手指明了
 
 ### 如何选择合适的python docker 镜像
 
-Docker 技术现在应成为了项目部署的成熟方案。在使用docker技术部署的时候，docker镜像的大小，会对容器的启动速度有一定的影响u'an'f。所以，在实际的生产环境中，镜像的体系越小越好。[DockerHub](https://hub.docker.com/)官方镜像仓库，给我提供了很多直接可用的镜像，还有许多开发者自己打包的。在Python项目中，应该如何选择呢？这篇文章对常用镜像做了比较，并得出了Python项目的最佳选择。
+Docker 技术现在项目部署中，已相当的成熟。在使用docker技术部署的时候，docker镜像的大小，会对容器的启动速度有一定的影响u'an'f。所以，在实际的生产环境中，镜像的体系越小越好。[DockerHub](https://hub.docker.com/)官方镜像仓库，给我提供了很多直接可用的镜像，还有许多开发者自己打包的。在Python项目中，应该如何选择呢？这篇文章对常用镜像做了比较，并得出了Python项目的最佳选择。
 
 > 原文地址：https://pythonspeed.com/articles/base-image-python-docker-images/
 >
