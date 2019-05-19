@@ -19,7 +19,7 @@ tags : [资源分享计划]
 
 ### 一个python新闻的播客
 
-`PythonBytes` 是一个python相关的博客网站，他会每周推送一些reddit、twitter等网站上的一些python相关新闻。有意思的是它的所有新闻都配有标准的美式英语音频。
+`PythonBytes` 是一个python相关的博客网站，他会每周推送一些reddit、twitter等网站上的一些python相关新闻。作为播客，它的所有新闻都配有英语音频。
 
 > python播客： https://pythonbytes.fm/
 
