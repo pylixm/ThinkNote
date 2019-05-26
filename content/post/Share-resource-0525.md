@@ -53,21 +53,27 @@ ES2015/ES6 的一本免费电子书，可结合阮老师的电子书一块看。
 Flutter 是Google开源的一款移动端开发语言，它致力一次编写导出运行，可以Android和IOS上运行。本文列举了Flutter的一些优势，移动开发的朋友可以关注下。
 
 > https://medium.freecodecamp.org/why-i-think-flutter-is-the-future-of-mobile-app-development-768332b73c0d
+> PDF版链接: https://pan.baidu.com/s/1vP7wEB9CBR63HJQAUjIpQQ 提取码: r2jy 
 
 ### 值得学习的Python内置函数
 
 python内置了很多可以直接使用的函数，使我们的编码工作变得简单。本文讲解了一些值得我们学习的Python内置函数，大家可学习参考。
 
 > https://treyhunner.com/2019/05/python-builtins-worth-learning/
+> PDF 版链接: https://pan.baidu.com/s/1v2VKP6GUtzMzxrZunsEJRA 提取码: r86y 
 
 ### Python4.0的新特性
 
 Python 核心开发团队发布了4.0的一些新特性，大家可以关注。
 
 > http://charlesleifer.com/blog/new-features-planned-for-python-4-0/
+> PDF版链接: https://pan.baidu.com/s/1pe3EIknZZPdPAIcHU0_i-g 提取码: q4qf 
 
 ### Asyncio 概述
 
-> asyncio 概述：https://stackabuse.com/overview-of-async-io-in-python-3-7/
+asyncio 模块为python提供了异步IO的编程能力，本文介绍了该模块的基本功能与用法。
+
+> https://stackabuse.com/overview-of-async-io-in-python-3-7/
+> PDF版链接: https://pan.baidu.com/s/1jRvEY05O4701MkYW8ZeO-g 提取码: gsgp 
 
 
