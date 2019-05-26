@@ -17,7 +17,7 @@ tags : [资源分享计划]
 
 > https://github.com/buger/goreplay
 
-### 一份Python3将要启动模块的名单
+### 一份Python3将要弃用模块的名单
 
 PEP594 新的一批python模块将会被弃用。
 
