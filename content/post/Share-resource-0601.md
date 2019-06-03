@@ -51,7 +51,7 @@ scrapy 不用介绍，可能是python语言中最流行的爬虫框架了。这�
 > 原文：https://medium.com/free-code-camp/how-to-choose-which-programming-language-you-should-learn-in-2019-60abef241012
 > PDF 链接: https://pan.baidu.com/s/1twcxv3S0BYXfuyUQMl5L2A 提取码: 2zx7 
 
-### 什么样的代码优秀的
+### 什么样的代码是优秀的
 
 本文阐述了「什么样的代码是优秀的」，那就是简短的、简单的、健壮的。并给出了一些，使代码更加健壮的建议。
 
