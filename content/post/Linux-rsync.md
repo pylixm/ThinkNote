@@ -96,7 +96,7 @@ total size is 52  speedup is 0.37
 -avzP 提示：这里的 相当于 -vzrtopgDlP(还多了Dl功能)生产环境常用 
 -avz 定时任务就不用输出过程了可以-az
 -e 使用的信道协议，指定替代rsh的shell程序，例如：ssh
---exclude=PATTERN 指定排除不需要传输的文件模式（和tar参数一样）--exclude=file（文件名所在的目录文件）（和tar参数一样）--delete 让目标目录SRC和源目录数据DST一致。
+--exclude=PATTERN 指定排除不需要传输的文件模式（和tar参数一样）--exclude=file（文件名所在的目录文件）（和tar参数一样）--delete 无差异同步，即全部同步。
 ```
 
 该场景下，要注意下面几个问题：
@@ -180,7 +180,7 @@ comment this is my log #本模块注释，可选
  rsync -vzrtp --progress --port 888  source.txt 192.168.33.12::backup/source.txt 
 ```
 
-若配置了用户命令密码，需要将密码明文保存到文件`/etc/rsyncd/rsyncd.pass`, 在执行时指定密码文件。如下：
+若配置了用户命令密码，需要将密码明文保存到文件`/etc/rsyncd/rsyncd.pass`并附相关权限`chmod 600 /etc/rsync.pass`, 在执行时指定密码文件。如下：
 
 ```
 # 拉取文件
