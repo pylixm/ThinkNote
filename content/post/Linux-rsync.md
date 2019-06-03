@@ -14,7 +14,7 @@ rsync 是一个快速的、多功能的本地和远端的文件同步工具。�
 rsync 支持增量的同步文件，它使用特有的“rsync 算法”计算文件的不同，只同步差异的部分，所以它的同步非常快。
 rsync 支持远端的文件同步，使用原生的rsync传输协议，也可通过SSH协议传输，是`rcp`和`scp`理想的替代品。
 
-在现在的许多Linux发行版本上都默认安装了，若没有按照，可使用 `yum install rsync` 来安装。
+在现在的许多Linux发行版本上都默认安装了，若没有按照，可使用 `yum install rsync` 安装。
 
 ## 使用
 
@@ -24,7 +24,7 @@ rsync 可以分为3种传输数据的常用场景：
 - 远端主机的文件传输
 - 作为daemon服务的方式提供服务
 
-下面咱们来逐一说下。
+下面咱们来逐一介绍。
 
 ### 本机复制内容
 
@@ -34,7 +34,7 @@ rsync 可以分为3种传输数据的常用场景：
 rsync source.txt destination.txt 
 ```
 
-可以加些参数，来更定制化复制，如添加 `-P`来显示进度。
+可以加些参数，来定制化，如添加 `-P`来显示进度。
 
 ```bash
 $ rsync -P source.txt destination.txt
@@ -65,7 +65,7 @@ rsync host:source destination
 
 将本地文件同步到远端：
 
-```
+```bash
 # 默认rsync协议
 $ rsync -v source.txt root@192.168.33.12:/root/dst.txt
 root@192.168.33.12's password:
@@ -107,13 +107,11 @@ total size is 52  speedup is 0.37
 
 ### 以服务形式同步
 
-该场景应该是使用最广泛的一种，我们实际开发中，常常搭建`rsync`服务来作为文件的暂存服务器或备份服务器，实现上传下载。
+该场景应该是使用最广泛的一种，我们实际开发中，常常搭建`rsync`服务来作为文件的暂存服务器或备份服务器。rsync daemon 模式下，支持用户名认证和读写的权限控制。
 
-它除了可以增量同步文件外，还支持用户名认证和读写的权限控制。
+该场景下，`rsync`分为服务端和客户端。服务端以daemon形式对外提供服务，客户端即其他安卓`rsync`命令的服务器。
 
-该场景下，`rsync`分为服务端和客户端。服务端以daemon形式对外提供服务，客户端即其他安卓`rsync`命令和服务端交互的服务器。
-
-服务端，只需添加些配置即可。默认的配置文件在 `/etc/rsyncd.conf`，如下配置：
+服务端，只需添加些配置即可。默认的配置文件在 `/etc/rsyncd.conf`，可按如下说明修改配置：
 
 ```bash
 # 配置参考 https://www.linuxidc.com/Linux/2016-12/138768.htm
@@ -165,7 +163,7 @@ exclude = error_log httpd.pid #忽略的文件或目录
 comment this is my log #本模块注释，可选
 ```
 
-配置好后，启动服务端，若使用yum安装，系统为`systemd`管理的话，直接 `systemctl start rsyncd`即可。若不是，则需手动启动，如下：
+配置好后，启动服务端，若使用yum安装，服务为`systemd`管理的话，直接 `systemctl start rsyncd`即可。若不是，则需手动启动，如下：
 
 ```bash
 /usr/local/rsync/bin/rsync --daemon --config=/etc/rsyncd.conf
@@ -181,7 +179,7 @@ comment this is my log #本模块注释，可选
  rsync -vzrtp --progress --port 888  source.txt 192.168.33.12::backup/source.txt 
 ```
 
-若配置了用户命令密码，需要将密码明文保存到文件`/etc/rsyncd/rsyncd.pass`并附相关权限`chmod 600 /etc/rsync.pass`, 在执行时指定密码文件。如下：
+若配置了用户和密码，则需要将密码明文保存到文件`/etc/rsyncd/rsyncd.pass`并附相关权限`chmod 600 /etc/rsync.pass`, 在执行时指定密码文件。如下：
 
 ```
 # 拉取文件
