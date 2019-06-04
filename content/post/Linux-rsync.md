@@ -192,10 +192,10 @@ rsync -vzrtp --progress --port 888 --password-file=/etc/rsyncd/rsyncd.pass sourc
 除了可以同步文件外，还可以对整个目录做同步。
 
 ```
-# 拉取文件
+# 拉取目录
 rsync -vzrtp --progress --port 888 --password-file=/etc/rsyncd/rsyncd.pass rsync@192.168.33.12::backup  source/
 
-# 推送文件
+# 推送目录
 rsync -vzrtp --progress --port 888 --password-file=/etc/rsyncd/rsyncd.pass source/ rsync@192.168.33.12::backup/
 ```
 
