@@ -25,20 +25,20 @@ tags : [资源分享计划]
 
 ### 一个Python的微型http框架
 
-·`BlackSheep`快速的HTTP 服务端和客户端，它基于Cython，uvloop和httptools构建，支持`asyncio`模块。同时提供客户端和服务端，这个给我们在都是python技术栈的业务调用场景下，提供了些许的遍历。大家可尝试：
+·`BlackSheep`快速的HTTP 服务端和客户端，它基于Cython，uvloop和httptools构建，支持`asyncio`模块。同时提供客户端和服务端，这个给我们在都是python技术栈的业务调用场景下，提供了些许的便利。大家可尝试：
 
 >https://github.com/RobertoPrevato/BlackSheep
 
-### 10分免费的Python教程
+### 10个免费的Python教程
 
 > https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912
 
 
 ## 文章类
 
-### 一定有一个vim 命令你不知道的
+### 一定有一个vim 命令是你不知道的
 
-vim 编辑器已经成为许多Linux发行版的默认文本编辑器，学好vim已成为一种必备的技能。想要用好vim这个编辑器，快捷建是少不了的。这篇文章介绍了vim下的一些实用的快借鉴。大家可参阅：
+vim 编辑器已经成为许多Linux发行版的默认文本编辑器，im已成为编程人员一种必备的技能。想要用好vim这个编辑器，快捷建是少不了的。这篇文章介绍了vim下的一些实用的快借鉴。大家可参阅：
 
 > https://www.hillelwayne.com/post/intermediate-vim/
 
@@ -62,8 +62,9 @@ vim 编辑器已经成为许多Linux发行版的默认文本编辑器，学好vi
 
 ### 增加你的python代码可读性
 
-本文整理了一些，书写更`pythonic`代码的小建议，大家可以参阅：
+本文整理了一些书写更`pythonic`代码的小建议，大家可以参阅：
 
 > https://www.codementor.io/blog/pythonic-code-6yxqdoktzt
 
 **文章类PDF版：链接: https://pan.baidu.com/s/1BVWWsxvuMpMLOB7O_CEq5Q 提取码: 25kz**
+
