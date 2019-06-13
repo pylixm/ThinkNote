@@ -39,7 +39,7 @@ LVS软件组成：
 
 ## LVS 基本工作原理
 
-![](/static/imgs/lvs/lvs.png)
+![](/static/imgs/lvs/lvs.jpg)
 
 - 1.当用户向**负载均衡调度器**（VS或者叫LB）发起请求，调度器将请求发往至内核空间。
 - 2.PREROUTING链首先会接收到用户请求，判断目标IP确定是本机IP，将数据包发往INPUT链。
@@ -54,7 +54,7 @@ LVS 的负责均衡有四种常用模式，分别为DR模式、NAT模式、TUN�
 
 VS/NAT是一种最简单的方式，所有的RealServer只需要将自己的网关指向Director即可。客户端可以是任意操作系统，但此方式下，一个Director能够带动的RealServer比较有限。在VS/NAT的方式下，Director也可以兼为一台RealServer。
 
-![](/static/imgs/lvs/nat.png)
+![](/static/imgs/lvs/nat.jpg)
 
 **工作流程** 用户请求LVS到达director，director将请求的报文的目的IP改为RIP，同时将报文的目标端口也改为realserver的相应端口，最后将报文发送到realserver上，realserver将数据返回给director，director在相应客户端之前，把数据包的源ip改为自己的vip地址，然后响应用户，将数据发送给用户。
 
@@ -82,7 +82,7 @@ VS/DR方式是通过改写请求报文中的MAC地址部分来实现的。Direct
 
 IP隧道（IP tunneling）是将一个IP报文封装在另一个IP报文的技术，这可以使得目标为一个IP地址的数据报文能被封装和转发到另一个IP地址。IP隧道技术亦称为IP封装技术（IP encapsulation）。IP隧道主要用于移动主机和虚拟私有网络（Virtual Private Network），在其中隧道都是静态建立的，隧道一端有一个IP地址，另一端也有唯一的IP地址。
 
-![](/static/imgs/lvs/tun.png)
+![](/static/imgs/lvs/tun.jpg)
 
 **工作流程** 用户请求LVS到达director，director通过IP-TUN加密技术将请求报文的包封装到一个新的IP包里面，目的IP为VIP(不变)，然后director将报文发送到realserver，realserver基于IP-TUN解密，然后解析出来包的目的为VIP，检测网卡是否绑定了VIP，绑定了就处理这个包，如果在同一个网段，将请求直接返回给用户，否则通过网关返回给用户；如果没有绑定VIP就直接丢掉这个包。
 
@@ -98,7 +98,7 @@ IP隧道（IP tunneling）是将一个IP报文封装在另一个IP报文的技�
 
 FULLNAT模式和NAT相似，只是数据包在过lvs时，不只修改目的ip，源ip也一块修改了。
 
-![](/static/imgs/lvs/tun.png)
+![](/static/imgs/lvs/fullnat.png)
 
 **特点**
 
