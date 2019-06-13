@@ -56,27 +56,38 @@ VS/NAT是一种最简单的方式，所有的RealServer只需要将自己的网�
 
 ![](/static/imgs/lvs/nat.jpg)
 
-**工作流程** 用户请求LVS到达director，director将请求的报文的目的IP改为RIP，同时将报文的目标端口也改为realserver的相应端口，最后将报文发送到realserver上，realserver将数据返回给director，director在相应客户端之前，把数据包的源ip改为自己的vip地址，然后响应用户，将数据发送给用户。
+**工作流程** 用户请求LVS到达director，director将请求的报文的目的IP有VIP改为RIP，同时将报文的目标端口也改为realserver的相应端口，最后将报文发送到realserver上，realserver将通过网关路由到director，将数据返回给director，director在相应客户端之前，把数据包的源ip有RIP改为VIP，然后响应用户，将数据发送给用户。
 
 **特点**
 
-- NAT模式修改的是目的ip，直接走的是switch不需要修改mac地址，所以VIP和RIP不需要在同一个网段内
-- NAT的包的进出都需要经过LVS，所以LVS可能会成为一个系统的瓶颈问题
+- NAT模式修改的是目的ip，可根据目的ip找到realserver，所以VIP和RIP不需要在同一个网段内。
+- NAT的包的进出都需要经过LVS，所以LVS可能会成为一个系统的瓶颈问题。
+
+### FULLNAT 模式
+
+FULLNAT模式和NAT相似，只是数据包在过lvs时，不只修改目的ip，源ip也一块修改了。
+
+![](/static/imgs/lvs/fullnat.png)
+
+**特点**
+
+- FULLNAT模式也不需要DIP和RIP在同一网段。
+- FULLNAT和NAT相比的话：会保证RS的回包一定可到达LVS。
+- FULLNAT需要更新源IP，所以性能正常比NAT模式下降10%。
 
 ### DR 模式
 
-VS/DR方式是通过改写请求报文中的MAC地址部分来实现的。Director和RealServer必需在物理上有一个网卡通过不间断的局域网相连。 RealServer上绑定的VIP配置在各自Non-ARP的网络设备上(如lo或tunl),Director的VIP地址对外可见，而RealServer的VIP对外是不可见的。RealServer的地址即可以是内部地址，也可以是真实地址。
+VS/DR方式是通过改写请求报文中的MAC地址部分来实现的。Director和RealServer必需在统一个局域网内（相同机房）。 RealServer上绑定的VIP配置在各自Non-ARP的网络设备上(如lo或tunl),Director的VIP地址对外可见，而RealServer的VIP对外是不可见的。RealServer的ip可谓内网IP, 也可为公网IP。
 
 ![](/static/imgs/lvs/dr.png)
 
-**工作流程** 用户请求LVS到达director，director将请求的报文的目的MAC地址改为后端的realserver的MAC地址，目的IP为VIP(不变)，源IP为client IP地址(不变)，然后director将报文发送到realserver，realserver检测到目的地址为自己本地的VIP，如果在同一网段，将请求直接返回给用户，如果用户跟realserver不在同一个网段，则需要通过网关返回给用户。
+**工作流程** 用户请求LVS到达director，director将请求的报文的目的MAC地址改为后端的realserver的MAC地址，目的IP为VIP(不变)，源IP为client IP地址(不变)，然后director通过ARP广播将报文发送到realserver，realserver检测到目的地址为自己本地的VIP，如果在同一网段，将请求直接返回给用户，如果用户跟realserver不在同一个网段，则需要通过网关返回给用户。
 
 **特点** 
 
-- 前端路由将目标地址为VIP报文统统发给Director Server
 - RS跟Director Server必须有一个网卡在同一个物理网络中
 - 所有的请求报文经由Director Server，但响应报文不经过Director Server
-- 所有的real server机器上必须配置VIP地址（lo或tunl）
+- 所有的real server机器上必须配置VIP地址（通常绑定lo）
 
 ### TUN 模式 
 
@@ -93,18 +104,6 @@ IP隧道（IP tunneling）是将一个IP报文封装在另一个IP报文的技�
 - 隧道模式运维起来会比较难，所以一般不用
 - 不支持端口映射
 - RIP、VIP、DIP全是公网地址
-
-### FULLNAT 模式
-
-FULLNAT模式和NAT相似，只是数据包在过lvs时，不只修改目的ip，源ip也一块修改了。
-
-![](/static/imgs/lvs/fullnat.png)
-
-**特点**
-
-- FULLNAT模式也不需要DIP和RIP在同一网段
-- FULLNAT和NAT相比的话：会保证RS的回包一定可到达LVS
-- FULLNAT需要更新源IP，所以性能正常比NAT模式下降10%
 
 ### 四种模式比较
 
