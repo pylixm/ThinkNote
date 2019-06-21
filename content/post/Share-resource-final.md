@@ -60,3 +60,5 @@ https://doisinkidney.com/posts/2019-06-04-solving-puzzles-without-your-brain.htm
 - [「资源分享计划第五期 0525」分享学习资源及优秀的技术文章](https://mp.weixin.qq.com/s?timestamp=1561083395&src=3&ver=1&signature=pH7Q4L-lf7vcJM9un2SCPACXD45SRE09tb9g2g55ja1MyG4O71Yttvrcq2fbZ*DCTHYTo19PmcT4NyhENiCFpKkSrMJuIY27wvY4U6GkBP*C5kU7QxwRFXE*Unenpq3vV0NLLJaNHjlGFd-nVtIRmmFTtKiwjdegtRDXY30w8yc=)
 - [「资源分享计划第六期 0601」分享学习资源及优秀的技术文章](https://mp.weixin.qq.com/s?timestamp=1561083395&src=3&ver=1&signature=pH7Q4L-lf7vcJM9un2SCPACXD45SRE09tb9g2g55ja1MyG4O71Yttvrcq2fbZ*DCTHYTo19PmcT4NyhENiCFpN0tq-GFbTUYBuAUFgOPOrX1gNOA5*vPcmcLjSVRchgfy5Wf9*HSk1Kpzu0B0RSz3IOpF9lfq3vZPXxK1Ag96wI=)
 - [「资源分享计划第七期 0608」分享学习资源及优秀的技术文章](https://mp.weixin.qq.com/s?timestamp=1561083395&src=3&ver=1&signature=pH7Q4L-lf7vcJM9un2SCPACXD45SRE09tb9g2g55ja1MyG4O71Yttvrcq2fbZ*DCTHYTo19PmcT4NyhENiCFpMAVquHGACQXq4SGXq2f*VzSy2agt5Hw1lvo5iJtf7A5jvphQr7*YOAdHFoiFHC35Bimhw56BQqKldP156XTyfA=)
+
+> [备用地址](https://pylixm.cc/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB%E8%AE%A1%E5%88%92/)
