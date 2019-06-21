@@ -42,7 +42,7 @@ vuex 为vue 提供了全局的状态数据存储，这为权限认证提供存�
 
 ### 一步步教你如何解决Python编程中遇到的难题
 
-https://doisinkidney.com/posts/2019-06-04-solving-puzzles-without-your-brain.html
+> https://doisinkidney.com/posts/2019-06-04-solving-puzzles-without-your-brain.html
 
 
 
