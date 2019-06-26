@@ -14,7 +14,7 @@ tags : [Python, Docker, 翻译]
 > 原文地址：https://pythonspeed.com/articles/base-image-python-docker-images/
 
 
-当你为Python应用程序构建Docker镜像时，一般是构建在现有镜像之上。这个“现有镜像”，我们往往叫它为基础镜像。这里我们有很多种选择，有像`Ubuntu`和`CentOS`这样的操作系统映像，也有许多不同的python基本映像。
+当你为Python应用程序构建Docker镜像时，一般是构建在现有镜像之上。这个“现有镜像”，我们往往叫它为基础镜像。这里我们有很多种选择，有像`Ubuntu`和`CentOS`这样的操作系统映像，也有许多不同的python基本镜像。
 
 你应该使用哪一个？哪一个更好？有很多选择，并不能够很好的确认那种镜像更适合你的业务场景。
 
