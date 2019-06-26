@@ -1,5 +1,5 @@
 ---
-title : 译-使用 celery 时的 3 个坑 
+title : 「译」使用 celery 时的 3 个坑 
 categories: [Python,] 
 date : 2016-03-08
 url: /posts/2016-03-08-Celery-gotchas.html 

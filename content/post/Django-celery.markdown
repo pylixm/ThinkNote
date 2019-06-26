@@ -1,6 +1,6 @@
 ---
 layout : post
-title : 译-在django中使用celery实现异步任务
+title : 「译」在django中使用celery实现异步任务
 categories: [Django,] 
 date : 2015-12-03 16:00:00
 url: /posts/2015-12-03-Django-celery.html 

@@ -1,10 +1,10 @@
 ---
 layout : post
-title : 译-机器学习简介
+title : 「译」机器学习简介
 categories: [机器学习,] 
 date : 2019-05-10
 url: /posts/2019-05-10-introduction-to-machine-learning.html 
-tags : [机器学习, ]
+tags : [机器学习, 翻译]
 ---
 
 本文为「[资源分享计划第一期 0427](https://pylixm.cc/posts/2019-04-29-share-resource.html)」中分享的文章「[Introduction To Machine Learning | Machine Learning Basics](https://www.codementor.io/zulaikhageer/introduction-to-machine-learning-machine-learning-basics-u9jnkzsjc#reinforcement-learning)」的一个节选译文，主要介绍了机器学习的一些相关概念和机器学习的过程，大家可以通过本文了解如下信息：
