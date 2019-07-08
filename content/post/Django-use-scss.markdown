@@ -19,7 +19,7 @@ tags : [Django, sass]
 
 官方网站：https://sass-lang.com/
 
-`Sass` 3版本以后，新引入了`Scss`语法，它完全兼容`Css3`，并且继承了 Sass 的强大功能。关于Scss和Sass，这里不做过多解释，有兴趣的可参考官方文档介绍。
+`Sass` 3版本以后，新引入了`Scss`语法，它完全兼容`Css3`，并且继承了`Sass` 的强大功能。关于`Scss`和`Sass`，这里不做过多解释，有兴趣的可参考官方文档介绍。
 
 话说回来，`Sass` 除了编写方便外，还有那些优势，大家可阅读这篇经典的文章[why sass?](https://alistapart.com/article/why-sass/#section1)。
 
