@@ -1,9 +1,9 @@
 ---
 layout : post
-title : Linux基础系列 - 三剑客之 ack 命令使用总结
+title : Linux基础系列 - 三剑客之 awk 命令使用总结
 categories: [Linux,] 
 date : 2018-10-16
-url: /posts/2018-10-16-Linux-ack.html 
+url: /posts/2018-10-16-Linux-awk.html 
 tags : [Linux, Linux基础系列, 运维知识库]
 ---
 
@@ -254,6 +254,22 @@ netstat -tan | grep "ESTABLISHED" | grep ":80" | wc -l
 
 # 用tcpdump嗅探80端口的访问看看谁最高
 tcpdump -i eth0 -tnn dst port 80 -c 1000 | awk -F"." '{print $1"."$2"."$3"."$4}' | sort | uniq -c | sort -nr
+```
+
+### 运算
+
+```shell
+# 1、求和
+cat data|awk '{sum+=$1} END {print "Sum = ", sum}'
+
+# 2、求平均
+cat data|awk '{sum+=$1} END {print "Average = ", sum/NR}'
+
+# 3、求最大值
+cat data|awk 'BEGIN {max = 0} {if ($1>max) max=$1 } END {print "Max=", max}'
+
+# 4、求最小值（min的初始值设置一个超大数即可）
+awk 'BEGIN {min = 1999999} {if ($1<min) min=$1} END {print "Min=", min}'
 ```
 
 ## 参考
