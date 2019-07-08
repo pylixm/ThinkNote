@@ -2,8 +2,8 @@
 layout : post
 title : Django 中如何使用 sass
 categories: [Django,] 
-date : 2016-01-05 20:00:00
-url: /posts/2018-07-08-how-to-use-sass-in-django.html 
+date : 2019-07-08 12:20:00
+url: /posts/2019-07-08-how-to-use-sass-in-django.html 
 tags : [Django, sass]
 ---
 
