@@ -1,10 +1,9 @@
 ---
-layout : post
 title : Django 中如何使用 sass
 categories: [Django,] 
-date : 2019-07-08 12:20:00
+date : 2019-07-07 18:00:00
 url: /posts/2019-07-08-how-to-use-sass-in-django.html 
-tags : [Django, sass]
+tags : [Django, Sass]
 ---
 
 作为一个运维开发，不像业务开发只专注后端业务开发即可，常常需要自己来构建前端的东西，当然系统交互体验说的过去就行，要求也没有业务系统那么高。但是还是会接触很多前端的知识，像是css、html、javascript 是必不可少的，你可以不精通，但必须会用。最近前端发展迅猛，已向着工程化大前端进发。常常开玩笑说，前端才是全栈，前后端、各平台全端通吃，现在貌似已成为事实。
