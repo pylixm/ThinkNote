@@ -141,18 +141,7 @@ $ mkdir static && touch static/css/demo.scss
 `demo.scss ` 添加sass 的样式代码：
 
 ```scss
-body {
-  .content{
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    background: grey;
-    p {
-      padding: 20px;
-      background: pink;
-    }
-  }
-}
+
 ```
 
 在浏览器，再次刷新会看到样式生效。打开开发者工具，查看html代码，会发现，sass代码已替换为css，如下：
