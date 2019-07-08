@@ -103,8 +103,9 @@ INSTALLED_APPS = [
 ]
 
 STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
+  'django.contrib.staticfiles.finders.FileSystemFinder',
+  'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+  'sass_processor.finders.CssFinder',
 ]
 
 # Django Sass 编译后css 的存放位置
