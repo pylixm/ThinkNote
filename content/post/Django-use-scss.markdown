@@ -124,24 +124,23 @@ $ mkdir static && touch static/css/demo.scss
 在`index.html` 中加入如下配置：
 
 ```html
-{% load sass_tags %}
-<html>
-  <head>
-    <title>Django sass demo</title>
-    <link href="{% sass_src 'css/demo.scss' %}" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div class="content">
-      Django sass demo 
-    </div>
-  </body>
-</html>
 ```
 
 `demo.scss ` 添加sass 的样式代码：
 
 ```scss
-
+body {
+  .content{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: grey;
+    p {
+      padding: 20px;
+      background: pink;
+    }
+  }
+}
 ```
 
 在浏览器，再次刷新会看到样式生效。打开开发者工具，查看html代码，会发现，sass代码已替换为css，如下：
