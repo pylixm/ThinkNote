@@ -1,7 +1,8 @@
 ---
+layout : post
 title : Django 中如何使用 sass
 categories: [Django,] 
-date : 2019-07-07 18:00:00
+date : 2019-07-07 18:20:00
 url: /posts/2019-07-08-how-to-use-sass-in-django.html 
 tags : [Django, Sass]
 ---
@@ -123,6 +124,18 @@ $ mkdir static && touch static/css/demo.scss
 在`index.html` 中加入如下配置：
 
 ```html
+{% load sass_tags %}
+<html>
+  <head>
+    <title>Django sass demo</title>
+    <link href="{% sass_src 'css/demo.scss' %}" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="content">
+      Django sass demo 
+    </div>
+  </body>
+</html>
 ```
 
 `demo.scss ` 添加sass 的样式代码：
