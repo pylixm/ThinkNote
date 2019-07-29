@@ -176,3 +176,5 @@ Manifest是一个包含puppet DSL文件的目录。这些文件的扩展名为.p
 - https://blog.csdn.net/xuejinliang/article/details/52923095
 - https://www.upguard.com/articles/open-source-puppet-vs.-puppet-enterprise-which-is-right-for-you
 - 可作为puppet的GUI替代方案：https://www.theforeman.org/
+
+到这里，大家对运维中的配置管理工具Puppet的基本概念和工作原理，应该有大致的了解，后面的文章我会分享下如何简单的使用。
