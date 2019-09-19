@@ -214,7 +214,7 @@ docker-compose up  # 前台运行
 docker-compose up -d  # 无误后可后台运行
 ```
 
-docker-compose ps 可以看到启动好的容器：
+`docker-compose ps` 可以看到启动好的容器：
 
 ```bash 
 $ docker-compose ps    
