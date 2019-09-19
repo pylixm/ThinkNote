@@ -94,7 +94,7 @@ Usage:
 ```
 mtr 8.8.8.8
 ```
-返回 ：
+返回报告 ：
 
 ```bash
 Keys:  Help   Display mode   Restart statistics   Order of fields   quit
@@ -181,4 +181,4 @@ IP 协议族的一员，主要用于网络设备间发送错误指示信息, 一
 
 ### 扩展阅读
 
-- https://wsgzao.github.io/post/mtr/
+- 如何分析mtr报告：https://wsgzao.github.io/post/mtr/
