@@ -7,7 +7,6 @@
  - 工作年限：5年
  - 技术博客：https://pylixm.cc/
  - Github：https://github.com/pylixm
-
  - 期望职位：运维高级开发工程师
  - 期望薪资：税前月薪35k+，特别喜欢的公司可例外
  - 期望城市：北京
@@ -38,6 +37,7 @@
 - 良好的自我驱动能力和时间管理，积极参与并贡献开源项目；
 
 管理
+
 - 规划项目长期目标和短期目标
 - 技术选型，方案设计，模块和功能设计
 - 定期项目总结，向下管理，向上汇报
@@ -73,12 +73,14 @@
 ### 基于SaltStack的底层架构扩展
 
 在运维自动化的过程中，需要一个批量机器的管理工具。经过调研，同时结合我们团队自身的技术栈，选择了SaltStack。但是它上层的API接口，并不能满足我们的需求。我们根据自身需求，对它做了改造：
+
 - 封装其Restfull API，使其可以横向扩展而不依赖Salt-Master;
 - 增加Salt命令下发及模块执行的审计功能；
 - 增加Salt的权限控制，可以根据Salt-Minion范围及执行模块做权限划分；
 通过对SaltStack的改造，夯实了整个自动化操作的底层通道基础，使上层saas的自动化处理更加稳定、安全。
 
 在该项目期间，主要做了如下重点工作：
+
 - 开发了上层的API服务组件，提供了和外部服务交互的API，支持命令审计功能、用户权限功能等功能。
 - 优化整体架构和API服务，使单台机器的QPS由200提升到1000+，详细可参考当时总结分析的文章[记一次Tornado QPS优化](https://pylixm.cc/posts/2017-04-04-tornado-qps-optimization.html)。
 
@@ -99,7 +101,7 @@
 
 ## 开源项目
 
-- [Django-mdeditor](https://github.com/pylixm/django-mdeditor)：基于editor.md的Django-app组件，star 190。
+- [Django-mdeditor](https://github.com/pylixm/django-mdeditor)：基于editor.md的Django-app组件，star 200+。
 - [Python基础教程](https://github.com/pylixm/python_start)：根据自己工作学习经验总结的Python入门教程。
 
 ## 技术文章
