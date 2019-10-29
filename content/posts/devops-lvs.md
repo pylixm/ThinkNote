@@ -2,7 +2,6 @@
 type : post
 title : LVS 相关原理说明
 categories: [LVS] 
-series: [Devops,]
 date : 2019-06-13
 url: /posts/2019-06-13-lvs.html 
 tags : [DevOps, LVS, 运维知识库]

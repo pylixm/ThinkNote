@@ -2,6 +2,7 @@
 type : post
 title : 数据结构与算法 - 复杂度分析
 categories: [数据结构与算法,] 
+series: [数据结构与算法笔记,]
 date : 2019-09-20
 url: /posts/2019-09-20-complexity.html 
 tags : [数据结构与算法, 复杂度分析]
