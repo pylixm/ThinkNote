@@ -18,11 +18,13 @@ Follow me:
 
   - [GitHub](https://github.com/pylixm)
   - [微博](http://weibo.com/2258086637)
+  - QQ Group:
 
-QQ Group:
+<img src="/static/imgs/qr_qq_group.png" width = "150" height = "150" />
 
-![](/static/imgs/python_qq_group.png)
+  - WeChat Official Account:
 
+<img src="/static/imgs/qr_wechat.png" width = "150" height = "150" />
 
 ## 关于博客
 ---
