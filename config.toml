@@ -63,8 +63,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 [[menu.main]]
   name = "资源库"
   weight = 40
-  identifier = "source"
-  url = "/source/"
+  identifier = "resource"
+  url = "/resource/"
 
 [[menu.main]]
   name = "归档"
