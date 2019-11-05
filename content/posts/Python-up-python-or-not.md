@@ -2,7 +2,7 @@
 type : post
 title : 现在是否适合升级到Python3.8 
 categories: [Python,] 
-series: [Python]
+series: [Python,]
 date : 2019-11-05
 url: /posts/2019-11-05-up-python-or-not.html
 tags : [Python, unittest]
