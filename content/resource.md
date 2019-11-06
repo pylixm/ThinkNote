@@ -100,4 +100,4 @@ tags : [资源库]
 - [资源：中国科学技术大学课程资源](https://github.com/USTC-Resource/USTC-Course)
 - [软件：lottery 年会抽奖](https://github.com/fouber/lottery)
 - [资源：程序员找工作黑名单单位](https://github.com/shengxinjing/programmer-job-blacklist)
-
+- [电子书：免费的计算机类书籍大集合](https://github.com/justjavac/free-programming-books-zh_CN)
