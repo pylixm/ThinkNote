@@ -64,6 +64,10 @@ tags : [资源库]
 
 ### 数据库类
 
+### 大数据类
+
+- [资源：大数据入门指南](https://github.com/heibaiying/BigData-Notes)
+
 ### 算法类
 
 - [资源：机器学习(Machine Learning)、深度学习(Deep Learning)、NLP面试中常考到的知识点和代码实现](https://github.com/NLP-LOVE/ML-NLP)
