@@ -2,6 +2,7 @@
 type : post
 title : Python GIL锁的来龙去脉
 categories: [Python,] 
+series: [Python进击,]
 date : 2018-08-10
 url: /posts/2018-08-10-python-GIL.html 
 tags : [Python, GIL]

@@ -2,6 +2,7 @@
 type : post
 title : 「译」如何选择python项目的基础docker镜像
 categories: [Python,] 
+series: [Python进击,]
 date : 2019-06-26
 url: /posts/2019-06-26-base-image-python-docker-images.html 
 tags : [Python, Docker, 翻译]

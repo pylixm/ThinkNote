@@ -2,6 +2,7 @@
 type : post
 title : 「译」python 3 值得尝试的一些技巧
 categories: [Python,] 
+series: [Python进击,]
 date : 2019-05-16
 url: /posts/2019-05-16-python-trick.html 
 tags : [Python, 翻译]
