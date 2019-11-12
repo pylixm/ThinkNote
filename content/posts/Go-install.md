@@ -182,6 +182,7 @@ Go 源码文件以 .go 为后缀，所有源码文件都是以包为组织形式
 **代码包的导入**
 
 代码包导入语句中使用的包名称应该与其导入路径一至，如代码包 `fmt` 的导入：
+
 ```
 import (
     "fmt"
@@ -191,6 +192,7 @@ import (
 **代码包的导入方法**
 
 - 带别名的导入： 
+  
 ```go
 import str "strings" 
 
@@ -198,6 +200,7 @@ str.HasPrefix("abc","a")
 ```
 
 - 本地化的导入：
+  
 ```go
 import . "strings" 
 
@@ -205,6 +208,7 @@ HasPrefix("abc","a")
 ```
 
 - 仅仅初始化
+  
 ```go
 import _ "strings"
 
