@@ -1,7 +1,8 @@
 ---
 type : post
 title : Linux基础系列 - rsync
-categories: [Linux,] 
+categories: [Linux,]
+series: [Linux基础系列,] 
 date : 2019-06-03
 url: /posts/2019-06-03-Linux-rsync.html 
 tags : [Linux, Linux基础系列, 运维知识库]

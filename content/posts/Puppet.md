@@ -1,13 +1,11 @@
 ---
 type : post 
-title : 「WWH」「译」Puppet 简单入门 - 理论篇
+title : 「译」Puppet 简单入门 - 理论篇
 categories: [Puppet] 
 date : 2019-07-23
 url: /posts/2019-07-23-Puppet-tutorial.html 
-tags : [Puppet, WWH, 运维知识库] 
+tags : [Puppet, 运维知识库] 
 ---
-
-> WWH 为 What/Why/How，即是什么、为什么和怎么做。该系列文章，希望从这三点出发，用简单的语言说清楚一件事情，讲清楚一个工具或一个原理。
 
 本文为译文，原文[Puppet Tutorial for Beginners: Resources, Classes, Manifest, Modules](https://www.guru99.com/puppet-tutorial.html)，主要讲解了`Puppet`工具的基本概念和用法。作为快速了解和备忘正合适，翻译记录，希望对大家有用，下面为译文。
 

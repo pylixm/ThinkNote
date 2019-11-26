@@ -1,7 +1,8 @@
 ---
 type : post
 title : Linux基础系列 - route 
-categories: [Linux,] 
+categories: [Linux,]
+series: [Linux基础系列,] 
 date : 2018-09-14
 url: /posts/2018-09-14-Linux-route.html 
 tags : [Linux, Linux基础系列, 运维知识库]

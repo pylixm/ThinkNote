@@ -1,7 +1,8 @@
 ---
 type : post
 title : Linux基础系列 - flock 命令
-categories: [Linux,] 
+categories: [Linux,]
+series: [Linux基础系列,] 
 date : 2019-04-24
 url: /posts/2019-04-24-flock.html 
 tags : [Linux, 运维知识库]

@@ -1,7 +1,8 @@
 ---
 type : post
 title : Linux基础系列 - 网络监测利器 mtr
-categories: [Linux,] 
+categories: [Linux,]
+series: [Linux基础系列,] 
 date : 2019-09-19
 url: /posts/2019-09-19-Linux-mtr.html 
 tags : [Linux, Linux基础系列, 运维知识库]

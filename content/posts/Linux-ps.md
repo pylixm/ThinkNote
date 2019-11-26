@@ -1,7 +1,8 @@
 ---
 type : post
 title : Linux基础系列 - 命令ps
-categories: [Linux,] 
+categories: [Linux,]
+series: [Linux基础系列,] 
 date : 2018-04-23
 url: /posts/2018-04-23-Linux-ps.html 
 tags : [Linux, Linux基础系列, 运维知识库]

@@ -1,10 +1,10 @@
 ---
 type : post 
-title : 「WWH」使用docker部署django技术栈项目
+title : 使用docker部署django技术栈项目
 categories: [Django] 
 date : 2019-08-30
 url: /posts/2019-08-30-docker-django.html 
-tags : [WWH, django, docker] 
+tags : [django, docker] 
 ---
 
 随着Docker的普及成熟，已经逐渐成为部署项目的首选，今天来和大家分享下如何使用docker部署django技术栈项目。

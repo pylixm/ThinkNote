@@ -1,7 +1,8 @@
 ---
 type : post
 title : Linux基础系列 - 磁盘Raid相关总结
-categories: [Linux,] 
+categories: [Linux,]
+series: [Linux基础系列,] 
 date : 2019-04-01 
 url: /posts/2019-04-01-Linux-disk-raid.html 
 tags : [Linux, Raid, Linux基础系列, 运维知识库]

@@ -1,13 +1,11 @@
 ---
 type : post 
-title : 「WWH」使用Let's Encrypt免费证书实现Nginx站点的HTTPS化 
+title : 使用Let's Encrypt免费证书实现Nginx站点的HTTPS化 
 categories: [HTTPS] 
 date : 2019-08-12
 url: /posts/2019-08-12-letencrypt.html 
-tags : [letencrypt, WWH, HTTPS] 
+tags : [letencrypt, HTTPS] 
 ---
-
-> WWH 为 What/Why/How，即是什么、为什么和怎么做。该系列文章，希望从这三点出发，用简单的语言说清楚一件事情，讲清楚一个工具或一个原理。
 
 这篇文章，向大家分享如何使用`Let's Encrypt`的免费证书来实现Nginx网站的HTTPS化。
 
