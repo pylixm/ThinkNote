@@ -245,9 +245,11 @@ drwxr-xr-x   2 root root    4096 Nov 29 11:18 puppetesttdir
 
 其他重要的Topic，大家可参考对应文档。
 
+
 - [重要的目录和文件说明](https://puppet.com/docs/puppet/6.10/dirs_important_directories.html)
 - [puppet environments相关](https://puppet.com/docs/puppet/6.10/env_environments.html)
 - [puppet modules使用](https://puppet.com/docs/puppet/6.10/modules.html)
 - [puppet 配置文件语法](https://puppet.com/docs/puppet/6.10/puppet_language.html)
 - [puppet server http api](https://puppet.com/docs/puppet/6.10/nodes_external.html)
 - [puppet facter](https://puppet.com/docs/puppet/6.10/facter.html)
+- [puppet 模块仓库](https://forge.puppet.com/)
