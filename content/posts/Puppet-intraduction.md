@@ -3,7 +3,7 @@ type : post
 title : 「译」Puppet 简单入门 - 理论篇
 categories: [Puppet] 
 date : 2019-07-23
-url: /posts/2019-07-23-Puppet-tutorial.html 
+url: /posts/2019-07-23-Puppet-tutorial-one.html 
 tags : [Puppet, 运维知识库] 
 ---
 
@@ -80,6 +80,8 @@ user { "Puppetuser":
 }
 ```
 
+具体语法可参阅官方文档[puppet 语法最佳指南](https://puppet.com/docs/puppet/5.5/lang_summary.html)
+
 ## 配置管理工具常用的部署架构
 
 业界常用的配置管理工具，有两种部署架构供选择：
@@ -111,7 +113,7 @@ Master 节点和Agent 节点之间通信通过SSL来确保安全。
 
 ### Master 和 Agent 节点的通信
 
-- 1、在Agent和Master服务器之间建立连接后，Puppet Agent会将有关其服务状态的数据发送到Puppet Master服务器。 这些被称为`fasts`：此信息包括主机名，内核详细信息，IP地址，文件名详细信息等。
+- 1、在Agent和Master服务器之间建立连接后，Puppet Agent会将有关其服务状态的数据发送到Puppet Master服务器。 这些被称为`facts`：此信息包括主机名，内核详细信息，IP地址，文件名详细信息等。
 
 - 2、Puppet Master使用此数据和menifest文件(配置文件)编译一个应用于Agent的配置列表，这个列表被称为`catalog`。 catalog中描述了一些操作，例如包安装，升级或删除，文件系统创建，用户创建或删除，服务器重启，IP配置更改等。
 
@@ -163,6 +165,8 @@ Manifest是一个包含puppet DSL文件的目录。这些文件的扩展名为.p
 ### Puppet Modules
 
 模块是文件和目录的集合，像是Manifast和Class的定义。它们是Puppet中可重复使用和可共享的单元。
+
+puppet 支持的模块及各系统兼容性，可参考 [这里](https://forge.puppet.com/supported)。
 
 他们的关系大致如下：
 
