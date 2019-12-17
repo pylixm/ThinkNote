@@ -58,6 +58,7 @@ queryset = queryset.prefetch_related('orders')
 ```
 
 当 DRF 调用上述相同序列化 customers 时，出现的是这种情况：
+
 - 获取所有 customers（执行两个往返数据库操作，第一个是获取 customers，第二个获取相关 customers 的所有相关的 orders。）
 - 对于第一个返回的 customers，获取其 order（不需要访问数据库，我们已经在上一步中获取了所需要的数据）
 - 对于第二个返回的 customers，获取其 order （不需要访问数据库）
@@ -165,4 +166,4 @@ class EventSerializer(serializers.ModelSerializer):
 
 ## 结论
 
-「提前加载」是一项常见的性能优化手段。每当您通过ORM查询嵌套关系时，都应该考虑设置适当的预加载。以我的经验，这是现代中小型Web开发中最常见的与性能相关的问题。
+「预加载」是一项常见的性能优化手段。每当您通过ORM查询嵌套关系时，都应该考虑设置适当的预加载。以我的经验，这是现代中小型Web开发中最常见的与性能相关的问题。
