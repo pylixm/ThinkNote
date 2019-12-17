@@ -14,6 +14,8 @@ tags : [Django, Restful]
 
 在 Django 的技术栈里，Django REST Framework 无疑算是REST框架中的首选。但是它和Django 的高度耦合，在方便的同时也继承了Django ORM 数据操作的性能底下特性。本文提出了一些性能优化的点，翻译记录，大家可做参考，下面是正文。
 
+---
+
 Django 开发者可以使用 Django REST Framework 快速的开发出简单而强大的标准 REST APIs，我们已经成功的应用在了一些 Django Web 项目上。但是，看似简单直观的 Django REST Framework 及其嵌套的序列化可能会大大降低你的 API 端的性能。你的服务器的其他部分的响应能力也会被某一个低效的 REST API 拖后腿。
 
 问题的根源就是 「N+1 selects problem」。首先查询数据库一次得到表中的数据（例如，Customers），然后每个用户的其他字段又需要循环不止一次地查询数据库（例如 customer.country.Name）。使用 Django 的 ORM，很容易造成这个问题，而使用 DRF，同样会造成这个问题。幸运的是，目前有修复 Django REST Framework 性能问题的解决方法，而且不需要对代码进行重大重组。只需要使用 select_related 和 prefetch_related 方法来执行所谓的「预加载」。这种方法产生了很好的效果，在我们最近的项目中，有个重要的 API 调用花费了5-10秒钟才返回结果。运用合适的预加载后，同样的调用时间花费都变的低于1秒，耗时降低了20倍以上。
