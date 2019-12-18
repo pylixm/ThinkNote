@@ -4,7 +4,7 @@ title : Python中的类属性和实例属性-补充篇
 categories: [Python,] 
 series: [Python进击,]
 date : 2019-11-06 
-url: /posts/2019-11-06-python-class-attribute.html 
+url: /posts/2019-11-06-python-class-attribute-2.html 
 tags : [Python,]
 ---
 
