@@ -88,7 +88,7 @@ tags : [数据结构与算法, 复杂度分析]
 
 可分为两类：多项式量级和非多项式量级。其中 `O(2n)` 和 `O(n!)`为非多项式量级，其他都为多项式量级。
 
-![](static/imgs/complexity/complexity.jpg)
+![](/static/imgs/complexity/complexity.jpg)
 
 **常量阶**
 

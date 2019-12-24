@@ -1,6 +1,6 @@
 ---
 type : post
-title : 数据结构与算法 - 数组
+title : 数据结构与算法 - 线性表 - 数组
 categories: [数据结构与算法,] 
 series: [数据结构与算法笔记,]
 date : 2019-12-17
