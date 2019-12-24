@@ -36,3 +36,8 @@ tags : [数据结构与算法, 跳表]
 
 - 静态数据结构：存储空间在程序执行过程中不能加以改变，定义好之后变由系统分配了固定大小的存储空间。
 - 动态数据结构：不确定总的数据存储量，会根据数据元素的多少，而发生变化。
+
+## 扩展阅读
+
+- https://cloud.tencent.com/developer/article/1353762
+- https://github.com/wangzheng0822/algo
