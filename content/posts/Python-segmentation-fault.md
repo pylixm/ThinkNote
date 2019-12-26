@@ -81,7 +81,11 @@ libressl-2.8.0 成功显示
 make && make install
 ```
 
-## 扩容阅读
+## 总结
+
+在Python中遇到段错误，首先考虑升级出现段错误的模块包。如果未解决问题，可通过`gdb`来调试定位问题，根据具体问题具体解决。
+
+## 扩展阅读
 
 - https://www.cnblogs.com/mengzhilva/p/11059329.html
 - https://en.wikipedia.org/wiki/Segmentation_fault
