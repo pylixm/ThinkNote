@@ -7,10 +7,9 @@ url: /posts/2020-04-14-kafka.html
 tags : [DevOps, kafka]
 ---
 
+# Kafka 简介
 
-## Kafka 简介
-
-### 历史 
+## 历史 
 
 消息代理，狭义的讲它是一种按照一定专递协议进行消息传递的架构模式。常用来解决系统之间的耦合、异步任务调用和瞬时流量的应对问题。随着互联网行业的发展，大数据、分布式架构的兴起，消息代理的使用越来越多，高吞吐、实时性的要求越来越高。
 
@@ -22,7 +21,7 @@ Kafka 就是在这样的背景下诞生的。在2010年，Linkedin公司需要�
 - 可以储存流式的记录，并且有较好的容错性。
 - 可以在流式记录产生时就进行处理。
 
-### kafka的中常用概念
+## kafka的中常用概念
 
 在我们使用Kafka之前，先来了解下期中的一些概念。Kafka的[官方文档](http://kafka.apache.org/intro)已经描述的非常详细，下边是一些总结：
 
@@ -45,11 +44,11 @@ Kafka 就是在这样的背景下诞生的。在2010年，Linkedin公司需要�
 - 消费者（customers）：将消息从kakfa服务端取出使用的称之为消费者。如果所有的consumer都具有相同的group,这种情况和队列模式很像，消息将会在consumers之间负载均衡；如果所有的consumer都具有不同的group,那这就是"发布-订阅"，消息将会广播给所有的消费者。
 - zookeeper： 用来存储机器的配置信息。
 
-## Kafka 搭建
+# Kafka 搭建
 
 Kafka集群的搭建非常简单，可直接参考[官方文档](http://kafka.apache.org/quickstart)。
 
-### 启动时注意
+## 启动时注意
 
 在Kafka启动时，`kafka-server-start.sh` 提供了daemon模式，可通过添加参数`-daemon` 实现。
 
@@ -60,14 +59,14 @@ Kafka启动后，我们需要监控kafka的运行情况，许多开源的监控�
 ```
 JMX_PORT=9988 ./bin/kafka-server-start.sh -daemon config/server.properties
 ```
-### 几个重要的配置
+## 几个重要的配置
 
 - `offsets.topic.replication.factor` topic 分区的副本数，默认为1，即没有副本。当有broker宕机的时候，topic信息不全，导致集群不可用。建议设置参数值大于1.
 - `log.retention.hours` 日志文件清理，默认为168。建议根据自己磁盘和数据量合理设置，以免因磁盘满造成宕机不可用。
 
-## 使用问题和优化
+# 使用问题和优化
 
-### 针对kafka的管理监控问题
+## 针对kafka的管理监控问题
 
 对于kafka管理及监控，这里推荐两款开源工具 [Kafka Manager](https://github.com/yahoo/CMAK) 和 [Kafka Eagle](https://github.com/smartloli/kafka-eagle)。
 
@@ -79,7 +78,7 @@ JMX_PORT=9988 ./bin/kafka-server-start.sh -daemon config/server.properties
 
 该工具是国内同行开发的，支持对Kafka的简单管理和报警，可以看作者这篇剖析来进一步了解：[Kafka监控系统Kafka Eagle剖析](https://www.cnblogs.com/smartloli/p/9371904.html)
 
-### 利用Customer Group 实现消费者的高可用 
+## 利用Customer Group 实现消费者的高可用 
 
 根据消费者组的特性，不同的消费者组可以订阅同样的所有topic数据，在消费者组内，数据只能被一个消费者消费，也就是每个topic的分区只能被一个消费者消费。
 
@@ -88,3 +87,4 @@ JMX_PORT=9988 ./bin/kafka-server-start.sh -daemon config/server.properties
 
 - [系统架构的演变](https://blog.csdn.net/GitChat/article/details/80991660)
 - [kafka与其他mq对比](https://stackshare.io/stackups/activemq-vs-kafka-vs-rabbitmq)
+- [了解合适使用RabbitMQ和Apache Kafka](https://tanzu.vmware.com/content/blog/understanding-when-to-use-rabbitmq-or-apache-kafka)
