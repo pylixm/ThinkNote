@@ -85,6 +85,8 @@ JMX_PORT=9988 ./bin/kafka-server-start.sh -daemon config/server.properties
 这样我们可以把消费者放到一个组中，以组作为一个消费集群来看，便是高可用的了。当有消费者宕机是，该消费者消费的分区会重新平衡到其他消费者上继续消费，从消费者组整体来看，仍然是完整可用的。
 
 
+# 扩展阅读
+
 - [系统架构的演变](https://blog.csdn.net/GitChat/article/details/80991660)
 - [kafka与其他mq对比](https://stackshare.io/stackups/activemq-vs-kafka-vs-rabbitmq)
 - [了解合适使用RabbitMQ和Apache Kafka](https://tanzu.vmware.com/content/blog/understanding-when-to-use-rabbitmq-or-apache-kafka)
