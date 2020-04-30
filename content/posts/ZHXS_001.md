@@ -7,7 +7,8 @@ url: /posts/2020-04-30-zhxs-0501.html
 tags : [朝花夕拾 ]
 ---
 
-- [「朝花夕拾」总目录](/posts/2020-04-30-zhxs-index.html )
+- [「朝花夕拾」总目录](https://pylixm.cc/posts/2020-04-30-zhxs-index.html)
+
 
 # Python 资讯
 
@@ -28,7 +29,7 @@ tags : [朝花夕拾 ]
 - [nginx 优化网站速度和带宽的5个配置](https://www.nginx.com/blog/help-the-world-by-healing-your-nginx-configuration/)
 
 
-# 资源
+# 项目和资源
 
 - [一款类win98老式的UI库，热衷老UI样式的可以尝试](https://github.com/jdan/98.css)
   
