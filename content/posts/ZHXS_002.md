@@ -7,8 +7,11 @@ url: /posts/2020-05-08-zhxs-0508.html
 tags : [朝花夕拾 ]
 ---
 
+- [「朝花夕拾」总目录](https://pylixm.cc/posts/2020-04-30-zhxs-index.html)
+
 
 ## 资讯 
+
 - [5月4日，Python的issue追踪准备迁移到Github，正在招聘项目经理](http://pyfound.blogspot.com/2020/05/pythons-migration-to-github-request-for.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+PythonSoftwareFoundationNews+%28Python+Software+Foundation+News%29)
   
 - [5月5日，2019年Python开发者报告公布。](https://www.jetbrains.com/lp/python-developers-survey-2019/)
