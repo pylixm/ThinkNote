@@ -2,6 +2,7 @@
 type : post
 title : 「朝花夕拾」- 0508期，总第二期
 categories: [朝花夕拾,] 
+series: [朝花夕拾,]
 date : 2020-05-08
 url: /posts/2020-05-08-zhxs-0508.html 
 tags : [朝花夕拾 ]

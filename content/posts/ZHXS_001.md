@@ -2,6 +2,7 @@
 type : post
 title : 「朝花夕拾」- 0501期，总第一期
 categories: [朝花夕拾,] 
+series: [朝花夕拾,]
 date : 2020-04-30
 url: /posts/2020-04-30-zhxs-0501.html 
 tags : [朝花夕拾 ]
