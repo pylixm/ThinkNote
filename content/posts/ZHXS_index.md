@@ -72,5 +72,3 @@ tags : [朝花夕拾 ]
 - [通过交互式可视化学习卷积神经网络。](https://github.com/poloclub/cnn-explainer]
 - [机器学习和深度学习的一些基本原则，视频和文本形式。](https://deeplizard.com/learn/playlist/PLZbbT5o_s2xq7LwI2y8_QtvuXZedL6tQU]
 
-
-![](./static/imgs/wx/../../../../../static/static/imgs/wx/gzh_green.png)
