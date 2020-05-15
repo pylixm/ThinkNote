@@ -32,4 +32,4 @@ tags : [朝花夕拾 ]
   
 - [一款智能的Pycharm/VSCode 插件，可优化代码的编写质量](https://sourcery.ai/blog/explaining-refactorings-1/)
   
-- [2020 Python 语言峰会，语音聊天记录](https://pyfound.blogspot.com/2020/04/the-2020-python-language-summit.html)
+- [2020 Python 语言峰会，受疫情影响，只进行了小范围的会谈，这是会谈的语音聊天记录](https://pyfound.blogspot.com/2020/04/the-2020-python-language-summit.html)
