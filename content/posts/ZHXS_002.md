@@ -31,7 +31,7 @@ tags : [朝花夕拾 ]
   
 - [53 个Python面试题和解答。](https://towardsdatascience.com/53-python-interview-questions-and-answers-91fa311eec3f)
 
-## 资源
+## 项目和资源
 
 - [GINO 递归定义为 GINO Is Not ORM，是一个基于 asyncio 和 SQLAlchemy core 的轻量级异步 Python ORM 框架，目前（2020 年初）仅支持 asyncpg 一种引擎。](https://python-gino.org/docs/zh/master/tutorials/announcement.html)
   
