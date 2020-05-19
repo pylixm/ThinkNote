@@ -10,6 +10,7 @@ tags : [Python, concurrent]
 
 >原文地址：https://rednafi.github.io/digressions/python/2020/04/21/python-concurrent-futures.html
 
+> 文章较长，建议收藏后再看。
 
 使用Python编写并发代码时并不流畅，我们需要一些额外的思考，你手中的任务是I/O密集类型还是CPU密集型。此外，由于全局解释锁的存在，进一步增加了编写真正的并发代码的难度。
 
@@ -23,7 +24,7 @@ Python标准库还包含一个名为`concurrent.futrures`的模块。在Python3.
 
 根据官方文档，
 
-> concurrent.futures 模块为异步执行可调用对象提供了一个高级接口。
+> The concurrent.futures module provides a high-level interface for asynchronously executing callables.
 
 这意味着你可以使用更高阶别的接口来使用线程和进程。该模块提供了一个名为`Executor`的抽象类，你不能直接实例化它，需要使用它提供的两个子类之一来跑任务。
 
@@ -43,7 +44,7 @@ Executor (Abstract Base Class)
 
 ## Executor Objects 
 
-由于`ThreadPoolExecutor`和`ProcessPoolExecutor`有相同的API接口，在这两种情况下，我们主要来看下它们提供的两个方法。
+由于`ThreadPoolExecutor`和`ProcessPoolExecutor`有相同的API接口，我们主要来看下它们提供的两个方法。
 
 
 ### submit(func, args, *kwargs)
@@ -81,7 +82,7 @@ for task in get_tasks():
     perform(task)
 ```
 
-`get_tasks`返回一个可迭代对象，该迭代对象包含有特定功能任务的参数等相关信息。`perform`函数依次运行，每次只能运行一个。由于逻辑是顺序执行的，因此很容易理解。当任务数量少或单个任务的执行时间少复杂度较低时，没有什么大问题。但是当任务数量巨大或单个任务很耗时时，这样很快就会变得不稳定、性能低下。
+`get_tasks`返回一个可迭代对象，该迭代对象包含有特定功能任务的参数相关信息。`perform`函数依次运行，每次只能运行一个。由于逻辑是顺序执行的，因此很容易理解。当任务数量少或单个任务的执行时间少、复杂度较低时，没有什么大问题。但是当任务数量巨大或单个任务很耗时时，整端代码性能就变得非常低下。
 
 根据一般经验，`ThreadPoolExecutor` 在主要受I/O限制的任务时使用，例如发起多个http请求、将大量文件保存到磁盘等。`ProcessPoolExecutor` 在主要受CPU限制的任务中应用。如大运算量的任务、对大量图片处理应用和一次处理多个文本文件等。
 
