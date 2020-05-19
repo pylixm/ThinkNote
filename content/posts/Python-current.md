@@ -11,7 +11,7 @@ tags : [Python, concurrent]
 >原文地址：https://rednafi.github.io/digressions/python/2020/04/21/python-concurrent-futures.html
 
 
-使用Python编写并发代码时并不流畅，我们需要一些思考，你手中的任务是I/O密集类型还是CPU密集型。此外，由于全局解释锁的存在，进一步增加了编写真正的并发代码的难度。
+使用Python编写并发代码时并不流畅，我们需要一些额外的思考，你手中的任务是I/O密集类型还是CPU密集型。此外，由于全局解释锁的存在，进一步增加了编写真正的并发代码的难度。
 
 在Python中编写并发代码常常这样做：
 
