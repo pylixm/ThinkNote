@@ -8,7 +8,7 @@ url: /posts/2020-05-18-python-concurrent-feature.html
 tags : [Python, concurrent]
 ---
 
-原文地址：https://rednafi.github.io/digressions/python/2020/04/21/python-concurrent-futures.html
+>原文地址：https://rednafi.github.io/digressions/python/2020/04/21/python-concurrent-futures.html
 
 
 使用Python编写并发代码需要额外的考虑一些问题，例如你手中的任务时I/O类型还是CPU密集型，是否还需要其他额外的处理才能实现并发。此外，由于全局解释锁的存在，进一步增加了编写真正的并发代码的限制。
