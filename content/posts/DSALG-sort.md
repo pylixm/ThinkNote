@@ -1,6 +1,6 @@
 ---
 type : post
-title : 数据结构与算法 - 算法 - 排序
+title : 数据结构与算法 - 算法 - 排序一
 categories: [数据结构与算法,] 
 series: [数据结构与算法笔记,]
 date : 2019-12-27
