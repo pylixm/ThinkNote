@@ -30,6 +30,10 @@ tags : [朝花夕拾 ]
 
 - [5月13日，Python3.8.3 发布](https://www.python.org/downloads/release/python-383/)
 
+## 0522期，总第四期
+
+- [5月19日，Python 3.9.0b1 开放下载测试。](https://pythoninsider.blogspot.com/2020/05/python-390b1-is-now-available-for.html)
+
 # 文章
 
 ## 0501期，总第一期
@@ -63,6 +67,19 @@ tags : [朝花夕拾 ]
 - [Victor Stinner （python指导委员会，cpython核心维护之一）和 Julien Danjou（Datadog工程师） 的访谈笔记](https://www.welcometothejungle.com/en/articles/btc-performance-python)
 
 - [除了Threading和multiprocessing，另一种更轻松的并发实现方法](https://rednafi.github.io/digressions/python/2020/04/21/python-concurrent-futures.html)
+
+## 0522期，总第四期
+
+- [通过构建互动游戏来教孩子们学习Python。文中介绍了一款Python的游戏引擎PursuedPyBear，做儿童编程教育的朋友可以参阅。](https://opensource.com/article/20/5/python-games)
+
+- [如何通过分析SQL来优化Django ORM的性能。](http://schegel.net/posts/optimizing-django-orm-queries/)
+
+- [有个Python 子解释器落地的最新消息。](https://lwn.net/Articles/820424/)
+
+- [Python 如何实现一个grpc 服务端。](https://towardsdatascience.com/implementing-grpc-server-using-python-9dc42e8daea0)
+
+- [详细剖析Python 的装饰器。](https://rednafi.github.io/digressions/python/2020/05/13/python-decorators.html)
+
 
 # 资源
 
@@ -105,3 +122,13 @@ tags : [朝花夕拾 ]
 - [一款智能的Pycharm/VSCode 插件，可优化代码的编写质量](https://sourcery.ai/blog/explaining-refactorings-1/)
   
 - [2020 Python 语言峰会，语音聊天记录](https://pyfound.blogspot.com/2020/04/the-2020-python-language-summit.html)
+
+## 0522期，总第四期
+
+- [jira 免费替代品。](https://tara.ai/)
+
+- [正则表达式的一个简明教程。](https://refrf.shreyasminocha.me/)
+
+- [一种新的shell。](https://github.com/nushell/nushell)
+
+- [用python 实现的PDF解析器。](https://github.com/jstockwin/py-pdf-parser)
