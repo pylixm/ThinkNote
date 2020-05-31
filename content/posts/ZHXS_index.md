@@ -34,6 +34,10 @@ tags : [朝花夕拾 ]
 
 - [5月19日，Python 3.9.0b1 开放下载测试。](https://pythoninsider.blogspot.com/2020/05/python-390b1-is-now-available-for.html)
 
+## 0530期，总第五期
+
+- [第一届 FlaskCon将在6月7日举行，喜欢Flask的朋友可以关注](https://sessionize.com/flaskcon)
+
 # 文章
 
 ## 0501期，总第一期
@@ -79,6 +83,14 @@ tags : [朝花夕拾 ]
 - [Python 如何实现一个grpc 服务端。](https://towardsdatascience.com/implementing-grpc-server-using-python-9dc42e8daea0)
 
 - [详细剖析Python 的装饰器。本文介绍了各种Python中的解释器，由易入难深入剖析了装饰器这一重要的特性。](https://rednafi.github.io/digressions/python/2020/05/13/python-decorators.html)
+
+## 0530期，总第五期
+
+- [缓存使用的五种应用模式，文章列举了现在流行的缓存使应用模式及优使用场景。](https://xie.infoq.cn/article/49947a60376964f1c16369a8b)
+
+- [Python 中10个常用的库，文章介绍了10个Python生态中常用的10个库，包括绘图、网络请求、数据处理、命令行处理等等。](https://www.activestate.com/blog/top-10-python-tools-to-make-your-life-easier/)
+  
+- [《为什么这么设计》这是一个编程相关的系列文章，内容从编程语言到系统网络涉猎广泛，你可以理解为编程的十万个为什么，作者引经据典对每个观点都是有理有据，每个程序员都值得读一下。](https://draveness.me/whys-the-design/)
 
 # 资源
 
@@ -131,3 +143,11 @@ tags : [朝花夕拾 ]
 - [一种新的shell。](https://github.com/nushell/nushell)
 
 - [用python 实现的PDF解析器。可以帮助你结构化PDF中的信息。](https://github.com/jstockwin/py-pdf-parser)
+
+
+## 0530期，总第五期
+
+- [django grpc 框架，本月刚刚发布，生产可用性待验证，可以参考其思路](https://github.com/fengsp/django-grpc-framework)
+  
+- [各语言的web框架性能测试比较，可以看看你使用的框架在不同环境下的表现](https://github.com/the-benchmarker/web-frameworks)
+  
