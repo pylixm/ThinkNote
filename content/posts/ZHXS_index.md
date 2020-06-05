@@ -92,6 +92,22 @@ tags : [朝花夕拾 ]
   
 - [《为什么这么设计》这是一个编程相关的系列文章，内容从编程语言到系统网络涉猎广泛，你可以理解为编程的十万个为什么，作者引经据典对每个观点都是有理有据，每个程序员都值得读一下。](https://draveness.me/whys-the-design/)
 
+## 0605期，总第六期
+
+
+- 前后端分离架构中，JWT 被使用的最多。但是我们真的需要吗？传统的 cookie-session 机制不好吗？这篇文章将告诉我们 JWT 是为什么不适合作为回话管理使用。
+  [http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-sessions/](http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-sessions/ "http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-sessions/")（译文：https://learnku.com/articles/22616）
+
+- ASGI 协议的框架层出不穷，想 starlette 、fastapi、sanic 等。本文介绍了 Fastapi 框架的基本用法，可参考。
+  [https://fedoramagazine.org/use-fastapi-to-build-web-services-in-python/](https://fedoramagazine.org/use-fastapi-to-build-web-services-in-python/ "https://fedoramagazine.org/use-fastapi-to-build-web-services-in-python/")
+
+- Locust 是一款易用的分布式压测工具。除了命令，它还提供了一个 web 界面，供使用者观察压力情况。
+  [https://docs.locust.io/en/latest/quickstart.html](https://docs.locust.io/en/latest/quickstart.html "https://docs.locust.io/en/latest/quickstart.html")
+
+- SOLID 设计原则的 Python 使用指南，SOLID 包括：单一设计原则、开闭原则、里斯科夫的代位原则、接口隔离原则、依赖倒置原则。
+  [https://dev.to/ezzy1337/a-pythonic-guide-to-solid-design-principles-4c8i](https://dev.to/ezzy1337/a-pythonic-guide-to-solid-design-principles-4c8i "https://dev.to/ezzy1337/a-pythonic-guide-to-solid-design-principles-4c8i")
+
+
 # 资源
 
 ## 0501期，总第一期
@@ -151,3 +167,7 @@ tags : [朝花夕拾 ]
   
 - [各语言的web框架性能测试比较，可以看看你使用的框架在不同环境下的表现](https://github.com/the-benchmarker/web-frameworks)
   
+## 0605期，总第六期
+
+- Pydantic 是一个使用 Python 类型提示来进行数据验证和设置管理的库。多数 ASGI 协议的 web 框架使用了该库，大大提高了数据处理的速度。
+  [https://pydantic-docs.helpmanual.io/](https://pydantic-docs.helpmanual.io/ "https://pydantic-docs.helpmanual.io/")（中文翻译：https://blog.csdn.net/swinfans/article/details/89629641）
