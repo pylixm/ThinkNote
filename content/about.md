@@ -49,7 +49,7 @@ Follow me:
 * [E-Mail](mailto:pyli.xm@gmail.com)
 
 
-## 友链
+## 朋友们
 
 - [佩恩的博客](https://www.wuyabala.com/#contact)：好好学习的未来程序员。
 - [Valcosmos](https://www.valzt.cn/): 一只向往未来和远方的小小程序猿（Web前端）。
