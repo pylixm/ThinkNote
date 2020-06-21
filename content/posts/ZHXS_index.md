@@ -38,6 +38,10 @@ tags : [朝花夕拾 ]
 
 - [第一届 FlaskCon将在6月7日举行，喜欢Flask的朋友可以关注](https://sessionize.com/flaskcon)
 
+## 0619期，总第八期
+
+- 6月15日 ，Django 3.1 beta 1 released
+
 # 文章
 
 ## 0501期，总第一期
@@ -107,6 +111,30 @@ tags : [朝花夕拾 ]
 - SOLID 设计原则的 Python 使用指南，SOLID 包括：单一设计原则、开闭原则、里斯科夫的代位原则、接口隔离原则、依赖倒置原则。
   [https://dev.to/ezzy1337/a-pythonic-guide-to-solid-design-principles-4c8i](https://dev.to/ezzy1337/a-pythonic-guide-to-solid-design-principles-4c8i "https://dev.to/ezzy1337/a-pythonic-guide-to-solid-design-principles-4c8i")
 
+## 0612/0619期，总第七、八期
+
+- 一行css 代码，实现暗黑模式。
+[https://francoisbest.com/posts/2020/dark-mode-for-excalidraw](https://francoisbest.com/posts/2020/dark-mode-for-excalidraw)
+
+- 文章介绍了一个排查Python程序内存溢出的工具 filprofiler 。它会捕捉你的错误栈，可以生成一个 svg 的动态图供你分析使用。
+[https://francoisbest.com/posts/2020/dark-mode-for-excalidraw](https://francoisbest.com/posts/2020/dark-mode-for-excalidraw)
+
+- Cookie 的一篇全面介绍，介绍了如何使用Cookie、Cookie的安全和权限一级2AJAX和CORS之间的关系 。Cookie学习不错的教材。
+[https://www.valentinog.com/blog/cookies/](https://www.valentinog.com/blog/cookies/)
+
+
+- 文章从一个数据工程师的角度用实力对比分析了Python 和Go 在Apache Beam 平台下的表现对比。
+[https://chollinger.com/blog/2020/06/a-data-engineering-perspective-on-go-vs.-python-part-1/](https://chollinger.com/blog/2020/06/a-data-engineering-perspective-on-go-vs.-python-part-1/)
+
+- 由于Python的动态、鸭子类型、猴子不定等特性使得设计模式像是过度设计，但是又一种模式-代理模式，在Python程序中是很有用的，可以是我们写出高可维护的代码。
+[https://chollinger.com/blog/2020/06/a-data-engineering-perspective-on-go-vs.-python-part-1/](https://chollinger.com/blog/2020/06/a-data-engineering-perspective-on-go-vs.-python-part-1/)
+
+-  文章通过一个仿生产环境的基准测试，用数据解释了「为什么在高负载下异步比同步表现差」，通过进一步的推理和证据，得到结论：异步的程序现在仍不成熟明朗，存在一些性能和不确定的问题。
+[http://calpaterson.com/async-python-is-not-faster.html](http://calpaterson.com/async-python-is-not-faster.html)
+
+- 文章介绍了一种密码分割的密码保护管理发放，可以尝试。
+[https://opensource.com/article/20/6/python-passwords](https://opensource.com/article/20/6/python-passwords)
+
 
 # 资源
 
@@ -171,3 +199,9 @@ tags : [朝花夕拾 ]
 
 - Pydantic 是一个使用 Python 类型提示来进行数据验证和设置管理的库。多数 ASGI 协议的 web 框架使用了该库，大大提高了数据处理的速度。
   [https://pydantic-docs.helpmanual.io/](https://pydantic-docs.helpmanual.io/ "https://pydantic-docs.helpmanual.io/")（中文翻译：https://blog.csdn.net/swinfans/article/details/89629641）
+
+
+## 0612/0619期，总第七、八期
+
+- 在Docker 中运行的Mac 系统，接近原生OSX-KVM。
+[https://github.com/sickcodes/Docker-OSX](https://github.com/sickcodes/Docker-OSX)
