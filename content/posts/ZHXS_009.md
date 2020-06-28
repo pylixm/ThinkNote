@@ -9,6 +9,8 @@ url: /posts/2020-06-26-zhxs-0626.html
 tags : [朝花夕拾 ]
 ---
 
+> 「朝花夕拾」周刊总目录: https://pylixm.cc/posts/2020-04-30-zhxs-index.html
+
 ## 资讯
 
 - 6月17日，DjangoCon US 2020 因疫情取消
