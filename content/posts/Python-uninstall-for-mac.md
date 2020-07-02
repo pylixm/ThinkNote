@@ -7,9 +7,9 @@ url: /posts/2020-07-02-python-uninstall-for-mac.html
 tags : [Python, uninstall, mac]
 ---
 
-Python 开发时，都是自己安装一个用户自己的Python, 很少使用系统自带的。一是版本老旧，另一个是怕安装开发包时和系统依赖包冲突，对系统造成不必要的破坏。Python 官方提供了Linux、mac和Windows 下Python的安装包，高版本的python安装包，在安装时是允许多版本存在的，对已有python并不会造成破坏。但早期的一些旧版本安装包，还是会覆盖已有的版本，对多版本共存支持的不是很好。
+使用Python开发时，大都是安装一个自己的Python, 很少使用系统自带的。一是版本老旧，另一个是怕安装开发包时和系统依赖包冲突，对系统造成不必要的破坏。Python 官方提供了Linux、mac和Windows 下Python的安装包，高版本的python安装包，在安装时是允许多版本存在的，对已有python并不会造成破坏。但早期的一些旧版本安装包，还是会覆盖已有的版本，对多版本共存支持的不是很好。
 
-Windows 系统下还好，我们可以选择安装目录。安装错误时，可以方便的卸载。但是针对于Mac 来说，不是很友好。下边是Mac 安装包卸载的方法，适用大多数的Python版本安装包，目前最新为`Python3.8.3`。
+Windows 系统下还好，我们可以选择安装目录。安装错误时，可以方便的卸载。但是针对于Mac 来说，大多数人并不知道安装路径，所以不是很友好。下边是Mac 安装包卸载的方法，适用大多数的Python版本安装包，目前最新为`Python3.8.3`。
 
 
 ## Mac 下 pkg 安装Python 卸载
@@ -28,7 +28,7 @@ sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.8
 sudo rm -rf "/Applications/Python 3.8"
 ```
 
-***三/ 还原`/usr/local/bin`目录下的Python连接恢复：***
+**三/ 还原`/usr/local/bin`目录下的Python连接恢复：**
 
 若该目录下有其他版本Python软连，python或python3 修改会之前版本。
 
