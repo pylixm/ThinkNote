@@ -48,3 +48,8 @@ export PATH
 ```
 
 Mac 下推荐使用 brew 来安装Python，亦或是使用`pyenv`之类来管理。brew 安装不同版本的python 可使用 @ + 版本号来安装，如`brew install python@3.8`，pyenv的使用可参阅我另一篇文章[使用 pyenv + virtualenv 打造多版本python开发环境](https://pylixm.cc/posts/2016-06-19-Virtualenv-install.html)。
+
+
+## 参考
+
+- [https://blog.bbzhh.com/index.php/archives/97.html](https://blog.bbzhh.com/index.php/archives/97.html)
