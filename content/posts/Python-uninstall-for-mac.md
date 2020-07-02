@@ -52,16 +52,16 @@ rm -rf 2to3-3.8
 ```
 做一个软链接至`/usr/bin/python`。
 
-**四：删除安装包所定义的环境变量：**
+**四/ 删除安装包所定义的环境变量(若有)**
 
 ```bash
-vi ~/.bash_profile
+vim ~/.bash_profile
 ```
 
 删除
 
 ```bash
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+PATH="/usr/local/opt/python@3.8/bin:${PATH}"
 export PATH
 ```
 
