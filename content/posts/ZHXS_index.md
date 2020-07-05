@@ -12,7 +12,7 @@ tags : [朝花夕拾 ]
 
 之所以取名「朝花夕拾」，一是这些“花”确实是后来才“拾取”，有一定的滞后性。另一个取其收集回忆的寓意。
 
-# Python 资讯
+# 资讯
 
 ## 0501期，总第一期
 
@@ -49,6 +49,11 @@ tags : [朝花夕拾 ]
 
 - 6月27日，NumPy 1.19.0 Release Notes
 [https://numpy.org/devdocs/release/1.19.0-notes.html](https://numpy.org/devdocs/release/1.19.0-notes.html)
+
+## 0703期，总第十期
+
+-  7月1日，Redis 项目的创始人@antirez 宣布退出代码的日常开发，以后只充当该项目的顾问。理由是“我写代码是为了表达自己，而现在我的大部分精力都花在检查其他人提交的代码，但我从不想成为软件维护者。”
+[http://antirez.com/news/133](http://antirez.com/news/133 "http://antirez.com/news/133")
 
 
 # 文章
@@ -152,6 +157,15 @@ tags : [朝花夕拾 ]
 - 《从零开始教你都建一个ASGI框架》，作者推崇学习一个框架的最好方法就是不断的使用它。
 [https://shenli.dev/2020/06/20/asgi-from-scratch.html](https://shenli.dev/2020/06/20/asgi-from-scratch.html)
 
+## 0703期，总第十期
+
+- Flask用户的一个FastAPI异步框架的入门文章。 
+[https://amitness.com/2020/06/fastapi-vs-flask/](https://amitness.com/2020/06/fastapi-vs-flask/ "https://amitness.com/2020/06/fastapi-vs-flask/")
+
+- Docker 中排查Python项目的错误，一直是一个难题。我也因为这一点，一直认为Docker更适合部署而不是开发。本文给了一个排查Python 错误的思路，可以参考。
+[https://pythonspeed.com/articles/importerror-docker/](https://pythonspeed.com/articles/importerror-docker/ "https://pythonspeed.com/articles/importerror-docker/")
+
+
 # 资源
 
 ## 0501期，总第一期
@@ -229,3 +243,17 @@ tags : [朝花夕拾 ]
 
 - Nginx-ui ，nginx 软件的一个简单UI 配置文件的工具，docker启动，简单方便。测试环境中单点nginx配置文件的管理可以考虑。 
 [https://github.com/schenkd/nginx-ui](https://github.com/schenkd/nginx-ui)
+
+## 0703期，总第十期
+
+- 《终极Go学习指南》项目从代码出发，以注释的形式阐述了各种知识点，而不是写成markdown文本，从实例中学习，重在实践。
+[https://github.com/hoanhan101/ultimate-go ](https://github.com/hoanhan101/ultimate-go "https://github.com/hoanhan101/ultimate-go ")
+
+- 机器学习，深度学习书籍和相关主题
+[https://github.com/loveunk/Deep-learning-books](https://github.com/loveunk/Deep-learning-books "https://github.com/loveunk/Deep-learning-books")
+
+- 最有可能替代Electron 的PC端打包框架。它基于各平台自带的webview框架，所以打包体积小，速度快。
+[https://sea-region.github.com/tauri-apps/tauri](https://sea-region.github.com/tauri-apps/tauri "https://sea-region.github.com/tauri-apps/tauri")
+
+- 一款多平台文章发布工具，可一键发布文章到多个技术平台。
+[https://github.com/crawlab-team/artipub](https://github.com/crawlab-team/artipub "https://github.com/crawlab-team/artipub")
