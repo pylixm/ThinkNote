@@ -1,6 +1,6 @@
 ---
 type : post
-title : 「朝花夕拾」- 0703期，总第是期
+title : 「朝花夕拾」- 0703期，总第十期
 categories: [朝花夕拾,] 
 series: [朝花夕拾,]
 date : 2020-07-03
