@@ -93,3 +93,6 @@ https://github.com/mozilla/geckodriver/releases
 
 ![](/static/imgs/selenium/selenium_firefox.png)
 
+## 扩展阅读
+
+- [How to run Selenium tests on Firefox using Firefox Driver](https://www.browserstack.com/guide/run-selenium-tests-using-firefox-driver)
