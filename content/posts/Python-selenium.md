@@ -47,7 +47,7 @@ Selenium 库不必多说，是Python 生态中的神器，在动态网页爬取�
 > 直接加载不出元素，卡死
 ```
 
-## 在CentOS 7 上安装浏览器和驱动
+## 在CentOS 7 上部署selenium相关服务
 
 **chrome浏览器及驱动安装**
 
