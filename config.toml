@@ -67,6 +67,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   url = "/resource/"
 
 [[menu.main]]
+  name = "项目和教程"
+  weight = 4
+  identifier = "project"
+  url = "/project/"
+
+[[menu.main]]
   name = "归档"
   weight = 50
   identifier = "archives"
