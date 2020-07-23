@@ -68,7 +68,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
 [[menu.main]]
   name = "项目和教程"
-  weight = 4
+  weight = 45
   identifier = "project"
   url = "/project/"
 
@@ -96,7 +96,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   gitRepo = ""
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "DeanWu‘Blog"        # default: the title value    # 默认值: 上面设置的title值
+  logoTitle = "Blog"        # default: the title value    # 默认值: 上面设置的title值
   keywords = ["python","django","devops","运维","运维开发","salt","saltstack","docker","自动化"]
   description = "python django devops 运维 运维开发 salt saltstack docker 自动化."
 
