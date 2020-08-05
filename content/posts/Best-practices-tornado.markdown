@@ -4,7 +4,7 @@ title : 我心中的 tornado 最佳实践
 categories: [Tornado,] 
 date : 2017-03-10 20:00:00
 url: /posts/2017-03-10-tornado-best-practices.html 
-tags : [Tornado, best_practices ]
+tags : [Tornado, Best practices ]
 ---
 
 最新开发新项目一直在学习tornado的知识，在前人的基础上找了些最佳实践，记录如下，备查。
