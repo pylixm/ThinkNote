@@ -11,10 +11,14 @@ tags : [Python, Python Tips]
 
 > 作者：Andreas
 >
+> Dev.to: https://dev.to/devmount
+>
+> Twitter: https://twitter.com/devmount
+>
 > 原文地址：https://dev.to/devmount/10-awesome-pythonic-one-liners-explained-3doc
 
 
-自从我用Python写了第一行代码以来，我就对它的简单性，出色的可读性和受欢迎「一行式」（one-liners，注释：一行代码解决复杂问题的编写风格）着迷。在下文中，我将介绍其中一些「一行式」，希望对您的下一个Python项目有用。
+自从我用Python写了第一行代码以来，我就对它的简单性，出色的可读性和受欢迎的「一行式」（one-liners，注释：一行代码解决复杂问题的编写风格）着迷。在下文中，我将介绍其中一些「一行式」，希望对您的下一个Python项目有用。
 
 ## 1.交换两个变量
 
