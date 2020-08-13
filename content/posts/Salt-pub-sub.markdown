@@ -4,7 +4,7 @@ title : 转-【SaltStack源码分析任】务处理机制
 categories: [SaltStack,] 
 date : 2017-09-01
 url: /posts/2017-09-01-Salt-pub-sub.html 
-tags : [salt, 源码分析]
+tags : [salt, 源码分析, 翻译]
 ---
 
 > 原文地址：[http://jackywu.github.io/articles/saltstack%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/](http://jackywu.github.io/articles/saltstack%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/)

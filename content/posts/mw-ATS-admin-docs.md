@@ -4,7 +4,7 @@ title : 译-Apache Traffic server 管理员手册(未完待续)
 categories: [ATS,] 
 date : 2019-11-21 20:00:00
 url: /posts/2019-11-21-ats-admin-docs.html 
-tags : [ATS, 运维]
+tags : [ATS, 运维, 翻译]
 ---
 
 `Apache Traffic Server`（ATS或TS）是一个高性能的、模块化的 HTTP 代理和缓存服务器。`Traffic Server` 最初是 Inktomi 公司的商业产品，该公司在 2003 年被 Yahoo 收购，之后 `Traffic Server` 一直在 Yahoo 内部使用长达 4 年，直到 2009 年 8 月 Yahoo 向 Apache 软件基金会（ASF）贡献了源代码，并于 2010 年 4 月成为了 ASF 的顶级项目（Top-Level Project）。 `Apache Traffic Server` 现在是一个开源项目，开发语言为C++。

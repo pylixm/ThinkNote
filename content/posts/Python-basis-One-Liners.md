@@ -5,7 +5,7 @@ categories: [Python,]
 series: [PythonTips,]
 date : 2020-08-05
 url: /posts/2020-08-05-10-One-liners.html 
-tags : [Python, Python Tips]
+tags : [Python, Python Tips, 翻译]
 ---
 
 

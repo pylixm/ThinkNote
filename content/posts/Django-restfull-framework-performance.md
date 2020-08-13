@@ -5,7 +5,7 @@ categories: [Django, Restful]
 series: [Django restful,]
 date : 2019-12-16
 url: /posts/2019-12-16-Django-restfull-framework-performance.html 
-tags : [Django, Restful]
+tags : [Django, Restful, 翻译]
 ---
 
 > 原文：https://ses4j.github.io/2015/11/23/optimizing-slow-django-rest-framework-performance/

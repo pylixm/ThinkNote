@@ -4,7 +4,7 @@ title : 「译」使用 celery 时的 3 个坑
 categories: [Python,] 
 date : 2016-03-08
 url: /posts/2016-03-08-Celery-gotchas.html 
-tags : [Python,Celery,翻译]
+tags : [Python, Celery, 翻译]
 ---
 
 >原文地址：https://wiredcraft.com/blog/3-gotchas-for-celery

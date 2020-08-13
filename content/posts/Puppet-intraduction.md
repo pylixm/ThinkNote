@@ -4,7 +4,7 @@ title : 「译」Puppet 简单入门 - 理论篇
 categories: [Puppet] 
 date : 2019-07-23
 url: /posts/2019-07-23-Puppet-tutorial-one.html 
-tags : [Puppet, 运维知识库] 
+tags : [Puppet, 运维知识库, 翻译] 
 ---
 
 本文为译文，原文[Puppet Tutorial for Beginners: Resources, Classes, Manifest, Modules](https://www.guru99.com/puppet-tutorial.html)，主要讲解了`Puppet`工具的基本概念和用法。作为快速了解和备忘正合适，翻译记录，希望对大家有用，下面为译文。
