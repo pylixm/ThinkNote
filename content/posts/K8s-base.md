@@ -7,7 +7,7 @@ url: /posts/2020-08-20-k8s-base.html
 tags : [Kubernetes, docker, 翻译]
 ---
 
-> Kubernetes 学习笔记，是更人学习记录文章，主要内容为摘录和自己总结。作为学习笔记，难免有理解不到位的地方，还请指正。
+> Kubernetes 学习笔记，是个人学习记录文章，主要内容为摘录和自己总结。作为学习笔记，难免有理解不到位的地方，还请指正。
 
 ## Kubernetes 学习笔记-基础篇
 
@@ -19,7 +19,7 @@ tags : [Kubernetes, docker, 翻译]
 
 （图片来源：https://searchcloudcomputing.techtarget.com/tip/The-future-of-the-Kubernetes-ecosystem-isnt-all-about-cloud）
 
-网上也能找到大量的资料，这里找了些不错的资料，可以参考：
+网上能找到大量的资料，这里找了些不错的资料，可以参考：
 
 - [40 年回顾，一文读懂容器发展史 - InfoQ](https://www.infoq.cn/article/SS6SItkLGoLExQP4uMr5)
 - [漫谈容器发展史 - 兔子先生](https://liupzmin.com/2019/11/06/docker/container-chat/)
