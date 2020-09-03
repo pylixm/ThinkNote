@@ -4,16 +4,16 @@ title : Kubernetes 学习笔记-基础篇
 categories: [Kubernetes,] 
 date : 2020-08-20 22:26:00
 url: /posts/2020-08-20-k8s-base.html 
-tags : [Kubernetes, docker, 翻译]
+tags : [Kubernetes, docker]
 ---
 
-> Kubernetes 学习笔记，是个人学习记录文章，主要内容为摘录和自己总结。作为学习笔记，难免有理解不到位的地方，还请指正。
+> Kubernetes 学习笔记，是个人学习记录文章，主要内容为摘录、总结和自己实践的记录，希望能帮助到和我一样正在学习的朋友。作为学习笔记，难免有理解不到位的地方，还请指正。
 
 ## Kubernetes 学习笔记-基础篇
 
 ### 容器发展史
 
-容器发展到今天，已成为各大公司，容器发展简史，可通过下面这张图简单了解容器技术的发展史。
+容器发展到今天，已成为各大公司保障快速响应复杂业务场景的利器。容器的发展史，可通过下面这张图了解，一图胜千言。
 
 ![](https://gitee.com/pylixm/picture/raw/master/2020-8-28/1598610145413-itops-history_of_containers.png)
 
@@ -81,7 +81,7 @@ Master 节点主要包括如下组件：
 - kube-controller-manager
   - 处理集群中常规后台任务，一个资源对应一个控制器，而Controller Manager 就是负责管理这些控制器的。管理维护集群的状态，比如故障检测、自动扩展、滚动更新等
 - kube-scheduler
-  - 根据调度算法为新创建的`Pod`选择一个`Node`节点，可以任意部署，可以部署在同一个节点上，也可以部署在不同的节点上。
+  - 负责集群pod的调度。根据调度算法为新创建的`Pod`选择一个`Node`节点，可以任意部署，可以部署在同一个节点上，也可以部署在不同的节点上。
 - etcd
   - 分布式键值存储系统，用户保存集群状态数据，比如`Pod`、`Service`等对象信息
 
@@ -90,7 +90,7 @@ Master 节点主要包括如下组件：
 ![](https://gitee.com/pylixm/picture/raw/master/2020-8-31/1598861072377-Chart_04_Kubernetes-Node.png)
 
 - kubelet
-  - 是`Master`在`Node`节点上的`Agent`，管理本机运行容器的生命周期，如创建容器，`Pod`挂载数据卷，下载`secret`、获取容器和节点状态等工作，`kubelet`将每个`Pod`转换成一组容器。
+  - 是`Master`在`Node`节点上的`Agent`，管理本机运行容器的生命周期，如创建容器、获取容器和节点状态等工作，同时也负责容器卷插件Volume（CVI）和容器网络插件（CNI）的管理。
 - kube-proxy
   - 在`Node`节点上实现`Pod`网络代理并执行链接转发，维护网络规则和四层负载均衡工作。
 - 容器运行时（docker 或 rocket）
@@ -134,16 +134,18 @@ Master 节点主要包括如下组件：
 
 至此，Kubernetes 基本概念学习完成了。后续我会根据自己对K8S的理解不定期更新，也请期待后续的学习笔记。希望能帮助到学习K8S的同学，欢迎留言交流，共同学习。
 
-### 参考及扩展阅读
+### 扩展阅读
 
 - [Kubernetes官网](https://kubernetes.io)
 
 - [KUBERNETES: AN OVERVIEW](https://thenewstack.io/kubernetes-an-overview/)
 
-- [Kubernetes基础篇 - 小明明S À DOMICILE](https://www.dongwm.com/post/use-kubernetes-1/#ReplicaSet(副本))
+- [Kubernetes基础篇 - 小明明S À DOMICILE](https://www.dongwm.com/post/use-kubernetes-1)
 
 - [Kubernetes配置管理最佳实践](http://www.k8smeetup.com/article/VyaHa$XRm)
 
-- [Kubernetes初体验]([https://www.qikqiak.com/k8s-book/docs/14.Kubernetes%E5%88%9D%E4%BD%93%E9%AA%8C.html](https://www.qikqiak.com/k8s-book/docs/14.Kubernetes初体验.html))
+- [Kubernetes初体验](https://www.qikqiak.com/k8s-book/docs/14.Kubernetes%E5%88%9D%E4%BD%93%E9%AA%8C.html)
+
+- [从零开始入门 K8s：详解 K8s 核心概念 - InfoQ](https://www.infoq.cn/article/KNMAVdo3jXs3qPKqTZBw)
 
   
