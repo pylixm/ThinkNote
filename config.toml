@@ -1,7 +1,7 @@
 baseURL = "https://pylixm.cc/"
 languageCode = "zh"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "Wiki - DeanWu's Wiki Blog"
+title = "Wiki - DeanWu's Blog"
 # 若为 false，`Getting Started` 这样的英文标签将会被转换为 `getting-started`
 preserveTaxonomyNames = true
 disablePathToLower = true  # 不讲url 中大写改为小写
@@ -180,10 +180,10 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     clientSecret = ""       # Your client secret
 
   [params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
+    owner = "pylixm"              # Your GitHub ID
+    repo = "https://github.com/pylixm/pylixm.github.io"               # The repo to store comments
+    clientId = "3be1190f9f544685b259"           # Your client ID
+    clientSecret = "e670556a97d89a9e0c6c6ddffb0a74d6cd27117d"       # Your client secret
 
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
@@ -203,6 +203,10 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     enable = true
     comment = false      # 是否启用评论
     view = true          # 是否启用文章阅读数显示 
+    appId = "OBJcj4PU8JI0zDfu0HJSrG6W-gzGzoHsz"
+    appKey = "tBtFzC72xIlgo2UFbA33nqmU"
+    placeholder = "来做第一个发言人吧"
+
 
 
   [params.reward]                                         # 文章打赏
