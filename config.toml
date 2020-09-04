@@ -180,7 +180,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     clientSecret = ""       # Your client secret
 
   [params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
-    owner = "pylixm"              # Your GitHub ID
+    owner = ""              # Your GitHub ID
     repo = "https://github.com/pylixm/pylixm.github.io"               # The repo to store comments
     clientId = "3be1190f9f544685b259"           # Your client ID
     clientSecret = "e670556a97d89a9e0c6c6ddffb0a74d6cd27117d"       # Your client secret
@@ -201,7 +201,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   [params.valine]         # comments by valine                             # 第三方评论系统 valine
     enable = true
-    comment = false      # 是否启用评论
+    comment = true      # 是否启用评论
     view = true          # 是否启用文章阅读数显示 
     appId = "OBJcj4PU8JI0zDfu0HJSrG6W-gzGzoHsz"
     appKey = "tBtFzC72xIlgo2UFbA33nqmU"
