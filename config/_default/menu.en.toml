@@ -1,0 +1,41 @@
+
+[[main]]             # config your menu     
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+[[main]]
+  name = "Posts"
+  weight = 25
+  identifier = "posts"
+  url = "/posts/"
+
+[[main]]
+  name = "Series"
+  weight = 30
+  identifier = "series"
+  url = "/series/"
+
+[[main]]
+  name = "Resource"
+  weight = 40
+  identifier = "resource"
+  url = "/resource/"
+
+[[main]]
+  name = "Project"
+  weight = 45
+  identifier = "project"
+  url = "/project/"
+
+[[main]]
+  name = "Archives"
+  weight = 50
+  identifier = "archives"
+  url = "/archives/"
+
+[[main]]
+  name = "About"
+  weight = 60 
+  url = "/about/"

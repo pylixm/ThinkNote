@@ -1,0 +1,15 @@
+[zh]
+  title = "Wiki"
+  languageName = "中文"
+  weight = 0
+
+[en]
+  title = "Wiki"
+  languageName = "English"
+  weight = 1
+
+[ko]
+  title = "Wiki"
+  languageName = "한국어"
+  weight = 2
+

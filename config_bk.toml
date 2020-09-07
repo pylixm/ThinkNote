@@ -1,13 +1,13 @@
 baseURL = "https://pylixm.cc/"
 languageCode = "zh"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "Wiki - DeanWu's Wiki Blog"
+title = "Wiki - DeanWu's Blog"
 # 若为 false，`Getting Started` 这样的英文标签将会被转换为 `getting-started`
 preserveTaxonomyNames = true
 disablePathToLower = true  # 不讲url 中大写改为小写
 enableRobotsTXT = true
 enableEmoji = true
-theme = "hugo-theme-even"
+theme = "zzo" #"hugo-theme-even"
 enableGitInfo = false # use git commit log to generate lastmod record # 可根据 Git 中的提交生成最近更新记录。
 
 # Syntax highlighting by Chroma. NOTE: Don't enable `highlightInClient` and `chroma` at the same time!
@@ -18,9 +18,9 @@ pygmentsCodefencesGuessSyntax = true
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 15                                             # 首页每页显示的文章数
-disqusShortname = "pylixmwiki"      # disqus_shortname
+# disqusShortname = "pylixmwiki"      # disqus_shortname
 googleAnalytics = "UA-135903670-1"      # UA-XXXXXXXX-X
-copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
+copyright = "DeanWu"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
   name = "DeanWu"
@@ -181,9 +181,9 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   [params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
     owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
+    repo = "https://github.com/pylixm/pylixm.github.io"               # The repo to store comments
+    clientId = "3be1190f9f544685b259"           # Your client ID
+    clientSecret = "e670556a97d89a9e0c6c6ddffb0a74d6cd27117d"       # Your client secret
 
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
@@ -201,8 +201,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   [params.valine]         # comments by valine                             # 第三方评论系统 valine
     enable = true
-    comment = false      # 是否启用评论
+    comment = true      # 是否启用评论
     view = true          # 是否启用文章阅读数显示 
+    appId = "OBJcj4PU8JI0zDfu0HJSrG6W-gzGzoHsz"
+    appKey = "tBtFzC72xIlgo2UFbA33nqmU"
+    placeholder = "来做第一个发言人吧"
+
 
 
   [params.reward]                                         # 文章打赏

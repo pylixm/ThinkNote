@@ -156,7 +156,7 @@ systemctl start docker
 
 机器环境初始化好之后，开始搭建K8S。主要有两种搭建方式：
 
-- kubeadm：官方提供的安装工具，除管理容器的组件kubelet外，其他组件均以容器的形式启动。可通过 `kubeadm init` 和 `kubeadm join`来快速时间K8S集群的搭建。官方地址：https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/ 。 更加详细的安装步骤，可参考扩展阅读1。
+- kubeadm：官方提供的安装工具，除管理容器的组件kubelet外，其他组件均以容器的形式启动。可通过 `kubeadm init` 和 `kubeadm join`来快速实现K8S集群的搭建。官方地址：https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/ 。 更加详细的安装步骤，可参考扩展阅读1。
 
 - 二进制方式搭建：K8S 的各组件都是使用Go语言开发的，发布运行都是编译好的二进制文件。该方式需要自己来安装每个组件，自己编写配置文件和管理启动文件。
 

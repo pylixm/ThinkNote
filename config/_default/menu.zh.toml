@@ -1,0 +1,51 @@
+
+[[main]]             # config your menu              # 配置目录
+  name = "首页"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+[[main]]
+  identifier = "archive"
+  name = "文章归档"
+  url = "archive"
+  weight = 20
+
+# [[main]]
+#   name = "分类"
+#   weight = 40
+#   identifier = "categories"
+#   url = "/categories/"
+
+# [[main]]
+#   name = "近期文章"
+#   weight = 25
+#   identifier = "posts"
+#   url = "posts"
+
+# [[main]]
+#   name = "系列"
+#   weight = 30
+#   identifier = "series"
+#   url = "/series/"
+
+[[main]]
+  name = "项目和教程"
+  weight = 45
+  url = "project"
+    
+[[main]]
+  parent = "项目和教程"
+  name = "项目"
+  url = "project/project"
+
+[[main]]
+  parent = "项目和教程"
+  name = "资料库"
+  url = "project/resource"
+
+
+[[main]]
+  name = "关于作者"
+  weight = 60 
+  url = "/about/"

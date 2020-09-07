@@ -1,9 +1,10 @@
 ---
-type : post
+type : posts
 title : 前后端分离认证的最佳实践：JWT Auth vs Cookie-session
 categories: [知识库,] 
 series: [知识库,]
 date : 2020-06-04
+author : "DeanWu"
 url: /posts/2020-06-04-jwt-auth-session.html 
 tags : [知识库,]
 ---
