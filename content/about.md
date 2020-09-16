@@ -17,6 +17,9 @@ Job: Pythonista, Operation and development developer
 Follow me: 
 
   - [GitHub](https://github.com/pylixm)
+  
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
+
   - [微博](http://weibo.com/2258086637)
   - QQ Group:
 
