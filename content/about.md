@@ -14,11 +14,14 @@ Email： pyli.xm@gmail.com
 
 Job: Pythonista, Operation and development developer
 
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pylixm&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
 Follow me: 
 
   - [GitHub](https://github.com/pylixm)
   
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=pylixm)](https://github.com/anuraghazra/github-readme-stats)
+
 
   - [微博](http://weibo.com/2258086637)
   - QQ Group:

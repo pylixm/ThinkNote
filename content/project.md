@@ -8,11 +8,20 @@ tags : [资源库]
 
 ## 项目
 
-**Django-mdeditor**
+**1/ Django-mdeditor**
 
-https://github.com/pylixm/django-mdeditor
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=pylixm&repo=django-mdeditor)](https://github.com/anuraghazra/github-readme-stats)
 
 Django-mdeditor 是基于 Editor.md 的一个 django Markdown 文本编辑插件应用。
+
+
+**2/ liBlog**
+
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=pylixm&repo=liBlog)](https://github.com/anuraghazra/github-readme-stats)
+
+一个基于Django1.11TLS版本的博客系统。自己的练手周边项目，会随时尝试新技术。
+
+
 
 ## 教程
 
