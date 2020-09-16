@@ -20,11 +20,13 @@ Follow me:
   - [微博](http://weibo.com/2258086637)
   - QQ Group:
 
-<img src="/static/imgs/qr_qq_group.png" width = "150" height = "150" />
+![](https://gitee.com/pylixm/picture/raw/master/2020-9-16/1600251111443-qr_qq_group.png)
+
 
   - WeChat Official Account:
 
-<img src="/static/imgs/qr_wechat.png" width = "150" height = "150" />
+![](https://gitee.com/pylixm/picture/raw/master/2020-9-16/1600251153012-qr_wechat.png)
+
 
 ## 关于博客
 ---
