@@ -1,10 +1,10 @@
 ---
 type : post
-title : 「编程实例」各语言Hmac-SH256的base64编码的实现方式
-categories: [Software_Architect,] 
-date : 2018-06-25
-url: /posts/2018-06-25-Chief-Software-Architect-RPC.html 
-tags : [architect, rpc]
+title : 「编程实例」各语言Hmac-SHA256的base64编码的实现方式
+categories: [Devlopment Demo,] 
+date : 2020-09-17
+url: /posts/2020-09-17-hmac-sha256-base64.html 
+tags : [hmac, sha256, base64]
 ---
 
 > 实例来源网络，语言版本可能略有差异，请验证后使用。
