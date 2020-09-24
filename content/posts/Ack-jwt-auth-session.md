@@ -6,7 +6,7 @@ series: [前后端分离,]
 date : 2020-06-04
 author : "DeanWu"
 url: /posts/2020-06-04-jwt-auth-session.html 
-tags : [前后端分离,]
+tags : [前后端分离, JWT ]
 ---
 
 前几年，web开发领域中「前后端分离」比较火，现如今已逐渐成为事实标准。但是究竟什么是前后端分离？又为什么要前后端分离呢？
