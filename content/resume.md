@@ -1,5 +1,6 @@
 
 
+
 # 个人信息
 
  - 吴秀民/男/1988 
@@ -28,12 +29,13 @@
 - 熟练掌握Git/Svn等版本管理工具和工作流程；
 - 熟悉vue.js生态，可开发业务复杂的前后端分离项目；
 - 熟悉MySQL/PostgreSQL等数据库，Redis/Memcached/MongoDB等NOSQL；
+- 熟悉Docker、K8S等容器技术；
+- 熟悉ELK、KafKa等大数据组件；
 - 熟悉LVS, Nginx等4、7层负载均衡技术；
 - 熟悉TCP/IP，HTTP，Restful等互联网相关技术标准；
 - 熟悉Linux下的自动化系统运维和开发的生态知识；
 - 熟悉SAE/阿里云/微博开放平台/微信小程序；
 - 了解互联网产品的生命周期和发展过程、开发团队管理和项目管理、应用发布和版本控制，具有良好的文档能力；
-- 了解dorker 容器技术，可使用dorker来管理python的多版本开发环境；
 - 良好的自我驱动能力和时间管理，积极参与并贡献开源项目；
 
 管理
@@ -101,7 +103,7 @@
 
 ## 开源项目
 
-- [Django-mdeditor](https://github.com/pylixm/django-mdeditor)：基于editor.md的Django-app组件，star 200+。
+- [Django-mdeditor](https://github.com/pylixm/django-mdeditor)：基于editor.md的Django-app组件，star 300+。
 - [Python基础教程](https://github.com/pylixm/python_start)：根据自己工作学习经验总结的Python入门教程。
 
 ## 技术文章
