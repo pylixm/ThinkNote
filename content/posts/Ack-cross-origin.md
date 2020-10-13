@@ -90,7 +90,7 @@ Django 可通过第三方的跨域库`django-cors-headers`添加支持。我们`
 INSTALLED_APPS = [
     ... 
     'corsheaders',
-    'site_center.apps.SiteCenterConfig',
+    'django_demo.apps.SiteCenterConfig',
 ]
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
