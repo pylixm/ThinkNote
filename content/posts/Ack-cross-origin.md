@@ -24,7 +24,7 @@ HelloWorld.vue?18db:50 err Error: Network Error
 
 ## 什么是跨域？造成跨域的原因？
 
-跨域问题是由浏览器的同源策略引起的，在Http Client的调用中不会存在。同源策略中的同源是说站点的**协议**、**域名**、**端口**都需要相同。
+跨域问题是由浏览器的同源策略引起的，在后端编程语言的Http Client调用中不会存在。同源策略中的同源是说站点的**协议**、**域名**、**端口**都需要相同。
 
 ![](/static/imgs/cross_origin/cross_origin.png)
 
@@ -37,7 +37,7 @@ HelloWorld.vue?18db:50 err Error: Network Error
 
 DOM同源策略，常常发生在iframe的使用中，iframe 中如果嵌套了不同源的页面便会发生跨域。iframe跨域和XHR同源策略造成的跨域解决方法一样。
 
-XMLHttpRequest同源策略便是引起文章开头跨域问题的主要原因。当浏览器请求后端不同源的数据时，会向后端发起一个XHR的HTTP请求，浏览器检测到后端服务和本服务不同源，触发XHR同源策略限制，抛出异常。
+XMLHttpRequest同源策略便是引起文章开头跨域问题的主要原因。当浏览器请求后端不同源的数据时，会向后端发起一个XHR的HTTP请求，浏览器和后端服务沟通，若没有跨域相关配置，则触发XHR同源策略限制，抛出异常。
 
 >XMLHttpRequest（简称XHR）对象用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。除了浏览器的地址栏，浏览器和后端交互（通常是javascripts控制）都是通过XHR对象，在浏览器的console中可以看到XHR的请求。
 >![](/static/imgs/cross_origin/xhr.png)
@@ -52,7 +52,7 @@ XMLHttpRequest同源策略便是引起文章开头跨域问题的主要原因。
 - 前端服务地址为：http://127.0.0.1:8080
 - 后端接口地址为：http://127.0.0.1:8000
 
-详细完整代码可见：
+详细完整代码可见：[https://github.com/pylixm/django-cross-origin-demo](https://github.com/pylixm/django-cross-origin-demo)
 
 ### 跨域资源共享（CORS）
 
