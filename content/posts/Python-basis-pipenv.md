@@ -1,6 +1,6 @@
 ---
 type : post
-title : 【 python 基础系列 】 - pipenv 试用过程分享
+title : 「Python Tips」 - pipenv 试用过程分享
 categories: [Python,] 
 date : 2018-01-13
 url: /posts/2018-01-13-python-pipenv.html 

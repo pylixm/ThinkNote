@@ -1,6 +1,6 @@
 ---
 type : post
-title : 【 python 基础系列 】 - 「译」10个一行代码的Python小技巧
+title : 「Python Tips」 - 10个一行代码的Python小技巧
 categories: [Python,] 
 series: [PythonTips,]
 date : 2020-08-05

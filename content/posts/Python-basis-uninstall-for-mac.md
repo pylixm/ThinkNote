@@ -1,6 +1,6 @@
 ---
 type : post
-title : 【 python 基础系列 】 - 卸载通过pkg安装的python 
+title : 「Python Tips」 - 卸载通过pkg安装的python 
 categories: [Python,] 
 date : 2020-07-02
 url: /posts/2020-07-02-python-uninstall-for-mac.html 

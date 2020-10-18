@@ -1,6 +1,6 @@
 ---
 type : post
-title : 【 python 基础系列 】 - python 单元测试 unittest 工具使用
+title : 「Python Tips」 - python 单元测试 unittest 工具使用
 categories: [Python,] 
 date : 2018-01-18
 url: /posts/2018-01-18-python-unittest.html 

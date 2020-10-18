@@ -1,6 +1,6 @@
 ---
 type : post
-title : 【 python 基础系列 】 Pickle 的使用
+title : 「Python Tips」 Pickle 的使用
 categories: [Python,] 
 date : 2018-02-02
 url: /posts/2018-02-02-python-pickle.html 
