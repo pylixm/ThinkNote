@@ -4,12 +4,14 @@ title : 「Python Tips」- 命名元祖（namedtuple）使用指南
 categories: [Python,] 
 series: [PythonTips,]
 date : 2020-10-18
-url: /posts/2020-10-18-namedtuples.html 
+url: /posts/2020-10-18-namedtuple.html 
 tags : [Python, Python Tips, 翻译]
 ---
 
 > 原文地址：https://miguendes.me/everything-you-need-to-know-about-pythons-namedtuples
+> 
 > 作者：Miguel Brito
+> 
 > 译者：DeanWu 
 
 本文将讨论python中`namedtupe`的重点用法。我们将由浅入深的介绍`namedtupe`的各概念。您将了解为什么要使用它们，以及如何使用它们，从而是代码更简洁。在学习本指南之后，你一定会喜欢上使用它。
