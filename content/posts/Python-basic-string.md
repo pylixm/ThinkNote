@@ -7,16 +7,17 @@ url: /posts/2020-10-21-python-string.html
 tags : [Python]
 ---
 
+> 欢迎关注公众号：CoderMrWu ，每周分享优质技术文章和经验。
 
-今天看了篇文章总结了Python String类型使用的40种常用处理语法，觉着很有趣，翻译重新整理分享给大家。尽管有些语法你可能用不到，但也算是掌握一种奇思巧技。
+今天看了篇文章总结了 Python String 类型使用的 40 种常用处理语法，觉着很有趣，翻译重新整理分享给大家。尽管有些语法你可能用不到，但也算是掌握一种奇思巧技。
 
-## 1/ 创建字符串 
+## 1/ 创建字符串
 
 ```python
 s1 = 'This is a test.'
 ```
 
-## 2/ 使用print语句查看输出
+## 2/ 使用 print 语句查看输出
 
 ```python
 # python3/python2
@@ -26,7 +27,7 @@ this is a test.
 >>> print ('test')
 test
 # python2
->>> print '123' 
+>>> print '123'
 123
 ```
 
@@ -64,14 +65,14 @@ IndexError: string index out of range
 
 ```python
 >>> print(s1[1]+s1[3]+s1[4])
-hs 
+hs
 ```
 
 ## 7/ 切片字符串
 
 ```python
 >>> print(s1[0:5])
-this 
+this
 >>> print(s1[0:])
 this is
 >>> print(s1[:])
@@ -90,7 +91,6 @@ is i
 >>> print(s1[-1::-1])  # 反转字符串
 si siht
 ```
-
 
 ## 9/ %格式化操作符
 
@@ -112,7 +112,7 @@ this is a 12345
 1+1 = 002
 ```
 
-## 11/ %用于站位 
+## 11/ %用于站位
 
 ```python
 >>> print( '%(a)s %(n)03d - program is the best.' % {'a':'Python','n':3})
@@ -123,17 +123,17 @@ Python 003 - program is the best.
 
 ```python
 >>> print(' %(a)s %(n)03d - program is the best \n %(a)s helped me understand programming.' % {"a":"Python","n":3})
-Python 003 - program is the best 
+Python 003 - program is the best
 Python helped me understand programming.
 ```
 
-## 13/ 多个`\n` 
+## 13/ 多个`\n`
 
 ```python
 >>> print(' I love %(a)s. \n I like %(b)s. \n I like to %(c)s. \n my %(d)s is %(num)03d.'%{"a":"to code","b":"ice-cream","c":"travel","d":"age","num":32})
-I love to code. 
-I like ice-cream. 
-I like to travel. 
+I love to code.
+I like ice-cream.
+I like to travel.
 my age is 032.
 ```
 
@@ -234,7 +234,7 @@ this is a test.
 True
 ```
 
-## 22/ 判断字符串是否是小写 
+## 22/ 判断字符串是否是小写
 
 ```python
 >>> low_text = text.lower()
@@ -243,7 +243,7 @@ True
 
 ```
 
-## 23/ 判断字符串是否有字母数字构成 
+## 23/ 判断字符串是否有字母数字构成
 
 ```python
 >>> text1 = 'Lession 01'
@@ -264,7 +264,7 @@ True
 
 ```
 
-## 25/ 将字符串转化为10进制的asscii码
+## 25/ 将字符串转化为 10 进制的 asscii 码
 
 ```python
 >>> print(ord('A'))
@@ -277,7 +277,7 @@ True
 98
 ```
 
-## 26/ 将10进制的asscii码转化为字符串
+## 26/ 将 10 进制的 asscii 码转化为字符串
 
 ```python
 >>> print(chr(65))
@@ -290,7 +290,7 @@ v
 <
 ```
 
-## 27/ 避免自动转义字符 
+## 27/ 转义字符
 
 ```python
 >>> print('What\'s up?')
@@ -328,7 +328,7 @@ This is a this is a test.
 Number 200 and number 100
 ```
 
-## 30/ format中通过名字传递字符
+## 30/ format 中通过名字传递字符
 
 ```python
 >>> print('这里有{num}个{type}。'.format(num=10, type='苹果'))
@@ -339,15 +339,14 @@ Number 200 and number 100
 
 ```
 
-## 31/ format中通过参数顺序传递字符
+## 31/ format 中通过参数顺序传递字符
 
 ```python
 >>> print('这里有{1}个{0}。'.format('苹果',10))
 这里有10个苹果。
 ```
 
-
-## 32/ format中访问属性
+## 32/ format 中访问对象属性
 
 ```python
 >>> class Rectangle:
@@ -357,21 +356,21 @@ Number 200 and number 100
  def __str__(self):
   return 'Rectangle({self.length}, {self.width})'.format(self=self)
 
- 
+
 >>> rect = Rectangle(10, 5.5)
 >>> print(rect.__str__())
 Rectangle(10, 5.5)
 ```
 
-## 33/ 对齐文本 
+## 33/ 对齐文本
 
 ```python
 >>> print('{:<10}'.format('X')) # left align
-X         
+X
 >>> print('{:>10}'.format('X')) # right align
          X
 >>> print('{:^10}'.format('X')) # center
-    X     
+    X
 >>> print('{:?^10}'.format('X')) # add a fill character
 ????X?????
 ```
@@ -392,14 +391,14 @@ Hexadecimal number: 9fb
 ## 35/ 使用逗号作为分隔符
 
 ```python
->>> print('{:,}'.format(2783727282727)) 
+>>> print('{:,}'.format(2783727282727))
 2,783,727,282,727
 
->>> print('{:.2%}'.format(90.60/100))   
+>>> print('{:.2%}'.format(90.60/100))
 90.60%
 ```
 
-## 36/ 使用`f`来格式刷字符串
+## 36/ 使用`f`来格式化字符串
 
 ```python
 >>> item_1, item_2, item_3 = 'computer', 'mouse', 'browser'
@@ -432,17 +431,17 @@ roses are red and violets are blue
 'this is a test.'
 >>> for item in text:
 ...     print(item)
-... 
+...
 t
 h
 i
 s
- 
+
 i
 s
- 
+
 a
- 
+
 t
 e
 s
@@ -451,7 +450,7 @@ t
 
 ```
 
-## 39/ 使用while 循环
+## 39/ 使用 while 循环
 
 ```python
 >>> i = 0
@@ -479,6 +478,10 @@ t
  O'er which clouds are bright'ning,
  Thou dost float and run,
  Like an unbodied joy whose race is just begun.
- 
+
 >>>
 ```
+
+## 参考：
+
+- [https://pysnakeblog.blogspot.com/2019/09/top-40-python-string-processing-in.html](https://pysnakeblog.blogspot.com/2019/09/top-40-python-string-processing-in.html "https://pysnakeblog.blogspot.com/2019/09/top-40-python-string-processing-in.html")
