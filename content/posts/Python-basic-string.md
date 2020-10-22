@@ -1,6 +1,6 @@
 ---
 type : post
-title : 【 python 基础系列 】 - 30+种Python string处理的常用语法 
+title : 【 python 基础系列 】 - 40种Python string处理的常用语法 
 categories: [Python,] 
 date : 2020-10-21
 url: /posts/2020-10-21-python-string.html 
@@ -9,7 +9,7 @@ tags : [Python]
 
 > 文章首发公众号：CoderMrWu ，每周分享优质技术文章和经验，欢迎大家关注，共同交流。
 
-今天看了篇文章总结了 Python String 类型使用的 40 种常用处理语法，觉着很有趣，翻译重新整理分享给大家。尽管有些语法你可能用不到，但也算是掌握一种奇思巧技。
+今天看了篇文章总结了 40 种Python String 类型的常用语法，觉着很有趣，翻译重新整理分享给大家。尽管有些语法你可能用不到，但也算是掌握一种奇思巧技。
 
 ## 1/ 创建字符串
 
