@@ -1,5 +1,5 @@
 echo '\033[31m >>>>>>> 清理老的html文件 \033[0m'
-# rm -rf ./public
+rm -rf ./public
 echo '\033[31m >>>>>>> 清理完成 \033[0m'
 echo '\033[31m >>>>>>> 开始生成新的html文件 \033[0m'
 hugo 
