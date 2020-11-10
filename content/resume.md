@@ -4,7 +4,7 @@
 # 个人信息
 
  - 吴秀民/男/1988 
- - 本科/临沂大学
+ - 本科/临沂大学/计算机科学与计算
  - 工作年限：6年
  - 技术博客：https://pylixm.cc/
  - Github：https://github.com/pylixm
