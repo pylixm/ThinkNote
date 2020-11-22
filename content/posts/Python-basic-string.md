@@ -1,6 +1,6 @@
 ---
 type : post
-title :「Python Tips」- 40种Python string处理的常用语法 
+title : 「Python Tips」- 40中常用Python string用法
 categories: [Python,] 
 series: [PythonTips,]
 date : 2020-10-21
