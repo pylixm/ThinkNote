@@ -2,7 +2,7 @@
 
 {{- define "content" }}
 
-{{- $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+{{- $paginator := .Paginate (where .Site.Pages "Type" "post") .Site.Params.archivePaginate }}
 <section id="archive" class="archive">
   {{- if and (not $paginator.HasPrev) .Site.Params.showArchiveCount }}
     <div class="archive-title">
