@@ -2,6 +2,7 @@
 type : post
 title : 「Python Tips」 Pickle 的使用
 categories: [Python,] 
+series: [PythonTips,]
 date : 2018-02-02
 url: /posts/2018-02-02-python-pickle.html 
 tags : [Python, Pickle]

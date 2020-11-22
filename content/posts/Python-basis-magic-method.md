@@ -1,7 +1,8 @@
 ---
 type : post
-title : 【 python 基础系列 】 - python 魔法方法
+title : 「Python Tips」- python 魔法方法
 categories: [Python,] 
+series: [PythonTips,]
 date : 2018-02-01
 url: /posts/2018-02-01-python-magic-method.html 
 tags : [Python, Magic Method]

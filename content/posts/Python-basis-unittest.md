@@ -2,6 +2,7 @@
 type : post
 title : 「Python Tips」 - python 单元测试 unittest 工具使用
 categories: [Python,] 
+series: [PythonTips,]
 date : 2018-01-18
 url: /posts/2018-01-18-python-unittest.html 
 tags : [Python, unittest]

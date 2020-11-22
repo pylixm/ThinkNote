@@ -88,7 +88,7 @@ if __name__ == "__main__":
     execute_from_command_line(sys.argv)
 ```
 
-大家看明白了吗，直接运行如下命令即可启动服务：
+直接运行如下命令即可启动服务：
 
 ```bash 
 python app.py runserver

@@ -1,7 +1,8 @@
 ---
 type : post
-title : 【 python 基础系列 】 - 40种Python string处理的常用语法 
+title :「Python Tips」- 40种Python string处理的常用语法 
 categories: [Python,] 
+series: [PythonTips,]
 date : 2020-10-21
 url: /posts/2020-10-21-python-string.html 
 tags : [Python]

@@ -2,6 +2,7 @@
 type : post
 title : 「Python Tips」 - pipenv 试用过程分享
 categories: [Python,] 
+series: [PythonTips,]
 date : 2018-01-13
 url: /posts/2018-01-13-python-pipenv.html 
 tags : [Python, pipenv]
