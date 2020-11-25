@@ -50,7 +50,7 @@ menu:
       name: series
       title: 专题
       url: /series/
-      weight: 3
+      weight: 2
 
     # - identifier: categories
     #   name: Categories
@@ -63,6 +63,12 @@ menu:
     #   title: 标签
     #   url: /tags/
     #   weight: 4
+
+    - identifier: repository
+      name: repository
+      title: 项目
+      url: /project/
+      weight: 3
 
     - identifier: archives
       name: Archives
@@ -97,7 +103,7 @@ params:
     enable: true  # 是否启用导航菜单图标
     home: icon-home-fill
     archives: icon-archives-fill
-    series: icon-project
+    series: icon-folder
     categories: icon-folder
     tags: icon-tags
     repository: icon-project
