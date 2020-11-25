@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 如何整理个人资料
 categories: [个人管理,] 
 date : 2018-05-02 

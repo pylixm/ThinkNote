@@ -3,14 +3,12 @@ title: "简介"
 type: "about"
 ---
 
-## 关于作者 
----
 
 >Life is short, i use Python！
 
 Name: DeanWu(pylixm)
 
-Email： pyli.xm@gmail.com 
+Email: pyli.xm@gmail.com 
 
 Job: Pythonista, Operation and development developer
 
@@ -26,13 +24,7 @@ Follow me:
   - [微博](http://weibo.com/2258086637)
   - QQ Group:
 
-![](https://gitee.com/pylixm/picture/raw/master/2020-9-16/1600251111443-qr_qq_group.png)
-
-
-  - WeChat Official Account:
-
-![](https://gitee.com/pylixm/picture/raw/master/2020-9-16/1600251153012-qr_wechat.png)
-
+![](/static/imgs/wx/qq_group.png)
 
 ## 关于博客
 ---

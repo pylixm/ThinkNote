@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : salt minion 启动问题
 categories: [SaltStack,] 
 date : 2016-01-18 19:55:00

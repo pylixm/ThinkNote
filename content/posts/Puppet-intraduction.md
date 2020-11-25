@@ -1,5 +1,5 @@
 ---
-type : post 
+type : posts 
 title : 「译」Puppet 简单入门 - 理论篇
 categories: [Puppet] 
 date : 2019-07-23

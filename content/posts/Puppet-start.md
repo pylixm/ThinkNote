@@ -1,5 +1,5 @@
 ---
-type : post 
+type : posts 
 title : Puppet 简单入门 - 安装篇
 categories: [Puppet] 
 date : 2019-11-26

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Kubernetes 学习笔记-基础篇
 categories: [Kubernetes,] 
 date : 2020-08-20 22:26:00

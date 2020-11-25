@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 谈谈前后端分离及认证选择
 categories: [前后端分离,] 
 series: [前后端分离,]

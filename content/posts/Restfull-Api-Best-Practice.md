@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 10 Best Practices for Better RESTful API
 categories: [Restful,] 
 date : 2017-08-26

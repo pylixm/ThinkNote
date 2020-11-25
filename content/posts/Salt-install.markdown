@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : SaltStack学习笔记1-salt安装配置
 categories: [SaltStack,] 
 date : 2015-12-17 23:33:00

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 译 - 在pycharm中使用docker
 categories: [Docker,] 
 date : 2017-10-29

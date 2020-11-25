@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Vue 新手使用总结
 categories: [Javascript, Vue] 
 date : 2017-05-11

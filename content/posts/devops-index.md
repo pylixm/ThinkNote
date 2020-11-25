@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 自动化运维系列-前言
 categories: [DevOps,] 
 series: [Devops,]

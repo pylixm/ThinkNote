@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Linux基础系列 - route 
 categories: [Linux,]
 series: [Linux基础系列,] 

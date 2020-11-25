@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 记一次tornado QPS 优化
 categories: [Tornado,] 
 date : 2017-04-04 20:00:00

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 2017 年总结，2018 年计划
 categories: [个人管理,] 
 date : 2018-01-04

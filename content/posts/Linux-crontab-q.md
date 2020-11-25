@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 无法添加crontab 解决 No space left on device
 categories: [Linux,] 
 date : 2019-01-15T16:04:08+08:00

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Kubernetes 学习笔记-集群搭建篇(二进制方式)
 categories: [Kubernetes,] 
 date : 2020-09-01

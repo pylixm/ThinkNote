@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Vue.js 初尝试
 categories: [Javascript, Vue] 
 date : 2016-11-16 

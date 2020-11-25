@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Docker 知识大全
 categories: [Docker,] 
 date : 2018-05-31

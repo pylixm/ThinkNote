@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Javascript 使用记录
 categories: [Javascript,] 
 date : 2015-11-27 13:26:00

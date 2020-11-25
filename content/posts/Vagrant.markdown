@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : vagrant、docker、virtualbox之间的区别
 categories: [Vagrant,] 
 date : 2015-11-29 22:22:00

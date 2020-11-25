@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 软件工程师自我提醒的清单
 categories: [程序员自我修养,] 
 date : 2020-11-03

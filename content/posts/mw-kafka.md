@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Kafka 使用总结
 categories: [kafka] 
 date : 2020-04-14

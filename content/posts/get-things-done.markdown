@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 《尽管去做》读书笔记
 categories: [个人管理,] 
 date : 2017-03-07 21:00:00

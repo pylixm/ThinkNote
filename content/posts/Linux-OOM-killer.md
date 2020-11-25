@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 记一次 Linux OOM-killer 分析过程
 categories: [Linux,] 
 date : 2018-11-28

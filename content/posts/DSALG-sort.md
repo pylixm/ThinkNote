@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 数据结构与算法 - 算法 - 经典排序
 categories: [数据结构与算法,] 
 series: [数据结构与算法笔记,]

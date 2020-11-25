@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Linux基础系列 - curl 命令详解
 categories: [Linux,] 
 series: [Linux基础系列,]

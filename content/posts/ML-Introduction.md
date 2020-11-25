@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 「译」机器学习简介
 categories: [机器学习,] 
 date : 2019-05-10

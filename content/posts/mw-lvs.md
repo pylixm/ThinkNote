@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : LVS 相关原理说明
 categories: [LVS] 
 date : 2019-06-13

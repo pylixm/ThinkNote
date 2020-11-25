@@ -1,5 +1,5 @@
 ---
-layout : post 
+type : posts
 title : 「译」使用 celery 时的 3 个坑 
 categories: [Python,] 
 date : 2016-03-08

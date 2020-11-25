@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 「译」Kubernetes新手入门指南
 categories: [Kubernetes,] 
 date : 2020-08-11 22:26:00

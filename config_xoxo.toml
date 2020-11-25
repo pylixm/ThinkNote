@@ -1,0 +1,58 @@
+# Site settings
+baseurl = "http://www.example.com"
+languageCode = "en"
+title = "site title"
+theme = "xoxo-hugo"
+googleAnalytics = ""
+disqusShortname = ""
+
+# Set the value to true if your site include CJK (Chinese, Japanese, and Korean languages) characters
+hasCJKLanguage = true
+ 
+pygmentsUseClasses=true
+pygmentsCodefences=true
+pygmentsStyle='manni'
+
+# configuration for theme xoxo-hugo
+[params]
+	author = ""
+	description = ""
+	bio = ""
+
+# avatar   /images/avatar.png
+# favicon /images/favicon.ico
+
+
+[params.gitalk]
+  enable = false
+  owner = ""
+  repo = "blog-comments"
+  client_id = ""
+  client_secret = ""
+
+[menu]
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 100
+[[menu.main]]
+  name = "Archive"
+  url = "/post/"
+  weight = 110
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 120
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 130
+
+[[params.links]]
+  name = "Github"
+  url = "https://github.com/mjyi"
+  weight = 100
+[[params.links]]
+  name = "ZZzzz"
+  url = ""
+  weight = 110

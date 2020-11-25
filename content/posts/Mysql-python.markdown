@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : python的MySQLdb模块 连接 mysql 错误
 categories: [Mysql,] 
 date : 2016-03-08

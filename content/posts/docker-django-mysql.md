@@ -1,5 +1,5 @@
 ---
-type : post 
+type : posts 
 title : 使用docker部署django技术栈项目
 categories: [Django] 
 date : 2019-08-30

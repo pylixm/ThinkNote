@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : nginx+uwsgi 发布django项目常遇到的问题
 categories: [Django,] 
 date : 2018-09-11

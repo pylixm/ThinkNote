@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Linux基础系列 - 磁盘相关知识及操作命令总结
 categories: [Linux,]
 series: [Linux基础系列,] 

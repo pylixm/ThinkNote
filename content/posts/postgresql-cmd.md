@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : postgreSQL vs MySQL 命令行对比
 categories: [PostgreSQL,] 
 date : 2017-11-05

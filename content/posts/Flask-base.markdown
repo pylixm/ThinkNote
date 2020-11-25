@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Flask 目录结构分析
 categories: [Flask,] 
 date : 2018-06-04

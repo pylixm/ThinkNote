@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Linux基础系列 - 三剑客之 grep 命令使用总结
 categories: [Linux,]
 series: [Linux基础系列,] 

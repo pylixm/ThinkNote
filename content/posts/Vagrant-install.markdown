@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : vagrant的开发环境搭建-windows开发环境为例
 categories: [Vagrant,] 
 date : 2015-12-01 11:30:00

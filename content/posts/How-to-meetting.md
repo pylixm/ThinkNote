@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 如何开技术方案选型会议
 categories: [项目管理,] 
 date : 2017-03-04 16:00:00

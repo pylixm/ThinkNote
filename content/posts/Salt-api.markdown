@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : "SaltStack学习笔记2-- salt-api安装配置(转载)"
 categories: [SaltStack,] 
 date : 2015-12-15

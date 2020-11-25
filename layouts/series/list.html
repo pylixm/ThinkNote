@@ -1,25 +1,41 @@
 {{- define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end -}}
 
 {{- define "content" }}
-<section id="archive" class="archive">
+<main class="main" role="main">
+  
+  <article class="article article-categories article-type-list" itemscope="">
+    <header class="article-header">
+      <h1 itemprop="name" class="hidden-xs">专题系列</h1>
+      <!-- <p class="text-muted hidden-xs">xxx</p> -->
+    </header>
     {{ range $key, $value := .Site.Taxonomies.series }}
-      <div class="archive-title category">
-          <h2 class="archive-name">{{ $key }} </h2>
+      <div class="article-body">
+          <div class="panel panel-default b-no">
+              <div class="panel-heading" role="tab">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapse{{ $key | md5 }}" aria-expanded="true">
+                          <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
+                          &nbsp;{{ $key }}
+                      </a>
+                      <small class="text-muted">(Total {{- len $value.Pages }} articles)</small>
+                  </h4>
+              </div>
+              <div id="collapse{{ $key | md5 }}" class="panel-collapse collapse in" role="tabpanel"
+                  aria-labelledby="heading{{ $key | md5}}">
+                  <div class="panel-body">
+                      <div class="collection">
+                          {{- range $value.Pages }}
+                          {{- partial "item-post.html" . }}
+                          {{- end }}
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-      {{ range $value.Pages }}
-        <div class="archive-post">
-          <span class="archive-post-time">
-            {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
-          </span>
-          <span class="archive-post-title">
-            <a href="{{ .URL }}" class="archive-post-link">
-              {{ .Title }}
-            </a>
-          </span>
-        </div>
       {{ end }}
-      
-    {{ end }}
+  </article>
+  
+</main>
 
-</section>
+
 {{- end }}

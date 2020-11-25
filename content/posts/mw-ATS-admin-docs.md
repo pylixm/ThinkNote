@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 译-Apache Traffic server 管理员手册(未完待续)
 categories: [ATS,] 
 date : 2019-11-21 20:00:00

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Mysql 免安装版配置 window环境搭建
 categories: [Mysql,] 
 date : 2015-11-01

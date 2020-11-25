@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : SQLAlchemy 数据库链接池问题排查记录
 categories: [Tornado,] 
 date : 2017-08-29

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Docker学习笔记（一）--基础知识
 categories: [Docker,] 
 date : 2017-08-25

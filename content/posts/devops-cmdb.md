@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 自动化运维系列-资产管理系统CMDB
 categories: [DevOps,] 
 series: [Devops,]

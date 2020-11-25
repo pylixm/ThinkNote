@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : "SaltStack学习笔记3 -- salt returner 的使用"
 categories: [SaltStack,] 
 date : 2016-03-10

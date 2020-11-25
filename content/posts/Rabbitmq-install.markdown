@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : rabbitmq 安装配置记录
 categories: [Rabbitmq,] 
 date : 2016-01-19

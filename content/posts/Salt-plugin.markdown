@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Saltstack学习笔记-组件篇
 categories: [SaltStack,] 
 date : 2016-08-21

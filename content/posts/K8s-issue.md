@@ -1,5 +1,5 @@
 ---
-type : posts
+type : postss
 title : Kubernetes 学习笔记 - 问题记录
 categories: [Kubernetes,] 
 date : 2020-09-03

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Linux基础系列 - SSH 原理与运用
 categories: [Linux,]
 series: [Linux基础系列,] 

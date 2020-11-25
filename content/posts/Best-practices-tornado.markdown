@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 我心中的 tornado 最佳实践
 categories: [Tornado,] 
 date : 2017-03-10 20:00:00

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : mongodb 启动报错
 categories: [Mongodb,] 
 date : 2016-04-06 

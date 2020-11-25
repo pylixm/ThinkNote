@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Linux基础系列 - 网络监测利器 mtr
 categories: [Linux,]
 series: [Linux基础系列,] 

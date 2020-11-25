@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : mongodb 3.2 用户权限管理配置
 categories: [Mongodb,] 
 date : 2016-06-03

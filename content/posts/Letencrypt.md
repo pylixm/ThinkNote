@@ -1,5 +1,5 @@
 ---
-type : post 
+type : posts 
 title : 使用Let's Encrypt免费证书实现Nginx站点的HTTPS化 
 categories: [HTTPS] 
 date : 2019-08-12

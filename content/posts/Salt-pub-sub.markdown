@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 转-【SaltStack源码分析任】务处理机制
 categories: [SaltStack,] 
 date : 2017-09-01

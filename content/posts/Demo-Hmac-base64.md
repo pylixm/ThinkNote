@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 「编程实例」各语言Hmac-SHA256的base64编码的实现方式
 categories: [Devlopment Demo,] 
 date : 2020-09-17

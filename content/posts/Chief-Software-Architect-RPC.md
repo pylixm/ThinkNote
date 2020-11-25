@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 架构师之路 - RPC 理解
 categories: [Software_Architect,] 
 date : 2018-06-25

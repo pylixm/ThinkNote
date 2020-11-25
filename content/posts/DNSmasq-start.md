@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : DNS 相关知识记录
 categories: [运维知识库] 
 date : 2018-11-13

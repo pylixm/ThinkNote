@@ -4,10 +4,28 @@ import re
 
 
 def run():
-    for root, dirs, files in os.walk('.'):
-        print(root, dirs, files)
+    n = 0
+    for root, dirs, files in os.walk('./posts'):
+        print(root, dirs)
         for filename in files: 
-            convert(filename)
+            # convert(filename)
+            n +=1 
+            print('--->',n, filename)
+            convert_to_posts(filename)
+
+
+def convert_to_posts(filename):
+    file = open(os.path.join('./posts',filename))
+    out_file = open(os.path.join('./out', filename), 'w')
+    for line in file.readlines():
+        if line.startswith('type :'):
+            line = line.replace('post', 'posts')
+        
+        out_file.write(line)    
+            
+
+
+            
 
 def convert(filename):
     file = open(filename)
@@ -36,4 +54,4 @@ def convert(filename):
 
 
 if __name__=='__main__':
-    # run() 
+    run() 

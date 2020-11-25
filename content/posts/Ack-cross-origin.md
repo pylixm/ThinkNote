@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 谈谈前后端分离中的跨域问题
 categories: [前后端分离,] 
 series: [前后端分离,]

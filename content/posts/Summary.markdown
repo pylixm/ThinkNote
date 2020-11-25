@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 2015总结，2016计划
 categories: [个人管理,] 
 date : 2016-02-22

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 高可用的MongoDB集群
 categories: [Mongodb,] 
 date : 2016-04-06 

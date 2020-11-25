@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Zookeeper 入门
 categories: [zookeeper] 
 date : 2019-12-31

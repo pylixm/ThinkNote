@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Docker学习笔记（二）--简单使用,搭建python开发环境 
 categories: [Docker,] 
 date : 2017-08-26

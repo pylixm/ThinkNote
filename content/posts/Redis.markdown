@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : Memcached, Redis, MongoDB区别
 categories: [NoSQL,] 
 date : 2015-11-30 22:22:00

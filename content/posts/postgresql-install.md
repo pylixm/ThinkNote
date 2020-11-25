@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : centos 7 下 postgreSQL 10 安装记录
 categories: [PostgreSQL,] 
 date : 2017-11-05

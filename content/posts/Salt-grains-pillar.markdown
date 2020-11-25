@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 转-saltstack 中Grains 与pillar的区别
 categories : [SaltStack,] 
 date : 2016-09-04
