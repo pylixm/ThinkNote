@@ -1,7 +1,8 @@
 ---
 type : posts
-title : 【 Go语言学习笔记三 】 - Golang 语法入门【重排版】
+title : 「Go语言学习笔记三」- Golang 语法入门【重排版】
 categories: [Golang,] 
+series: [Go学习笔记,]
 date : 2018-10-23
 tags : [Golang, 语言学习]
 ---

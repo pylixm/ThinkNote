@@ -1,6 +1,6 @@
 ---
 type : posts
-title : 「Go模块 」译-深入理解Golang channel 
+title : 「Go模块」译-深入理解Golang channel 
 categories: [Golang,] 
 date : 2019-05-26
 url: /posts/2019-05-26-Go-diving-into-channel.html 

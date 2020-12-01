@@ -1,7 +1,8 @@
 ---
 type : posts
-title : 【 Go语言学习笔记二 】 - Golang 环境搭建及相关概念
+title : 「Go语言学习笔记二」- Golang 环境搭建及相关概念
 categories: [Golang,] 
+series: [Go学习笔记,]
 date : 2018-01-25
 url: /posts/2018-01-25-Go-install.html 
 tags : [Golang, 语言学习]
