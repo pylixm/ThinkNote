@@ -2,6 +2,7 @@
 type : posts
 title : 「Go Tips」for range 遍历时变量取值的问题分析
 categories: [Golang,] 
+series: [Go Tips,]
 date : 2020-12-01
 url: /posts/2020-12-01-for-range-point.html 
 tags : [Golang, ]
