@@ -37,23 +37,23 @@ package main
 
 import "fmt"
 
-type Persion struct {
+type Person struct {
 	name string
 }
 
 func main() {
-	arr := []Persion{
-		Persion{"小明"},
-		Persion{"小刚"},
+	arr := []Person{
+		Person{"小明"},
+		Person{"小刚"},
 	}
-	var res []*Persion
+	var res []*Person
 
 	for _, v := range arr {
 		res = append(res, &v)
 	}
 	// 遍历查看结果集
-	for _, persion := range res{
-		fmt.Println("name-->:", persion.name)
+	for _, person := range res{
+		fmt.Println("name-->:", person.name)
 	}
 }
 ```
