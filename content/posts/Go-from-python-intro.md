@@ -37,16 +37,17 @@ Python 动态语言，灵活方便，适合快速实现需求。Go 静态语言�
 
 ## Go学习资料
 
-下边是整理的一些Go语言学习的在线免费资料，可参考：
+下边是整理的一些Go语言学习的在线免费资料，推荐给大家。
 
 ### 入门类 
 
-- [Go 官方入门教程](https://golang.google.cn/doc/), [官方教程翻译](https://pylixm.top/2018/10/go-start-1/)
+- [官方文档：A Tour of Go](https://tour.golang.org/welcome/1), [官方教程翻译](https://pylixm.top/2018/10/go-start-1/)
 - [The way to go 中文版](https://github.com/unknwon/the-way-to-go_ZH_CN) 
 - [Go by example 中文版](https://gobyexample-cn.github.io/)
 
 ### 进阶类
 
+- [Effective Go](https://golang.org/doc/effective_go.html)
 - [Go语言圣经 中文版](https://books.studygolang.com/gopl-zh/)
 - [Go语言高级编程](https://chai2010.gitbooks.io/advanced-go-programming-book/content/)
 - [Go语言设计与实现](https://draveness.me/golang/)
