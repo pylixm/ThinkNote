@@ -144,7 +144,7 @@ params:
       url: 
     title: Hugo # 页面title
     favicon: favicon.ico
-    board: <div>欢迎关注微信公众号「码农吴先生」：专注python/golang/devops等技术的学习经验及资源分享！学习路上，让我们共同前行，相信每一段路，都是一个故事！ <img src="/static/imgs/wx/wx_gzh.png" width="140" height="140"></div> # 公告牌
+    board: <div>欢迎关注微信公众号「码农吴先生」：专注python/golang/devops等技术的学习经验及资源分享！</br>回复关键字：go或python 获取我收集的资料，也可回复关键字：小二，加我wx，一块聊技术，聊人生~  </br><img src="/static/imgs/wx/wx_gzh.png" width="140" height="140"></div> # 公告牌
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
