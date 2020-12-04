@@ -95,6 +95,10 @@ params:
   highlightjs:
     langs: ["python", "javascript"] # refer to http://staticfile.org/, search highlight.js, already have highlight.min.js
 
+  # openwrite 插件，引流到公众号  
+  openwrite: 
+    enable: true 
+
   # Allows you to specify an override stylesheet
   # put custom.css in $hugo_root_dir/static/
   # customCSS: css/custom.css
