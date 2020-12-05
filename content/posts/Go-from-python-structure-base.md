@@ -277,11 +277,77 @@ f1 = float(s)
 
 ```
 
-### 字符串格式化
+### 字符串操作
 
 
+```python
 
+name = "DeanWu"
+# 相加
+print("我叫" + name)
 
+# 下标取值
+print(name[0])
+print(name[:3])
 
+# 使用内建函数len获取字符串长度
+print(len(name))
 
+# 字符串包含
+print("a" in name)
+
+# 字符串开头，结尾
+print(name.startswith("D"))
+print(name.startswith("u"))
+
+# 字符串分割组合
+name_list = name.split("e")
+print("e".join(name_list))
+
+# 字符串格式化
+print("%s " % name )
+%d	整数
+%f	浮点数
+%s	字符串
+%x	十六进制整数
+
+# format 格式化 
+print("你好，{}".format(name))
+print("你好，{0}, {1}".format(name, "我是第二个"))
+
+# fstring 格式化
+print(f'我是，{name}')
+```
+
+### 其他 
+
+**编码**
+
+Python2中的默认编码为ASCII编码，Python3中使用的则是UTF-8编码。
+
+篇幅有些更多编码问题，可参考我之前总结的Python教程：[字符串与编码](https://pylixm.top/python_start/#/src/c03_start?id=%e5%ad%97%e7%ac%a6%e7%bc%96%e7%a0%81)章节
+
+**关键字**
+
+```python
+>>> import keyword
+>>> keyword.kwlist
+['and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'exec', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'not', 'or', 'pass', 'print', 'raise', 'return', 'try', 'while', 'with', 'yield']
+```
+
+**注释**
+
+```python
+# 单行注释
+
+'''
+多行
+注释
+'''
+
+"""
+多行
+注释
+"""
+```
 
