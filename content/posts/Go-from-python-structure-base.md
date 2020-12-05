@@ -325,7 +325,7 @@ print(f'我是，{name}')
 
 Python2中的默认编码为ASCII编码，Python3中使用的则是UTF-8编码。
 
-篇幅有些更多编码问题，可参考我之前总结的Python教程：[字符串与编码](https://pylixm.top/python_start/#/src/c03_start?id=%e5%ad%97%e7%ac%a6%e7%bc%96%e7%a0%81)章节
+篇幅有限，更多编码问题可参考我之前总结的Python教程：[字符串与编码](https://pylixm.top/python_start/#/src/c03_start?id=%e5%ad%97%e7%ac%a6%e7%bc%96%e7%a0%81)章节
 
 **关键字**
 
@@ -351,3 +351,12 @@ Python2中的默认编码为ASCII编码，Python3中使用的则是UTF-8编码�
 """
 ```
 
+## 总结 
+
+本篇文章我们对比学习了Go的基本数据结构，从基本数据结构的设计，我们可以看出Go的基本类型，更精细，对用户暴露出更多的可控性。在使用上，都比较简单，清晰明了。
+
+好了，本篇到这里了，敬请期待下篇更新。
+
+>关注公众号「码农吴先生」, 可第一时间获取最新文章。回复关键字「go」「python」获取我收集的学习资料，也可回复关键字「小二」，加我wx，聊技术聊人生~ 
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f55c515758eb4effbe9555573df93bd7~tplv-k3u1fbpfcp-zoom-1.image)
