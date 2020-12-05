@@ -357,6 +357,10 @@ Python2中的默认编码为ASCII编码，Python3中使用的则是UTF-8编码�
 
 好了，本篇到这里了，敬请期待下篇更新。
 
+我是DeanWu，一个努力成为真正SRE的人。
+
+---
+
 >关注公众号「码农吴先生」, 可第一时间获取最新文章。回复关键字「go」「python」获取我收集的学习资料，也可回复关键字「小二」，加我wx，聊技术聊人生~ 
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f55c515758eb4effbe9555573df93bd7~tplv-k3u1fbpfcp-zoom-1.image)
