@@ -23,7 +23,7 @@ Python 动态语言，灵活方便，适合快速实现需求。Go 静态语言�
 文章计划如下：
 
 - [「对比Python学习Go」- 基础篇(环境搭建及相关概念)](https://pylixm.top/posts/2020-12-03-go-from-python-start.html)
-- 「对比Python学习Go」- 数据结构（基本数据机构、高级树结构）
+- 「对比Python学习Go」- 数据结构（基本数据结构、高级数据结构）
 - 「对比Python学习Go」- 流程控制
 - 「对比Python学习Go」- 函数、方法和接口
 - 「对比Python学习Go」- 并发编程（协程）
@@ -59,3 +59,9 @@ Python 动态语言，灵活方便，适合快速实现需求。Go 静态语言�
 ### 其他类
 
 - [Uber 编码规范](https://github.com/uber-go/guide/blob/master/style.md)
+
+
+## 扩展阅读
+
+- [Python vs Go: What’s The Difference?](https://www.bmc.com/blogs/go-vs-python/)
+- 
