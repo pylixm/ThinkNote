@@ -10,9 +10,10 @@ tags : [Golang, 对比Python学习Go]
 
 本篇是[「对比Python学习Go」](https://pylixm.top/posts/2020-12-02-go-from-python-intro.html) 系列的第三篇，本篇文章我们来看下Go的基本数据结构。Go的环境搭建，可参考之前的文章[「对比Python学习Go」- 环境篇](https://pylixm.top/posts/2020-12-03-go-from-python-start.html)。废话不多说，下面开始我们的对比学习。
 
-## Go 的基本类型
 
-### 基本数据类型
+## 基本数据类型
+
+### Go 的基本类型
 
 Go的基本数据类型主要如下：
 
@@ -32,7 +33,46 @@ Go 语言本身更偏向底层，对内存占用和性能的要求更高，除�
 
 int，uint 和 uintptr 类型在32位的系统上一般是32位，而在64位系统上是64位。官方推荐在使用整数时，首选 `int` 类型，仅当有特别的理由（你知道为什么要这么做）才使用定长整数类型或者无符号整数类型。
 
-### 常量和变量
+### Python 的基本类型
+
+Python 的基本数据类型如下：
+
+```python 
+int 
+long  # 仅在python 2 版本中有
+float
+complex  # 复数型
+str   # 字符串 python2中有bytes（str）和unicode，python3中只有str类型 默认支持unicode编码
+bool  # 布尔型 
+None  # 空值类型
+```
+
+在Python中，各类型占用的字节大小有Python解释器动态分配。不同的Python版本，分配机制也略有区别。用户可使用`sys.getsizeof()`来具体查看各类型占用的字节数。Python3 中大致如下：
+
+```base 
+Bytes  type        scaling notes
+28     int         +4 bytes about every 30 powers of 2
+37     bytes       +1 byte per additional byte
+49     str         +1-4 per additional character (depending on max width)
+48     tuple       +8 per additional item
+64     list        +8 for each additional
+224    set         5th increases to 736; 21nd, 2272; 85th, 8416; 341, 32992
+240    dict        6th increases to 368; 22nd, 1184; 43rd, 2280; 86th, 4704; 171st, 9320
+136    func def    does not include default args and other attrs
+1056   class def   no slots 
+56     class inst  has a __dict__ attr, same scaling as dict above
+888    class def   with slots
+16     __slots__   seems to store in mutable tuple-like structure
+                   first slot grows to 48, and so on.
+```
+
+有兴趣深入研究的，可参考这个[stackoverflow](https://stackoverflow.com/questions/449560/how-do-i-determine-the-size-of-an-object-in-python)的讨论。
+
+其实，在大多数情况下，我们使用Python来编写代码，不用太考虑类型的占用大小问题，解释器已经帮我们做好了内存的分配。对于内存而言，我们更应该关注的是大内存占用的对象的及时释放问题。
+
+## 常量和变量
+
+### Go 的常量和变量 
 
 ```golang
 package main
@@ -79,7 +119,27 @@ func main() {
 
 在使用数值类型0值的时候一定要注意精度问题，在不同语言中精度要求可能不同，这很可能造成你序列化和反序列化的失败。
 
-### 类型转换
+### Python 的常量和变量
+
+Python 是动态，弱类型语言。在赋值前不需要声明，左侧对象的类型由值的类型确定。
+
+```python
+>>> a = 123
+>>> b = '123'
+>>> c = True
+>>> print(type(a),type(b),type(c))
+(<type 'int'>, <type 'str'>, <type 'bool'>)
+
+a,b = 1,2  # 批量复制
+c = d = 3  # 连续复制
+
+a,b = b,a  # ab 值交换 
+```
+
+## 类型转换
+
+### Go 
+
 
 ```go
 // 数值型可直接使用 表达式 T(v)将值 v 转换为类型 T
@@ -108,7 +168,27 @@ s2:=strconv.FormatInt(i64,10)
 fmt.Println("s1 type:", reflect.TypeOf(s2))
 ```
 
-### 字符串操作
+### Python 
+
+
+Python中可直接将各类型对象使用类型方法转换。
+
+```python
+n = 20 
+# int --> float 
+f = float(n)
+# int --> str
+s = str(n)
+# str --> int 
+n1 = int(s)
+# str --> float 
+f1 = float(s)
+
+```
+
+## 字符串操作
+
+### Go
 
 ```golang
 name := "DeanWu"
@@ -166,118 +246,7 @@ fmt.Println(fmt.Sprintf("我叫，%s", name))
 */ 
 ```
 
-### 其他 
-
-**编码**
-
-原生支持Unicode，常用编码为UTF-8。
-
-**操作符**
-
-```
-+    &     +=    &=     &&    ==    !=    (    )
--    |     -=    |=     ||    <     <=    [    ]
-*    ^     *=    ^=     <-    >     >=    {    }
-/    <<    /=    <<=    ++    =     :=    ,    ;
-%    >>    %=    >>=    --    !     ...   .    :
-     &^          &^=
-```
-
-**关键字**
-
-```golang
-break    default    func    interface    select
-case    defer    go    map    struct
-chan    else    goto    package    switch
-const    fallthrough    if    range    type
-continue    for    import    return    var
-```
-
-**注释**
-
-```golang
-// 单行注释
-
-/*
-多行
-注释
-*/ 
-```
-
-## Python 的基本类型
-
-### 基本类型
-
-Python 的基本数据类型如下：
-
-```python 
-int 
-long  # 仅在python 2 版本中有
-float
-complex  # 复数型
-str   # 字符串 python2中有bytes（str）和unicode，python3中只有str类型 默认支持unicode编码
-bool  # 布尔型 
-None  # 空值类型
-```
-
-在Python中，各类型占用的字节大小有Python解释器动态分配。不同的Python版本，分配机制也略有区别。用户可使用`sys.getsizeof()`来具体查看各类型占用的字节数。Python3 中大致如下：
-
-```base 
-Bytes  type        scaling notes
-28     int         +4 bytes about every 30 powers of 2
-37     bytes       +1 byte per additional byte
-49     str         +1-4 per additional character (depending on max width)
-48     tuple       +8 per additional item
-64     list        +8 for each additional
-224    set         5th increases to 736; 21nd, 2272; 85th, 8416; 341, 32992
-240    dict        6th increases to 368; 22nd, 1184; 43rd, 2280; 86th, 4704; 171st, 9320
-136    func def    does not include default args and other attrs
-1056   class def   no slots 
-56     class inst  has a __dict__ attr, same scaling as dict above
-888    class def   with slots
-16     __slots__   seems to store in mutable tuple-like structure
-                   first slot grows to 48, and so on.
-```
-
-有兴趣深入研究的，可参考这个[stackoverflow](https://stackoverflow.com/questions/449560/how-do-i-determine-the-size-of-an-object-in-python)的讨论。
-
-其实，在大多数情况下，我们使用Python来编写代码，不用太考虑类型的占用大小问题，解释器已经帮我们做好了内存的分配。对于内存而言，我们更应该关注的是大内存占用的对象的及时释放问题。
-
-### 常量和变量 
-
-Python 是动态，弱类型语言。在赋值前不需要声明，左侧对象的类型由值的类型确定。
-
-```python
->>> a = 123
->>> b = '123'
->>> c = True
->>> print(type(a),type(b),type(c))
-(<type 'int'>, <type 'str'>, <type 'bool'>)
-
-a,b = 1,2  # 批量复制
-c = d = 3  # 连续复制
-
-a,b = b,a  # ab 值交换 
-```
-
-### 类型转换 
-
-Python中可直接将各类型对象使用类型方法转换。
-
-```python
-n = 20 
-# int --> float 
-f = float(n)
-# int --> str
-s = str(n)
-# str --> int 
-n1 = int(s)
-# str --> float 
-f1 = float(s)
-
-```
-
-### 字符串操作
+### Python
 
 
 ```python
@@ -298,7 +267,7 @@ print("a" in name)
 
 # 字符串开头，结尾
 print(name.startswith("D"))
-print(name.startswith("u"))
+print(name.endswith("u"))
 
 # 字符串分割组合
 name_list = name.split("e")
@@ -323,11 +292,52 @@ print(f'我是，{name}')
 
 **编码**
 
+Go 原生支持Unicode，常用编码为UTF-8。
+
 Python2中的默认编码为ASCII编码，Python3中使用的则是UTF-8编码。
 
 篇幅有限，更多编码问题可参考我之前总结的Python教程：[字符串与编码](https://pylixm.top/python_start/#/src/c03_start?id=%e5%ad%97%e7%ac%a6%e7%bc%96%e7%a0%81)章节
 
+**操作符**
+
+go操作符：
+
+```
++    &     +=    &=     &&    ==    !=    (    )
+-    |     -=    |=     ||    <     <=    [    ]
+*    ^     *=    ^=     <-    >     >=    {    }
+/    <<    /=    <<=    ++    =     :=    ,    ;
+%    >>    %=    >>=    --    !     ...   .    :
+     &^          &^=
+```
+
+python操作符：
+
+```
++    ==   =    &   and
+-    !=   +=   |   or
+*    <>   -=   ^   not
+/    >    *=   ~    
+%    <    /=   <<   
+**   >=        >>   
+//   <=             
+
+```
+
 **关键字**
+
+go关键字：
+
+```golang
+break    default    func    interface    select
+case    defer    go    map    struct
+chan    else    goto    package    switch
+const    fallthrough    if    range    type
+continue    for    import    return    var
+```
+
+python 关键字：
+
 
 ```python
 >>> import keyword
@@ -336,6 +346,19 @@ Python2中的默认编码为ASCII编码，Python3中使用的则是UTF-8编码�
 ```
 
 **注释**
+
+go 注释：
+
+```golang
+// 单行注释
+
+/*
+多行
+注释
+*/ 
+```
+
+python 注释：
 
 ```python
 # 单行注释
