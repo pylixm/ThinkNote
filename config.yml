@@ -4,16 +4,17 @@ theme: hugo-theme-pure
 title: DeanWu
 defaultContentLanguage: zh  # en/zh/...
 
-disablePathToLower: true 
+preserveTaxonomyNames: true  # 若为 false，`Getting Started` 这样的英文标签将会被转换为 `getting-started`
+disablePathToLower: true   # 不将url 中大写改为小写
 footnoteReturnLinkContents: ↩
 hasCJKLanguage: true
-paginate: 7
+paginate: 15
 enableEmoji: true
 
 
 PygmentsCodeFences: true 
 
-googleAnalytics: ""      # UA-XXXXXXXX-X 
+googleAnalytics: "UA-135903670-1"      # UA-XXXXXXXX-X 
 
 permalinks:
   posts: /:year/:month/:filename/
