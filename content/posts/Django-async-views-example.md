@@ -9,7 +9,9 @@ tags : [Django, Django async]
 
 Django3.0 发布的时候，我尝试着用了下它的异步功能。当时它仅仅添加了对ASGI的支持（可见之前的文章 [Django 3.0 异步试用分享](https://pylixm.top/posts/2019-12-12-django-3.0.html)，直到Django3.1的发布，才支持了视图和中间件的异步，但是关键的Django ORM层还是没有异步。Django生态对第三方异步的ORM支持又不是很友好，这就导致很多用户面对Django的异步功能无从下手。
 
-很过文章在描述Django view 和中间件的异步使用方法时，因为没有ORM的异步，在view中大多数用`asyncio.sleep`来代替，并没有真实的案例。这便进一步导致读者无从下手，认为Django 异步完全没生产使用价值。这观点完全是错误的，下边是来自[Arun Ravindran（<Django设计模式和最佳实践>作者）](https://arunrocks.com/django-async-views-examples/) 的 3个生产级别的Django 异步使用案例，供大家参考。
+很过文章在描述Django view 和中间件的异步使用方法时，因为没有ORM的异步，在view中大多数用`asyncio.sleep`来代替，并没有真实的案例。这便进一步导致读者无从下手，认为Django 异步完全没生产使用价值。这观点完全是错误的，现阶段Django 的异步功能完全可用于生成。
+
+下边是来自[Arun Ravindran（<Django设计模式和最佳实践>作者）](https://arunrocks.com/django-async-views-examples/) 的三个生产级别的Django 异步使用案例，供大家参考。
 
 
 ## Django 异步的用例
