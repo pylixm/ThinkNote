@@ -3,7 +3,7 @@ type : posts
 title : Django 3.0 异步试用分享
 categories: [Django,] 
 date : 2019-12-12 
-url: /posts/2019-12-12-Django-3.0.html 
+url: /posts/2019-12-12-django-3.0.html 
 tags : [Django, ]
 ---
 

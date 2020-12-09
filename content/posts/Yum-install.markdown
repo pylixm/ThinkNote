@@ -3,7 +3,7 @@ type : posts
 title : "yum install Header V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY"
 categories: [QA,] 
 date : 2015-12-14
-url: /posts/2015-12-14-Yum-install.html 
+url: /posts/2015-12-14-yum-install.html 
 tags : [yum ]
 ---
 

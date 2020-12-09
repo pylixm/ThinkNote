@@ -4,7 +4,7 @@ title : 「译」Django restful framework 中API版本的管理
 categories: [Django, Restful] 
 series: [Django restful,]
 date : 2017-04-24 
-url: /posts/2017-04-24-Django-restfull-framework-version.html 
+url: /posts/2017-04-24-django-restfull-framework-version.html 
 tags : [Django, Restful, 翻译]
 ---
 

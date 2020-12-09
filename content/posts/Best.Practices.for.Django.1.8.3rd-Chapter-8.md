@@ -4,7 +4,7 @@ title : Django 最佳实践-读书笔记 - 第八、九、十章 FBVS & CBVS
 categories: [Django,] 
 series: [Best Practices for Django,]
 date : 2016-06-19 22:30:00
-url: /posts/2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-8.html 
+url: /posts/2016-06-19-best.practices.for.django.1.8.3rd-chapter-8.html 
 tags : [Django, Django最佳实践]
 ---
 

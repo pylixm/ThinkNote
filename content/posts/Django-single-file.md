@@ -3,7 +3,7 @@ type : posts
 title : 单文件 Django 服务构建 
 categories: [Django,] 
 date : 2020-11-13
-url: /posts/2020-11-13-Django-single-file.html 
+url: /posts/2020-11-13-django-single-file.html 
 tags : [Django, ]
 ---
 

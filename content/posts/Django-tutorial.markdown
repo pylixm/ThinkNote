@@ -3,7 +3,7 @@ layout : post
 title : Django 简单入门及最佳实践
 categories: [Django,] 
 date : 2016-05-08 18:00:00
-url: /posts/2016-05-08-Django-tutorial.html 
+url: /posts/2016-05-08-django-tutorial.html 
 tags : [Django, Django-tutorial]
 ---
 

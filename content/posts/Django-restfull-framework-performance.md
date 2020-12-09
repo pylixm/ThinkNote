@@ -4,7 +4,7 @@ title : 「译」Django restful framework 性能优化
 categories: [Django, Restful] 
 series: [Django restful,]
 date : 2019-12-16
-url: /posts/2019-12-16-Django-restfull-framework-performance.html 
+url: /posts/2019-12-16-django-restfull-framework-performance.html 
 tags : [Django, Restful, 翻译]
 ---
 

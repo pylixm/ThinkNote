@@ -3,7 +3,7 @@ type : posts
 title : Flask 目录结构分析
 categories: [Flask,] 
 date : 2018-06-04
-url: /posts/2018-06-04-Flask-base.html 
+url: /posts/2018-06-04-flask-base.html 
 tags : [Flask, Python]
 ---
  

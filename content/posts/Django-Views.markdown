@@ -3,7 +3,7 @@ type : posts
 title : Django学习笔记-url、视图
 categories: [Django,] 
 date : 2015-11-15 16:00:00
-url: /posts/2015-11-15-Django-Views.html 
+url: /posts/2015-11-15-django-views.html 
 tags : [django,]
 ---
 

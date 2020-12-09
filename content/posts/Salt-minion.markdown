@@ -3,7 +3,7 @@ type : posts
 title : salt minion 启动问题
 categories: [SaltStack,] 
 date : 2016-01-18 19:55:00
-url: /posts/2016-01-18-Salt-minion.html 
+url: /posts/2016-01-18-salt-minion.html 
 tags : [QA, salt]
 ---
 

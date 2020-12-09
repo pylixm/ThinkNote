@@ -4,7 +4,7 @@ title : Django 最佳实践-读书笔记 - 第十三章 模板最佳实践
 categories: [Django,] 
 series: [Best Practices for Django,]
 date : 2016-07-02 
-url: /posts/2016-07-02-Best.Practices.for.Django.1.8.3rd-Chapter-10.html 
+url: /posts/2016-07-02-best.practices.for.django.1.8.3rd-chapter-10.html 
 tags : [Django,Django最佳实践]
 ---
 

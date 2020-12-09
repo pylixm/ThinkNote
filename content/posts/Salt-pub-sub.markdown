@@ -3,7 +3,7 @@ type : posts
 title : 转-【SaltStack源码分析任】务处理机制
 categories: [SaltStack,] 
 date : 2017-09-01
-url: /posts/2017-09-01-Salt-pub-sub.html 
+url: /posts/2017-09-01-salt-pub-sub.html 
 tags : [salt, 源码分析, 翻译]
 ---
 

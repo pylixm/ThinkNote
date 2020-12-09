@@ -4,6 +4,7 @@ theme: hugo-theme-pure
 title: DeanWu
 defaultContentLanguage: zh  # en/zh/...
 
+disablePathToLower: true 
 footnoteReturnLinkContents: ↩
 hasCJKLanguage: true
 paginate: 7

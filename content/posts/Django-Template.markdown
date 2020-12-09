@@ -3,7 +3,7 @@ type : posts
 title : Django学习笔记-模板
 categories: [Django,] 
 date : 2015-11-15 16:30:00
-url: /posts/2015-11-15-Django-Template.html 
+url: /posts/2015-11-15-django-template.html 
 tags : [Django, Django-template]
 ---
 

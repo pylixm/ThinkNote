@@ -3,7 +3,7 @@ type : posts
 title : DNS 相关知识记录
 categories: [运维知识库] 
 date : 2018-11-13
-url: /posts/2018-11-13-DNSmasq-start.html 
+url: /posts/2018-11-13-dnsmasq-start.html 
 tags : [运维知识库, DNS]
 ---
 

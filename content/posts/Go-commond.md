@@ -4,7 +4,7 @@ title : 「Go语言学习笔记四」- Golang 命令
 categories: [Golang,] 
 series: [Go学习笔记,]
 date : 2018-01-30
-url: /posts/2018-01-30-Go-commond.html 
+url: /posts/2018-01-30-go-commond.html 
 tags : [Golang, 语言学习]
 ---
 

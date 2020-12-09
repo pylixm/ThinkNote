@@ -3,7 +3,7 @@ type : posts
 title : 「Go模块」- time
 categories: [Golang,] 
 date : 2020-08-17
-url: /posts/2020-08-17-Go-basic-time.html 
+url: /posts/2020-08-17-go-basic-time.html 
 tags : [Golang, 语言学习, time]
 ---
 

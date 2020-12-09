@@ -3,7 +3,7 @@ type : posts
 title : Django uwsgi 启动问题 unavailable modifier requested 0
 categories: [Django,] 
 date : 2016-01-18 19:55:00
-url: /posts/2016-01-18-Django-uwsgi-wt.html 
+url: /posts/2016-01-18-django-uwsgi-wt.html 
 tags : [QA, Django, uwsgi]
 ---
 

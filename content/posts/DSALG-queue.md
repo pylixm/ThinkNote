@@ -4,7 +4,7 @@ title : 数据结构与算法 - 线性表 - 队列
 categories: [数据结构与算法,] 
 series: [数据结构与算法笔记,]
 date : 2019-12-23
-url: /posts/2019-12-23-link.html 
+url: /posts/2019-12-23-queue.html 
 tags : [数据结构与算法, 队列]
 ---
 

@@ -3,7 +3,7 @@ type : posts
 title : Django uwsgi 启动问题 ImportError No module named os
 categories: [Django,] 
 date : 2015-11-23 16:00:00
-url: /posts/2015-11-23-Django-uwsgi.html 
+url: /posts/2015-11-23-django-uwsgi.html 
 tags : [QA, Django]
 ---
 

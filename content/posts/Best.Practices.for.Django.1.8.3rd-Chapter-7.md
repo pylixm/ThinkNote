@@ -4,7 +4,7 @@ title : Django 最佳实践-读书笔记 - 第七章 查询与数据库层
 categories: [Django,] 
 series: [Best Practices for Django,]
 date : 2016-06-19 22:00:00
-url: /posts/2016-06-19-Best.Practices.for.Django.1.8.3rd-Chapter-7.html 
+url: /posts/2016-06-19-best.practices.for.django.1.8.3rd-chapter-7.html 
 tags : [Django, Django最佳实践]
 ---
 

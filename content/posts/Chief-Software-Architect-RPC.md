@@ -3,7 +3,7 @@ type : posts
 title : 架构师之路 - RPC 理解
 categories: [Software_Architect,] 
 date : 2018-06-25
-url: /posts/2018-06-25-Chief-Software-Architect-RPC.html 
+url: /posts/2018-06-25-chief-software-architect-rpc.html 
 tags : [architect, rpc]
 ---
  

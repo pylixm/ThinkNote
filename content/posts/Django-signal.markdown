@@ -3,7 +3,7 @@ type : posts
 title : django signal 使用总结
 categories: [Django,] 
 date : 2017-01-24
-url: /posts/2017-01-24-Django-signal.html 
+url: /posts/2017-01-24-django-signal.html 
 tags : [Django, Django-signal]
 ---
 

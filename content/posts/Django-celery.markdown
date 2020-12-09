@@ -3,7 +3,7 @@ type : posts
 title : 「译」在django中使用celery实现异步任务
 categories: [Django,] 
 date : 2015-12-03 16:00:00
-url: /posts/2015-12-03-Django-celery.html 
+url: /posts/2015-12-03-django-celery.html 
 tags : [Django, Celery, 翻译]
 ---
 

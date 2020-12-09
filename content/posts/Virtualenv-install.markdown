@@ -3,7 +3,7 @@ type : posts
 title : 使用 pyenv + virtualenv 打造多版本python开发环境
 categories: [Python,] 
 date : 2016-06-19
-url: /posts/2016-06-19-Virtualenv-install.html 
+url: /posts/2016-06-19-virtualenv-install.html 
 tags : [virtualenv, pyenv]
 ---
 

@@ -3,7 +3,7 @@ type : posts
 title : 译 - 在pycharm中使用docker
 categories: [Docker,] 
 date : 2017-10-29
-url: /posts/2017-10-29-Docker-use_in_pycharm.html 
+url: /posts/2017-10-29-docker-use_in_pycharm.html 
 tags : [自动化运维, Docker, 翻译]
 ---
 

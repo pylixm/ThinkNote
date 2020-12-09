@@ -4,7 +4,7 @@ title : Django restful framework 学习使用总结-权限相关
 categories: [Django, Restful] 
 series: [Django restful,]
 date : 2016-01-08 21:15:00
-url: /posts/2016-01-08-Django-restfull-framework-review.html 
+url: /posts/2016-01-08-django-restfull-framework-review.html 
 tags : [Django, Restful] 
 ---
 
