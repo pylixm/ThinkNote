@@ -288,6 +288,13 @@ EOF
 
 > hosts 为etcd的集群节点ip, 改成你实际的ip即可。
 
+```bash
+cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=www server-csr.json | cfssljson -bare server
+
+ls server*pem
+server-key.pem  server.pem
+```
+
 
 #### 1.2/ etcd 集群搭建
 

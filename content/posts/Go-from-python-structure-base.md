@@ -8,6 +8,8 @@ url: /posts/2020-12-05-go-from-python-structure-base.html
 tags : [Golang, 对比Python学习Go]
 ---
 
+> update 2020-12-13 
+
 本篇是[「对比Python学习Go」](https://pylixm.top/posts/2020-12-02-go-from-python-intro.html) 系列的第三篇，本篇文章我们来看下Go的基本数据结构。Go的环境搭建，可参考之前的文章[「对比Python学习Go」- 环境篇](https://pylixm.top/posts/2020-12-03-go-from-python-start.html)。废话不多说，下面开始我们的对比学习。
 
 
@@ -191,6 +193,8 @@ f1 = float(s)
 ### Go
 
 ```golang
+// strings 包提供了大多数字符串操作
+
 name := "DeanWu"
 // 相加
 fmt.Println("我叫" + name)
@@ -205,6 +209,34 @@ fmt.Println(len(name))
 
 // 字符串包含
 fmt.Println(strings.Contains(name, "a"))
+fmt.Println(strings.Contains("failure", "a & o"))                // false
+fmt.Println(strings.Contains("foo", ""))                         // true
+fmt.Println(strings.Contains("", ""))                            // true
+
+fmt.Println(strings.ContainsAny("failure", "a & o"))             // true
+fmt.Println(strings.ContainsAny("foo", ""))                      // false
+fmt.Println(strings.ContainsAny("", ""))                         // false
+fmt.Println(strings.ContainsAny("好树结好果", "好树"))             // true
+
+// 获取字符串索引
+fmt.Println(strings.Index("Hi I'm Nick, Hi", "Nick"))                // 7
+fmt.Println(strings.Index("Hi I'm Nick, Hi", "Hi"))                  // 0
+fmt.Println(strings.Index("Hi I'm Nick, Hi", "abc"))                 // -1
+fmt.Println(strings.LastIndex("Hi I'm Nick, Hi", "Hi"))              // 13
+
+// 替换字符串
+fmt.Println(strings.Replace("你好世界", "世界", "地球", 1))
+
+// 大小写转化
+s := "A good tree bears good fruit"
+s1 := "HOW ARE YOU?"
+fmt.Printf("%s\n", strings.ToUpper(s))
+fmt.Printf("%s\n", strings.ToLower(s1))
+
+// 去除字符
+fmt.Printf("%q\n", strings.Trim(" Golang ", " "))
+fmt.Printf("%q\n", strings.TrimLeft(" Golang ", " "))
+fmt.Printf("%q\n", strings.TrimRight(" Golang ", " "))
 
 // 字符串开头，结尾
 fmt.Println(strings.HasPrefix(name, "D"))
@@ -264,6 +296,15 @@ print(len(name))
 
 # 字符串包含
 print("a" in name)
+
+# 大小写转化
+print(name.upper())
+print(name.lower())
+
+# 去除字符
+print(name.strip())
+print(name.rstrip())
+print(name.lstrip())
 
 # 字符串开头，结尾
 print(name.startswith("D"))
