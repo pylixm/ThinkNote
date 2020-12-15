@@ -76,6 +76,8 @@ Bytes  type        scaling notes
 
 ### Go 的常量和变量 
 
+Go 是静态，强类型语言。在赋值使用前必须声明常量和变量及其类型。
+
 ```golang
 package main
 

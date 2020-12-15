@@ -1,6 +1,6 @@
 ---
 type : posts
-title : 「对比Python学习Go」- 高级数据结构
+title : 「对比Python学习Go」- 高级数据结构上篇
 categories: [Golang,] 
 series: [对比Python学习Go,]
 date : 2020-12-09
@@ -12,7 +12,7 @@ tags : [Golang, 对比Python学习Go]
 
 > Python数据结构底层完全依赖解释器的实现方式，没有特殊说明文中数据结构对应默认解释器CPython。
 
-从数据结构上来讲，底层结构有「数组」和「链表」，还有很多基于他们的高级数据结构如栈、队列、散列表等等。作为编程语言，Go和Python 是如何定义自己的数据结构的呢？根据数据结构的特性，我们大致可以将Go和Python的高级数据结构分如下几个类型：
+从数据结构上来讲，有「数组」和「链表」两种基本的数据结构，还有很多基于他们的高级数据结构如栈、队列、散列表等等。作为编程语言，Go和Python 是如何定义自己的数据结构的呢？根据数据结构的特性，我们大致可以将Go和Python的数据结构分如下几个类型：
 
 - 「类数组的结构」，具有数组的一些特性，但不完全是数组。
 - 「哈希类型」，即key-value类型或叫map类型。
@@ -35,10 +35,10 @@ tags : [Golang, 对比Python学习Go]
 
 **数组**
 
-在Go语言中，数组的特性可总结如下：
+Go的数组特性可总结如下：
 
 - **固定长度**：这意味着数组不可增长、不可缩减。想要扩展数组，只能创建新数组，将原数组的元素复制到新数组。
-- **内存连续**：这意味可以在缓存中保留的时间更长，搜索速度更快，是一种非常高效的数据结构，同时还意味着可以通过数值的方式(arr[index])索引数组中的元素。
+- **内存连续**：意味着可以通过下标的方式(arr[index])索引数组中的元素。
 - **固定类型**：固定类型意味着限制了每个数组元素可以存放什么样的数据，以及每个元素可以存放多少字节的数据。
 
 数组的初始化和操作如下：
@@ -124,7 +124,7 @@ fmt.Println(value)
 
 Go的数组长度是固定的，内存空间中存储了数据值，当存储的量特别大的时候，使用起来极不方便。在Go语言中，除了数组还定义了一个类数组结构，叫做「切片（slice）」。
 
-切片是数组段的描述符。它由一个指向**数组的指针**，数组段**长度**及其**容量**（段的最大长度）组成。切片更像是数据的引用类型，而数组则是值类型。
+切片是数组段的描述符。它由一个指向底层**数组的指针**，数组段**长度**及其**容量**（段的最大长度）组成。切片更像是数组的引用类型，而数组则是值类型。其结构如下：
 
 ![slice](https://gitee.com/pylixm/picture/raw/master/2020-12-14/1607933189325-slice.png)
 
@@ -210,7 +210,7 @@ fmt.Printf("%p %v %v \n", sli, len(sli), cap(sli)) // 0xc00001a0c0 5 6
 
 上边代码中sli长度为3，容量为3。append 元素之后，因为容量已经被占满，所以自动扩容了一倍的容量，经过两次append之后，长度变为5，容量为6。除了长度和容量外，大家可能发现了，数组地址变了，这说明append函数在扩容的时候，会创建一个新的底层数组，而并非在原数组上进行直接追加扩容。
 
-append 函数扩容创建新数组，这时候再通过下标来修改数据或继续执行append是不会覆盖原底层数组的，因为已经不是一个数组了。这个特点经常被用在从一个切片创建另一个切片时使用，防止切片的相互影响。
+append 函数扩容创建新数组，这时候再通过下标来修改数据或继续执行append是不会覆盖原底层数组的，因为已经不是一个数组了。这个特点经常被用在从一个切片创建另一个切片时，防止切片赋值相互影响。
 
 ```golang
 sli := make([]int, 3)  // 定义一个长度，大小都为3的切片
@@ -239,15 +239,19 @@ typedef struct {
     Py_ssize_t allocated;
 } PyListObject;
 ```
-抛去公共的头部变量`PyObject_VAR_HEAD`，列表由一个指针数组`ob_item`，和一个容量`allocated`组成。
+抛去公共的头部变量`PyObject_VAR_HEAD`，列表由一个指针数组`ob_item`，和一个容量`allocated`组成。结构如下：
 
 ![list](https://gitee.com/pylixm/picture/raw/master/2020-12-14/1607946372784-list.png)
 
-参考 [How are lists implemented in CPython?](https://docs.python.org/3/faq/design.html#how-are-lists-implemented-in-cpython) 总结List有如下特性：
+列表中，并未存储实际的数值，而是存储了数值的引用地址，引用地址可以指向任意类型的数据，也就可以理解为什么列表中可以有任意类型的元素了。另一个，列表中引用地址的大小相同，保存在一个连续的存储空间，也就有了数组的一些特性，可以通过下标快速定位。
+
+根据列表底层结构和 Python 官方文档 [How are lists implemented in CPython?](https://docs.python.org/3/faq/design.html#how-are-lists-implemented-in-cpython) 总结List有如下特性：
 
 - 列表元素可以使用下标索引取值，各元素是有位置顺序的，底层为连续的存储空间。
 - 列表中存储的是数据的内存地址，并非真实数据。所以从上层结构看，list列表可以存储任意类型，即列表元素中的内存地址可以是指向任意类型的。
-- 可以任意添加新元素，要能不断地添加新元素，其使用了「动态扩充」的策略。
+- 可以任意添加新元素，要能不断地添加新元素，其使用了「动态扩充」的策略。扩容策略的增长倍数大致是这样的：0, 4, 8, 16, 24, 32, 40, 52, 64, 76...，参考源码 [listobject.c](https://github.com/python/cpython/blob/master/Objects/listobject.c#L67)。
+
+列表的初始化及操作如下：
 
 ```python
 # 列表的初始化
@@ -273,7 +277,6 @@ print(len(l1))
 
 # 删除索引为3的元素
 del l1[3] 
-
 
 ```
 Python 的列表作为内建的高级数据结构，实现了一系列的操作功能函数。
@@ -340,20 +343,77 @@ print(l21)
 
 ```
 
+**元组**
 
-## key-value 结构
+Python 中除了列表，还有元组比较像数组。元组和列表相似，只是不能增加、删除、修改。底层结构如下：
 
-https://zhuanlan.zhihu.com/p/33496977
+```c
+typedef struct {
+    PyObject_VAR_HEAD
+    PyObject *ob_item[1];
+} PyTupleObject;
+```
+除了头字段，只有一个指针数组。没有想列表一样的容量字段`allocated`，这正映了元组的不可变特性。除了元素的不可变特性外，其他和列表一样，是列表类型的一个子集。
 
-## 独有数据结构
+你可能会有这样的疑问，都有列表了，元组存在的意义在哪里？元组相比于列表，有以下几点优势：
 
-### Go - 指针
+- 1. 因为元素不可变性，它可以作为哈希类型的key值。这样使的key的描述意义更丰富，更易理解。
+- 2. 对于元组，解释器会缓存一些小的静态变量使用的内存，这样在初始化时，就比列表快。
 
-### Go - 结构体 
 
-### Python - 集合/元组
+元组的初始化及常用操作：
 
-### Python - 迭代器/生成器
+```python
+
+# 元组的初始化
+a = (1, 2, 3)
+b = ('1', [2, 3])
+c = ('1', '2', (3, 4))
+d = ()
+e = (1,)  # 元组中只有一个元素时，需要使用逗号结尾
+
+print(a, b, c, d, e)
+# (1, 2, 3) ('1', [2, 3]) ('1', '2', (3, 4)) () (1,)
+
+# 下标获取值
+print(a[1])  # 2
+
+# 元组合并
+print(a+b)  # (1, 2, 3, '1', [2, 3])
+
+# 内建函数使用
+# 元组长度
+print(len(a))  # 3
+
+# 使用 * 是复制指针
+f = a*2
+print(f)  # (1, 2, 3, 1, 2, 3)
+print(id(f[0]))  # 4376435920
+print(id(a[0]))  # 4376435920
+print(id(f[3]))  # 4376435920
+
+
+# 无法更新编辑
+# a[0] = 1
+# Traceback (most recent call last):
+#   File "/Users/deanwu/projects/01_LearnDocs/learn_codes/python/python_list.py", line 15, in <module>
+#     a[0] = 1
+# TypeError: 'tuple' object does not support item assignment
+
+# 无法删除
+# del a[0]
+# Traceback (most recent call last):
+#   File "/Users/deanwu/projects/01_LearnDocs/learn_codes/python/python_list.py", line 21, in <module>
+#     del a[0]
+# TypeError: 'tuple' object doesn't support item deletion
+
+```
+
+## 总结 
+
+本篇我们我学习了Go和Python的高级数据结构中类数组的结构，它们都有一些数组的特性，但又都有自己语言的特点。Go的切片和Python的列表，底层都基于数组，但Go的切片更像是数组的描述符指针，而Python的列表，则是使用地址和数据分开存储，引用地址使用连续空间存储，继承数组快速查找的优点，外部存储实现任意类型元素的存储。整体下来，甚是巧妙。
+
+不管何种语言，我们在使用时，既要了解结构的基本用法，还要了解其底层的逻辑结构，才能避免在使用时的一些莫名的坑。
 
 
 ## 扩展阅读
@@ -361,4 +421,4 @@ https://zhuanlan.zhihu.com/p/33496977
 - [Golang slice](https://www.cnblogs.com/sparkdev/p/10704614.html)
 - [python中的list类型](https://www.cnblogs.com/yifeixu/p/8893823.html)
 - [CPython中list的实现](https://www.laurentluce.com/posts/python-list-implementation/)
-- [listObject.c](https://svn.python.org/projects/python/trunk/Objects/listobject.c)
+- [listobject.c](https://github.com/python/cpython/blob/master/Objects/listobject.c)
