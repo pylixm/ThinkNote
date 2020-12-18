@@ -917,7 +917,29 @@ cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kube
 
 ls kube-proxy*pem
 kube-proxy-key.pem  kube-proxy.pem
+
+# 生成 kubeconfig 文件
+
+kubectl config set-cluster kubernetes \
+  --certificate-authority=/opt/kubernetes/ssl/ca.pem \
+  --embed-certs=true \
+  --server=https://192.168.10.12:6443 \
+  --kubeconfig=kube-proxy.kubeconfig
+kubectl config set-credentials kube-proxy \
+  --client-certificate=./kube-proxy.pem \
+  --client-key=./kube-proxy-key.pem \
+  --embed-certs=true \
+  --kubeconfig=kube-proxy.kubeconfig
+kubectl config set-context default \
+  --cluster=kubernetes \
+  --user=kube-proxy \
+  --kubeconfig=kube-proxy.kubeconfig
+kubectl config use-context default --kubeconfig=kube-proxy.kubeconfig
+
+cp kube-proxy.kubeconfig /opt/kubernetes/cfg/
 ```
+
+
 
 环境变量配置文件
 
