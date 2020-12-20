@@ -25,8 +25,7 @@ Python 动态语言，灵活方便，适合快速实现需求。Go 静态语言�
 
 - [「对比Python学习Go」- 基础篇(环境搭建及相关概念)](https://pylixm.top/posts/2020-12-03-go-from-python-start.html)
 - [「对比Python学习Go」- 基本数据结构](https://pylixm.top/posts/2020-12-05-go-from-python-structure-base.html)
-- [「对比Python学习Go」- 高级数据结构上篇](https://pylixm.top/posts/2020-12-09-go-from-python-structure-advance.html)
-- 「对比Python学习Go」- 高级数据结构下篇
+- [「对比Python学习Go」- 高级数据结构](https://pylixm.top/posts/2020-12-09-go-from-python-structure-advance.html)
 - 「对比Python学习Go」- 流程控制
 - 「对比Python学习Go」- 函数、类和接口
 - 「对比Python学习Go」- 并发编程（协程）
@@ -62,6 +61,7 @@ Python 动态语言，灵活方便，适合快速实现需求。Go 静态语言�
 ### 其他类
 
 - [Uber 编码规范](https://github.com/uber-go/guide/blob/master/style.md)
+- [Go 语言实战: 编写可维护 Go 语言代码建议](https://github.com/llitfkitfk/go-best-practice)
 
 
 ## 扩展阅读

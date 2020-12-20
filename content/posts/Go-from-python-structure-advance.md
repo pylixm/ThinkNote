@@ -411,26 +411,269 @@ print(id(f[3]))  # 4376435920
 
 ## 哈希结构
 
-https://zhuanlan.zhihu.com/p/33496977
+哈希结构又叫做散列表（hash table），它是数组的一种扩展。它通过**散列函数**把元素的键值映射为数组的下标，然后将数据存储在数组中对应下标的位置。当我们按照键值查询元素时，我们用同样的散列函数，将键值转化数组下标，从对应的数组下标的位置取数据。通过散列函数，我们可以类似数组下标一样直接定位数据，时间复杂度可以到O(1)。
+
+哈希结构中，最重要的两个知识点是「哈希函数的构建」和「散列冲突的解决」。
+
+**哈希函数**构建的好坏直接影响到数据结构的性能，哈希的key 分布均匀的话，会减少散列冲突的发生。
+**散列冲突**是哈希结构不可避免的，解决散列冲突的方法主要有两种，是「开放寻址法(open addressing)」和「列表法(chaining)」。
+
+开发寻址法，即利用一些算法查找下一个为空的数组位置。列表法，是在当前key的数组位置，以链表的形式，增加额外空间。
+
+更多哈希知识，可参考我整理的有关散列表的笔记 [数据结构与算法 - 散列表](https://pylixm.top/posts/2019-12-25-hash-table.html)。
+
+了解了上边列出的哈希结构的基本知识后，我们来看看Go和Python的哈希结构是如何的。
+### Go 
+
+Go语言的中的哈希结构为 map 结构，根据[map的源码](https://github.com/golang/go/blob/master/src/runtime/map.go)分析，map的底层结构大致如下：
+
+![](https://gitee.com/pylixm/picture/raw/master/2020-12-20/1608453778434-image.png)
+
+最外层为一个hmap的结构体，使用一个[]bmap数组存放了bmap的地址，bmap用来存储数据，每个bmap最多可存储8个kv对，另外还有一个overflow，存储后一个bmap的地址。
+oldbuckets 用来存放老的buckets数组地址，在扩容的时候会使用来暂存还没有移到新buckets数组的bmap地址。mapextra 用来存放非指针数据，用于优化存储和访问。
+
+关于map内存的增长扩容，则主要是[]bmap数组的扩容。当数据越来越多时，[]bmap数组后边挂的bmap也会越来越多，bmap的数量越多，在查找时，则大部分时间会花费在链表的查找上。这里有个标准，通常是在装填因子(填入表中的元素个数/散列表的长度)[大于6.5](https://github.com/golang/go/blob/master/src/runtime/map.go#L68)时，会触发[]bmap数组的扩容，通常是源数组的两倍。扩容后，并不会立即迁移数据，而是先将老的[]bmap数组挂在olebuckets上，待有新的更新或插入操作时，才进行bmap的迁移。
+
+根据我们对Go map内存结构的分析，结合散列表的知识，我们可以知道，Go使用了「链表法」来解决散列冲突。只不过，链表中的节点并非是值，而是一个bmap结构的存储块，这样可以减少单个链上的对象块，方便内存管理，利于GC操作。
+
+在哈希函数方面，采用哈希低位确定bmap，高位对比确定是否有存储的key，提高了哈希比对搜索的效率。
+
+另一个在bmap中，并没有key-value结对存储，而是将相对占用空间小的key放一块，value按相同的顺序放一块。这样利用内存对齐，节省空间。
+
+Go map的设计处处透露着对性能的极致追求，强烈建议好好研究一番。
+
+下面我们来看看Go map的一些常用操作：
+
+```golang
+
+// 初始化
+// 使用make函数
+myMap := make(map[string]int)
+fmt.Println(myMap) // map[]
+
+// 使用字面量
+myResume := map[string]string{"name": "DeanWu", "job": "SRE"}
+fmt.Println(myResume)  // map[job:SRE name:DeanWu]
+
+// 声明一个空map
+//var myResume1 map[string]string
+//myResume1["name"] = "DeanWu"  //panic: assignment to entry in nil map
+// 空的map，系统并没有分配内存，并能赋值。
+
+// 键值的类型可以是内置的类型，也可以是结构类型，只要这个值可以使用 == 运算符做比较
+// 切片、函数以及包含切片的结构类型，这些类型由于具有引用语义，可被其他引用改变原值，不能作为映射的键。
+//myMap1 := map[[]string]int{}
+//fmt.Println(myMap1)  // invalid map key type []string
+
+// 更新、赋值key
+myResume["job"] = "web deployment"
+fmt.Println(myResume)  // map[job:web deployment name:DeanWu]
+
+// 获取某个key的值
+value, exists := myResume["name"]
+if exists {
+  fmt.Println(value) // DeanWu
+}
+value1 := myResume["name"]
+if value1 != ""{
+  fmt.Println(value1) // DeanWu
+  // 推荐上边的写法，因为即使map无此key也会返回对应的零值。需要根据数据类型，做相应的判断，不如上边的统一，方便。
+}
+
+// 删除键值对
+delete(myResume, "job")
+delete(myResume, "year")  // 当map中没有这个key时，什么都不执行。
+fmt.Println(myResume)  // map[name:DeanWu]
+
+
+```
+
+map 也可以嵌套。
+
+```golang
+// map嵌套
+myNewResume := map[string]map[string]string{
+  "name": {
+    "first": "Dean",
+    "last":"Wu",
+  },
+}
+fmt.Println(myNewResume) // map[name:map[first:Dean last:Wu]]
+```
+
+### Python 
+
+Python 中的哈希结构，有字典和集合两种。
+
+**字典**
+
+字典根据[Python3的源码](https://github.com/python/cpython/blob/master/Objects/dictobject.c)，底层结构大致如下：
+
+![](https://gitee.com/pylixm/picture/raw/master/2020-12-20/1608478122767-image.png)
+
+
+其中最外层是[PyDictObject](https://github.com/python/cpython/blob/fb5db7ec58624cab0797b4050735be865d380823/Include/cpython/dictobject.h#L10)，其中定义了一些字典的全局控制字段。其中有个[PyDictKeysObject](https://github.com/python/cpython/blob/master/Objects/dict-common.h)定义了字典哈希表的一些字段。其中有两个数组 `dk_indices[]` 和 `dk_entries[]`，这两个便是真正的存储数据的数组。kv数据保存在`dk_entries[]`数组中，`dk_indices[]`来存储kv数据在`dk_enties`数组中保存的索引。其中每个kv数据以`entry`的数据结构来存储，如下：
+
+```c
+typedef struct {
+    /* Cached hash code of me_key. */
+    Py_hash_t me_hash;
+    PyObject *me_key;
+    PyObject *me_value; /* This field is only meaningful for combined tables */
+} PyDictKeyEntry;
+```
+
+`me_hash`缓存存key的哈希值，防止哈希值的重复计算。`me_key`和`me_value`便是key和value的真正数据了。
+
+哈希表的扩容，从源码中可以看出，一个字典的最小容量为[8](https://github.com/python/cpython/blob/master/Objects/dictobject.c#L111)，Python 采用了"翻倍扩容"的策略。根据经验值得出，哈希表数组中，装填因子为2/3时，是一个哈希冲突的临界值。所以，当哈希数组`dk_entries`装填因子到2/3时，便会扩容。
+
+这里Python为了节省内存，将索引和哈希表数组分开，分为`dk_indices`和`dk_entries`。前者保存的是数据的索引，占空间小，可申请所有元素个数的空间。后者可以只申请原大小的2/3空间。因为到2/3之后，便会扩容，这个2/3可以根据`dk_indices`获得。
+
+分析了Python 字典的底层结构，根据哈希表的知识，我们可以知道Python 是用「开放寻址法」来解决哈希冲突的。
+
+Python 字典的常用操作：
+
+```Python
+# 初始化
+myDict1 = dict()
+myDict2 = {}   # 推荐使用
+print(myDict1, myDict2)  # {} {}
+
+# 赋值
+myDict3 = {'name': 'Tim', 'age': 18}
+myDict3['job'] = 'student'
+print(myDict3)  # {'name': 'Tim', 'age': 18, 'job': 'student'}
+
+# 取值
+print(myDict3['name'])  # Tim
+# print(myDict3['phone'])  # KeyError: 'phone'
+print(myDict3.get('phone'))  # None 若没有key，使用get 方法不会抛出错误
+print(myDict3.get('phone', '136xxxxxxx'))  # 136xxxxxxx  给没有key的，附默认值
+
+# 删除
+del[myDict3['job']]
+print(myDict3)  # {'name': 'Tim', 'age': 18}
+
+# 字典提供丰富的内建方法
+# radiansdict.clear() 删除字典内所有元素
+# radiansdict.copy() 返回一个字典的浅复制，返回原字典的引用
+# radiansdict.fromkeys() 创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值
+# radiansdict.get(key, default=None) 返回指定键的值，如果值不在字典中返回default值
+# key in dict 如果键在字典dict里返回true，否则返回false
+# radiansdict.items() 以列表返回可遍历的(键, 值) 元组数组
+# radiansdict.keys() 以列表返回一个字典所有的键
+# radiansdict.setdefault(key, default=None) 和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default
+# radiansdict.update(dict2) 把字典dict2的键/值对更新到dict里
+# radiansdict.values() 以列表返回字典中的所有值
+# pop(key[,default]) 删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。
+# popitem() 随机返回并删除字典中的一对键和值(一般删除末尾对)。
+```
+
+**集合**
+
+集合和字典一样，底层也是哈希结构，和字典相比，可理解为只有key，没有values。根据[Python3源码](https://github.com/python/cpython/blob/63298930fb531ba2bb4f23bc3b915dbf1e17e9e1/Include/setobject.h)，大致结构如下：
+
+![image](https://gitee.com/pylixm/picture/raw/master/2020-12-21/1608483008360-image.png)
+
+相比字典，集合简单了不少。在`PySetObject`中直接保存了存储数据的数组。
+
+根据集合的底层数据结构分析，它解决哈希冲突也是使用的「开发寻址法」。
+
+集合的一些常用操作：
+
+```Python
+# 初始化
+s1 = {'1', '2', '3'}  # 不推荐，当元素中有字典时，会报错
+s2 = set(['1', '4', '5'])
+print(s1)  # {'3', '1', '2'}
+print(s2)  # {'3', '1', '2'}
+
+# 交集
+print(s1&s2)  # {'1'}
+# 并集
+print(s1|s2)  # {'3', '5', '4', '2', '1'}
+# 差集
+print(s1 - s2)  # {'3', '2'}
+# 判断子集和超集
+s2.issubset(s1)   # s2 是否为s1 的子集
+s1.issuperset(s2)  # s1 是否为 s2 的超集
+
+# 集合的一些内建方法
+# set.add(obj) 添加集合元素
+# set.remove(obj) 删除集合元素
+# set.update(set) 合并集合
+# set.pop() 随机删除一个元素，并返回该元素
+```
 
 ## 独有数据结构
 
+除了类数组和哈希结构外，Go还有自己独有的一些结构。
 ### Go - 指针
+
+Go 语言具有指针。 指针保存了变量的内存地址。类型 *T是指向类型 T的值的指针。其零值是 nil。
+
+- &符号会生成一个指向其作用对象的指针。
+- *符号表示指针指向的底层的值。
+
+与 C 不同，Go 没有指针运算。
+
+```golang
+i, j := 42, 2701
+
+p := &i         // point to i
+fmt.Println(*p) // read i through the pointer
+*p = 21         // set i through the pointer
+fmt.Println(i)  // see the new value of i
+
+p = &j         // point to j
+*p = *p / 37   // divide j through the pointer
+fmt.Println(j) // see the new value of j
+```
+
+Python 中并没有指针的概念，内存的地址被叫做“引用”。和这里的指针有异曲同工之妙，但仅仅是体现在逻辑分析上，并没有语法支持。
 
 ### Go - 结构体 
 
-### Python - 集合/元组
+Go语言中，结构体（struct）就是一个字段的集合，结构体字段可以通过结构体指针来访问。
 
-### Python - 迭代器/生成器
+```golang
+// 定义结构体，自动名必须大写开头，作为公共变量
+type Vertex struct {
+  X int
+  Y int
+}
+// 初始化
+var ver Vertex
+ver.X = 4  // 可使用. 来赋值和访问结构体
+fmt.Println(ver.X)  // 4
 
+// 可使用指针来访问
+v := Vertex{1, 2}
+p := &v
+p.X = 1e9
+fmt.Println(v)  // {1000000000 2}
+
+```
+
+结构体可以实现嵌套，当嵌套时，会继承嵌套结构体的所有字段。
+
+```golang
+type NewVertex struct {
+  Vertex
+  Z int
+}
+var v1 NewVertex
+v1.X = 12
+v1.Z = 13
+fmt.Println(v1.X) // 12
+fmt.Println(v1)  // {{12 0} 13}
+```
+
+正因为结构体的上边的这些特性，加之Go语言中并没有类的概念，结构体在很多Web框架中，被当做“类”来使用。
 
 ## 总结 
 
-本篇我们我学习了Go和Python的高级数据结构中类数组的结构，它们都有一些数组的特性，但又都有自己语言的特点。Go的切片和Python的列表，底层都基于数组，但Go的切片更像是数组的描述符指针，而Python的列表，则是使用地址和数据分开存储，引用地址使用连续空间存储，继承数组快速查找的优点，外部存储实现任意类型元素的存储。整体下来，甚是巧妙。
-
-不管何种语言，我们在使用时，既要了解结构的基本用法，还要了解其底层的逻辑结构，才能避免在使用时的一些莫名的坑。
-
-
+本篇我们我学习了Go和Python的高级数据结构，他们底层都遵循了一定的数据结构，但又都有自己的特色。集合自己语言的特性，设计巧妙。总之，不管何种语言，我们在使用时，既要了解结构的基本用法，还要了解其底层的逻辑结构，才能避免在使用时的一些莫名的坑。
 
 ## 扩展阅读
 
@@ -438,3 +681,7 @@ https://zhuanlan.zhihu.com/p/33496977
 - [python中的list类型](https://www.cnblogs.com/yifeixu/p/8893823.html)
 - [CPython中list的实现](https://www.laurentluce.com/posts/python-list-implementation/)
 - [listobject.c](https://github.com/python/cpython/blob/master/Objects/listobject.c)
+- [Golang map](https://github.com/cch123/golang-notes/blob/master/map.md)
+- [Go语言设计与实现-哈希表](https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-hashmap/)
+- [Go语言原本-散列表](https://golang.design/under-the-hood/zh-cn/part1basic/ch03lang/map/)
+- [什么是map](https://github.com/qcrao/Go-Questions/blob/master/map/map%20%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88.md)
