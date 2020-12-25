@@ -16,20 +16,10 @@ Docker 是一种轻量级的虚拟化技术，是一种Linux容器（Linux Conta
 
 大多数人可能知道虚拟机，可以在一台硬件机器上虚拟出另一台计算机，有它自己的cpu、硬盘等各种虚拟的硬件。而 Linux 容器技术也是一种虚拟技术，但是它并非直接从硬件上来虚拟，而是通过软件技术对进程及资源进行隔离，从而达到虚拟化的目的。Docker 就是一种这样隔离虚拟化技术。
 <!-- more -->
-Docker的发展由来大致如下：
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1frtdhgj1ilj20k00dxaaj.jpg)
+　Docker 使用 Google 公司推出的 Go 语言 进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离，属于 操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 LXC，从 0.7 版本以后开始去除 LXC，转而使用自行开发的 libcontainer，从 1.11 开始，则进一步演进为使用 runC 和 containerd。
 
-（图片来源：https://zhuanlan.zhihu.com/p/34732608）
-
-Docker 与传统虚拟化技术不同如下：
-
-![](https://ws1.sinaimg.cn/large/8697aaedly1frtfbkjvuxj211i0e0k14.jpg)
-
-![](https://ws1.sinaimg.cn/large/8697aaedly1frtfbjwwm5j211g0aek1r.jpg)
-
-(图片来源：Docker 从入门到实践)
-
+![docker_arch](https://gitee.com/pylixm/picture/raw/master/2020-12-25/1608877395861-docker-on-linux.png)
 
 Docker 发展之迅速，除了分布式和微服务的大潮外，还得益于其优秀的特性。
 
@@ -59,8 +49,6 @@ Docker 使用分层存储和镜像技术，使得镜像可重复使用，维护�
 
 **Docker相较虚拟机优势明显**
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1frtffbs8p2j21540aqq58.jpg)
-
 
 Docker 两个主要部件：
 
@@ -69,7 +57,6 @@ Docker 两个主要部件：
 
 Docker 使用客户端-服务器 (C/S) 架构模式。Docker 客户端会与 Docker 守护进程进行通信。Docker 守护进程会处理复杂繁重的任务，例如建立、运行、发布你的 Docker 容器。Docker 客户端和守护进程可以运行在同一个系统上，当然你也可以使用 Docker 客户端去连接一个远程的 Docker 守护进程。Docker 客户端和守护进程之间通过 socket 或者 RESTful API 进行通信。
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1frul61gqzvj20g10djaac.jpg)
 
 ### 1.1 Docker 守护进程
 如上图所示，Docker 守护进程运行在一台主机上。用户并不直接和守护进程进行交互，而是通过 Docker 客户端间接和其通信。
