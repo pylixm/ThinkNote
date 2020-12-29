@@ -4,7 +4,7 @@ title : 「对比Python学习Go」- 高级数据结构
 categories: [Golang,] 
 series: [对比Python学习Go,]
 date : 2020-12-09
-url: /posts/2020-12-09-go-from-python-structure-advance-1.html 
+url: /posts/2020-12-09-go-from-python-structure-advance.html 
 tags : [Golang, 对比Python学习Go]
 ---
 
