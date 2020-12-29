@@ -8,7 +8,7 @@ url: /posts/2020-12-03-go-from-python-start.html
 tags : [Golang, 对比Python学习Go]
 ---
 
-
+本篇是[「对比Python学习Go」](https://pylixm.top/posts/2020-12-02-go-from-python-intro.html) 系列的第二篇，本篇文章我们来看下Go的开发环境搭建。本系列的其他文章可到 [「对比Python学习Go」- 开篇](https://pylixm.top/posts/2020-12-02-go-from-python-intro.html) 查看。
 ## 环境搭建
 
 ### Go 的安装 

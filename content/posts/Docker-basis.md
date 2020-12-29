@@ -16,20 +16,6 @@ Docker 是一种轻量级的虚拟化技术，是一种Linux容器（Linux Conta
 
 大多数人可能知道虚拟机，可以在一台硬件机器上虚拟出另一台计算机，有它自己的cpu、硬盘等各种虚拟的硬件。而 Linux 容器技术也是一种虚拟技术，但是它并非直接从硬件上来虚拟，而是通过软件技术对进程及资源进行隔离，从而达到虚拟化的目的。Docker 就是一种这样隔离虚拟化技术。
 
-Docker的发展由来大致如下：
-
-![](https://ws1.sinaimg.cn/large/8697aaedly1frtdhgj1ilj20k00dxaaj.jpg)
-
-（图片来源：https://zhuanlan.zhihu.com/p/34732608）
-
-Docker 与传统虚拟化技术不同如下：
-
-![](https://ws1.sinaimg.cn/large/8697aaedly1frtfbkjvuxj211i0e0k14.jpg)
-
-![](https://ws1.sinaimg.cn/large/8697aaedly1frtfbjwwm5j211g0aek1r.jpg)
-
-(图片来源：Docker 从入门到实践)
-
 ## Docker 能做什么
 
 Docker 可以做什么，从虚拟化角度来说，它可以完成如下功能：
@@ -72,9 +58,6 @@ Docker 容器封装了软件运行环境，使其不依赖系统，使其更容�
 
 Docker 使用分层存储和镜像技术，使得镜像可重复使用，维护和扩展更轻松。
 
-**Docker相较虚拟机优势明显**
-
-![](https://ws1.sinaimg.cn/large/8697aaedly1frtffbs8p2j21540aqq58.jpg)
 
 
 ## Docker 基本实现原理
