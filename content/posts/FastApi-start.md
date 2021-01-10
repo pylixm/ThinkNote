@@ -1,6 +1,6 @@
 ---
 type : posts
-title : FastApi 入门
+title : FastApi 简单入门，附生产级脚手架代码
 categories: [FastApi,] 
 date : 2021-01-05
 url: /posts/2021-01-05-start.html 
