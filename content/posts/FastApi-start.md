@@ -1,14 +1,3 @@
----
-type : posts
-title : FastApi 简单入门，附生产级脚手架代码
-categories: [FastApi,] 
-date : 2021-01-05
-url: /posts/2021-01-05-start.html 
-tags : [FastApi, Python]
----
-
-> 公司内部分享的话术稿
-
 大家好，今天我分享的主题是Python技术栈中一个新崛起的框架`FastApi`。我们可以用它来快速的构建具有「异步」特性的RestAPI和web服务。
 
 这个topic受众比较狭窄，但是还是希望今天的内容可以给到大家启发。今天分享的内容主要分下面几个模块：

@@ -1,7 +1,7 @@
 ---
 type : posts
 title : 谈谈前后端分离及认证选择
-categories: [前后端分离,] 
+categories: [前后端分离, 程序员杂谈] 
 series: [前后端分离,]
 date : 2020-06-04
 author : "DeanWu"

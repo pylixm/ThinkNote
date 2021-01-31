@@ -1,7 +1,7 @@
 ---
 type : posts
 title : 谈谈前后端分离中的跨域问题
-categories: [前后端分离,] 
+categories: [前后端分离, 程序员杂谈] 
 series: [前后端分离,]
 date : 2020-10-13
 author : "DeanWu"
