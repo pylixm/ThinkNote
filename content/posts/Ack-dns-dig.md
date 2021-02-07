@@ -6,7 +6,6 @@ date : 2021-02-07
 url: /posts/2021-02-07-dns-dig.html 
 tags : [Dns, dig ]
 ---
-
 互联网公司，基本都有针对[DNS](https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F "DNS")域名解析的优化处理。有些公司甚至会构建自己的智能 DNS 解析系统，来解决 LocalDNS 存在的[一系列问题](http://www.52im.net/thread-2121-1-1.html "一系列问题")，如域名劫持、调用精度和实时性等。
 
 现如今，HttpDNS 已经成为一种比较常用优化方案之一。HttpDNS 是基于 http 协议具有 DNS 域名解析能力的一种服务，现在各大云厂商都已经构建了自己的 HttpDNS 服务。如[阿里云 HttpDNS](https://help.aliyun.com/product/30100.html "阿里云HttpDNS")、[腾讯云 HttpDNS](https://cloud.tencent.com/product/hd "腾讯云HttpDNS")等。
@@ -40,7 +39,7 @@ dig @ns服务器 www.baidu.com +subnet=客户端ip
 
 该方式，只是一个简单的思路探索，其中还有很多细节的问题需要深究。DNS 解析是业务系统的一个强依赖服务，可用性和稳定性不容忽视。
 
-好了，今天的分享就到这里。
+好了，今天的分享就到这里，欢迎留言探讨！
 
 我是 DeanWu，一个努力成为真正 SRE 的人。
 
