@@ -1,7 +1,7 @@
 ---
 type : posts
 title : 2020 年成长记录
-categories: [个人管理] 
+categories: [个人管理,] 
 date : 2021-02-11
 url: /posts/2021-02-11-summary-2021.html 
 tags : [summary, 个人管理]
