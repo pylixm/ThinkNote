@@ -77,6 +77,8 @@ ansible 执行的任务单元。
 
 插件，模块功能的补充，常有连接类型插件，循环插件，变量插件，过滤插件，插件功能用的较少。
 
+- 官方文档：[插件列表](https://docs.ansible.com/ansible/latest/plugins/plugins.html)
+
 **API**
 
 提供给第三方程序调用的应用程序编程接口。
@@ -190,6 +192,53 @@ server {
         group: "{{ nginx_group }}"
       become: yes
 ```
+
+### 角色 
+
+统一管理playbook文件，可理解为一个标准的目录规范。可使用如下命令初始化一个角色目录：
+
+`ansible-galaxy init roles/role_nginx`
+
+```目录结构
+└── role_nginx
+    ├── defaults
+    │   └── main.yml
+    ├── files
+    ├── handlers
+    │   └── main.yml
+    ├── meta
+    │   └── main.yml
+    ├── README.md
+    ├── tasks
+    │   └── main.yml
+    ├── templates
+    ├── tests
+    │   ├── inventory
+    │   └── test.yml
+    └── vars
+        └── main.yml
+```
+
+roles 同目录，创建调用play文件，即可应用整个角色。
+
+```
+---
+# this playbook deploy the whole application stack in this site
+- name: configuration and deploy webservers and application code
+  hosts: webservers
+  
+  roles:
+    - role_nginx
+```
+
+角色文件的寻找目录：
+
+- play 文件同级目录的role同名目录
+- play 文件统计目录的roles 目标下 
+- `~/.ansible/roles` 用户目录下 
+- ansible.cfg 配置的角色目录下 
+- /etc/ansible/roles 目录下
+- 也可使用绝对路径配置角色
 
 ## 使用指南
 
