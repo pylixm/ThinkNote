@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : "资源分享计划第一期 0427"
 categories: [资源分享计划,] 
 date : 2019-04-27

@@ -1,9 +1,9 @@
 
 ---
-type : post
+type : posts
 title : 「朝花夕拾」- 0626期，总第九期
-categories: [朝花夕拾,] 
-series: [朝花夕拾,]
+categories : [朝花夕拾,] 
+series : [朝花夕拾,]
 date : 2020-06-26
 url: /posts/2020-06-26-zhxs-0626.html 
 tags : [朝花夕拾 ]

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : "资源分享计划第七期 0608"
 categories: [资源分享计划,] 
 date : 2019-06-08

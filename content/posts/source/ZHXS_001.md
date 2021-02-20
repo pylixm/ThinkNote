@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 「朝花夕拾」- 0501期，总第一期
 categories: [朝花夕拾,] 
 series: [朝花夕拾,]

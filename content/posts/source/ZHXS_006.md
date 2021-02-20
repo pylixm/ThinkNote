@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : 「朝花夕拾」- 0605期，总第六期
 categories: [朝花夕拾,] 
 series: [朝花夕拾,]

@@ -1,5 +1,5 @@
 ---
-type : post
+type : posts
 title : "资源分享计划第三期 0511"
 categories: [资源分享计划,] 
 date : 2019-05-11
