@@ -1,6 +1,6 @@
 # Site settings
 baseURL: https://pylixm.top
-theme: hugo-theme-stack #hugo-theme-pure
+theme: hugo-theme-pure
 title: DeanWu
 defaultContentLanguage: zh  # en/zh/...
 
