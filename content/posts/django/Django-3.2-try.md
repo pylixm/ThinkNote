@@ -205,7 +205,7 @@ Django3.2 分页器 `Paginator` 对象增加了`get_elided_page_range`方法 ，
 
 - 覆盖索引，文档描述「[include is ignored for databases besides PostgreSQL.](https://docs.djangoproject.com/en/dev/ref/models/indexes/#django.db.models.Index.include "include is ignored for databases besides PostgreSQL.") 」，在 mysql 数据库上使用，只会创建单字段索引，mysql 中只能使用联合索引以达到覆盖查询字段的效果。
 - 函数索引，文档描述[Functional indexes are ignored with MySQL < 8.0.13 and MariaDB as neither supports them.](https://docs.djangoproject.com/en/dev/ref/models/indexes/#expressions "Functional indexes are ignored with MySQL < 8.0.13 and MariaDB as neither supports them.")，但我使用 8.0.17 测试仍有语法问题，期待正式版发布吧。
-- 文件上传增加新的[FileUploadHandler.upload_interrupted()](https://docs.djangoproject.com/en/dev/ref/files/uploads/#django.core.files.uploadhandler.FileUploadHandler.upload_interrupted "FileUploadHandler.upload_interrupted()")信号用来通知上传中断，可以做些后续的工作。
+- 文件上传增加新的[FileUploadHandler.upload_interrupted()](https://docs.djangoproject.com/en/dev/ref/files/uploads/#django.core.files.uploadhandler.FileUploadHandler.upload_interrupted "FileUploadHandler.upload_interrupted( "FileUploadHandler.upload_interrupted()")")信号用来通知上传中断，可以做些后续的工作。
 - `QuerySet.select_for_update()` 查询锁的实现，目前支持不是很好，需要的数据库版本都比较高。「Currently, the postgresql, oracle, and mysql database backends support select_for_update(). However, MariaDB 10.3+ supports only the nowait argument and MySQL 8.0.1+ supports the nowait, skip_locked, and of arguments. The no_key argument is supported only on PostgreSQL.」期待后续更新吧。
 - PostgreSQL 9.5 的上游支持将于 2021 年 2 月结束。Django3.2 支持 PostgreSQL 9.6 及更高版本。
 - 对 MySQL 5.6 的上游支持将于 2021 年 4 月结束。Django 3.2 支持 MySQL 5.7 和更高版本。
@@ -214,7 +214,7 @@ Django3.2 分页器 `Paginator` 对象增加了`get_elided_page_range`方法 ，
 
 总的来说 Django3.2 并没有大的更新，延续了 3.1 的很多功能，对 Model 性能和实用性方面做了不少优化，针对 postgreSQL 偏多，有些功能要求 mysql 版本都在 8.0 以上。期待的异步功能并没有更新，看来“异步 Django”的愿望实现还需要时间。
 
-上边完整代码可从github获取，地址为 [https://github.com/pylixm/django_32_demo](https://github.com/pylixm/django_32_demo)
+上边完整代码可从github获取，地址为 [https://github.com/pylixm/django_32_demo](https://github.com/pylixm/django_32_demo "https://github.com/pylixm/django_32_demo")
 
 好了，今天的分享就到这里吧，欢迎留言讨论你觉着超赞的Django新功能~ 
 
@@ -223,3 +223,8 @@ Django3.2 分页器 `Paginator` 对象增加了`get_elided_page_range`方法 ，
 >关注公众号「码农吴先生」, 可第一时间获取最新文章。回复关键字「go」「python」获取我收集的学习资料，也可回复关键字「小二」，加我wx拉你进技术交流群，聊技术聊人生~ 
 
 ![](https://gitee.com/pylixm/picture/raw/master/2020-12-14/deanwu_wechat.png)
+
+## 扩展阅读
+
+- [Mysql优化覆盖索引](https://www.haoyizebo.com/posts/e9b9d3be/ "Mysql优化覆盖索引")
+- [Exciting New Features in Django 3.2](https://hakibenita.com/django-32-exciting-features "Exciting New Features in Django 3.2")
